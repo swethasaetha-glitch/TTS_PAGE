@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        font-family: "Times New Roman", Times, Georgia, serif !important;
+    }
+    body {
+        @apply bg-slate-50 text-slate-900 antialiased overflow-x-hidden;
+        font-family: "Times New Roman", Times, Georgia, serif !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6, button, input, select, textarea, span, p, a, div, .font-serif-title {
+        font-family: "Times New Roman", Times, Georgia, serif !important;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0ea5e9;
+}
+
+/* Clean White & Sky Blue Glassmorphism */
+.glass-white {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(14, 165, 233, 0.15);
+}
+
+.glass-white-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-white-hover:hover {
+    background: #ffffff;
+    border-color: rgba(14, 165, 233, 0.4);
+    box-shadow: 0 15px 35px -10px rgba(14, 165, 233, 0.15);
+}
+
+/* Sky Blue Gradient Text */
+.text-sky-gradient {
+    background: linear-gradient(135deg, #0f172a 0%, #0369a1 40%, #0ea5e9 80%, #2563eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+[x-cloak] {
+    display: none !important;
+}

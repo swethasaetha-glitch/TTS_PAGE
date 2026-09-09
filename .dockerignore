@@ -1,0 +1,9 @@
+/node_modules
+/vendor
+/public/build
+.env
+.git
+.github
+.idea
+.vscode
+*.log

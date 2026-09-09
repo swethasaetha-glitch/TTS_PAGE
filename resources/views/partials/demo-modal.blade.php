@@ -43,12 +43,12 @@
         </button>
 
         <template x-if="submitted">
-            <div class="py-12 flex flex-col items-center justify-center text-center space-y-4 font-serif">
+            <div class="py-12 flex flex-col items-center justify-center text-center space-y-4 font-sans">
                 <div class="w-16 h-16 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center animate-bounce">
                     <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                 </div>
-                <h3 class="text-2xl font-bold text-slate-900 font-serif">Demo Request Received!</h3>
-                <p class="text-sm text-slate-600 max-w-xs font-serif">
+                <h3 class="text-2xl font-bold text-slate-900 font-sans">Demo Request Received!</h3>
+                <p class="text-sm text-slate-600 max-w-xs font-sans">
                     Thank you! Our technical team will reach out to you shortly.
                 </p>
             </div>
@@ -56,16 +56,16 @@
 
         <template x-if="!submitted">
             <div>
-                <div class="flex items-center gap-2 text-sky-600 font-semibold text-xs uppercase tracking-wider mb-2 font-serif">
+                <div class="flex items-center gap-2 text-sky-600 font-semibold text-xs uppercase tracking-wider mb-2 font-sans">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
                     <span>Schedule Personal Walkthrough</span>
                 </div>
-                <h3 class="text-2xl font-bold text-sky-600 mb-2 font-serif">Book a Live 3D Demo</h3>
-                <p class="text-sm text-slate-900 mb-6 font-serif">
+                <h3 class="text-2xl font-bold text-sky-600 mb-2 font-sans">Book a Live 3D Demo</h3>
+                <p class="text-sm text-slate-900 mb-6 font-sans">
                     Discover how Track Tech Solution can optimize your garment manufacturing facility in real time.
                 </p>
 
-                <form @submit.prevent="submitForm()" class="space-y-4 font-serif">
+                <form @submit.prevent="submitForm()" class="space-y-4 font-sans">
                     <div>
                         <label class="block text-xs font-medium text-slate-700 mb-1">Full Name</label>
                         <input type="text" x-model="form.name" required placeholder="e.g. Rahul Sharma"

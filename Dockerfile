@@ -1,6 +1,5 @@
 FROM richarvey/nginx-php-fpm:3.1.6
 
-# Set document root to Laravel public folder
 ENV WEBROOT /var/www/html/public
 ENV PHP_ERRORS_STDERR 1
 ENV ERRORS 0
@@ -9,10 +8,8 @@ ENV RUN_SCRIPTS 1
 
 WORKDIR /var/www/html
 
-# Copy application code
 COPY . .
 
-# Install Node.js, build Vite assets, install Composer packages & set permissions
 RUN apk add --no-cache nodejs npm \
     && composer install --no-dev --optimize-autoloader \
     && npm install \

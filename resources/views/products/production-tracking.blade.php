@@ -11,19 +11,19 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div class="lg:col-span-7 space-y-6">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-700 text-xs font-serif font-semibold uppercase">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-700 text-xs font-sans font-semibold uppercase">
                 Production Tracking
             </div>
 
-            <h1 class="text-4xl sm:text-5xl font-bold text-sky-600 font-serif tracking-tight leading-tight">
+            <h1 class="text-4xl sm:text-5xl font-bold text-sky-600 font-sans tracking-tight leading-tight">
                 Real-Time Production Tracking
             </h1>
 
-            <p class="text-lg text-slate-900 font-serif leading-relaxed">
+            <p class="text-lg text-slate-900 font-sans leading-relaxed">
                 Gain live shopfloor visibility across every cutting table, sewing line, and finishing station. Track bundles, operator efficiency, and line balancing with instant telemetry.
             </p>
 
-            <ul class="space-y-3 pt-2 text-base text-slate-900 font-serif">
+            <ul class="space-y-3 pt-2 text-base text-slate-900 font-sans">
                 <li class="flex items-center gap-3">
                     <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> RFID & Barcode bundle tracking from cut to pack
                 </li>
@@ -44,7 +44,7 @@
         </div>
 
         <div class="lg:col-span-5 h-[440px] rounded-3xl bg-white border border-sky-200 p-6 overflow-hidden shadow-xl">
-            <div class="text-xs font-serif text-sky-700 font-semibold mb-2">3D SHOPFLOOR TELEMETRY CORE</div>
+            <div class="text-xs font-sans text-sky-700 font-semibold mb-2">3D SHOPFLOOR TELEMETRY CORE</div>
             <div id="hero-3d-canvas" class="w-full h-full cursor-grab active:cursor-grabbing"></div>
         </div>
     </div>

@@ -3,16 +3,13 @@
 @tailwind utilities;
 
 @layer base {
-    * {
-        font-family: "Times New Roman", Times, Georgia, serif !important;
-    }
-    body {
+    body, p, span, a, li, label, input, textarea, select {
         @apply bg-slate-50 text-slate-900 antialiased overflow-x-hidden;
-        font-family: "Times New Roman", Times, Georgia, serif !important;
+        font-family: 'Roboto', 'Poppins', sans-serif !important;
     }
     
-    h1, h2, h3, h4, h5, h6, button, input, select, textarea, span, p, a, div, .font-serif-title {
-        font-family: "Times New Roman", Times, Georgia, serif !important;
+    h1, h2, h3, h4, h5, h6, button, .font-heading, .font-bold {
+        font-family: 'Poppins', 'Roboto', sans-serif !important;
     }
 }
 

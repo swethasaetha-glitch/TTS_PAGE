@@ -31,15 +31,15 @@
     <div class="max-w-4xl mx-auto w-full flex flex-col items-center text-center space-y-8 relative z-10">
 
         <!-- Centered Main Title -->
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-white font-serif max-w-4xl drop-shadow-lg">
-            Revolutionizing <span class="text-sky-400 italic font-serif drop-shadow-lg">Garment Manufacturing</span> <br class="hidden sm:inline" />
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-white font-sans max-w-4xl drop-shadow-lg">
+            Revolutionizing <span class="text-sky-400 italic font-sans drop-shadow-lg">Garment Manufacturing</span> <br class="hidden sm:inline" />
             With Real-Time Digital Intelligence
         </h1>
 
         <!-- Centered Subtitle -->
-        <p class="text-lg sm:text-2xl text-slate-100 font-serif leading-relaxed max-w-2xl drop-shadow-md">
+        <p class="text-lg sm:text-2xl text-slate-100 font-sans leading-relaxed max-w-2xl drop-shadow-md">
             From Factory Floor to Executive Dashboard. <br />
-            <span class="text-sky-400 font-serif text-xs sm:text-sm tracking-widest uppercase font-semibold">Track. Optimize. Transform.</span>
+            <span class="text-sky-400 font-sans text-xs sm:text-sm tracking-widest uppercase font-semibold">Track. Optimize. Transform.</span>
         </p>
 
         <!-- Centered Action Buttons (Flexbox) -->
@@ -51,14 +51,14 @@
             </button>
 
             <a href="#interactive-3d"
-               class="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-900/80 hover:bg-slate-800 text-white font-serif font-medium text-base px-9 py-4 rounded-full border border-white/30 hover:border-sky-400 backdrop-blur-md shadow-lg transition-all group">
+               class="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-900/80 hover:bg-slate-800 text-white font-sans font-medium text-base px-9 py-4 rounded-full border border-white/30 hover:border-sky-400 backdrop-blur-md shadow-lg transition-all group">
                 <span>Explore 3D Engine</span>
                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </a>
         </div>
 
         <!-- Centered Features Pills -->
-        <div class="pt-8 border-t border-white/20 flex flex-wrap items-center justify-center gap-4 text-xs font-serif font-medium text-white w-full">
+        <div class="pt-8 border-t border-white/20 flex flex-wrap items-center justify-center gap-4 text-xs font-sans font-medium text-white w-full">
             <div class="px-4 py-2 rounded-full bg-slate-900/80 border border-sky-400/30 backdrop-blur-md shadow-md flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-sky-400"></span> Quality Control AI
             </div>
@@ -79,13 +79,13 @@
 <section id="impact" class="relative py-28 px-4 sm:px-6 lg:px-8 bg-white border-y border-slate-200">
     <div class="max-w-7xl mx-auto space-y-16">
         <div class="text-center space-y-4 max-w-3xl mx-auto">
-            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100/80 border border-sky-200 inline-block font-serif">
+            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100/80 border border-sky-200 inline-block font-sans">
                 Our Impact
             </span>
-            <h2 class="text-4xl sm:text-5xl font-bold text-sky-600 font-serif tracking-tight leading-tight">
+            <h2 class="text-4xl sm:text-5xl font-bold text-sky-600 font-sans tracking-tight leading-tight">
                 Beyond borders, beyond limits
             </h2>
-            <p class="text-slate-900 text-base sm:text-lg font-serif max-w-2xl mx-auto leading-relaxed">
+            <p class="text-slate-900 text-base sm:text-lg font-sans max-w-2xl mx-auto leading-relaxed">
                 Empowering manufacturers worldwide with cutting-edge technology and innovative solutions
             </p>
         </div>
@@ -95,32 +95,32 @@
                 <div class="p-3.5 rounded-2xl bg-sky-100 text-sky-600 inline-flex mb-4 group-hover:bg-sky-500 group-hover:text-white transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                 </div>
-                <div class="text-4xl sm:text-5xl font-bold text-sky-600 font-serif tracking-tight mb-2">500+</div>
-                <p class="text-sm font-semibold text-slate-900 font-serif">Active lines</p>
+                <div class="text-4xl sm:text-5xl font-bold text-sky-600 font-sans tracking-tight mb-2">500+</div>
+                <p class="text-sm font-semibold text-slate-900 font-sans">Active lines</p>
             </div>
 
             <div class="relative p-8 rounded-3xl bg-slate-50 border border-sky-200 shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all group text-center">
                 <div class="p-3.5 rounded-2xl bg-sky-100 text-sky-600 inline-flex mb-4 group-hover:bg-sky-500 group-hover:text-white transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                 </div>
-                <div class="text-4xl sm:text-5xl font-bold text-sky-600 font-serif tracking-tight mb-2">10M+</div>
-                <p class="text-sm font-semibold text-slate-900 font-serif">Users</p>
+                <div class="text-4xl sm:text-5xl font-bold text-sky-600 font-sans tracking-tight mb-2">10M+</div>
+                <p class="text-sm font-semibold text-slate-900 font-sans">Users</p>
             </div>
 
             <div class="relative p-8 rounded-3xl bg-slate-50 border border-sky-200 shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all group text-center">
                 <div class="p-3.5 rounded-2xl bg-sky-100 text-sky-600 inline-flex mb-4 group-hover:bg-sky-500 group-hover:text-white transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </div>
-                <div class="text-4xl sm:text-5xl font-bold text-sky-600 font-serif tracking-tight mb-2">50M+</div>
-                <p class="text-sm font-semibold text-slate-900 font-serif">Pieces checked/month</p>
+                <div class="text-4xl sm:text-5xl font-bold text-sky-600 font-sans tracking-tight mb-2">50M+</div>
+                <p class="text-sm font-semibold text-slate-900 font-sans">Pieces checked/month</p>
             </div>
 
             <div class="relative p-8 rounded-3xl bg-slate-50 border border-sky-200 shadow-lg hover:shadow-xl hover:scale-[1.03] transition-all group text-center">
                 <div class="p-3.5 rounded-2xl bg-sky-100 text-sky-600 inline-flex mb-4 group-hover:bg-sky-500 group-hover:text-white transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 002 2h1.5a2.5 2.5 0 002.5-2.5V11a2 2 0 012-2h1.055M11 20.055V18a2 2 0 00-2-2h-1a2 2 0 00-2 2v2.055"></path></svg>
                 </div>
-                <div class="text-4xl sm:text-5xl font-bold text-sky-600 font-serif tracking-tight mb-2">25</div>
-                <p class="text-sm font-semibold text-slate-900 font-serif">Countries</p>
+                <div class="text-4xl sm:text-5xl font-bold text-sky-600 font-sans tracking-tight mb-2">25</div>
+                <p class="text-sm font-semibold text-slate-900 font-sans">Countries</p>
             </div>
         </div>
     </div>
@@ -130,10 +130,10 @@
 <section id="products" class="relative py-28 px-4 sm:px-6 lg:px-8 bg-slate-50">
     <div class="max-w-7xl mx-auto space-y-20">
         <div class="text-center space-y-4 max-w-3xl mx-auto">
-            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block font-serif">
+            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block font-sans">
                 Comprehensive Software Suite
             </span>
-            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 font-serif tracking-tight">
+            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 font-sans tracking-tight">
                 Designed for <span class="text-sky-600 italic">Smart Garment Factories</span>
             </h2>
         </div>
@@ -146,18 +146,18 @@
                         <div class="p-3.5 rounded-2xl bg-sky-100 text-sky-600 group-hover:bg-sky-500 group-hover:text-white transition-colors">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                         </div>
-                        <span class="text-xs font-semibold text-sky-700 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 font-serif">AI Powered</span>
+                        <span class="text-xs font-semibold text-sky-700 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 font-sans">AI Powered</span>
                     </div>
                     <div>
-                        <h3 class="text-3xl font-bold text-slate-900 font-serif group-hover:text-sky-600 transition-colors">Quality Control AI</h3>
-                        <p class="text-xs font-medium text-slate-500 mt-1 font-serif">Predict & Prevent Defects Inline</p>
+                        <h3 class="text-3xl font-bold text-slate-900 font-sans group-hover:text-sky-600 transition-colors">Quality Control AI</h3>
+                        <p class="text-xs font-medium text-slate-500 mt-1 font-sans">Predict & Prevent Defects Inline</p>
                     </div>
-                    <p class="text-sm text-slate-600 font-serif leading-relaxed">
+                    <p class="text-sm text-slate-600 font-sans leading-relaxed">
                         Flawless quality assurance powered by vision AI. Automate fabric roll inspection, stitching flaw detection, and inline quality logging to reduce defects by up to 35%.
                     </p>
                 </div>
                 <div class="pt-8 mt-8 border-t border-slate-100">
-                    <a href="{{ route('products.quality-control') }}" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-sky-700 font-serif">
+                    <a href="{{ route('products.quality-control') }}" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-sky-700 font-sans">
                         <span>Explore Quality Control Module</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
@@ -171,18 +171,18 @@
                         <div class="p-3.5 rounded-2xl bg-sky-100 text-sky-600 group-hover:bg-sky-500 group-hover:text-white transition-colors">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         </div>
-                        <span class="text-xs font-semibold text-sky-700 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 font-serif">Live Telemetry</span>
+                        <span class="text-xs font-semibold text-sky-700 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 font-sans">Live Telemetry</span>
                     </div>
                     <div>
-                        <h3 class="text-3xl font-bold text-slate-900 font-serif group-hover:text-sky-600 transition-colors">Production Tracking</h3>
-                        <p class="text-xs font-medium text-slate-500 mt-1 font-serif">End-to-End Real Time Visibility</p>
+                        <h3 class="text-3xl font-bold text-slate-900 font-sans group-hover:text-sky-600 transition-colors">Production Tracking</h3>
+                        <p class="text-xs font-medium text-slate-500 mt-1 font-sans">End-to-End Real Time Visibility</p>
                     </div>
-                    <p class="text-sm text-slate-600 font-serif leading-relaxed">
+                    <p class="text-sm text-slate-600 font-sans leading-relaxed">
                         Gain 100% transparent tracking across all production stages—from cutting room and sewing lines to finishing and final dispatch.
                     </p>
                 </div>
                 <div class="pt-8 mt-8 border-t border-slate-100">
-                    <a href="{{ route('products.production-tracking') }}" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-sky-700 font-serif">
+                    <a href="{{ route('products.production-tracking') }}" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-sky-700 font-sans">
                         <span>Explore Production Tracking</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
@@ -196,18 +196,18 @@
                         <div class="p-3.5 rounded-2xl bg-sky-100 text-sky-600 group-hover:bg-sky-500 group-hover:text-white transition-colors">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
                         </div>
-                        <span class="text-xs font-semibold text-sky-700 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 font-serif">IoT Connected</span>
+                        <span class="text-xs font-semibold text-sky-700 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 font-sans">IoT Connected</span>
                     </div>
                     <div>
-                        <h3 class="text-3xl font-bold text-slate-900 font-serif group-hover:text-sky-600 transition-colors">Machine Maintenance (OEE)</h3>
-                        <p class="text-xs font-medium text-slate-500 mt-1 font-serif">Equipment Health & Downtime Prevention</p>
+                        <h3 class="text-3xl font-bold text-slate-900 font-sans group-hover:text-sky-600 transition-colors">Machine Maintenance (OEE)</h3>
+                        <p class="text-xs font-medium text-slate-500 mt-1 font-sans">Equipment Health & Downtime Prevention</p>
                     </div>
-                    <p class="text-sm text-slate-600 font-serif leading-relaxed">
+                    <p class="text-sm text-slate-600 font-sans leading-relaxed">
                         Maximize overall equipment effectiveness (OEE). Monitor machine run hours, predict motor failures, and schedule servicing automatically.
                     </p>
                 </div>
                 <div class="pt-8 mt-8 border-t border-slate-100">
-                    <a href="{{ route('products.machine-maintenance') }}" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-sky-700 font-serif">
+                    <a href="{{ route('products.machine-maintenance') }}" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-sky-700 font-sans">
                         <span>Explore Machine Maintenance</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
@@ -221,18 +221,18 @@
                         <div class="p-3.5 rounded-2xl bg-sky-100 text-sky-600 group-hover:bg-sky-500 group-hover:text-white transition-colors">
                             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                         </div>
-                        <span class="text-xs font-semibold text-sky-700 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 font-serif">Smart Gantt</span>
+                        <span class="text-xs font-semibold text-sky-700 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 font-sans">Smart Gantt</span>
                     </div>
                     <div>
-                        <h3 class="text-3xl font-bold text-slate-900 font-serif group-hover:text-sky-600 transition-colors">Production Planning</h3>
-                        <p class="text-xs font-medium text-slate-500 mt-1 font-serif">Intelligent Scheduling & Line Optimization</p>
+                        <h3 class="text-3xl font-bold text-slate-900 font-sans group-hover:text-sky-600 transition-colors">Production Planning</h3>
+                        <p class="text-xs font-medium text-slate-500 mt-1 font-sans">Intelligent Scheduling & Line Optimization</p>
                     </div>
-                    <p class="text-sm text-slate-600 font-serif leading-relaxed">
+                    <p class="text-sm text-slate-600 font-sans leading-relaxed">
                         Schedule customer orders against exact line capacities, section skills, and delivery deadlines with an intuitive digital planner.
                     </p>
                 </div>
                 <div class="pt-8 mt-8 border-t border-slate-100">
-                    <a href="{{ route('products.production-planning') }}" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-sky-700 font-serif">
+                    <a href="{{ route('products.production-planning') }}" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 hover:text-sky-700 font-sans">
                         <span>Explore Production Planning</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                     </a>
@@ -243,10 +243,10 @@
         <!-- Garment Manufacturing Industry Modules Grid -->
         <div class="mt-16 pt-16 border-t border-slate-200/80 space-y-12">
             <div class="text-center space-y-3 max-w-2xl mx-auto">
-                <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block font-serif">
+                <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block font-sans">
                     Garment Industry Modules
                 </span>
-                <h3 class="text-3xl font-bold text-slate-900 font-serif">
+                <h3 class="text-3xl font-bold text-slate-900 font-sans">
                     End-to-End Digitalization for Apparel Factories
                 </h3>
             </div>
@@ -257,11 +257,11 @@
                     <div class="h-44 relative overflow-hidden bg-slate-100">
                         <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=600&q=80" alt="Quality Management System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-                        <span class="absolute bottom-3 left-3 text-xs font-semibold font-serif text-white bg-sky-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md">QMS AI</span>
+                        <span class="absolute bottom-3 left-3 text-xs font-semibold font-sans text-white bg-sky-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md">QMS AI</span>
                     </div>
                     <div class="p-5 space-y-2">
-                        <h4 class="text-lg font-bold text-slate-900 font-serif group-hover:text-sky-600 transition-colors">Quality Management System</h4>
-                        <p class="text-xs text-slate-600 font-serif leading-relaxed">
+                        <h4 class="text-lg font-bold text-slate-900 font-sans group-hover:text-sky-600 transition-colors">Quality Management System</h4>
+                        <p class="text-xs text-slate-600 font-sans leading-relaxed">
                             Inline fabric inspection, stitch defect tagging, and AQL automated scoring dashboards.
                         </p>
                     </div>
@@ -272,11 +272,11 @@
                     <div class="h-44 relative overflow-hidden bg-slate-100">
                         <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" alt="Production Tracking System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-                        <span class="absolute bottom-3 left-3 text-xs font-semibold font-serif text-white bg-sky-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md">RFID & Barcode</span>
+                        <span class="absolute bottom-3 left-3 text-xs font-semibold font-sans text-white bg-sky-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md">RFID & Barcode</span>
                     </div>
                     <div class="p-5 space-y-2">
-                        <h4 class="text-lg font-bold text-slate-900 font-serif group-hover:text-sky-600 transition-colors">Production Tracking System</h4>
-                        <p class="text-xs text-slate-600 font-serif leading-relaxed">
+                        <h4 class="text-lg font-bold text-slate-900 font-sans group-hover:text-sky-600 transition-colors">Production Tracking System</h4>
+                        <p class="text-xs text-slate-600 font-sans leading-relaxed">
                             Real-time bundle tracking across sewing lines with real-time WIP updates and operator efficiency metrics.
                         </p>
                     </div>
@@ -287,11 +287,11 @@
                     <div class="h-44 relative overflow-hidden bg-slate-100">
                         <img src="https://images.unsplash.com/photo-1604014237800-1c9102c219da?auto=format&fit=crop&w=600&q=80" alt="Cutting Room Digitisation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-                        <span class="absolute bottom-3 left-3 text-xs font-semibold font-serif text-white bg-sky-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md">Smart Spreading</span>
+                        <span class="absolute bottom-3 left-3 text-xs font-semibold font-sans text-white bg-sky-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md">Smart Spreading</span>
                     </div>
                     <div class="p-5 space-y-2">
-                        <h4 class="text-lg font-bold text-slate-900 font-serif group-hover:text-sky-600 transition-colors">Cutting Room Digitisation</h4>
-                        <p class="text-xs text-slate-600 font-serif leading-relaxed">
+                        <h4 class="text-lg font-bold text-slate-900 font-sans group-hover:text-sky-600 transition-colors">Cutting Room Digitisation</h4>
+                        <p class="text-xs text-slate-600 font-sans leading-relaxed">
                             Digital marker planning, fabric roll optimization, and automated ply-count tracking.
                         </p>
                     </div>
@@ -302,11 +302,11 @@
                     <div class="h-44 relative overflow-hidden bg-slate-100">
                         <img src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&w=600&q=80" alt="Fabric Inventory Management" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-                        <span class="absolute bottom-3 left-3 text-xs font-semibold font-serif text-white bg-sky-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md">Warehouse IoT</span>
+                        <span class="absolute bottom-3 left-3 text-xs font-semibold font-sans text-white bg-sky-600/90 backdrop-blur-sm px-2.5 py-1 rounded-md">Warehouse IoT</span>
                     </div>
                     <div class="p-5 space-y-2">
-                        <h4 class="text-lg font-bold text-slate-900 font-serif group-hover:text-sky-600 transition-colors">Fabric Inventory Management</h4>
-                        <p class="text-xs text-slate-600 font-serif leading-relaxed">
+                        <h4 class="text-lg font-bold text-slate-900 font-sans group-hover:text-sky-600 transition-colors">Fabric Inventory Management</h4>
+                        <p class="text-xs text-slate-600 font-sans leading-relaxed">
                             Barcode-driven roll allocation, shade grouping, shrinkage matching, and zero-loss fabric storage.
                         </p>
                     </div>
@@ -330,13 +330,13 @@
         }
     }">
         <div class="text-center space-y-4 max-w-3xl mx-auto">
-            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block font-serif">
+            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block font-sans">
                 Interactive Factory Intelligence
             </span>
-            <h2 class="text-4xl sm:text-5xl font-bold text-sky-600 font-serif tracking-tight leading-tight">
+            <h2 class="text-4xl sm:text-5xl font-bold text-sky-600 font-sans tracking-tight leading-tight">
                 Calculate Your Factory's Cost Savings
             </h2>
-            <p class="text-slate-900 text-base sm:text-lg font-serif">
+            <p class="text-slate-900 text-base sm:text-lg font-sans">
                 Adjust your factory capacity below to see instant cost reduction and productivity gains.
             </p>
         </div>
@@ -345,16 +345,16 @@
             <!-- Slider Controls Panel -->
             <div class="lg:col-span-6 p-8 sm:p-10 rounded-3xl bg-white border border-sky-200 shadow-xl space-y-8 flex flex-col justify-between">
                 <div>
-                    <h3 class="text-2xl font-bold text-sky-600 font-serif mb-6">Factory Parameters</h3>
+                    <h3 class="text-2xl font-bold text-sky-600 font-sans mb-6">Factory Parameters</h3>
 
                     <!-- Slider 1: Active Sewing Lines -->
                     <div class="space-y-3 mb-6">
-                        <div class="flex justify-between items-center text-slate-900 font-serif text-sm">
+                        <div class="flex justify-between items-center text-slate-900 font-sans text-sm">
                             <span class="font-semibold">Active Sewing Lines</span>
-                            <span class="text-sky-600 font-bold text-lg font-serif" x-text="lines + ' Lines'"></span>
+                            <span class="text-sky-600 font-bold text-lg font-sans" x-text="lines + ' Lines'"></span>
                         </div>
                         <input type="range" min="5" max="100" step="5" x-model="lines" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-500">
-                        <div class="flex justify-between text-xs text-slate-500 font-serif">
+                        <div class="flex justify-between text-xs text-slate-500 font-sans">
                             <span>5 Lines</span>
                             <span>50 Lines</span>
                             <span>100 Lines</span>
@@ -363,12 +363,12 @@
 
                     <!-- Slider 2: Daily Pieces per Line -->
                     <div class="space-y-3 mb-6">
-                        <div class="flex justify-between items-center text-slate-900 font-serif text-sm">
+                        <div class="flex justify-between items-center text-slate-900 font-sans text-sm">
                             <span class="font-semibold">Daily Garments per Line</span>
-                            <span class="text-sky-600 font-bold text-lg font-serif" x-text="pcsPerLine + ' pcs/day'"></span>
+                            <span class="text-sky-600 font-bold text-lg font-sans" x-text="pcsPerLine + ' pcs/day'"></span>
                         </div>
                         <input type="range" min="500" max="3000" step="100" x-model="pcsPerLine" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-500">
-                        <div class="flex justify-between text-xs text-slate-500 font-serif">
+                        <div class="flex justify-between text-xs text-slate-500 font-sans">
                             <span>500 pcs</span>
                             <span>1,500 pcs</span>
                             <span>3,000 pcs</span>
@@ -377,12 +377,12 @@
 
                     <!-- Slider 3: Rework Rate -->
                     <div class="space-y-3">
-                        <div class="flex justify-between items-center text-slate-900 font-serif text-sm">
+                        <div class="flex justify-between items-center text-slate-900 font-sans text-sm">
                             <span class="font-semibold">Current Defect / Re-work Rate</span>
-                            <span class="text-sky-600 font-bold text-lg font-serif" x-text="reworkRate + '%'"></span>
+                            <span class="text-sky-600 font-bold text-lg font-sans" x-text="reworkRate + '%'"></span>
                         </div>
                         <input type="range" min="2" max="12" step="1" x-model="reworkRate" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-500">
-                        <div class="flex justify-between text-xs text-slate-500 font-serif">
+                        <div class="flex justify-between text-xs text-slate-500 font-sans">
                             <span>2% (Low)</span>
                             <span>6% (Average)</span>
                             <span>12% (High)</span>
@@ -390,7 +390,7 @@
                     </div>
                 </div>
 
-                <div class="pt-4 border-t border-slate-100 flex items-center gap-3 text-xs text-slate-500 font-serif">
+                <div class="pt-4 border-t border-slate-100 flex items-center gap-3 text-xs text-slate-500 font-sans">
                     <svg class="w-4 h-4 text-sky-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     <span>Based on real shopfloor benchmarks across 500+ active apparel manufacturing lines.</span>
                 </div>
@@ -401,27 +401,27 @@
                 <div class="absolute -top-12 -right-12 w-48 h-48 bg-white/10 rounded-full blur-2xl pointer-events-none"></div>
 
                 <div class="space-y-6 relative z-10">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/20 border border-white/30 text-white text-xs font-semibold uppercase tracking-wider font-serif">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/20 border border-white/30 text-white text-xs font-semibold uppercase tracking-wider font-sans">
                         Estimated ROI Results
                     </div>
 
                     <div>
-                        <div class="text-xs font-semibold uppercase tracking-wider text-sky-200 font-serif mb-1">Projected Monthly Savings</div>
-                        <div class="text-4xl sm:text-5xl font-bold font-serif tracking-tight text-white">
+                        <div class="text-xs font-semibold uppercase tracking-wider text-sky-200 font-sans mb-1">Projected Monthly Savings</div>
+                        <div class="text-4xl sm:text-5xl font-bold font-sans tracking-tight text-white">
                             ₹ <span x-text="monthlySavings"></span>
                         </div>
-                        <p class="text-xs text-sky-100 mt-1 font-serif">Saved from fabric scrap, inline re-works, and downtime</p>
+                        <p class="text-xs text-sky-100 mt-1 font-sans">Saved from fabric scrap, inline re-works, and downtime</p>
                     </div>
 
                     <div class="grid grid-cols-2 gap-4 pt-4 border-t border-white/20">
                         <div>
-                            <div class="text-3xl font-bold font-serif text-white" x-text="garmentsSaved"></div>
-                            <div class="text-xs text-sky-100 font-serif mt-0.5">Garments Saved / Month</div>
+                            <div class="text-3xl font-bold font-sans text-white" x-text="garmentsSaved"></div>
+                            <div class="text-xs text-sky-100 font-sans mt-0.5">Garments Saved / Month</div>
                         </div>
 
                         <div>
-                            <div class="text-3xl font-bold font-serif text-white">+37%</div>
-                            <div class="text-xs text-sky-100 font-serif mt-0.5">Overall Line OEE Boost</div>
+                            <div class="text-3xl font-bold font-sans text-white">+37%</div>
+                            <div class="text-xs text-sky-100 font-sans mt-0.5">Overall Line OEE Boost</div>
                         </div>
                     </div>
                 </div>
@@ -441,20 +441,20 @@
 <section id="interactive-3d" class="relative py-28 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-200" x-data="{ activeTab: 'core' }">
     <div class="max-w-7xl mx-auto space-y-16 relative z-10">
         <div class="text-center space-y-4 max-w-3xl mx-auto">
-            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block font-serif">
+            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block font-sans">
                 Interactive 3D Engine
             </span>
-            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 font-serif tracking-tight">
+            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 font-sans tracking-tight">
                 Manipulate & Inspect Our <br />
                 <span class="text-sky-600 italic">3D WebGL Models</span>
             </h2>
-            <p class="text-slate-600 text-base sm:text-lg font-serif">
+            <p class="text-slate-600 text-base sm:text-lg font-sans">
                 Click any tab below to switch models and drag with your mouse to rotate in 3D space.
             </p>
         </div>
 
         <!-- Tab Buttons -->
-        <div class="flex flex-wrap items-center justify-center gap-3 font-serif">
+        <div class="flex flex-wrap items-center justify-center gap-3 font-sans">
             <button @click="activeTab = 'core'; window.switch3DViewport('core')"
                     :class="activeTab === 'core' ? 'bg-sky-500 text-white font-medium shadow-md shadow-sky-500/20 scale-105' : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'"
                     class="px-6 py-3.5 rounded-2xl text-sm transition-all">
@@ -483,16 +483,16 @@
         <!-- 3D Canvas Box -->
         <div class="relative rounded-3xl bg-slate-50 border border-sky-100 p-6 sm:p-8 shadow-2xl overflow-hidden min-h-[560px] flex flex-col justify-between">
             <div class="flex items-center justify-between z-20 mb-4">
-                <div class="flex items-center gap-2 text-xs font-serif text-sky-700 bg-white px-3 py-1.5 rounded-full border border-sky-200 shadow-sm">
+                <div class="flex items-center gap-2 text-xs font-sans text-sky-700 bg-white px-3 py-1.5 rounded-full border border-sky-200 shadow-sm">
                     <span class="w-2 h-2 rounded-full bg-sky-500 animate-ping"></span>
                     <span>WEBGL 3D ENGINE ACTIVE</span>
                 </div>
-                <div class="text-xs text-slate-500 font-serif">DRAG MOUSE TO ROTATE</div>
+                <div class="text-xs text-slate-500 font-sans">DRAG MOUSE TO ROTATE</div>
             </div>
 
             <div id="interactive-3d-viewport" class="w-full h-[480px] relative z-10 cursor-grab active:cursor-grabbing"></div>
 
-            <div id="viewport-description" class="mt-4 pt-4 border-t border-slate-200 text-center text-sm font-serif text-slate-600 z-20 italic">
+            <div id="viewport-description" class="mt-4 pt-4 border-t border-slate-200 text-center text-sm font-sans text-slate-600 z-20 italic">
                 Interactive 3D digital core representing real-time factory telemetry.
             </div>
         </div>
@@ -503,13 +503,13 @@
 <section class="relative py-28 px-4 sm:px-6 lg:px-8 bg-slate-50 border-t border-slate-200 overflow-hidden">
     <div class="max-w-7xl mx-auto space-y-16">
         <div class="text-center space-y-4 max-w-3xl mx-auto">
-            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block font-serif">
+            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block font-sans">
                 Global Network
             </span>
-            <h2 class="text-4xl sm:text-5xl font-bold text-sky-600 font-serif tracking-tight leading-tight">
+            <h2 class="text-4xl sm:text-5xl font-bold text-sky-600 font-sans tracking-tight leading-tight">
                 Trusted by Industry Leaders
             </h2>
-            <p class="text-slate-900 text-base sm:text-lg font-serif">
+            <p class="text-slate-900 text-base sm:text-lg font-sans">
                 Partnering with world-class textile & garment manufacturing pioneers
             </p>
         </div>
@@ -529,8 +529,8 @@
                             <img src="{{ asset('images/partners/shahi.png') }}" alt="Shahi Exports Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">Shahi Exports</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">Shahi Exports</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
 
@@ -540,8 +540,8 @@
                             <img src="{{ asset('images/partners/arvind.png') }}" alt="Arvind Ltd Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">Arvind Ltd</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">Arvind Ltd</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
 
@@ -551,8 +551,8 @@
                             <img src="{{ asset('images/partners/pds.png') }}" alt="PDS Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">PDS</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">PDS</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
 
@@ -562,8 +562,8 @@
                             <img src="{{ asset('images/partners/modelama.png') }}" alt="Modelama Exports Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">Modelama Exports</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">Modelama Exports</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
 
@@ -573,8 +573,8 @@
                             <img src="{{ asset('images/partners/armstrong.png') }}" alt="Armstrong Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">Armstrong</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">Armstrong</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
 
@@ -584,8 +584,8 @@
                             <img src="{{ asset('images/partners/penguin.png') }}" alt="Penguin Apparels Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">Penguin Apparels</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">Penguin Apparels</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
 
@@ -595,8 +595,8 @@
                             <img src="{{ asset('images/partners/sahana.png') }}" alt="Sahana Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">Sahana</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">Sahana</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
 
@@ -606,8 +606,8 @@
                             <img src="{{ asset('images/partners/trendyfits.png') }}" alt="Trendy Fits Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">Trendy Fits</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">Trendy Fits</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
 
@@ -617,8 +617,8 @@
                             <img src="{{ asset('images/partners/mehala.png') }}" alt="Mehala Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">Mehala</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">Mehala</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
                 </div>
@@ -631,8 +631,8 @@
                             <img src="{{ asset('images/partners/shahi.png') }}" alt="Shahi Exports Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">Shahi Exports</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">Shahi Exports</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
 
@@ -642,8 +642,8 @@
                             <img src="{{ asset('images/partners/arvind.png') }}" alt="Arvind Ltd Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">Arvind Ltd</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">Arvind Ltd</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
 
@@ -653,8 +653,8 @@
                             <img src="{{ asset('images/partners/pds.png') }}" alt="PDS Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">PDS</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">PDS</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
 
@@ -664,8 +664,8 @@
                             <img src="{{ asset('images/partners/modelama.png') }}" alt="Modelama Exports Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">Modelama Exports</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">Modelama Exports</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
 
@@ -675,8 +675,8 @@
                             <img src="{{ asset('images/partners/armstrong.png') }}" alt="Armstrong Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">Armstrong</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">Armstrong</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
 
@@ -686,8 +686,8 @@
                             <img src="{{ asset('images/partners/penguin.png') }}" alt="Penguin Apparels Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">Penguin Apparels</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">Penguin Apparels</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
 
@@ -697,8 +697,8 @@
                             <img src="{{ asset('images/partners/sahana.png') }}" alt="Sahana Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">Sahana</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">Sahana</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
 
@@ -708,8 +708,8 @@
                             <img src="{{ asset('images/partners/trendyfits.png') }}" alt="Trendy Fits Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">Trendy Fits</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">Trendy Fits</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
 
@@ -719,8 +719,8 @@
                             <img src="{{ asset('images/partners/mehala.png') }}" alt="Mehala Logo" class="max-h-9 w-auto object-contain group-hover:scale-110 transition-transform">
                         </div>
                         <div>
-                            <h3 class="text-base font-bold text-sky-600 font-serif group-hover:text-sky-700 transition-colors">Mehala</h3>
-                            <p class="text-xs font-semibold text-slate-900 font-serif mt-0.5">Strategic Partner</p>
+                            <h3 class="text-base font-bold text-sky-600 font-sans group-hover:text-sky-700 transition-colors">Mehala</h3>
+                            <p class="text-xs font-semibold text-slate-900 font-sans mt-0.5">Strategic Partner</p>
                         </div>
                     </div>
                 </div>

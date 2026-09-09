@@ -5,6 +5,8 @@ ENV PHP_ERRORS_STDERR 1
 ENV ERRORS 0
 ENV TOKEN 1
 ENV RUN_SCRIPTS 1
+ENV LARA_APP 1
+ENV NGINX_SITES_CONF /var/www/html/conf/nginx/site.conf
 
 WORKDIR /var/www/html
 

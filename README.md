@@ -1,59 +1,167 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Track Tech Solution — Digital Intelligence for Garment Manufacturing
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A modern, high-performance web platform built for apparel and textile manufacturing operations. The project provides comprehensive product showcases, interactive 3D WebGL model viewports, a real-time factory ROI calculator, an animated partner marquee, and live demo booking functionality for garment digitization systems.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🛠️ Tech Stack
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Backend Framework**: PHP 8.2+ with Laravel 12 (MVC Architecture)
+- **Templating Engine**: Laravel Blade Templating Engine (`.blade.php`)
+- **Styling & Design System**: Tailwind CSS v3 with official `Poppins` (Headings) and `Roboto` (Body copy) typography
+- **3D Graphics & Interactivity**: Three.js (WebGL 3D Engine) & Alpine.js (Reactive UI State Management)
+- **Build System**: Vite 7 Asset Bundler (`npm run build`)
+- **Database**: SQLite (`database/database.sqlite`)
+- **Containerization & Hosting**: Docker, Nginx, and Render Cloud Deployment
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## ✨ Application Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### 1. Product Suite Showcase
+Dedicated interactive product showcase pages for key garment manufacturing solutions:
+- **Quality Control AI**: Defect prediction, inline fabric inspection, and stitch flaw detection.
+- **Production Tracking**: Real-time RFID & barcode bundle tracking from cut table to final dispatch.
+- **Machine Maintenance (OEE)**: Predictive motor uptime monitoring, run-hour telemetry, and technician dispatch.
+- **Production Planning**: Smart Gantt scheduling, line load balancing, and delay simulation.
+- **Cutting Room Digitisation & Inventory**: Marker optimization, ply-count tracking, and zero-loss fabric roll storage.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 2. Interactive 3D WebGL Viewport Switcher
+Powered by Three.js WebGL canvas animations allowing visitors to manipulate 3D models in real-time:
+- **3D Digital Core**: Central factory telemetry representation.
+- **3D Quality Scanner**: Laser inspection head model.
+- **3D Gear System**: Interlocked gear system for machine maintenance.
+- **3D Multi-Facility Nodes**: Network graph for multi-factory scheduling.
 
-## Laravel Sponsors
+### 3. Interactive Factory ROI & Cost Savings Calculator
+- Real-time reactive sliders for **Active Sewing Lines**, **Daily Garment Pieces**, and **Inline Defect Rate**.
+- Dynamic formula calculations for **Projected Monthly Savings (₹)**, **Garments Saved from Rework**, and **+37% OEE Boost**.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 4. Continuous Moving Partner Marquee Slider
+Animated horizontal ticker displaying official partner company logos:
+- **Arvind Ltd**, **Shahi Exports**, **PDS**, **Modelama Exports**, **Armstrong**, **Penguin Apparels**, **Sahana**, **Trendy Fits**, and **Mehala**.
 
-### Premium Partners
+### 5. Inquiry & Live Demo Booking System
+- Personal walkthrough demo booking modal and contact form.
+- Form validation with CSRF protection, AJAX submission, and persistent database storage.
+- Dispatches automated confirmation emails using Laravel Mail.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 6. Floating Quick Action Glass Dock
+- Glassmorphic floating dock at the bottom-right corner providing direct phone support (+91 78689 25566) and instant demo booking access across all pages.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 📁 Project Structure
 
-## Code of Conduct
+```text
+main_page/
+├── app/
+│   ├── Http/Controllers/        # DemoController and PageController for routes & forms
+│   └── Models/                  # DemoRequest & Inquiry Eloquent models
+├── database/
+│   ├── migrations/              # SQLite database schema migrations
+│   └── database.sqlite          # SQLite database storage file
+├── resources/
+│   ├── css/app.css              # Custom Tailwind CSS rules & Poppins/Roboto fonts
+│   ├── js/app.js                # Three.js 3D viewport switcher scripts
+│   └── views/                   # Blade templates
+│       ├── layouts/             # Base HTML app shell (app.blade.php)
+│       ├── partials/            # Navbar, Footer, and Demo Modal partials
+│       ├── products/            # Quality Control, Tracking, Maintenance, Planning pages
+│       ├── home.blade.php       # Hero video, ROI calculator, 3D Engine, Partner Marquee
+│       └── contact.blade.php    # Contact form & headquarters details
+├── public/
+│   ├── build/                   # Production Vite-compiled CSS and JS bundles
+│   ├── images/partners/         # Clean transparent company logos
+│   └── videos/                  # H.264 high-definition background video (garment-bg.mp4)
+├── Dockerfile                   # Nginx + PHP-FPM container image for Render
+└── .dockerignore                # Production container file ignore rules
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 💻 Local Development Setup
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Prerequisites
+- **PHP**: 8.2 or newer installed locally
+- **Composer**: PHP package manager
+- **Node.js & NPM**: Node 18+ for Vite asset compilation
+- **Git**
 
-## License
+### Setup Steps
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/track-tech-solution.git
+   cd track-tech-solution/main_page
+   ```
+
+2. **Install PHP and Node dependencies**:
+   ```bash
+   composer install
+   npm install
+   ```
+
+3. **Configure Environment File**:
+   ```bash
+   cp .env.example .env
+   ```
+
+4. **Generate Application Encryption Key**:
+   ```bash
+   php artisan key:generate
+   ```
+
+5. **Initialize SQLite Database & Run Migrations**:
+   ```bash
+   touch database/database.sqlite
+   php artisan migrate
+   ```
+
+6. **Build Frontend Production Assets**:
+   ```bash
+   npm run build
+   ```
+
+7. **Start Local Development Server**:
+   ```bash
+   php artisan serve
+   ```
+   Access the website at **[http://127.0.0.1:8000](http://127.0.0.1:8000)** in your web browser.
+
+---
+
+## 📧 Mail Configuration
+
+To send real-time email notifications for demo requests and contact form submissions, configure SMTP credentials in your `.env` file:
+
+```env
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=your_email@gmail.com
+MAIL_PASSWORD=your_app_password
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=your_email@gmail.com
+MAIL_FROM_NAME="Track Tech Solution"
+```
+
+*Note: If mail settings are left default, form submissions will still successfully persist in the SQLite database while mail attempts are safely logged.*
+
+---
+
+## 🐳 Cloud Deployment on Render
+
+The repository includes a pre-configured `Dockerfile` built on `richarvey/nginx-php-fpm:3.1.6` for automated deployment on **Render.com**:
+
+1. Push code to your **GitHub** repository.
+2. Log in to [Render Dashboard](https://dashboard.render.com) → **New +** → **Web Service**.
+3. Select **Docker** as the Runtime environment.
+4. Set the following **Environment Variables**:
+   - `APP_ENV`: `production`
+   - `APP_DEBUG`: `false`
+   - `APP_KEY`: `base64:YOUR_GENERATED_KEY_HERE`
+   - `APP_URL`: `https://YOUR_APP.onrender.com`
+   - `DB_CONNECTION`: `sqlite`
+   - `DB_DATABASE`: `/var/www/html/database/database.sqlite`
+5. Deploy! Render will build the container, compile Vite assets, set document root to `/public`, and launch Nginx.

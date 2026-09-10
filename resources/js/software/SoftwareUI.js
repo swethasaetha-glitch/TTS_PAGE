@@ -1,9 +1,9 @@
 /**
- * Track Tech Solution — High-Tech Software UI Dashboard Animations & Simulations
- * Replaces abstract 3D shapes with realistic Garment Manufacturing Software UIs.
+ * Track Tech Solution — Monday.com Style Light SaaS Software Product Boards
+ * Clean, bright, modern UI dashboards with vibrant pastel status pills,
+ * operator avatars, interactive progress bars, and garment manufacturing workflows.
  */
 
-// Global active interval handles for cleanup
 let activeIntervals = [];
 
 function clearSoftwareIntervals() {
@@ -12,218 +12,7 @@ function clearSoftwareIntervals() {
 }
 
 /**
- * 1. AI QUALITY CONTROL SOFTWARE STUDIO
- */
-export function initQualityControlSoftware(containerId) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    clearSoftwareIntervals();
-
-    container.innerHTML = `
-        <div class="w-full h-full bg-slate-900 rounded-2xl border border-sky-500/30 overflow-hidden shadow-2xl flex flex-col font-sans text-white">
-            <!-- Software App Title Bar -->
-            <div class="px-5 py-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <div class="flex gap-1.5">
-                        <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
-                        <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
-                        <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
-                    </div>
-                    <span class="text-xs font-semibold tracking-wide text-slate-300">TTS Quality AI Vision Studio v4.2</span>
-                </div>
-                <div class="flex items-center gap-2 text-[11px] bg-sky-500/20 text-sky-400 border border-sky-500/40 px-3 py-1 rounded-full font-mono">
-                    <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
-                    <span>LIVE AI CAMERA STREAM — LINE 04</span>
-                </div>
-            </div>
-
-            <!-- Software Main Workspace Grid -->
-            <div class="flex-grow grid grid-cols-1 lg:grid-cols-12 p-4 sm:p-6 gap-4 sm:gap-6 bg-slate-900/90 overflow-y-auto">
-                <!-- Left: Interactive AI Camera Viewport (Canvas) -->
-                <div class="lg:col-span-7 relative bg-slate-950 rounded-xl border border-sky-500/20 overflow-hidden flex flex-col justify-between min-h-[280px]">
-                    <canvas id="qc-canvas" class="absolute inset-0 w-full h-full object-cover z-0"></canvas>
-                    
-                    <!-- Top Overlay Info -->
-                    <div class="relative z-10 p-3 flex justify-between items-start bg-gradient-to-b from-slate-950/90 to-transparent">
-                        <div class="text-xs font-mono text-emerald-400 bg-slate-900/80 border border-emerald-500/30 px-2.5 py-1 rounded">
-                            FPS: 60 | FPS DROP: 0 | LATENCY: 12ms
-                        </div>
-                        <div class="text-xs font-mono text-sky-400 bg-sky-950/80 border border-sky-500/30 px-2.5 py-1 rounded">
-                            AI CONFIDENCE: 99.4%
-                        </div>
-                    </div>
-
-                    <!-- Bottom Overlay Log -->
-                    <div class="relative z-10 p-3 bg-gradient-to-t from-slate-950/95 to-transparent flex justify-between items-center text-xs">
-                        <div class="flex items-center gap-2">
-                            <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold font-mono">PASS AQL 1.5</span>
-                            <span class="text-slate-300">Fabric Roll #8492-B</span>
-                        </div>
-                        <span id="qc-timestamp" class="text-slate-400 font-mono"></span>
-                    </div>
-                </div>
-
-                <!-- Right: Analytics & Defect Stream Panel -->
-                <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
-                    <!-- Metrics Cards -->
-                    <div class="grid grid-cols-2 gap-3">
-                        <div class="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800">
-                            <div class="text-[11px] text-slate-400 font-medium uppercase tracking-wider">Pass Rate</div>
-                            <div class="text-2xl font-bold text-emerald-400 font-mono mt-0.5">98.6%</div>
-                            <div class="text-[10px] text-emerald-400/80 mt-1">↑ 2.4% vs Manual Inspection</div>
-                        </div>
-                        <div class="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800">
-                            <div class="text-[11px] text-slate-400 font-medium uppercase tracking-wider">Defects Prevented</div>
-                            <div class="text-2xl font-bold text-sky-400 font-mono mt-0.5">1,248</div>
-                            <div class="text-[10px] text-sky-400/80 mt-1">This Shift</div>
-                        </div>
-                    </div>
-
-                    <!-- Live Defect Event Feed -->
-                    <div class="p-4 rounded-xl bg-slate-950/90 border border-slate-800 space-y-3 flex-grow">
-                        <div class="text-xs font-semibold text-slate-300 uppercase tracking-wider border-b border-slate-800 pb-2 flex justify-between">
-                            <span>Real-Time Defect Log</span>
-                            <span class="text-sky-400 text-[10px]">LIVE UPDATES</span>
-                        </div>
-                        <div id="qc-log-list" class="space-y-2 text-xs font-mono max-h-[140px] overflow-y-auto">
-                            <!-- Injected by script -->
-                        </div>
-                    </div>
-
-                    <!-- Action Control -->
-                    <div class="p-3 rounded-xl bg-sky-950/40 border border-sky-500/30 flex items-center justify-between text-xs">
-                        <span class="text-sky-300 font-medium">Auto-Stop Conveyor on Major Defect</span>
-                        <div class="w-8 h-4 bg-sky-500 rounded-full relative p-0.5 cursor-pointer">
-                            <div class="w-3 h-3 bg-white rounded-full ml-auto"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-
-    // Canvas Laser Scan Animation
-    const canvas = document.getElementById('qc-canvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let scanY = 0;
-    let animId;
-
-    const resizeCanvas = () => {
-        canvas.width = canvas.parentElement.clientWidth;
-        canvas.height = canvas.parentElement.clientHeight;
-    };
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    // Defect boxes
-    const defects = [
-        { x: 0.2, y: 0.3, w: 0.25, h: 0.2, label: 'STITCH FLAW 99%', color: '#ef4444' },
-        { x: 0.6, y: 0.6, w: 0.2, h: 0.18, label: 'SHADE VARIANCE 97%', color: '#f59e0b' },
-    ];
-
-    function drawQC() {
-        ctx.fillStyle = '#020617';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        // Draw Fabric Texture Grid
-        ctx.strokeStyle = '#1e293b';
-        ctx.lineWidth = 1;
-        const step = 20;
-        for (let x = 0; x < canvas.width; x += step) {
-            ctx.beginPath();
-            ctx.moveTo(x, 0);
-            ctx.lineTo(x, canvas.height);
-            ctx.stroke();
-        }
-        for (let y = 0; y < canvas.height; y += step) {
-            ctx.beginPath();
-            ctx.moveTo(0, y);
-            ctx.lineTo(canvas.width, y);
-            ctx.stroke();
-        }
-
-        // Draw Laser Scan Line
-        scanY += 2;
-        if (scanY > canvas.height) scanY = 0;
-
-        ctx.shadowColor = '#38bdf8';
-        ctx.shadowBlur = 15;
-        ctx.strokeStyle = '#38bdf8';
-        ctx.lineWidth = 3;
-        ctx.beginPath();
-        ctx.moveTo(0, scanY);
-        ctx.lineTo(canvas.width, scanY);
-        ctx.stroke();
-        ctx.shadowBlur = 0;
-
-        // Draw Laser Glow Overlay
-        const grad = ctx.createLinearGradient(0, scanY - 30, 0, scanY);
-        grad.addColorStop(0, 'rgba(56, 189, 248, 0)');
-        grad.addColorStop(1, 'rgba(56, 189, 248, 0.25)');
-        ctx.fillStyle = grad;
-        ctx.fillRect(0, scanY - 30, canvas.width, 30);
-
-        // Draw Defect Bounding Boxes
-        defects.forEach(d => {
-            const bx = d.x * canvas.width;
-            const by = d.y * canvas.height;
-            const bw = d.w * canvas.width;
-            const bh = d.h * canvas.height;
-
-            ctx.strokeStyle = d.color;
-            ctx.lineWidth = 2;
-            ctx.strokeRect(bx, by, bw, bh);
-
-            ctx.fillStyle = d.color;
-            ctx.fillRect(bx, by - 18, bw, 18);
-
-            ctx.fillStyle = '#ffffff';
-            ctx.font = '10px monospace';
-            ctx.fillText(d.label, bx + 4, by - 5);
-        });
-
-        animId = requestAnimationFrame(drawQC);
-    }
-    drawQC();
-
-    // Populate Defect Log Feed
-    const logList = document.getElementById('qc-log-list');
-    const logs = [
-        { time: '18:42:01', type: 'Stitch Skip', line: 'Line 04', status: 'Flagged', color: 'text-red-400' },
-        { time: '18:41:45', type: 'Needle Cut', line: 'Line 02', status: 'Corrected', color: 'text-amber-400' },
-        { time: '18:40:12', type: 'Fabric Stain', line: 'Line 08', status: 'Logged', color: 'text-sky-400' },
-        { time: '18:38:50', type: 'Thread Tension', line: 'Line 01', status: 'Passed', color: 'text-emerald-400' },
-    ];
-
-    if (logList) {
-        logList.innerHTML = logs.map(l => `
-            <div class="flex justify-between items-center bg-slate-900/60 p-2 rounded border border-slate-800">
-                <span class="text-slate-400">${l.time}</span>
-                <span class="text-slate-200 font-semibold">${l.type}</span>
-                <span class="${l.color}">${l.status}</span>
-            </div>
-        `).join('');
-    }
-
-    const tsEl = document.getElementById('qc-timestamp');
-    if (tsEl) {
-        const timer = setInterval(() => {
-            tsEl.innerText = new Date().toLocaleTimeString();
-        }, 1000);
-        activeIntervals.push(timer);
-    }
-
-    return () => {
-        cancelAnimationFrame(animId);
-        window.removeEventListener('resize', resizeCanvas);
-        clearSoftwareIntervals();
-    };
-}
-
-
-/**
- * 2. PRODUCTION TRACKING SYSTEM (PTS) COMMAND CENTER
+ * 1. MONDAY.COM GARMENT PRODUCTION TRACKING BOARD (DEFAULT HERO BOARD)
  */
 export function initProductionTrackingSoftware(containerId) {
     const container = document.getElementById(containerId);
@@ -231,115 +20,207 @@ export function initProductionTrackingSoftware(containerId) {
     clearSoftwareIntervals();
 
     container.innerHTML = `
-        <div class="w-full h-full bg-slate-900 rounded-2xl border border-sky-500/30 overflow-hidden shadow-2xl flex flex-col font-sans text-white">
-            <!-- App Header -->
-            <div class="px-5 py-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
+        <div class="w-full h-full bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-2xl flex flex-col font-sans text-slate-800">
+            <!-- Monday.com Top Navigation & Action Header -->
+            <div class="px-5 py-3.5 bg-slate-50 border-b border-slate-200 flex flex-wrap items-center justify-between gap-3">
                 <div class="flex items-center gap-3">
-                    <span class="text-xs font-semibold tracking-wide text-slate-300">TTS Production Control Command Center v4.2</span>
+                    <div class="flex gap-1.5">
+                        <span class="w-3 h-3 rounded-full bg-rose-400 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+                        <span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>
+                    </div>
+                    <div class="h-4 w-px bg-slate-300 mx-1"></div>
+                    <span class="text-sm font-bold text-slate-800 flex items-center gap-2">
+                        <span>🧵 Garment Sewing Line Production Board</span>
+                        <span class="text-[10px] font-semibold bg-sky-100 text-sky-700 px-2 py-0.5 rounded-full border border-sky-200">Main Workspace</span>
+                    </span>
                 </div>
-                <div class="flex items-center gap-2 text-[11px] bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 px-3 py-1 rounded-full font-mono">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span>12/12 SEWING LINES ACTIVE</span>
+
+                <div class="flex items-center gap-2 text-xs">
+                    <button class="px-3 py-1.5 rounded-lg bg-sky-600 hover:bg-sky-700 text-white font-semibold flex items-center gap-1.5 shadow-sm transition-all">
+                        <span>+ New Order</span>
+                    </button>
+                    <div class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-600 font-medium flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path></svg>
+                        <span>Filter</span>
+                    </div>
+                    <div class="px-3 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-600 font-medium flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"></path></svg>
+                        <span>Sort</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- Command Center Body -->
-            <div class="flex-grow p-4 sm:p-6 space-y-4 bg-slate-900/90 overflow-y-auto">
-                <!-- Top Summary Metrics -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                    <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
-                        <div class="text-[11px] text-slate-400 uppercase font-medium">Target Pcs (Today)</div>
-                        <div class="text-2xl font-bold text-white font-mono mt-0.5">24,000</div>
-                    </div>
-                    <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
-                        <div class="text-[11px] text-slate-400 uppercase font-medium">Actual Checked</div>
-                        <div class="text-2xl font-bold text-sky-400 font-mono mt-0.5" id="pts-actual">19,840</div>
-                    </div>
-                    <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
-                        <div class="text-[11px] text-slate-400 uppercase font-medium">Shopfloor Efficiency</div>
-                        <div class="text-2xl font-bold text-emerald-400 font-mono mt-0.5">92.4%</div>
-                    </div>
-                    <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
-                        <div class="text-[11px] text-slate-400 uppercase font-medium">RFID Scan Rate</div>
-                        <div class="text-2xl font-bold text-indigo-400 font-mono mt-0.5">480 scans/m</div>
-                    </div>
+            <!-- Board Metrics Bar -->
+            <div class="px-5 py-2.5 bg-slate-100/70 border-b border-slate-200 grid grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                    <span class="text-slate-600">Active Sewing Lines:</span>
+                    <strong class="text-slate-900 font-bold">12 / 12 Lines</strong>
                 </div>
-
-                <!-- Live Sewing Line Grid -->
-                <div class="bg-slate-950 rounded-xl border border-slate-800 p-4 space-y-3">
-                    <div class="flex justify-between items-center border-b border-slate-800 pb-2">
-                        <span class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Live Sewing Line Telemetry</span>
-                        <span class="text-[11px] text-sky-400 font-mono">UPDATED 1 sec ago</span>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs font-mono">
-                        <!-- Line 01 -->
-                        <div class="p-3 rounded-lg bg-slate-900 border border-emerald-500/30 space-y-2">
-                            <div class="flex justify-between items-center">
-                                <span class="font-bold text-white">LINE 01 — DENIM JACKETS</span>
-                                <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[10px]">96% OPTIMAL</span>
-                            </div>
-                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                                <div class="bg-emerald-500 h-full w-[96%]"></div>
-                            </div>
-                            <div class="flex justify-between text-[11px] text-slate-400">
-                                <span>Output: 1,840 / 1,900 pcs</span>
-                                <span>Op Eff: 94%</span>
-                            </div>
-                        </div>
-
-                        <!-- Line 02 -->
-                        <div class="p-3 rounded-lg bg-slate-900 border border-sky-500/30 space-y-2">
-                            <div class="flex justify-between items-center">
-                                <span class="font-bold text-white">LINE 02 — POLO SHIRTS</span>
-                                <span class="px-2 py-0.5 rounded bg-sky-500/20 text-sky-400 text-[10px]">91% RUNNING</span>
-                            </div>
-                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                                <div class="bg-sky-400 h-full w-[91%]"></div>
-                            </div>
-                            <div class="flex justify-between text-[11px] text-slate-400">
-                                <span>Output: 2,100 / 2,300 pcs</span>
-                                <span>Op Eff: 90%</span>
-                            </div>
-                        </div>
-
-                        <!-- Line 03 -->
-                        <div class="p-3 rounded-lg bg-slate-900 border border-amber-500/30 space-y-2">
-                            <div class="flex justify-between items-center">
-                                <span class="font-bold text-white">LINE 03 — WOVEN TROUSERS</span>
-                                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 text-[10px]">BOTTLENECK</span>
-                            </div>
-                            <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                                <div class="bg-amber-400 h-full w-[74%]"></div>
-                            </div>
-                            <div class="flex justify-between text-[11px] text-slate-400">
-                                <span>Output: 1,480 / 2,000 pcs</span>
-                                <span>Op Eff: 76%</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
+                    <span class="text-slate-600">Target Output:</span>
+                    <strong class="text-slate-900 font-bold">24,000 pcs</strong>
                 </div>
-
-                <!-- RFID Live Event Log Stream -->
-                <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 text-xs font-mono flex items-center justify-between">
-                    <div class="flex items-center gap-3">
-                        <span class="px-2 py-1 rounded bg-sky-500/20 text-sky-400 font-bold">RFID SCAN #90218</span>
-                        <span class="text-slate-300">Bundle #4829 -> Station 14 (Sleeve Hemming)</span>
-                    </div>
-                    <span class="text-emerald-400 font-semibold">VERIFIED</span>
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                    <span class="text-slate-600">Actual Inspected:</span>
+                    <strong class="text-sky-600 font-bold font-mono" id="pts-actual-val">19,840 pcs</strong>
                 </div>
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
+                    <span class="text-slate-600">Shopfloor OEE:</span>
+                    <strong class="text-emerald-600 font-bold font-mono">94.2% Optimal</strong>
+                </div>
+            </div>
+
+            <!-- Workflow Table Grid (Monday.com Style) -->
+            <div class="flex-grow p-4 overflow-x-auto overflow-y-auto">
+                <table class="w-full text-left border-collapse text-xs font-sans">
+                    <thead>
+                        <tr class="border-b border-slate-200 text-slate-500 uppercase tracking-wider text-[11px]">
+                            <th class="py-2.5 px-3 font-semibold">Order / Style Name</th>
+                            <th class="py-2.5 px-3 font-semibold">Line #</th>
+                            <th class="py-2.5 px-3 font-semibold">Stage</th>
+                            <th class="py-2.5 px-3 font-semibold">Status</th>
+                            <th class="py-2.5 px-3 font-semibold">Operator</th>
+                            <th class="py-2.5 px-3 font-semibold">Line Progress</th>
+                            <th class="py-2.5 px-3 font-semibold">Quality Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 font-medium">
+                        <!-- Row 1 -->
+                        <tr class="hover:bg-slate-50 transition-colors group">
+                            <td class="py-3 px-3 font-bold text-slate-900 flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded bg-sky-500"></span>
+                                <span>Polo Shirt #PO-402 (Ralph Lauren)</span>
+                            </td>
+                            <td class="py-3 px-3 text-slate-600 font-mono">Line 01</td>
+                            <td class="py-3 px-3 text-slate-600">Sleeve Stitching</td>
+                            <td class="py-3 px-3">
+                                <span class="px-3 py-1 rounded-md bg-amber-500 text-white font-bold text-[11px] shadow-sm inline-block cursor-pointer hover:opacity-90">
+                                    Working on it
+                                </span>
+                            </td>
+                            <td class="py-3 px-3">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded-full bg-sky-100 text-sky-700 font-bold flex items-center justify-center text-[10px] border border-sky-200">SM</span>
+                                    <span class="text-slate-700">Sarah M.</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-3">
+                                <div class="w-32 bg-slate-100 h-2.5 rounded-full overflow-hidden border border-slate-200">
+                                    <div class="bg-sky-500 h-full w-[84%] rounded-full"></div>
+                                </div>
+                                <span class="text-[10px] text-slate-500 mt-0.5 inline-block font-mono">84% (1,840 / 2,200)</span>
+                            </td>
+                            <td class="py-3 px-3 font-mono font-bold text-emerald-600">99.2% Passed</td>
+                        </tr>
+
+                        <!-- Row 2 -->
+                        <tr class="hover:bg-slate-50 transition-colors group">
+                            <td class="py-3 px-3 font-bold text-slate-900 flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded bg-emerald-500"></span>
+                                <span>Denim Jacket #PO-882 (Zara)</span>
+                            </td>
+                            <td class="py-3 px-3 text-slate-600 font-mono">Line 04</td>
+                            <td class="py-3 px-3 text-slate-600">Quality Inspection</td>
+                            <td class="py-3 px-3">
+                                <span class="px-3 py-1 rounded-md bg-emerald-500 text-white font-bold text-[11px] shadow-sm inline-block cursor-pointer hover:opacity-90">
+                                    Done
+                                </span>
+                            </td>
+                            <td class="py-3 px-3">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 font-bold flex items-center justify-center text-[10px] border border-emerald-200">AK</span>
+                                    <span class="text-slate-700">Alex K.</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-3">
+                                <div class="w-32 bg-slate-100 h-2.5 rounded-full overflow-hidden border border-slate-200">
+                                    <div class="bg-emerald-500 h-full w-[100%] rounded-full"></div>
+                                </div>
+                                <span class="text-[10px] text-slate-500 mt-0.5 inline-block font-mono">100% (1,900 / 1,900)</span>
+                            </td>
+                            <td class="py-3 px-3 font-mono font-bold text-emerald-600">98.8% Passed</td>
+                        </tr>
+
+                        <!-- Row 3 -->
+                        <tr class="hover:bg-slate-50 transition-colors group">
+                            <td class="py-3 px-3 font-bold text-slate-900 flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded bg-indigo-500"></span>
+                                <span>Cotton Hoodie #PO-104 (H&M)</span>
+                            </td>
+                            <td class="py-3 px-3 text-slate-600 font-mono">Line 02</td>
+                            <td class="py-3 px-3 text-slate-600">Embroidery & Hemming</td>
+                            <td class="py-3 px-3">
+                                <span class="px-3 py-1 rounded-md bg-sky-500 text-white font-bold text-[11px] shadow-sm inline-block cursor-pointer hover:opacity-90">
+                                    Quality Check
+                                </span>
+                            </td>
+                            <td class="py-3 px-3">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded-full bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center text-[10px] border border-indigo-200">RP</span>
+                                    <span class="text-slate-700">Rajesh P.</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-3">
+                                <div class="w-32 bg-slate-100 h-2.5 rounded-full overflow-hidden border border-slate-200">
+                                    <div class="bg-indigo-500 h-full w-[68%] rounded-full"></div>
+                                </div>
+                                <span class="text-[10px] text-slate-500 mt-0.5 inline-block font-mono">68% (1,600 / 2,350)</span>
+                            </td>
+                            <td class="py-3 px-3 font-mono font-bold text-emerald-600">99.5% Passed</td>
+                        </tr>
+
+                        <!-- Row 4 -->
+                        <tr class="hover:bg-slate-50 transition-colors group">
+                            <td class="py-3 px-3 font-bold text-slate-900 flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded bg-purple-500"></span>
+                                <span>Woven Trousers #PO-902 (Tommy)</span>
+                            </td>
+                            <td class="py-3 px-3 text-slate-600 font-mono">Line 08</td>
+                            <td class="py-3 px-3 text-slate-600">Cutting Room Spreading</td>
+                            <td class="py-3 px-3">
+                                <span class="px-3 py-1 rounded-md bg-purple-500 text-white font-bold text-[11px] shadow-sm inline-block cursor-pointer hover:opacity-90">
+                                    High Priority
+                                </span>
+                            </td>
+                            <td class="py-3 px-3">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-6 h-6 rounded-full bg-purple-100 text-purple-700 font-bold flex items-center justify-center text-[10px] border border-purple-200">ER</span>
+                                    <span class="text-slate-700">Elena R.</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-3">
+                                <div class="w-32 bg-slate-100 h-2.5 rounded-full overflow-hidden border border-slate-200">
+                                    <div class="bg-purple-500 h-full w-[45%] rounded-full"></div>
+                                </div>
+                                <span class="text-[10px] text-slate-500 mt-0.5 inline-block font-mono">45% (900 / 2,000)</span>
+                            </td>
+                            <td class="py-3 px-3 font-mono font-bold text-emerald-600">100% Passed</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Board Footer -->
+            <div class="px-5 py-2.5 bg-slate-50 border-t border-slate-200 flex justify-between items-center text-xs text-slate-500 font-medium">
+                <span>Showing 4 Active Production Workflows</span>
+                <span class="text-sky-600 font-semibold cursor-pointer hover:underline">View All 12 Lines &rarr;</span>
             </div>
         </div>
     `;
 
     // Dynamic Actual Counter Animation
-    const actualEl = document.getElementById('pts-actual');
+    const actualEl = document.getElementById('pts-actual-val');
     if (actualEl) {
         let val = 19840;
         const timer = setInterval(() => {
             val += Math.floor(Math.random() * 3) + 1;
-            actualEl.innerText = val.toLocaleString();
-        }, 2000);
+            actualEl.innerText = val.toLocaleString() + ' pcs';
+        }, 2500);
         activeIntervals.push(timer);
     }
 
@@ -348,7 +229,148 @@ export function initProductionTrackingSoftware(containerId) {
 
 
 /**
- * 3. MACHINE MAINTENANCE & OEE SOFTWARE
+ * 2. AI QUALITY CONTROL STUDIO (LIGHT MONDAY.COM STYLE)
+ */
+export function initQualityControlSoftware(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    clearSoftwareIntervals();
+
+    container.innerHTML = `
+        <div class="w-full h-full bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-2xl flex flex-col font-sans text-slate-800">
+            <!-- App Header -->
+            <div class="px-5 py-3 bg-slate-50 border-b border-slate-200 flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <span class="text-sm font-bold text-slate-900">✨ AI Quality Vision Studio</span>
+                    <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold border border-emerald-200">PASS AQL 1.5</span>
+                </div>
+                <div class="text-xs text-slate-500 font-mono">Live Line 04 Camera Feed</div>
+            </div>
+
+            <!-- Workspace Body -->
+            <div class="flex-grow p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6 bg-slate-50/60 overflow-y-auto">
+                <!-- Left Inspection Canvas -->
+                <div class="lg:col-span-7 bg-white rounded-xl border border-slate-200 p-4 shadow-sm relative overflow-hidden flex flex-col justify-between min-h-[260px]">
+                    <canvas id="qc-canvas-light" class="absolute inset-0 w-full h-full object-cover"></canvas>
+                    <div class="relative z-10 flex justify-between items-start">
+                        <span class="px-2.5 py-1 rounded bg-slate-900/80 text-white text-[11px] font-mono">AI MATCH: 99.4%</span>
+                        <span class="px-2.5 py-1 rounded bg-emerald-500 text-white text-[11px] font-bold">AQL PASSED</span>
+                    </div>
+                    <div class="relative z-10 text-xs font-mono text-slate-600 bg-white/90 p-2 rounded border border-slate-200 flex justify-between">
+                        <span>Fabric Roll: #8492-B</span>
+                        <span id="qc-clock" class="text-sky-600 font-bold"></span>
+                    </div>
+                </div>
+
+                <!-- Right Defect Summary & Cards -->
+                <div class="lg:col-span-5 space-y-4 flex flex-col justify-between text-xs">
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-sm">
+                            <div class="text-slate-500">First Time Pass</div>
+                            <div class="text-2xl font-bold text-emerald-600 font-mono mt-0.5">98.6%</div>
+                        </div>
+                        <div class="p-3.5 rounded-xl bg-white border border-slate-200 shadow-sm">
+                            <div class="text-slate-500">Defects Saved</div>
+                            <div class="text-2xl font-bold text-sky-600 font-mono mt-0.5">1,248 pcs</div>
+                        </div>
+                    </div>
+
+                    <!-- Defect Breakdown Cards -->
+                    <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm space-y-2.5">
+                        <div class="font-bold text-slate-800 border-b border-slate-100 pb-2">AI Defect Detection Summary</div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-slate-600">Stitch Skip Flaws:</span>
+                            <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-700 font-bold">0.2% (Low)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-slate-600">Shade Variance:</span>
+                            <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-700 font-bold">0.1% (Optimal)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-slate-600">Needle Cut Alerts:</span>
+                            <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-700 font-bold">1 Corrected</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // Light Canvas Laser Animation
+    const canvas = document.getElementById('qc-canvas-light');
+    if (canvas) {
+        const ctx = canvas.getContext('2d');
+        let scanY = 0;
+        let animId;
+
+        const resize = () => {
+            canvas.width = canvas.parentElement.clientWidth;
+            canvas.height = canvas.parentElement.clientHeight;
+        };
+        resize();
+        window.addEventListener('resize', resize);
+
+        function draw() {
+            ctx.fillStyle = '#f8fafc';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Light Grid
+            ctx.strokeStyle = '#e2e8f0';
+            ctx.lineWidth = 1;
+            for (let x = 0; x < canvas.width; x += 25) {
+                ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
+            }
+            for (let y = 0; y < canvas.height; y += 25) {
+                ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
+            }
+
+            // Laser Scan Line
+            scanY += 2;
+            if (scanY > canvas.height) scanY = 0;
+
+            ctx.shadowColor = '#0284c7';
+            ctx.shadowBlur = 10;
+            ctx.strokeStyle = '#0284c7';
+            ctx.lineWidth = 3;
+            ctx.beginPath(); ctx.moveTo(0, scanY); ctx.lineTo(canvas.width, scanY); ctx.stroke();
+            ctx.shadowBlur = 0;
+
+            // Green Bounding Box
+            const bx = canvas.width * 0.25;
+            const by = canvas.height * 0.3;
+            const bw = canvas.width * 0.45;
+            const bh = canvas.height * 0.4;
+            ctx.strokeStyle = '#10b981';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(bx, by, bw, bh);
+
+            ctx.fillStyle = '#10b981';
+            ctx.fillRect(bx, by - 18, bw, 18);
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 10px sans-serif';
+            ctx.fillText('STITCH PATTERN VERIFIED - PASS', bx + 6, by - 5);
+
+            animId = requestAnimationFrame(draw);
+        }
+        draw();
+
+        const clockEl = document.getElementById('qc-clock');
+        if (clockEl) {
+            const timer = setInterval(() => clockEl.innerText = new Date().toLocaleTimeString(), 1000);
+            activeIntervals.push(timer);
+        }
+
+        return () => {
+            cancelAnimationFrame(animId);
+            window.removeEventListener('resize', resize);
+            clearSoftwareIntervals();
+        };
+    }
+}
+
+
+/**
+ * 3. MACHINE MAINTENANCE & OEE BOARD
  */
 export function initMachineMaintenanceSoftware(containerId) {
     const container = document.getElementById(containerId);
@@ -356,120 +378,59 @@ export function initMachineMaintenanceSoftware(containerId) {
     clearSoftwareIntervals();
 
     container.innerHTML = `
-        <div class="w-full h-full bg-slate-900 rounded-2xl border border-sky-500/30 overflow-hidden shadow-2xl flex flex-col font-sans text-white">
-            <!-- App Header -->
-            <div class="px-5 py-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <span class="text-xs font-semibold tracking-wide text-slate-300">TTS Machine Health & OEE Telemetry v4.2</span>
-                </div>
-                <div class="flex items-center gap-2 text-[11px] bg-sky-500/20 text-sky-400 border border-sky-500/40 px-3 py-1 rounded-full font-mono">
-                    <span>94.8% OVERALL OEE</span>
-                </div>
+        <div class="w-full h-full bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-2xl flex flex-col font-sans text-slate-800">
+            <div class="px-5 py-3 bg-slate-50 border-b border-slate-200 flex justify-between items-center">
+                <span class="text-sm font-bold text-slate-900">⚙️ Machine Telemetry & OEE Dashboard</span>
+                <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-bold border border-emerald-200">94.8% OEE OPTIMAL</span>
             </div>
 
-            <!-- Main Workspace -->
-            <div class="flex-grow p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 bg-slate-900/90 overflow-y-auto">
-                <!-- Gauge & Telemetry View -->
-                <div class="lg:col-span-8 bg-slate-950 rounded-xl border border-slate-800 p-5 space-y-5">
-                    <div class="flex justify-between items-center border-b border-slate-800 pb-3">
-                        <div>
-                            <div class="text-sm font-bold text-white">SEWING MOTOR #M-408 (JUKI DDL-9000C)</div>
-                            <div class="text-xs text-slate-400 font-mono">Location: Line 04 - Station 08</div>
-                        </div>
-                        <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-mono font-semibold">STATUS: HEALTHY</span>
+            <div class="flex-grow p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-12 gap-6 bg-slate-50/60 overflow-y-auto">
+                <div class="lg:col-span-8 bg-white rounded-xl border border-slate-200 p-5 shadow-sm space-y-4">
+                    <div class="font-bold text-slate-900 text-sm border-b border-slate-100 pb-2">
+                        SEWING MOTOR #M-408 (JUKI DDL-9000C)
                     </div>
 
-                    <!-- Telemetry Gauges Row -->
-                    <div class="grid grid-cols-3 gap-4 text-center">
-                        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
-                            <div class="text-xs text-slate-400">Motor Temp</div>
-                            <div class="text-2xl font-bold text-emerald-400 font-mono" id="oee-temp">42°C</div>
-                            <div class="text-[10px] text-slate-500">Normal Range (&lt;65°C)</div>
+                    <div class="grid grid-cols-3 gap-4 text-center text-xs">
+                        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="text-slate-500">Motor Temp</div>
+                            <div class="text-2xl font-bold text-emerald-600 font-mono mt-1">42°C</div>
+                            <div class="text-[10px] text-emerald-600 mt-0.5">Healthy (&lt;65°C)</div>
                         </div>
 
-                        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
-                            <div class="text-xs text-slate-400">Vibration (Hz)</div>
-                            <div class="text-2xl font-bold text-sky-400 font-mono">1.2 g</div>
-                            <div class="text-[10px] text-slate-500">Optimal Smoothness</div>
+                        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="text-slate-500">Vibration</div>
+                            <div class="text-2xl font-bold text-sky-600 font-mono mt-1">1.2 g</div>
+                            <div class="text-[10px] text-sky-600 mt-0.5">Optimal</div>
                         </div>
 
-                        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800 space-y-1">
-                            <div class="text-xs text-slate-400">Run Time (Shift)</div>
-                            <div class="text-2xl font-bold text-indigo-400 font-mono">7h 42m</div>
-                            <div class="text-[10px] text-slate-500">Zero Unplanned Stops</div>
-                        </div>
-                    </div>
-
-                    <!-- Simulated Real-Time Vibration Spectrum Graph -->
-                    <div class="space-y-2">
-                        <div class="flex justify-between text-xs text-slate-400">
-                            <span>Vibration Spectrum Telemetry Stream</span>
-                            <span class="font-mono text-sky-400">Sampling 100Hz</span>
-                        </div>
-                        <div class="h-24 bg-slate-900 rounded-lg border border-slate-800 relative overflow-hidden flex items-end px-2 pb-2 gap-1" id="vibe-graph">
-                            <!-- Bars injected by JS -->
+                        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="text-slate-500">Shift Run Time</div>
+                            <div class="text-2xl font-bold text-indigo-600 font-mono mt-1">7h 42m</div>
+                            <div class="text-[10px] text-indigo-600 mt-0.5">Zero Downtime</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Predictive Alerts -->
-                <div class="lg:col-span-4 space-y-4 flex flex-col justify-between">
-                    <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-3">
-                        <div class="text-xs font-semibold text-slate-300 uppercase tracking-wider border-b border-slate-800 pb-2">
-                            Predictive Maintenance Alerts
+                <div class="lg:col-span-4 bg-white rounded-xl border border-slate-200 p-4 shadow-sm space-y-3 text-xs">
+                    <div class="font-bold text-slate-900 border-b border-slate-100 pb-2">Preventive Service Alerts</div>
+                    <div class="p-3 rounded-lg bg-amber-50 border border-amber-200 text-amber-800 space-y-1">
+                        <div class="font-bold flex justify-between">
+                            <span>Motor Lubrication</span>
+                            <span>In 14 hrs</span>
                         </div>
-
-                        <div class="space-y-2.5 text-xs">
-                            <div class="p-3 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-300 space-y-1">
-                                <div class="font-bold flex justify-between">
-                                    <span>Motor #M-102 Oil Lubrication</span>
-                                    <span>In 14 hrs</span>
-                                </div>
-                                <div class="text-[11px] text-amber-200/80">Automated service ticket generated for Maintenance Tech Team.</div>
-                            </div>
-
-                            <div class="p-3 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 space-y-1">
-                                <div class="font-bold flex justify-between">
-                                    <span>Needle Bar Bushing #M-204</span>
-                                    <span>In 5 days</span>
-                                </div>
-                                <div class="text-[11px] text-slate-400">Routine wear detected via vibration harmonics.</div>
-                            </div>
-                        </div>
+                        <div class="text-[11px] text-amber-700">Auto ticket assigned to Technician Team.</div>
                     </div>
-
-                    <button class="w-full py-3 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-semibold text-xs shadow-lg transition-all">
-                        Schedule Preventive Maintenance Shift
-                    </button>
                 </div>
             </div>
         </div>
     `;
-
-    // Vibration Graph Animation
-    const vibeGraph = document.getElementById('vibe-graph');
-    if (vibeGraph) {
-        for (let i = 0; i < 35; i++) {
-            const bar = document.createElement('div');
-            bar.className = 'flex-1 bg-sky-500/60 rounded-t transition-all duration-300';
-            bar.style.height = `${Math.floor(Math.random() * 70) + 15}%`;
-            vibeGraph.appendChild(bar);
-        }
-
-        const timer = setInterval(() => {
-            Array.from(vibeGraph.children).forEach(bar => {
-                bar.style.height = `${Math.floor(Math.random() * 75) + 15}%`;
-            });
-        }, 400);
-        activeIntervals.push(timer);
-    }
 
     return () => clearSoftwareIntervals();
 }
 
 
 /**
- * 4. SMART PRODUCTION PLANNING GANTT SOFTWARE
+ * 4. SMART PRODUCTION PLANNING GANTT
  */
 export function initProductionPlanningSoftware(containerId) {
     const container = document.getElementById(containerId);
@@ -477,73 +438,44 @@ export function initProductionPlanningSoftware(containerId) {
     clearSoftwareIntervals();
 
     container.innerHTML = `
-        <div class="w-full h-full bg-slate-900 rounded-2xl border border-sky-500/30 overflow-hidden shadow-2xl flex flex-col font-sans text-white">
-            <!-- App Header -->
-            <div class="px-5 py-3 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
-                <div class="flex items-center gap-3">
-                    <span class="text-xs font-semibold tracking-wide text-slate-300">TTS Smart Gantt Production Planner v4.2</span>
-                </div>
-                <div class="flex items-center gap-2 text-[11px] bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 px-3 py-1 rounded-full font-mono">
-                    <span>99.2% ON-TIME SHIPMENT CAPACITY</span>
-                </div>
+        <div class="w-full h-full bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-2xl flex flex-col font-sans text-slate-800">
+            <div class="px-5 py-3 bg-slate-50 border-b border-slate-200 flex justify-between items-center">
+                <span class="text-sm font-bold text-slate-900">📅 Smart Gantt Production Planner</span>
+                <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-700 text-xs font-bold border border-sky-200">99.2% ON-TIME SHIPMENT</span>
             </div>
 
-            <!-- Gantt Workspace -->
-            <div class="flex-grow p-4 sm:p-6 space-y-4 bg-slate-900/90 overflow-y-auto font-mono text-xs">
-                <!-- Timeline Header -->
-                <div class="grid grid-cols-12 gap-2 bg-slate-950 p-3 rounded-xl border border-slate-800 text-slate-400 font-semibold text-center">
-                    <div class="col-span-3 text-left">LINE / ORDER STYLE</div>
-                    <div class="col-span-2">MON</div>
-                    <div class="col-span-2">TUE</div>
-                    <div class="col-span-2">WED</div>
-                    <div class="col-span-2">THU</div>
-                    <div class="col-span-1">FRI</div>
-                </div>
+            <div class="flex-grow p-4 sm:p-6 space-y-4 bg-slate-50/60 overflow-y-auto text-xs">
+                <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm space-y-3">
+                    <div class="flex justify-between items-center border-b border-slate-100 pb-2 font-bold text-slate-800">
+                        <span>LINE / ORDER TIMELINE</span>
+                        <span class="text-sky-600 font-mono">THIS WEEK SCHEDULE</span>
+                    </div>
 
-                <!-- Gantt Row 1 -->
-                <div class="grid grid-cols-12 gap-2 bg-slate-950 p-3 rounded-xl border border-slate-800 items-center">
-                    <div class="col-span-3 font-bold text-white font-sans">
-                        LINE 01
-                        <div class="text-[10px] text-slate-400 font-normal">Order #PO-9821 (Zara Denim)</div>
+                    <!-- Row 1 -->
+                    <div class="space-y-1">
+                        <div class="flex justify-between font-semibold text-slate-700">
+                            <span>LINE 01 — Polo Shirt #PO-402 (Ralph Lauren)</span>
+                            <span class="text-emerald-600 font-mono">100% On Schedule</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-6 rounded-lg overflow-hidden p-1 flex items-center border border-slate-200">
+                            <div class="bg-sky-500 h-full rounded-md w-[85%] text-white text-[10px] font-bold px-2 flex items-center">
+                                Sewing & Finishing Batch (12,000 pcs)
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-span-8 bg-sky-500/20 border border-sky-500/50 p-2 rounded-lg text-sky-300 text-[11px] flex justify-between items-center">
-                        <span>Sewing & Finishing Batch (12,000 pcs)</span>
-                        <span class="px-2 py-0.5 rounded bg-sky-500 text-white font-bold text-[10px]">ON SCHEDULE</span>
-                    </div>
-                    <div class="col-span-1 text-center text-emerald-400 font-bold">100%</div>
-                </div>
 
-                <!-- Gantt Row 2 -->
-                <div class="grid grid-cols-12 gap-2 bg-slate-950 p-3 rounded-xl border border-slate-800 items-center">
-                    <div class="col-span-3 font-bold text-white font-sans">
-                        LINE 04
-                        <div class="text-[10px] text-slate-400 font-normal">Order #PO-7740 (H&M Hoodie)</div>
+                    <!-- Row 2 -->
+                    <div class="space-y-1 pt-2">
+                        <div class="flex justify-between font-semibold text-slate-700">
+                            <span>LINE 04 — Denim Jacket #PO-882 (Zara)</span>
+                            <span class="text-emerald-600 font-mono">Ahead by 2 hrs</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-6 rounded-lg overflow-hidden p-1 flex items-center border border-slate-200">
+                            <div class="bg-emerald-500 h-full rounded-md w-[92%] text-white text-[10px] font-bold px-2 flex items-center">
+                                Fabric Spreading & Cutting
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-span-6 col-start-4 bg-emerald-500/20 border border-emerald-500/50 p-2 rounded-lg text-emerald-300 text-[11px] flex justify-between items-center">
-                        <span>Fabric Spreading & Cutting</span>
-                        <span class="px-2 py-0.5 rounded bg-emerald-500 text-white font-bold text-[10px]">AHEAD BY 2 HOURS</span>
-                    </div>
-                    <div class="col-span-3 text-center text-slate-500">NEXT: PACKING</div>
-                </div>
-
-                <!-- Gantt Row 3 -->
-                <div class="grid grid-cols-12 gap-2 bg-slate-950 p-3 rounded-xl border border-slate-800 items-center">
-                    <div class="col-span-3 font-bold text-white font-sans">
-                        LINE 08
-                        <div class="text-[10px] text-slate-400 font-normal">Order #PO-4412 (Polo Ralph)</div>
-                    </div>
-                    <div class="col-span-7 col-start-5 bg-amber-500/20 border border-amber-500/50 p-2 rounded-lg text-amber-300 text-[11px] flex justify-between items-center">
-                        <span>Needle Skill Re-allocation</span>
-                        <span class="px-2 py-0.5 rounded bg-amber-500 text-white font-bold text-[10px]">CAPACITY OPTIMIZED</span>
-                    </div>
-                </div>
-
-                <!-- Bottom Summary -->
-                <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 flex justify-between items-center text-slate-300 font-sans">
-                    <span>AI Gantt Auto-Optimization: <strong class="text-sky-400">Enabled</strong></span>
-                    <button class="px-4 py-2 rounded-lg bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold">
-                        Re-balance Shopfloor Capacity
-                    </button>
                 </div>
             </div>
         </div>

@@ -57,35 +57,35 @@
             </a>
         </div>
 
-        <!-- Sleek Monday.com / Peachweb Style macOS SaaS App Mockup Container -->
+        <!-- Bright Monday.com Style macOS SaaS App Mockup Container -->
         <div class="pt-8 w-full max-w-5xl mx-auto relative group">
             <!-- Ambient Glowing Backdrop Mesh -->
-            <div class="absolute -inset-1 bg-gradient-to-r from-sky-500 via-blue-600 to-sky-400 rounded-3xl blur-2xl opacity-40 group-hover:opacity-60 transition duration-1000"></div>
+            <div class="absolute -inset-1 bg-gradient-to-r from-sky-400 via-blue-500 to-sky-300 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition duration-1000"></div>
 
-            <!-- Floating SaaS Micro Card 1: Line Efficiency Boost (Top Left) -->
-            <div class="hidden lg:flex absolute -top-4 -left-8 z-30 p-3.5 rounded-2xl bg-slate-900/90 border border-sky-400/30 shadow-2xl backdrop-blur-xl items-center gap-3 animate-bounce-slow">
-                <div class="p-2 rounded-xl bg-sky-500/20 text-sky-400">
+            <!-- Floating Monday.com SaaS Micro Card 1: Line Efficiency Boost (Top Left) -->
+            <div class="hidden lg:flex absolute -top-4 -left-8 z-30 p-3.5 rounded-2xl bg-white border border-slate-200 shadow-2xl items-center gap-3 animate-bounce-slow">
+                <div class="p-2 rounded-xl bg-emerald-100 text-emerald-600 border border-emerald-200">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                 </div>
                 <div class="text-left font-sans">
-                    <div class="text-[11px] text-slate-400 font-medium">Shopfloor Line OEE</div>
-                    <div class="text-base font-bold text-emerald-400 font-mono">+31.4% Efficiency</div>
+                    <div class="text-[11px] text-slate-500 font-medium">Shopfloor Line OEE</div>
+                    <div class="text-base font-bold text-emerald-600 font-mono">+31.4% Efficiency</div>
                 </div>
             </div>
 
-            <!-- Floating SaaS Micro Card 2: AI Quality Scanner (Top Right) -->
-            <div class="hidden lg:flex absolute -top-4 -right-8 z-30 p-3.5 rounded-2xl bg-slate-900/90 border border-sky-400/30 shadow-2xl backdrop-blur-xl items-center gap-3">
-                <div class="p-2 rounded-xl bg-emerald-500/20 text-emerald-400">
+            <!-- Floating Monday.com SaaS Micro Card 2: AI Quality Scanner (Top Right) -->
+            <div class="hidden lg:flex absolute -top-4 -right-8 z-30 p-3.5 rounded-2xl bg-white border border-slate-200 shadow-2xl items-center gap-3">
+                <div class="p-2 rounded-xl bg-sky-100 text-sky-600 border border-sky-200">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </div>
                 <div class="text-left font-sans">
-                    <div class="text-[11px] text-slate-400 font-medium">AI Quality Vision</div>
-                    <div class="text-base font-bold text-sky-400 font-mono">Zero AQL Violations</div>
+                    <div class="text-[11px] text-slate-500 font-medium">AI Quality Vision</div>
+                    <div class="text-base font-bold text-sky-600 font-mono">Zero AQL Violations</div>
                 </div>
             </div>
 
-            <!-- Main Control Center Window -->
-            <div id="hero-software-container" class="relative z-20 w-full h-[420px] rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl bg-slate-950">
+            <!-- Main Control Center Window (Bright Monday.com Light Theme Container) -->
+            <div id="hero-software-container" class="relative z-20 w-full h-[440px] rounded-2xl overflow-hidden border border-slate-200 shadow-2xl bg-white">
                 <!-- Managed by SoftwareUI.js -->
             </div>
         </div>

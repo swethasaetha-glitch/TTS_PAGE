@@ -75,8 +75,32 @@
     </div>
 </section>
 
+<!-- ================= SOFTWARE & TECHNOLOGY SOLUTIONS BRAND BANNER ================= -->
+<section class="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-sky-900 via-blue-900 to-slate-950 text-white overflow-hidden border-y border-sky-500/20 shadow-2xl">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+        <div class="space-y-4 max-w-3xl text-left">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-500/20 border border-sky-400/30 text-sky-300 text-xs font-semibold uppercase tracking-wider font-sans">
+                <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
+                Software & Technology Solutions
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-bold font-sans tracking-tight text-white leading-snug">
+                We Provide Enterprise Software Solutions for Smart Garment Factories
+            </h2>
+            <p class="text-slate-200 text-base sm:text-lg font-sans leading-relaxed">
+                We deliver real-time software technology that directly powers shopfloor operations—from AI quality vision inspection to RFID line tracking, machine OEE telemetry, and smart Gantt planning.
+            </p>
+        </div>
+        <div class="shrink-0 w-full md:w-auto">
+            <button @click="demoModalOpen = true" class="w-full md:w-auto px-8 py-4 rounded-full bg-white hover:bg-sky-50 text-sky-700 font-bold text-base shadow-2xl transition-all hover:scale-105 flex items-center justify-center gap-3">
+                <svg class="w-5 h-5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                <span>Schedule Software Consultation</span>
+            </button>
+        </div>
+    </div>
+</section>
+
 <!-- ================= IMPACT METRICS ================= -->
-<section id="impact" class="relative py-28 px-4 sm:px-6 lg:px-8 bg-white border-y border-slate-200">
+<section id="impact" class="relative py-28 px-4 sm:px-6 lg:px-8 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto space-y-16">
         <div class="text-center space-y-4 max-w-3xl mx-auto">
             <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100/80 border border-sky-200 inline-block font-sans">

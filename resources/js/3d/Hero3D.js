@@ -130,51 +130,7 @@ export function initHero3D(containerId) {
     });
     monitorGroup.add(backNetworkGroup);
 
-    // ================= 2. 360° ORBITAL TELEMETRY DATA RINGS =================
-    const orbitGroup = new THREE.Group();
-
-    // Orbital Ring 1 (Inner Tilted Ring)
-    const ring1Geo = new THREE.TorusGeometry(3.6, 0.03, 16, 100);
-    const ring1Mat = new THREE.MeshStandardMaterial({
-        color: 0x38bdf8,
-        emissive: 0x0284c7,
-        emissiveIntensity: 0.6,
-        roughness: 0.1,
-    });
-    const ring1 = new THREE.Mesh(ring1Geo, ring1Mat);
-    ring1.rotation.x = Math.PI / 3;
-    ring1.rotation.y = Math.PI / 6;
-    orbitGroup.add(ring1);
-
-    // Orbital Ring 2 (Outer Horizontal Ring)
-    const ring2Geo = new THREE.TorusGeometry(4.2, 0.025, 16, 100);
-    const ring2Mat = new THREE.MeshStandardMaterial({
-        color: 0x0ea5e9,
-        emissive: 0x0369a1,
-        emissiveIntensity: 0.5,
-        roughness: 0.15,
-    });
-    const ring2 = new THREE.Mesh(ring2Geo, ring2Mat);
-    ring2.rotation.x = Math.PI / 2.2;
-    orbitGroup.add(ring2);
-
-    // Orbiting Data Node Particles around rings
-    const orbitParticles = [];
-    const particleGeo = new THREE.SphereGeometry(0.08, 12, 12);
-    const particleMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8 });
-
-    for (let i = 0; i < 8; i++) {
-        const particle = new THREE.Mesh(particleGeo, particleMat);
-        const angle = (i / 8) * Math.PI * 2;
-        particle.position.set(Math.cos(angle) * 3.6, Math.sin(angle) * 1.8, Math.sin(angle) * 1.5);
-        particle.userData = { angle, radius: 3.6, speed: 0.015 + (i % 3) * 0.005 };
-        orbitGroup.add(particle);
-        orbitParticles.push(particle);
-    }
-
-    mainGroup.add(orbitGroup);
-
-    // ================= 3. POLISHED INDUSTRIAL BASE GRID =================
+    // ================= 2. POLISHED INDUSTRIAL BASE GRID =================
     const baseGrid = new THREE.GridHelper(12, 24, 0x38bdf8, 0x0284c7);
     baseGrid.position.y = -1.8;
     baseGrid.material.opacity = 0.4;
@@ -267,18 +223,6 @@ export function initHero3D(containerId) {
 
         // Subtle floating motion (gentle idle breathing, no 360 rotation)
         mainGroup.position.y = Math.sin(elapsedTime * 1.5) * 0.08;
-
-        // Orbit Rings Subtle Motion
-        ring1.rotation.z = elapsedTime * 0.2;
-        ring2.rotation.z = -elapsedTime * 0.15;
-
-        // Orbiting Particles Motion
-        orbitParticles.forEach((p) => {
-            p.userData.angle += p.userData.speed;
-            p.position.x = Math.cos(p.userData.angle) * p.userData.radius;
-            p.position.y = Math.sin(p.userData.angle) * 1.6;
-            p.position.z = Math.sin(p.userData.angle) * 1.8;
-        });
 
         // Dynamic Front Bar Chart Pulses
         frontBars.forEach((item, idx) => {

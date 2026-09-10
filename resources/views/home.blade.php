@@ -97,9 +97,66 @@
             </button>
         </div>
     </div>
+<!-- ================= DIGITAL GARMENT MANUFACTURING PIPELINE (CLEAN LIGHT THEME) ================= -->
+<section id="digital-pipeline" class="relative py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 text-slate-900 overflow-hidden border-b border-slate-200">
+    <div class="max-w-6xl mx-auto space-y-8 relative z-10" x-data="{ currentStage: 1 }">
+        <div class="text-center space-y-4 max-w-3xl mx-auto">
+            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block font-sans">
+                Digital Garment Technology Flow
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-bold font-sans tracking-tight text-sky-600 leading-tight">
+                How Our Software Powers <span class="text-slate-900 italic font-sans">Smart Garment Factories</span>
+            </h2>
+            <p class="text-slate-700 text-base sm:text-lg font-sans">
+                Explore the connected technology loop: from shopfloor machines to AI vision scanning and executive SaaS dashboards.
+            </p>
+        </div>
+
+        <!-- 5-Stage Stepper Navigation Bar -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-sans font-semibold">
+            <button @click="currentStage = 1" :class="currentStage === 1 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
+                <span>1. Garment Factory</span>
+            </button>
+            <span class="text-slate-400 hidden sm:inline">→</span>
+            <button @click="currentStage = 2" :class="currentStage === 2 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
+                <span>2. Real-Time Telemetry</span>
+            </button>
+            <span class="text-slate-400 hidden sm:inline">→</span>
+            <button @click="currentStage = 3" :class="currentStage === 3 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
+                <span>3. AI Vision</span>
+            </button>
+            <span class="text-slate-400 hidden sm:inline">→</span>
+            <button @click="currentStage = 4" :class="currentStage === 4 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
+                <span>4. Software Dashboard</span>
+            </button>
+            <span class="text-slate-400 hidden sm:inline">→</span>
+            <button @click="currentStage = 5" :class="currentStage === 5 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
+                <span>5. Insights</span>
+            </button>
+        </div>
+
+        <!-- Clean White 3D Viewport Box -->
+        <div class="relative h-[420px] sm:h-[480px] w-full rounded-3xl overflow-hidden bg-white border border-sky-200 shadow-xl">
+            <div id="hero-digital-factory-canvas" class="w-full h-full absolute inset-0 cursor-grab active:cursor-grabbing"></div>
+
+            <!-- Dynamic Live Light HUD Card Overlay -->
+            <div class="absolute bottom-6 left-6 right-6 pointer-events-none z-10">
+                <div class="bg-white/95 backdrop-blur-md p-5 rounded-2xl border border-sky-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-left shadow-lg">
+                    <div class="space-y-1">
+                        <span class="text-xs font-mono font-bold text-sky-700 uppercase tracking-widest block" x-text="currentStage === 1 ? 'STAGE 1: GARMENT FACTORY FLOOR & WORKSTATIONS' : currentStage === 2 ? 'STAGE 2: REAL-TIME TELEMETRY & MACHINE DATA' : currentStage === 3 ? 'STAGE 3: AI COMPUTER VISION & DEFECT SCANNING' : currentStage === 4 ? 'STAGE 4: ENTERPRISE SOFTWARE DASHBOARD UI' : 'STAGE 5: CONNECTED DIGITAL FACTORY INSIGHTS'"></span>
+                        <p class="text-xs sm:text-sm text-slate-700 font-sans leading-relaxed" x-text="currentStage === 1 ? 'Digital twin visualization of sewing workstations, conveyor line vectors, and active shopfloor operators.' : currentStage === 2 ? 'Real-time telemetry signals streaming machine RPM, temp, and RFID piece counters directly to cloud servers.' : currentStage === 3 ? 'AI vision scanning fabric rolls in real-time, detecting stitch flaws with 99.4% automated inspection accuracy.' : currentStage === 4 ? 'Unified SaaS dashboard monitoring overall line efficiency, OEE metrics, and production dispatch schedules.' : 'Complete factory intelligence loop: Garment Factory → Machines → Data → AI Vision → Software Dashboard → Insights.'"></p>
+                    </div>
+                    <span class="shrink-0 text-[11px] font-mono text-emerald-700 font-bold bg-emerald-50 px-4 py-2 rounded-full border border-emerald-200 shadow-sm">SYSTEM STATUS: OPTIMAL</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-
-
 
 <!-- ================= INTERACTIVE 3D DIGITAL TWIN STUDIO HUB ================= -->
 <section id="3d-studio" class="relative py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 text-slate-900 overflow-hidden border-b border-slate-200">

@@ -1,8 +1,8 @@
 import * as THREE from 'three';
 
 /**
- * 360° Dual-Sided B2B Garment Software Engine 3D Scene
- * Renders complete front & back SaaS Software Interfaces with Orbital Telemetry Data Rings
+ * Enterprise B2B Garment Software Engine 3D Scene
+ * Renders high-definition SaaS Software Dashboards with dynamic AI Vision Inspection & Live Telemetry metrics
  */
 export function initHero3D(containerId) {
     const container = document.getElementById(containerId);
@@ -11,8 +11,8 @@ export function initHero3D(containerId) {
     container.innerHTML = '';
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
-    camera.position.set(0, 1.8, 6.5);
+    const camera = new THREE.PerspectiveCamera(42, container.clientWidth / container.clientHeight, 0.1, 1000);
+    camera.position.set(0, 0.2, 6.2);
     camera.lookAt(0, 0, 0);
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -21,123 +21,236 @@ export function initHero3D(containerId) {
     container.appendChild(renderer.domElement);
 
     // Studio Lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 1.8);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 2.0);
     scene.add(ambientLight);
 
-    const dirLight1 = new THREE.DirectionalLight(0x38bdf8, 3.2);
-    dirLight1.position.set(10, 14, 12);
+    const dirLight1 = new THREE.DirectionalLight(0x38bdf8, 2.5);
+    dirLight1.position.set(8, 12, 10);
     scene.add(dirLight1);
 
-    const dirLight2 = new THREE.DirectionalLight(0x0284c7, 2.5);
-    dirLight2.position.set(-10, -8, -6);
+    const dirLight2 = new THREE.DirectionalLight(0x0284c7, 1.8);
+    dirLight2.position.set(-8, -6, -4);
     scene.add(dirLight2);
 
     const mainGroup = new THREE.Group();
     scene.add(mainGroup);
 
-    // ================= 1. DUAL-SIDED 360° SOFTWARE DISPLAY MONITOR =================
+    // ================= 1. DYNAMIC HIGH-RESOLUTION SaaS SOFTWARE UI CANVAS =================
+    const uiCanvas = document.createElement('canvas');
+    uiCanvas.width = 1024;
+    uiCanvas.height = 640;
+    const ctx = uiCanvas.getContext('2d');
+
+    const uiTexture = new THREE.CanvasTexture(uiCanvas);
+    uiTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
+
+    // 3D Display Monitor Chassis
     const monitorGroup = new THREE.Group();
 
-    // Metallic Outer Frame Chassis
-    const chassisGeo = new THREE.BoxGeometry(5.2, 3.2, 0.16);
-    const chassisMat = new THREE.MeshStandardMaterial({
+    const frameGeo = new THREE.BoxGeometry(5.4, 3.4, 0.14);
+    const frameMat = new THREE.MeshStandardMaterial({
         color: 0x0f172a,
-        metalness: 0.9,
+        metalness: 0.95,
         roughness: 0.15,
     });
-    const chassis = new THREE.Mesh(chassisGeo, chassisMat);
-    monitorGroup.add(chassis);
+    const frameMesh = new THREE.Mesh(frameGeo, frameMat);
+    monitorGroup.add(frameMesh);
 
-    // Illuminated Bezel Trim
-    const bezelGeo = new THREE.RingGeometry(2.3, 2.35, 32);
-    const bezelMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, side: THREE.DoubleSide });
-    
-    const bezelFront = new THREE.Mesh(bezelGeo, bezelMat);
-    bezelFront.position.z = 0.09;
-    bezelFront.scale.set(1.05, 0.65, 1);
-    monitorGroup.add(bezelFront);
-
-    const bezelBack = new THREE.Mesh(bezelGeo, bezelMat);
-    bezelBack.position.z = -0.09;
-    bezelBack.rotation.y = Math.PI;
-    bezelBack.scale.set(1.05, 0.65, 1);
-    monitorGroup.add(bezelBack);
-
-    // ---------------- FRONT DISPLAY (SaaS Executive Analytics Dashboard) ----------------
-    const frontScreenGeo = new THREE.PlaneGeometry(5.0, 3.0);
-    const frontScreenMat = new THREE.MeshBasicMaterial({
-        color: 0x0284c7,
-        transparent: true,
-        opacity: 0.35,
+    // Illuminated Front Screen
+    const screenGeo = new THREE.PlaneGeometry(5.2, 3.2);
+    const screenMat = new THREE.MeshBasicMaterial({
+        map: uiTexture,
         side: THREE.FrontSide,
     });
-    const frontScreen = new THREE.Mesh(frontScreenGeo, frontScreenMat);
-    frontScreen.position.z = 0.09;
-    monitorGroup.add(frontScreen);
+    const screenMesh = new THREE.Mesh(screenGeo, screenMat);
+    screenMesh.position.z = 0.08;
+    monitorGroup.add(screenMesh);
 
-    // Front Software Analytics Bar Charts
-    const frontBars = [];
-    const heights = [0.8, 1.4, 1.1, 1.9, 1.6, 2.2, 1.8, 2.4, 2.1];
-    const barGeo = new THREE.BoxGeometry(0.35, 1.0, 0.05);
-    const barMat = new THREE.MeshStandardMaterial({
-        color: 0x38bdf8,
-        emissive: 0x0ea5e9,
-        emissiveIntensity: 0.5,
-        roughness: 0.2,
-    });
+    // Sleek Pedestal Stand Base
+    const standGeo = new THREE.BoxGeometry(1.2, 0.4, 0.8);
+    const standMat = new THREE.MeshStandardMaterial({ color: 0x0284c7, metalness: 0.9, roughness: 0.2 });
+    const stand = new THREE.Mesh(standGeo, standMat);
+    stand.position.set(0, -1.9, 0);
+    monitorGroup.add(stand);
 
-    heights.forEach((h, idx) => {
-        const bar = new THREE.Mesh(barGeo, barMat);
-        bar.scale.y = h;
-        bar.position.set(-2.0 + idx * 0.5, -0.6 + (h * 0.5) / 2, 0.11);
-        monitorGroup.add(bar);
-        frontBars.push({ mesh: bar, baseHeight: h });
-    });
-
-    // ---------------- BACK DISPLAY (AI Vision & Multi-Plant Network Hub) ----------------
-    const backScreenGeo = new THREE.PlaneGeometry(5.0, 3.0);
-    const backScreenMat = new THREE.MeshBasicMaterial({
-        color: 0x0f172a,
-        side: THREE.FrontSide,
-    });
-    const backScreen = new THREE.Mesh(backScreenGeo, backScreenMat);
-    backScreen.rotation.y = Math.PI;
-    backScreen.position.z = -0.09;
-    monitorGroup.add(backScreen);
-
-    // Back Screen Circuit/Network Lines
-    const backNetworkGroup = new THREE.Group();
-    backNetworkGroup.rotation.y = Math.PI;
-    backNetworkGroup.position.z = -0.11;
-
-    const backNodePositions = [
-        [-1.8, 0.8], [-0.8, 0.4], [0.2, 0.9], [1.2, 0.3], [1.8, 0.8],
-        [-1.4, -0.6], [-0.2, -0.4], [0.8, -0.7], [1.6, -0.5]
-    ];
-
-    backNodePositions.forEach(([x, y]) => {
-        const nodeGeo = new THREE.SphereGeometry(0.12, 16, 16);
-        const nodeMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8 });
-        const node = new THREE.Mesh(nodeGeo, nodeMat);
-        node.position.set(x, y, 0);
-        backNetworkGroup.add(node);
-
-        const ringGeo = new THREE.RingGeometry(0.16, 0.2, 16);
-        const ringMat = new THREE.MeshBasicMaterial({ color: 0x0284c7, side: THREE.DoubleSide });
-        const ring = new THREE.Mesh(ringGeo, ringMat);
-        ring.position.set(x, y, 0.01);
-        backNetworkGroup.add(ring);
-    });
-    monitorGroup.add(backNetworkGroup);
-
-    // ================= 2. POLISHED INDUSTRIAL BASE GRID =================
-    const baseGrid = new THREE.GridHelper(12, 24, 0x38bdf8, 0x0284c7);
-    baseGrid.position.y = -1.8;
-    baseGrid.material.opacity = 0.4;
-    baseGrid.material.transparent = true;
-    mainGroup.add(baseGrid);
+    const poleGeo = new THREE.CylinderGeometry(0.1, 0.1, 0.8, 16);
+    const pole = new THREE.Mesh(poleGeo, standMat);
+    pole.position.set(0, -1.5, 0);
+    monitorGroup.add(pole);
 
     mainGroup.add(monitorGroup);
+
+    // ================= 2. DYNAMIC 2D SaaS DASHBOARD CANVAS RENDERER =================
+    let scanLineX = 50;
+    let scanDir = 1;
+
+    function renderSaaSUI(elapsedTime) {
+        if (!ctx) return;
+
+        // Background Glass Panel Gradient
+        const bgGrad = ctx.createLinearGradient(0, 0, 1024, 640);
+        bgGrad.addColorStop(0, '#030712');
+        bgGrad.addColorStop(0.5, '#0b1329');
+        bgGrad.addColorStop(1, '#030712');
+        ctx.fillStyle = bgGrad;
+        ctx.fillRect(0, 0, 1024, 640);
+
+        // Header Navigation Bar
+        ctx.fillStyle = '#0f172a';
+        ctx.fillRect(0, 0, 1024, 60);
+
+        // App Title
+        ctx.fillStyle = '#38bdf8';
+        ctx.font = 'bold 20px sans-serif';
+        ctx.fillText('TRACK TECH SOLUTION — SMART GARMENT SOFTWARE SUITE', 30, 38);
+
+        // System Live Badge
+        ctx.fillStyle = '#10b981';
+        ctx.beginPath();
+        ctx.arc(920, 30, 6, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.fillStyle = '#e2e8f0';
+        ctx.font = 'bold 14px monospace';
+        ctx.fillText('SYSTEM LIVE (10ms)', 935, 35);
+
+        // ---------------- 4 TOP SaaS KPI CARDS ----------------
+        const cards = [
+            { label: 'OEE UPTIME', val: '98.4%', sub: 'Optimal Motor Health', color: '#10b981' },
+            { label: 'RFID THROUGHPUT', val: '14,280 Pcs/Hr', sub: '500+ Garment Lines', color: '#38bdf8' },
+            { label: 'AI QUALITY PASS', val: '99.4%', sub: 'Defects Filtered: 1,420', color: '#38bdf8' },
+            { label: 'LINE BALANCE', val: '96.8%', sub: '25 Plants Synced', color: '#818cf8' },
+        ];
+
+        cards.forEach((card, idx) => {
+            const x = 30 + idx * 242;
+            const y = 80;
+
+            // Card Container
+            ctx.fillStyle = '#1e293b';
+            ctx.fillRect(x, y, 226, 110);
+            ctx.strokeStyle = '#334155';
+            ctx.lineWidth = 1;
+            ctx.strokeRect(x, y, 226, 110);
+
+            // Card Accent Top Line
+            ctx.fillStyle = card.color;
+            ctx.fillRect(x, y, 226, 4);
+
+            // Text
+            ctx.fillStyle = '#94a3b8';
+            ctx.font = 'bold 12px sans-serif';
+            ctx.fillText(card.label, x + 16, y + 28);
+
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 22px sans-serif';
+            ctx.fillText(card.val, x + 16, y + 62);
+
+            ctx.fillStyle = card.color;
+            ctx.font = 'bold 12px sans-serif';
+            ctx.fillText(card.sub, x + 16, y + 90);
+        });
+
+        // ---------------- MAIN PANEL 1: LIVE LINE OUTPUT ANALYTICS CHART ----------------
+        ctx.fillStyle = '#1e293b';
+        ctx.fillRect(30, 210, 470, 390);
+        ctx.strokeStyle = '#334155';
+        ctx.strokeRect(30, 210, 470, 390);
+
+        ctx.fillStyle = '#38bdf8';
+        ctx.font = 'bold 15px sans-serif';
+        ctx.fillText('LIVE SEWING LINE OUTPUT & TELEMETRY', 50, 240);
+
+        // Dynamic Line Graph Chart Area
+        ctx.strokeStyle = '#0284c7';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        for (let i = 0; i < 10; i++) {
+            const gx = 60 + i * 42;
+            const gy = 520 - Math.sin(elapsedTime * 2 + i) * 60 - (i % 3) * 20;
+            if (i === 0) ctx.moveTo(gx, gy);
+            else ctx.lineTo(gx, gy);
+
+            // Data Points
+            ctx.fillStyle = '#38bdf8';
+            ctx.fillRect(gx - 4, gy - 4, 8, 8);
+        }
+        ctx.stroke();
+
+        // Dynamic Throughput Bar Indicators
+        for (let b = 0; b < 7; b++) {
+            const bx = 60 + b * 60;
+            const bh = 80 + Math.sin(elapsedTime * 3 + b) * 45;
+            const by = 550 - bh;
+
+            const barGrad = ctx.createLinearGradient(bx, by, bx, 550);
+            barGrad.addColorStop(0, '#38bdf8');
+            barGrad.addColorStop(1, '#0284c7');
+            ctx.fillStyle = barGrad;
+            ctx.fillRect(bx, by, 36, bh);
+        }
+
+        // ---------------- MAIN PANEL 2: AI VISION INSPECTION SCANNER HUD ----------------
+        ctx.fillStyle = '#1e293b';
+        ctx.fillRect(524, 210, 470, 390);
+        ctx.strokeStyle = '#334155';
+        ctx.strokeRect(524, 210, 470, 390);
+
+        ctx.fillStyle = '#38bdf8';
+        ctx.font = 'bold 15px sans-serif';
+        ctx.fillText('AI VISION FABRIC INSPECTION SCANNER Feed', 544, 240);
+
+        // Fabric Roll Inspection Frame
+        ctx.fillStyle = '#0f172a';
+        ctx.fillRect(544, 260, 430, 250);
+        ctx.strokeStyle = '#0284c7';
+        ctx.strokeRect(544, 260, 430, 250);
+
+        // Animated Fabric Weave Texture Grid
+        ctx.strokeStyle = 'rgba(56, 189, 248, 0.15)';
+        ctx.lineWidth = 1;
+        for (let gx = 544; gx < 974; gx += 20) {
+            ctx.beginPath();
+            ctx.moveTo(gx, 260);
+            ctx.lineTo(gx, 510);
+            ctx.stroke();
+        }
+        for (let gy = 260; gy < 510; gy += 20) {
+            ctx.beginPath();
+            ctx.moveTo(544, gy);
+            ctx.lineTo(974, gy);
+            ctx.stroke();
+        }
+
+        // Moving AI Laser Scan Line
+        scanLineX += scanDir * 2.5;
+        if (scanLineX > 410 || scanLineX < 10) scanDir *= -1;
+
+        const scanX = 544 + scanLineX;
+        ctx.strokeStyle = '#38bdf8';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(scanX, 260);
+        ctx.lineTo(scanX, 510);
+        ctx.stroke();
+
+        // AI Bounding Box Callout
+        ctx.strokeStyle = '#ef4444';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(710, 330, 120, 90);
+
+        ctx.fillStyle = '#ef4444';
+        ctx.font = 'bold 12px monospace';
+        ctx.fillText('STITCH DEFECT DETECTED', 710, 320);
+        ctx.fillText('CONFIDENCE: 99.4%', 710, 435);
+
+        // Bottom Status Log Ticker
+        ctx.fillStyle = '#10b981';
+        ctx.font = 'bold 13px monospace';
+        ctx.fillText('INLINE INSPECTION PASS RATE: 98.6% FLAWLESS | ROLL #842 ACTIVE', 544, 550);
+
+        uiTexture.needsUpdate = true;
+    }
 
     // ================= INTERACTION CONTROLS =================
     container.style.touchAction = 'none';
@@ -169,8 +282,8 @@ export function initHero3D(containerId) {
             const deltaX = pos.x - previousPointerPos.x;
             const deltaY = pos.y - previousPointerPos.y;
             totalDragDistance += Math.abs(deltaX) + Math.abs(deltaY);
-            targetRotationY += deltaX * 0.008;
-            targetRotationX += deltaY * 0.005;
+            targetRotationY += deltaX * 0.006;
+            targetRotationX += deltaY * 0.004;
             previousPointerPos = pos;
         }
     };
@@ -211,24 +324,21 @@ export function initHero3D(containerId) {
         animationFrameId = requestAnimationFrame(animate);
         const elapsedTime = clock.getElapsedTime();
 
-        // Lock screen front-facing when not dragging (no continuous auto-spin)
+        // Render dynamic 2D SaaS interface onto screen texture
+        renderSaaSUI(elapsedTime);
+
+        // Lock screen front-facing when not dragging
         if (!isDragging) {
-            targetRotationY *= 0.95; // Smoothly return to front
-            targetRotationX *= 0.95; // Smoothly return to front
+            targetRotationY *= 0.92;
+            targetRotationX *= 0.92;
         }
 
         // Smooth rotation
         mainGroup.rotation.y += (targetRotationY - mainGroup.rotation.y) * 0.1;
         mainGroup.rotation.x += (targetRotationX - mainGroup.rotation.x) * 0.1;
 
-        // Subtle floating motion (gentle idle breathing, no 360 rotation)
-        mainGroup.position.y = Math.sin(elapsedTime * 1.5) * 0.08;
-
-        // Dynamic Front Bar Chart Pulses
-        frontBars.forEach((item, idx) => {
-            const pulseFactor = 1 + Math.sin(elapsedTime * 3.0 + idx) * 0.14;
-            item.mesh.scale.y = item.baseHeight * pulseFactor;
-        });
+        // Subtle floating motion
+        mainGroup.position.y = Math.sin(elapsedTime * 1.5) * 0.06;
 
         renderer.render(scene, camera);
     };
@@ -255,6 +365,7 @@ export function initHero3D(containerId) {
         window.removeEventListener('resize', onResize);
     };
 }
+
 
 
 

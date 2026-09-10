@@ -49,7 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 1. Homepage Interactive 3D Viewport
+    // 1. Homepage Interactive 3D Viewport & Hero Digital Factory Canvas
+    if (document.getElementById('hero-digital-factory-canvas')) {
+        initHero3D('hero-digital-factory-canvas');
+    }
     if (document.getElementById('interactive-3d-viewport')) {
         window.switch3DViewport('core');
     }

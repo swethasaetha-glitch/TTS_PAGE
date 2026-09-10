@@ -84,11 +84,13 @@ export function initQualityControl3D(containerId) {
     };
 
     const onPointerDown = (e) => {
+        e.stopPropagation();
         isDragging = true;
         previousPointerPos = getPointerPos(e);
     };
 
     const onPointerMove = (e) => {
+        e.stopPropagation();
         const pos = getPointerPos(e);
         if (isDragging) {
             const deltaX = pos.x - previousPointerPos.x;
@@ -99,16 +101,24 @@ export function initQualityControl3D(containerId) {
         }
     };
 
-    const onPointerUp = () => {
+    const onPointerUp = (e) => {
+        if (e) e.stopPropagation();
         isDragging = false;
+    };
+
+    const onClick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
     };
 
     container.addEventListener('mousedown', onPointerDown);
     container.addEventListener('mousemove', onPointerMove);
+    container.addEventListener('click', onClick);
     window.addEventListener('mouseup', onPointerUp);
 
-    container.addEventListener('touchstart', onPointerDown, { passive: true });
-    container.addEventListener('touchmove', onPointerMove, { passive: true });
+    container.addEventListener('touchstart', onPointerDown, { passive: false });
+    container.addEventListener('touchmove', onPointerMove, { passive: false });
+    container.addEventListener('touchend', onPointerUp);
     window.addEventListener('touchend', onPointerUp);
 
     // Animation Loop

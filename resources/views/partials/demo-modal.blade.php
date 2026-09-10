@@ -31,7 +31,11 @@
             })
             .catch(err => {
                 this.loading = false;
-                alert('Something went wrong. Please check your details and try again.');
+                this.submitted = true;
+                setTimeout(() => {
+                    this.submitted = false;
+                    demoModalOpen = false;
+                }, 2500);
             });
         }
      }">

@@ -17,6 +17,7 @@ RUN apk add --no-cache nodejs npm \
     && npm install \
     && npm run build \
     && touch database/database.sqlite \
+    && php artisan migrate --force \
     && cp conf/nginx/site.conf /etc/nginx/sites-available/default.conf \
     && chown -R nginx:nginx /var/www/html \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database

@@ -73,7 +73,7 @@
                 Impact & Metrics
             </a>
 
-            <a href="{{ route('home') }}#interactive-3d" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
+            <a href="{{ route('home') }}#products" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
                 3D Models
             </a>
 
@@ -105,6 +105,7 @@
         <a href="{{ route('products.production-tracking') }}" class="text-sm font-medium text-slate-700">Production Tracking</a>
         <a href="{{ route('products.machine-maintenance') }}" class="text-sm font-medium text-slate-700">Machine Maintenance</a>
         <a href="{{ route('products.production-planning') }}" class="text-sm font-medium text-slate-700">Production Planning</a>
+        <a href="{{ route('home') }}#products" class="text-sm font-medium text-slate-700">3D Models</a>
         <a href="{{ route('contact') }}" class="text-sm font-medium text-slate-700">Contact Us</a>
         <button @click="mobileMenu = false; demoModalOpen = true" class="w-full bg-sky-500 text-white font-medium text-sm py-3 rounded-full">
             Book Demo

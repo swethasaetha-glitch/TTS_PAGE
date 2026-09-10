@@ -38,7 +38,7 @@
                 <h4 class="text-sm font-semibold text-slate-900 font-sans uppercase tracking-wider mb-4">Company</h4>
                 <ul class="space-y-2.5 text-sm font-sans">
                     <li><a href="{{ route('home') }}#impact" class="hover:text-sky-600 transition-colors">Our Impact</a></li>
-                    <li><a href="{{ route('home') }}#interactive-3d" class="hover:text-sky-600 transition-colors">3D Viewport</a></li>
+                    <li><a href="{{ route('home') }}#products" class="hover:text-sky-600 transition-colors">3D Viewport</a></li>
                     <li><a href="{{ route('contact') }}" class="hover:text-sky-600 transition-colors">Contact Support</a></li>
                     <li><button @click="demoModalOpen = true" class="hover:text-sky-600 transition-colors">Book Live Demo</button></li>
                 </ul>

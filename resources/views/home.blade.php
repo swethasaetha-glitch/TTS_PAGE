@@ -50,44 +50,11 @@
                 <span>Book Live Demo</span>
             </button>
 
-            <a href="#interactive-software"
+            <a href="#products"
                class="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-900/80 hover:bg-slate-800 text-white font-sans font-medium text-base px-9 py-4 rounded-full border border-white/30 hover:border-sky-400 backdrop-blur-md shadow-lg transition-all group">
-                <span>Explore Software Studio</span>
+                <span>Explore Solutions</span>
                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </a>
-        </div>
-
-        <!-- Bright Monday.com Style macOS SaaS App Mockup Container -->
-        <div class="pt-8 w-full max-w-5xl mx-auto relative group">
-            <!-- Ambient Glowing Backdrop Mesh -->
-            <div class="absolute -inset-1 bg-gradient-to-r from-sky-400 via-blue-500 to-sky-300 rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition duration-1000"></div>
-
-            <!-- Floating Monday.com SaaS Micro Card 1: Line Efficiency Boost (Top Left) -->
-            <div class="hidden lg:flex absolute -top-4 -left-8 z-30 p-3.5 rounded-2xl bg-white border border-slate-200 shadow-2xl items-center gap-3 animate-bounce-slow">
-                <div class="p-2 rounded-xl bg-emerald-100 text-emerald-600 border border-emerald-200">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-                </div>
-                <div class="text-left font-sans">
-                    <div class="text-[11px] text-slate-500 font-medium">Shopfloor Line OEE</div>
-                    <div class="text-base font-bold text-emerald-600 font-mono">+31.4% Efficiency</div>
-                </div>
-            </div>
-
-            <!-- Floating Monday.com SaaS Micro Card 2: AI Quality Scanner (Top Right) -->
-            <div class="hidden lg:flex absolute -top-4 -right-8 z-30 p-3.5 rounded-2xl bg-white border border-slate-200 shadow-2xl items-center gap-3">
-                <div class="p-2 rounded-xl bg-sky-100 text-sky-600 border border-sky-200">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                </div>
-                <div class="text-left font-sans">
-                    <div class="text-[11px] text-slate-500 font-medium">AI Quality Vision</div>
-                    <div class="text-base font-bold text-sky-600 font-mono">Zero AQL Violations</div>
-                </div>
-            </div>
-
-            <!-- Main Control Center Window (Bright Monday.com Light Theme Container) -->
-            <div id="hero-software-container" class="relative z-20 w-full h-[440px] rounded-2xl overflow-hidden border border-slate-200 shadow-2xl bg-white">
-                <!-- Managed by SoftwareUI.js -->
-            </div>
         </div>
 
         <!-- Centered Features Pills -->
@@ -466,68 +433,6 @@
                     </button>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- ================= INTERACTIVE SOFTWARE VIEWPORT SWITCHER ================= -->
-<section id="interactive-software" class="relative py-28 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-200" x-data="{ activeTab: 'qc' }">
-    <div class="max-w-7xl mx-auto space-y-16 relative z-10">
-        <div class="text-center space-y-4 max-w-3xl mx-auto">
-            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block font-sans">
-                Interactive Software Studio
-            </span>
-            <h2 class="text-4xl sm:text-5xl font-bold text-slate-900 font-sans tracking-tight">
-                Inspect Our Live <br />
-                <span class="text-sky-600 italic">Garment Intelligence Software</span>
-            </h2>
-            <p class="text-slate-600 text-base sm:text-lg font-sans">
-                Click any software module below to test real-time shopfloor telemetry and control center interfaces.
-            </p>
-        </div>
-
-        <!-- Software Module Tab Buttons -->
-        <div class="flex flex-wrap items-center justify-center gap-3 font-sans">
-            <button @click="activeTab = 'qc'; window.switchSoftwareViewport('qc')"
-                    :class="activeTab === 'qc' ? 'bg-sky-600 text-white font-medium shadow-lg shadow-sky-500/30 scale-105' : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'"
-                    class="px-6 py-3.5 rounded-2xl text-sm transition-all flex items-center gap-2">
-                <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                <span>AI Quality Studio</span>
-            </button>
-
-            <button @click="activeTab = 'pts'; window.switchSoftwareViewport('pts')"
-                    :class="activeTab === 'pts' ? 'bg-sky-600 text-white font-medium shadow-lg shadow-sky-500/30 scale-105' : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'"
-                    class="px-6 py-3.5 rounded-2xl text-sm transition-all flex items-center gap-2">
-                <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                <span>Sewing Line Command (PTS)</span>
-            </button>
-
-            <button @click="activeTab = 'oee'; window.switchSoftwareViewport('oee')"
-                    :class="activeTab === 'oee' ? 'bg-sky-600 text-white font-medium shadow-lg shadow-sky-500/30 scale-105' : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'"
-                    class="px-6 py-3.5 rounded-2xl text-sm transition-all flex items-center gap-2">
-                <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path></svg>
-                <span>Machine Maintenance (OEE)</span>
-            </button>
-
-            <button @click="activeTab = 'gantt'; window.switchSoftwareViewport('gantt')"
-                    :class="activeTab === 'gantt' ? 'bg-sky-600 text-white font-medium shadow-lg shadow-sky-500/30 scale-105' : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'"
-                    class="px-6 py-3.5 rounded-2xl text-sm transition-all flex items-center gap-2">
-                <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                <span>Smart Gantt Planner</span>
-            </button>
-        </div>
-
-        <!-- Software Viewport Container -->
-        <div class="relative rounded-3xl bg-slate-950 border border-sky-500/30 p-4 sm:p-6 shadow-2xl overflow-hidden min-h-[540px] flex flex-col justify-between">
-            <div id="interactive-software-viewport" class="w-full h-[480px] relative z-10"></div>
-            <div id="interactive-3d-viewport" class="hidden"></div>
-
-            <div id="viewport-description" class="mt-4 pt-4 border-t border-slate-800 text-center text-sm font-sans text-slate-300 z-20 italic">
-                Real-time AI fabric vision studio scanning for stitching defects and AQL scoring.
-            </div>
-        </div>
-    </div>
-</section>
         </div>
     </div>
 </section>

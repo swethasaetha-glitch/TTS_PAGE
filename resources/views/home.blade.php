@@ -175,15 +175,74 @@
                 <div class="flex items-center justify-between z-10 pointer-events-none">
                     <span class="text-xs font-sans text-sky-700 font-semibold bg-sky-50 px-3.5 py-1.5 rounded-full border border-sky-200 flex items-center gap-2 shadow-sm">
                         <span class="w-2 h-2 rounded-full bg-sky-500 animate-ping"></span>
-                        LIVE 3D TELEMETRY STREAM
+                        <span x-text="activeTab === 'qc' ? 'SOFTWARE ENGINE: AI VISION INSPECTION' : activeTab === 'oee' ? 'SOFTWARE ENGINE: MACHINE OEE DIAGNOSTICS' : activeTab === 'nodes' ? 'SOFTWARE ENGINE: SMART GANTT SCHEDULER' : 'SOFTWARE ENGINE: REAL-TIME FACTORY TELEMETRY'"></span>
                     </span>
-                    <span class="text-xs font-mono font-semibold text-slate-600 bg-white/90 px-3 py-1 rounded-full border border-slate-200 shadow-sm">FPS: 60 | TAP TO JUMP TO SOLUTIONS</span>
+                    <span class="text-xs font-mono font-semibold text-slate-600 bg-white/90 px-3 py-1 rounded-full border border-slate-200 shadow-sm">60 FPS | LIVE DATA HUD</span>
                 </div>
 
+                <!-- 3D WebGL Canvas Container -->
                 <div id="interactive-3d-viewport" class="w-full h-full absolute inset-0 cursor-grab active:cursor-grabbing"></div>
 
+                <!-- Software UI HUD Overlay Elements -->
+                <div class="absolute inset-0 pointer-events-none z-10 p-6 flex flex-col justify-between">
+                    <!-- Top Software Metric Badges -->
+                    <div class="flex items-start justify-end gap-3 mt-10">
+                        <!-- QC HUD Badge -->
+                        <div x-show="activeTab === 'qc'" class="bg-white/90 backdrop-blur-md p-3.5 rounded-2xl border border-emerald-300 shadow-lg text-left max-w-xs space-y-1 animate-fade-in">
+                            <div class="flex items-center gap-2 text-emerald-700 font-bold text-xs font-sans uppercase">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                                AI Vision Inspection UI
+                            </div>
+                            <div class="text-[11px] font-mono text-slate-700 space-y-0.5">
+                                <p><span class="text-slate-400">Scan Status:</span> <span class="text-emerald-600 font-bold">Scanning Fabric Roll #842</span></p>
+                                <p><span class="text-slate-400">Stitch Flaws:</span> <span class="text-rose-600 font-bold">1 Defect Detected (99.4%)</span></p>
+                                <p><span class="text-slate-400">Inline Pass Rate:</span> <span class="text-emerald-600 font-bold">98.6% Flawless</span></p>
+                            </div>
+                        </div>
+
+                        <!-- OEE HUD Badge -->
+                        <div x-show="activeTab === 'oee'" class="bg-white/90 backdrop-blur-md p-3.5 rounded-2xl border border-sky-300 shadow-lg text-left max-w-xs space-y-1 animate-fade-in">
+                            <div class="flex items-center gap-2 text-sky-700 font-bold text-xs font-sans uppercase">
+                                <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span>
+                                Machine Maintenance OEE HUD
+                            </div>
+                            <div class="text-[11px] font-mono text-slate-700 space-y-0.5">
+                                <p><span class="text-slate-400">Motor Speed:</span> <span class="text-sky-600 font-bold">4,200 RPM</span></p>
+                                <p><span class="text-slate-400">Motor Temp:</span> <span class="text-amber-600 font-bold">38.2°C (Optimal)</span></p>
+                                <p><span class="text-slate-400">Overall OEE:</span> <span class="text-emerald-600 font-bold">98.4% Uptime</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Core HUD Badge -->
+                        <div x-show="activeTab === 'core'" class="bg-white/90 backdrop-blur-md p-3.5 rounded-2xl border border-blue-300 shadow-lg text-left max-w-xs space-y-1 animate-fade-in">
+                            <div class="flex items-center gap-2 text-blue-700 font-bold text-xs font-sans uppercase">
+                                <span class="w-2 h-2 rounded-full bg-blue-500 animate-ping"></span>
+                                Real-Time RFID Telemetry HUD
+                            </div>
+                            <div class="text-[11px] font-mono text-slate-700 space-y-0.5">
+                                <p><span class="text-slate-400">Active Lines:</span> <span class="text-blue-600 font-bold">500+ Garment Lines</span></p>
+                                <p><span class="text-slate-400">Throughput:</span> <span class="text-blue-600 font-bold">14,280 Pcs/Hr</span></p>
+                                <p><span class="text-slate-400">Telemetry Sync:</span> <span class="text-emerald-600 font-bold">Real-Time (10ms)</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Nodes HUD Badge -->
+                        <div x-show="activeTab === 'nodes'" class="bg-white/90 backdrop-blur-md p-3.5 rounded-2xl border border-indigo-300 shadow-lg text-left max-w-xs space-y-1 animate-fade-in">
+                            <div class="flex items-center gap-2 text-indigo-700 font-bold text-xs font-sans uppercase">
+                                <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+                                Smart Gantt Planner UI
+                            </div>
+                            <div class="text-[11px] font-mono text-slate-700 space-y-0.5">
+                                <p><span class="text-slate-400">Connected Hubs:</span> <span class="text-indigo-600 font-bold">25 Plants Worldwide</span></p>
+                                <p><span class="text-slate-400">Line Balance:</span> <span class="text-emerald-600 font-bold">96.8% Optimized</span></p>
+                                <p><span class="text-slate-400">Order Dispatch:</span> <span class="text-indigo-600 font-bold">On Schedule</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="z-10 pointer-events-none text-center py-2 bg-white/90 backdrop-blur-md rounded-2xl border border-sky-200 text-xs font-sans text-sky-700 font-semibold shadow-sm">
-                    👈 Drag to spin in 3D • Tap to jump to Solutions section 👉
+                    👈 Drag to rotate software 3D view • Tap viewport to explore product module 👉
                 </div>
             </div>
         </div>

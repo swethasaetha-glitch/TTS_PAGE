@@ -1,8 +1,8 @@
 import * as THREE from 'three';
 
 /**
- * Enterprise Digital Garment Factory & AI Software 3D Engine
- * Visually communicates: Garment Factory → Telemetry Data → AI Vision → Software Dashboard → Insights
+ * Enterprise B2B Garment Software Engine 3D Scene
+ * Renders realistic SaaS Software Dashboards, AI Inspection HUDs & Telemetry Streams
  */
 export function initHero3D(containerId) {
     const container = document.getElementById(containerId);
@@ -12,188 +12,146 @@ export function initHero3D(containerId) {
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
-    camera.position.set(0, 2.8, 7.5);
-    camera.lookAt(0, -0.2, 0);
+    camera.position.set(0, 2.2, 6.8);
+    camera.lookAt(0, 0, 0);
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     container.appendChild(renderer.domElement);
 
-    // Studio Lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 1.4);
+    // Premium SaaS Lighting Setup
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1.6);
     scene.add(ambientLight);
 
-    const dirLight1 = new THREE.DirectionalLight(0x38bdf8, 2.8);
-    dirLight1.position.set(10, 14, 12);
+    const dirLight1 = new THREE.DirectionalLight(0x38bdf8, 3.0);
+    dirLight1.position.set(8, 12, 10);
     scene.add(dirLight1);
 
-    const dirLight2 = new THREE.DirectionalLight(0x0284c7, 2.0);
-    dirLight2.position.set(-10, -8, -6);
+    const dirLight2 = new THREE.DirectionalLight(0x0284c7, 2.2);
+    dirLight2.position.set(-8, -6, -4);
     scene.add(dirLight2);
 
     const mainGroup = new THREE.Group();
     scene.add(mainGroup);
 
-    // ================= 1. INDUSTRIAL FACTORY FLOOR GRID & SEWING WORKSTATIONS =================
-    const gridHelper = new THREE.GridHelper(12, 24, 0x38bdf8, 0x0284c7);
-    gridHelper.position.y = -1.6;
-    gridHelper.material.opacity = 0.4;
-    gridHelper.material.transparent = true;
-    mainGroup.add(gridHelper);
-
-    // Main Conveyor Line Base
-    const lineBaseGeo = new THREE.BoxGeometry(8, 0.14, 1.2);
-    const lineBaseMat = new THREE.MeshStandardMaterial({ color: 0x0f172a, metalness: 0.85, roughness: 0.3 });
-    const lineBase = new THREE.Mesh(lineBaseGeo, lineBaseMat);
-    lineBase.position.set(0, -1.5, 0);
-    mainGroup.add(lineBase);
-
-    // 3D Sewing Machine Workstations
-    const stationPositions = [-3.0, -1.5, 0, 1.5, 3.0];
-    const stationsGroup = new THREE.Group();
-
-    stationPositions.forEach((posX, idx) => {
-        // Table Base
-        const tableGeo = new THREE.BoxGeometry(0.8, 0.5, 0.8);
-        const tableMat = new THREE.MeshStandardMaterial({ color: 0x0284c7, metalness: 0.9, roughness: 0.2 });
-        const table = new THREE.Mesh(tableGeo, tableMat);
-        table.position.set(posX, -1.2, 0);
-        stationsGroup.add(table);
-
-        // Sewing Arm Model
-        const armGeo = new THREE.BoxGeometry(0.2, 0.4, 0.5);
-        const armMat = new THREE.MeshStandardMaterial({ color: 0x38bdf8, metalness: 0.8 });
-        const arm = new THREE.Mesh(armGeo, armMat);
-        arm.position.set(posX - 0.2, -0.75, 0);
-        stationsGroup.add(arm);
-
-        // Needle Head
-        const needleGeo = new THREE.CylinderGeometry(0.02, 0.02, 0.3, 12);
-        const needleMat = new THREE.MeshStandardMaterial({ color: 0xffffff, metalness: 1.0 });
-        const needle = new THREE.Mesh(needleGeo, needleMat);
-        needle.position.set(posX - 0.2, -0.9, 0.15);
-        stationsGroup.add(needle);
-
-        // Station Status LED Indicator Light
-        const ledGeo = new THREE.SphereGeometry(0.08, 16, 16);
-        const ledColor = idx === 2 ? 0x38bdf8 : 0x10b981; // Active status LED
-        const ledMat = new THREE.MeshBasicMaterial({ color: ledColor });
-        const led = new THREE.Mesh(ledGeo, ledMat);
-        led.position.set(posX + 0.25, -0.85, 0.25);
-        stationsGroup.add(led);
-    });
-    mainGroup.add(stationsGroup);
-
-    // ================= 2. TELEMETRY DATA BEAMS & SIGNALS =================
-    const telemetryPulses = [];
-    const pulseCount = 35;
-    const pulseGeo = new THREE.CylinderGeometry(0.02, 0.02, 0.4, 8);
-    const pulseMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.9 });
-
-    for (let i = 0; i < pulseCount; i++) {
-        const pulse = new THREE.Mesh(pulseGeo, pulseMat);
-        pulse.position.set(
-            (Math.random() - 0.5) * 7.5,
-            -1.4 + Math.random() * 3.8,
-            (Math.random() - 0.5) * 2.2
-        );
-        pulse.userData = { speed: 0.025 + Math.random() * 0.025 };
-        mainGroup.add(pulse);
-        telemetryPulses.push(pulse);
-    }
-
-    // ================= 3. AI VISION INSPECTION SCANNING RIG =================
-    const aiGroup = new THREE.Group();
-    aiGroup.position.set(0, 0.2, 0);
-
-    // Camera Arch Frame
-    const archTopGeo = new THREE.BoxGeometry(4.2, 0.14, 0.18);
-    const archFrameMat = new THREE.MeshStandardMaterial({ color: 0x0284c7, metalness: 0.95, roughness: 0.1 });
-    const archTop = new THREE.Mesh(archTopGeo, archFrameMat);
-    archTop.position.set(0, 1.4, 0);
-    aiGroup.add(archTop);
-
-    const pillarGeo = new THREE.CylinderGeometry(0.07, 0.07, 2.8, 16);
-    const pLeft = new THREE.Mesh(pillarGeo, archFrameMat);
-    pLeft.position.set(-2.0, 0, 0);
-    const pRight = new THREE.Mesh(pillarGeo, archFrameMat);
-    pRight.position.set(2.0, 0, 0);
-    aiGroup.add(pLeft);
-    aiGroup.add(pRight);
-
-    // AI Camera Lens Unit
-    const cameraBodyGeo = new THREE.BoxGeometry(0.5, 0.35, 0.4);
-    const cameraBodyMat = new THREE.MeshStandardMaterial({ color: 0x0f172a, metalness: 0.9 });
-    const cameraBody = new THREE.Mesh(cameraBodyGeo, cameraBodyMat);
-    cameraBody.position.set(0, 1.15, 0);
-    aiGroup.add(cameraBody);
-
-    const lensGeo = new THREE.CylinderGeometry(0.12, 0.12, 0.15, 16);
-    const lensMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8 });
-    const lens = new THREE.Mesh(lensGeo, lensMat);
-    lens.rotation.x = Math.PI / 2;
-    lens.position.set(0, 1.15, 0.2);
-    aiGroup.add(lens);
-
-    // Glowing Laser Scan Plane
-    const laserGeo = new THREE.PlaneGeometry(3.8, 0.1);
-    const laserMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, side: THREE.DoubleSide, transparent: true, opacity: 0.85 });
-    const laserBeam = new THREE.Mesh(laserGeo, laserMat);
-    laserBeam.rotation.x = Math.PI / 2;
-    laserBeam.position.set(0, 0.3, 0);
-    aiGroup.add(laserBeam);
-
-    // Moving Fabric Mesh
-    const fabricGeo = new THREE.PlaneGeometry(3.2, 2.0);
-    const fabricMat = new THREE.MeshStandardMaterial({
-        color: 0x0284c7,
-        wireframe: true,
-        transparent: true,
-        opacity: 0.65,
-    });
-    const fabricMesh = new THREE.Mesh(fabricGeo, fabricMat);
-    fabricMesh.rotation.x = -Math.PI / 2.3;
-    fabricMesh.position.set(0, -0.5, 0);
-    aiGroup.add(fabricMesh);
-
-    mainGroup.add(aiGroup);
-
-    // ================= 4. SaaS ENTERPRISE DASHBOARD UI MONITOR =================
+    // ================= 1. DYNAMIC SAAS SOFTWARE MONITOR SCREEN =================
     const monitorGroup = new THREE.Group();
-    monitorGroup.position.set(0, 0.3, 0);
 
-    // Tilted Monitor Chassis
-    const chassisGeo = new THREE.BoxGeometry(4.8, 2.8, 0.12);
-    const chassisMat = new THREE.MeshStandardMaterial({ color: 0x0f172a, metalness: 0.9, roughness: 0.2 });
-    const chassis = new THREE.Mesh(chassisGeo, chassisMat);
-    monitorGroup.add(chassis);
+    // Sleek Curved Monitor Panel
+    const monitorGeo = new THREE.BoxGeometry(5.2, 3.2, 0.15);
+    const monitorMat = new THREE.MeshStandardMaterial({
+        color: 0x0369a1,
+        metalness: 0.9,
+        roughness: 0.15,
+    });
+    const monitorMesh = new THREE.Mesh(monitorGeo, monitorMat);
+    monitorGroup.add(monitorMesh);
 
-    // Screen Display Surface
-    const screenGeo = new THREE.PlaneGeometry(4.6, 2.6);
-    const screenMat = new THREE.MeshBasicMaterial({ color: 0x0284c7, transparent: true, opacity: 0.3 });
-    const screen = new THREE.Mesh(screenGeo, screenMat);
-    screen.position.z = 0.07;
-    monitorGroup.add(screen);
+    // Glowing Inner Screen Display Surface
+    const screenGeo = new THREE.PlaneGeometry(5.0, 3.0);
+    const screenMat = new THREE.MeshBasicMaterial({
+        color: 0x0284c7,
+        transparent: true,
+        opacity: 0.35,
+    });
+    const screenMesh = new THREE.Mesh(screenGeo, screenMat);
+    screenMesh.position.z = 0.08;
+    monitorGroup.add(screenMesh);
 
-    // Animated Software Bar Graphs inside Monitor
+    // Screen Bezel Border Glow Line
+    const bezelGeo = new THREE.RingGeometry(2.3, 2.35, 32);
+    const bezelMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, side: THREE.DoubleSide });
+    const bezel = new THREE.Mesh(bezelGeo, bezelMat);
+    bezel.position.z = 0.09;
+    bezel.scale.set(1.05, 0.65, 1);
+    monitorGroup.add(bezel);
+
+    // ================= 2. LIVE SOFTWARE BAR CHARTS & TELEMETRY GAUGES =================
     const chartBars = [];
-    const heights = [0.7, 1.2, 0.9, 1.6, 1.4, 1.8, 1.5, 2.0];
-    const barGeo = new THREE.BoxGeometry(0.32, 1.0, 0.04);
-    const barMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8 });
+    const barHeights = [0.8, 1.4, 1.1, 1.9, 1.6, 2.2, 1.8, 2.4, 2.1];
+    const barGeo = new THREE.BoxGeometry(0.35, 1.0, 0.06);
+    const barMat = new THREE.MeshStandardMaterial({
+        color: 0x38bdf8,
+        emissive: 0x0ea5e9,
+        emissiveIntensity: 0.4,
+        roughness: 0.2,
+    });
 
-    heights.forEach((h, i) => {
+    barHeights.forEach((h, idx) => {
         const bar = new THREE.Mesh(barGeo, barMat);
         bar.scale.y = h;
-        bar.position.set(-1.8 + i * 0.5, -0.4 + (h * 0.5) / 2, 0.08);
+        bar.position.set(-2.0 + idx * 0.5, -0.6 + (h * 0.5) / 2, 0.1);
         monitorGroup.add(bar);
         chartBars.push({ mesh: bar, baseHeight: h });
     });
 
-    monitorGroup.rotation.y = -Math.PI / 14;
+    // ================= 3. AI VISION INSPECTION SCANNER LASER PLANE =================
+    const aiScanGroup = new THREE.Group();
+
+    // Laser Beam Line across Software Screen
+    const laserGeo = new THREE.PlaneGeometry(4.8, 0.08);
+    const laserMat = new THREE.MeshBasicMaterial({
+        color: 0x38bdf8,
+        side: THREE.DoubleSide,
+        transparent: true,
+        opacity: 0.9,
+    });
+    const laserMesh = new THREE.Mesh(laserGeo, laserMat);
+    laserMesh.position.z = 0.12;
+    aiScanGroup.add(laserMesh);
+
+    monitorGroup.add(aiScanGroup);
+
+    // ================= 4. SHOPFLOOR WORKSTATION NODES & TELEMETRY PULSES =================
+    const shopfloorGroup = new THREE.Group();
+    shopfloorGroup.position.y = -1.8;
+
+    // Factory Floor Base Grid
+    const floorGrid = new THREE.GridHelper(10, 20, 0x38bdf8, 0x0284c7);
+    floorGrid.material.opacity = 0.4;
+    floorGrid.material.transparent = true;
+    shopfloorGroup.add(floorGrid);
+
+    // Workstation Node Rings & Indicators
+    const nodePositions = [-3.0, -1.5, 0, 1.5, 3.0];
+    nodePositions.forEach((posX, idx) => {
+        const nodeGeo = new THREE.CylinderGeometry(0.25, 0.25, 0.1, 16);
+        const nodeMat = new THREE.MeshStandardMaterial({ color: 0x0284c7, metalness: 0.8 });
+        const node = new THREE.Mesh(nodeGeo, nodeMat);
+        node.position.set(posX, 0.05, 0);
+        shopfloorGroup.add(node);
+
+        const statusLedGeo = new THREE.SphereGeometry(0.08, 16, 16);
+        const statusLedMat = new THREE.MeshBasicMaterial({ color: idx === 2 ? 0x38bdf8 : 0x10b981 });
+        const statusLed = new THREE.Mesh(statusLedGeo, statusLedMat);
+        statusLed.position.set(posX, 0.2, 0);
+        shopfloorGroup.add(statusLed);
+    });
+
+    mainGroup.add(shopfloorGroup);
+
+    // Telemetry Data Pulses Rising from Shopfloor to SaaS Monitor
+    const telemetryPulses = [];
+    const pulseCount = 30;
+    const pulseGeo = new THREE.CylinderGeometry(0.02, 0.02, 0.35, 8);
+    const pulseMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.85 });
+
+    for (let i = 0; i < pulseCount; i++) {
+        const pulse = new THREE.Mesh(pulseGeo, pulseMat);
+        pulse.position.set(
+            (Math.random() - 0.5) * 7.0,
+            -1.7 + Math.random() * 3.2,
+            (Math.random() - 0.5) * 2.0
+        );
+        pulse.userData = { speed: 0.02 + Math.random() * 0.025 };
+        mainGroup.add(pulse);
+        telemetryPulses.push(pulse);
+    }
+
     mainGroup.add(monitorGroup);
 
-    // ================= CONTROLS & INTERACTIVITY =================
+    // ================= INTERACTION CONTROLS =================
     container.style.touchAction = 'none';
 
     let isDragging = false;
@@ -266,28 +224,28 @@ export function initHero3D(containerId) {
         const elapsedTime = clock.getElapsedTime();
 
         if (!isDragging) {
-            targetRotationY += 0.0025;
+            targetRotationY += 0.002;
         }
 
-        // Rotation Interpolation
+        // Smooth rotation
         mainGroup.rotation.y += (targetRotationY - mainGroup.rotation.y) * 0.08;
         mainGroup.rotation.x += (targetRotationX - mainGroup.rotation.x) * 0.08;
 
-        // Telemetry Data Pulses rising
-        telemetryPulses.forEach((pulse) => {
-            pulse.position.y += pulse.userData.speed;
-            if (pulse.position.y > 2.8) {
-                pulse.position.y = -1.4;
-            }
+        // Laser Scan oscillation across screen
+        laserMesh.position.y = Math.sin(elapsedTime * 2.2) * 1.2;
+
+        // Dynamic Bar Chart pulses
+        chartBars.forEach((item, idx) => {
+            const pulseFactor = 1 + Math.sin(elapsedTime * 3.0 + idx) * 0.12;
+            item.mesh.scale.y = item.baseHeight * pulseFactor;
         });
 
-        // AI Vision Laser Scan motion
-        laserBeam.position.z = Math.sin(elapsedTime * 2.8) * 0.8;
-
-        // Dynamic Dashboard Chart Bars Pulse
-        chartBars.forEach((item, idx) => {
-            const pulseFactor = 1 + Math.sin(elapsedTime * 3.5 + idx) * 0.14;
-            item.mesh.scale.y = item.baseHeight * pulseFactor;
+        // Telemetry signals rising vertically
+        telemetryPulses.forEach((pulse) => {
+            pulse.position.y += pulse.userData.speed;
+            if (pulse.position.y > 1.8) {
+                pulse.position.y = -1.7;
+            }
         });
 
         renderer.render(scene, camera);
@@ -315,5 +273,6 @@ export function initHero3D(containerId) {
         window.removeEventListener('resize', onResize);
     };
 }
+
 
 

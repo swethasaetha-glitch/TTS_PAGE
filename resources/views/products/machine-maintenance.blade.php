@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Machine Maintenance (OEE) - Track Tech Solution')
+@section('title', 'Machine Maintenance & OEE Telemetry Software - Track Tech Solution')
 
 @section('content')
 <div class="pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
@@ -10,42 +10,42 @@
     </a>
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-7 space-y-6">
+        <div class="lg:col-span-6 space-y-6">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-700 text-xs font-sans font-semibold uppercase">
-                Machine Maintenance (OEE)
+                Machine Maintenance & OEE Telemetry
             </div>
 
             <h1 class="text-4xl sm:text-5xl font-bold text-sky-600 font-sans tracking-tight leading-tight">
-                Predictive Maintenance & OEE Tracking
+                Equipment Health & Downtime Prevention Software
             </h1>
 
             <p class="text-lg text-slate-900 font-sans leading-relaxed">
-                Maximized Uptime: Unlock the full potential of your sewing machines, cutting equipment, and finishing units. Monitor Overall Equipment Effectiveness (OEE) with predictive maintenance.
+                Maximize overall equipment effectiveness (OEE). Monitor sewing motor temperatures, vibration spectrums, and run hours to predict equipment failure before downtime occurs.
             </p>
 
             <ul class="space-y-3 pt-2 text-base text-slate-900 font-sans">
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Real-time machine run-hour & vibration telemetry
+                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> IoT vibration & temperature telemetry sensors for sewing machinery
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Predictive motor & needle failure prevention
+                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Real-time line OEE availability and performance indicators
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Instant technician work-order dispatch
+                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Predictive lubrication and needle bushing replacement alerts
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> 37% overall equipment effectiveness (OEE) boost
+                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Automated maintenance ticket generation for technician teams
                 </li>
             </ul>
 
             <button @click="demoModalOpen = true" class="mt-4 bg-gradient-to-r from-sky-500 via-blue-600 to-sky-600 hover:from-sky-600 hover:to-blue-700 text-white font-medium text-base px-9 py-4 rounded-full shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 hover:scale-105 transition-all">
-                Book Maintenance Demo
+                Book OEE Software Demo
             </button>
         </div>
 
-        <div class="lg:col-span-5 h-[440px] rounded-3xl bg-white border border-sky-200 p-6 overflow-hidden shadow-xl">
-            <div class="text-xs font-sans text-sky-700 font-semibold mb-2">3D INTERLOCKED GEAR SYSTEM</div>
-            <div id="oee-3d-canvas" class="w-full h-full cursor-grab active:cursor-grabbing"></div>
+        <div class="lg:col-span-6 h-[460px] rounded-3xl bg-slate-950 border border-sky-500/30 p-2 overflow-hidden shadow-2xl">
+            <div id="oee-software-canvas" class="w-full h-full"></div>
+            <div id="oee-3d-canvas" class="hidden"></div>
         </div>
     </div>
 </div>

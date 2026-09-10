@@ -1,59 +1,75 @@
 import './bootstrap';
 import Alpine from 'alpinejs';
+import {
+    initQualityControlSoftware,
+    initProductionTrackingSoftware,
+    initMachineMaintenanceSoftware,
+    initProductionPlanningSoftware
+} from './software/SoftwareUI';
 import { initHero3D } from './3d/Hero3D';
-import { initQualityControl3D } from './3d/QualityControl3D';
-import { initMachineMaintenance3D } from './3d/MachineMaintenance3D';
-import { initFloatingNodes3D } from './3d/FloatingNodes3D';
 
 window.Alpine = Alpine;
 
-// Store active 3D cleanups
-window.active3DCleanup = null;
+// Store active viewport cleanup
+window.activeViewportCleanup = null;
 
-// Helper to switch 3D viewport tabs dynamically
-window.switch3DViewport = (tabId) => {
-    if (window.active3DCleanup && typeof window.active3DCleanup === 'function') {
-        window.active3DCleanup();
+// Helper to switch software UI viewport tabs dynamically
+window.switchSoftwareViewport = (tabId) => {
+    if (window.activeViewportCleanup && typeof window.activeViewportCleanup === 'function') {
+        window.activeViewportCleanup();
     }
 
-    const container = 'interactive-3d-viewport';
+    const container = 'interactive-software-viewport';
     const descEl = document.getElementById('viewport-description');
 
-    if (tabId === 'core') {
-        window.active3DCleanup = initHero3D(container);
-        if (descEl) descEl.innerText = 'Interactive 3D digital core representing real-time factory telemetry.';
-    } else if (tabId === 'qc') {
-        window.active3DCleanup = initQualityControl3D(container);
-        if (descEl) descEl.innerText = 'Laser vision scanner simulating real-time defect analysis.';
+    if (tabId === 'qc') {
+        window.activeViewportCleanup = initQualityControlSoftware(container);
+        if (descEl) descEl.innerText = 'Real-time AI fabric vision studio scanning for stitching defects and AQL scoring.';
+    } else if (tabId === 'pts') {
+        window.activeViewportCleanup = initProductionTrackingSoftware(container);
+        if (descEl) descEl.innerText = 'Shopfloor command center monitoring live RFID/Barcode bundle scans and line WIP.';
     } else if (tabId === 'oee') {
-        window.active3DCleanup = initMachineMaintenance3D(container);
-        if (descEl) descEl.innerText = 'Interlocked 3D gear system tracking machine uptime & health.';
-    } else if (tabId === 'nodes') {
-        window.active3DCleanup = initFloatingNodes3D(container);
-        if (descEl) descEl.innerText = 'Constellation network illustrating global plant scheduling.';
+        window.activeViewportCleanup = initMachineMaintenanceSoftware(container);
+        if (descEl) descEl.innerText = 'Equipment health telemetry tracking motor vibration, temp, and overall line OEE.';
+    } else if (tabId === 'gantt') {
+        window.activeViewportCleanup = initProductionPlanningSoftware(container);
+        if (descEl) descEl.innerText = 'Smart Gantt production planner re-balancing shopfloor capacities automatically.';
     }
 };
 
+// Legacy fallback helper for backward compatibility
+window.switch3DViewport = (tabId) => {
+    if (tabId === 'core') window.switchSoftwareViewport('qc');
+    else if (tabId === 'qc') window.switchSoftwareViewport('qc');
+    else if (tabId === 'oee') window.switchSoftwareViewport('oee');
+    else if (tabId === 'nodes') window.switchSoftwareViewport('gantt');
+};
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize hero canvas if present
-    if (document.getElementById('hero-3d-canvas')) {
-        initHero3D('hero-3d-canvas');
+    // Initialize hero control center canvas or interactive container
+    if (document.getElementById('hero-software-container')) {
+        initQualityControlSoftware('hero-software-container');
     }
 
-    // Initialize default interactive viewport
-    if (document.getElementById('interactive-3d-viewport')) {
-        window.switch3DViewport('core');
+    // Initialize default interactive software viewport on homepage
+    if (document.getElementById('interactive-software-viewport')) {
+        window.switchSoftwareViewport('qc');
+    } else if (document.getElementById('interactive-3d-viewport')) {
+        window.switchSoftwareViewport('qc');
     }
 
-    // Initialize standalone 3D containers on product pages
-    if (document.getElementById('qc-3d-canvas')) {
-        initQualityControl3D('qc-3d-canvas');
+    // Initialize product page standalone software previews
+    if (document.getElementById('qc-software-canvas')) {
+        initQualityControlSoftware('qc-software-canvas');
     }
-    if (document.getElementById('oee-3d-canvas')) {
-        initMachineMaintenance3D('oee-3d-canvas');
+    if (document.getElementById('pts-software-canvas')) {
+        initProductionTrackingSoftware('pts-software-canvas');
     }
-    if (document.getElementById('nodes-3d-canvas')) {
-        initFloatingNodes3D('nodes-3d-canvas');
+    if (document.getElementById('oee-software-canvas')) {
+        initMachineMaintenanceSoftware('oee-software-canvas');
+    }
+    if (document.getElementById('gantt-software-canvas')) {
+        initProductionPlanningSoftware('gantt-software-canvas');
     }
 });
 

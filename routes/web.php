@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\DemoController;
+use App\Http\Controllers\QuoteController;
 
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/products/quality-control', [PageController::class, 'qualityControl'])->name('products.quality-control');
@@ -12,3 +13,4 @@ Route::get('/products/production-planning', [PageController::class, 'productionP
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
 Route::post('/demo', [DemoController::class, 'store'])->name('demo.store');
+Route::post('/quote', [QuoteController::class, 'store'])->name('quote.store');

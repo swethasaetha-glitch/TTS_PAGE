@@ -76,27 +76,31 @@
 </section>
 
 <!-- ================= SOFTWARE & TECHNOLOGY SOLUTIONS BRAND BANNER ================= -->
-<section class="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-sky-50 via-white to-sky-50 text-slate-900 overflow-hidden border-y border-sky-200 shadow-sm">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
-        <div class="space-y-4 max-w-3xl text-left">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-100 border border-sky-200 text-sky-700 text-xs font-semibold uppercase tracking-wider font-sans">
-                <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-ping"></span>
-                Software & Technology Solutions
+<section class="relative py-12 px-4 sm:px-6 lg:px-8 bg-slate-50 text-slate-900 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto">
+        <div class="bg-white p-8 sm:p-10 rounded-3xl border border-sky-200 shadow-xl flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+            <div class="space-y-4 max-w-3xl text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-100 border border-sky-200 text-sky-700 text-xs font-semibold uppercase tracking-wider font-sans">
+                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-ping"></span>
+                    Software & Technology Solutions
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold font-sans tracking-tight text-sky-600 leading-snug">
+                    We Provide Enterprise Software Solutions for <span class="text-slate-900">Smart Garment Factories</span>
+                </h2>
+                <p class="text-slate-700 text-base sm:text-lg font-sans leading-relaxed">
+                    We deliver real-time software technology that directly powers shopfloor operations—from AI quality vision inspection to RFID line tracking, machine OEE telemetry, and smart Gantt planning.
+                </p>
             </div>
-            <h2 class="text-3xl sm:text-4xl font-bold font-sans tracking-tight text-sky-600 leading-snug">
-                We Provide Enterprise Software Solutions for <span class="text-slate-900">Smart Garment Factories</span>
-            </h2>
-            <p class="text-slate-700 text-base sm:text-lg font-sans leading-relaxed">
-                We deliver real-time software technology that directly powers shopfloor operations—from AI quality vision inspection to RFID line tracking, machine OEE telemetry, and smart Gantt planning.
-            </p>
-        </div>
-        <div class="shrink-0 w-full md:w-auto">
-            <button @click="demoModalOpen = true" class="w-full md:w-auto px-9 py-4 rounded-full bg-gradient-to-r from-sky-500 via-blue-600 to-sky-600 hover:from-sky-600 hover:to-blue-700 text-white font-medium text-base shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 hover:scale-105 transition-all flex items-center justify-center gap-3">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                <span>Schedule Software Consultation</span>
-            </button>
+            <div class="shrink-0 w-full md:w-auto">
+                <button @click="demoModalOpen = true" class="w-full md:w-auto px-9 py-4 rounded-full bg-gradient-to-r from-sky-500 via-blue-600 to-sky-600 hover:from-sky-600 hover:to-blue-700 text-white font-medium text-base shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 hover:scale-105 transition-all flex items-center justify-center gap-3">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <span>Schedule Software Consultation</span>
+                </button>
+            </div>
         </div>
     </div>
+</section>
+
 <!-- ================= DIGITAL GARMENT MANUFACTURING PIPELINE (CLEAN LIGHT THEME) ================= -->
 <section id="digital-pipeline" class="relative py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 text-slate-900 overflow-hidden border-b border-slate-200">
     <div class="max-w-6xl mx-auto space-y-8 relative z-10" x-data="{ currentStage: 1 }">

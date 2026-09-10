@@ -134,7 +134,8 @@ export function initFloatingNodes3D(containerId) {
         animationFrameId = requestAnimationFrame(animate);
 
         if (!isDragging) {
-            targetRotationY += 0.003;
+            targetRotationY *= 0.95;
+            targetRotationX *= 0.95;
         }
 
         group.rotation.y += (targetRotationY - group.rotation.y) * 0.1;

@@ -255,17 +255,22 @@ export function initHero3D(containerId) {
         animationFrameId = requestAnimationFrame(animate);
         const elapsedTime = clock.getElapsedTime();
 
+        // Lock screen front-facing when not dragging (no continuous auto-spin)
         if (!isDragging) {
-            targetRotationY += 0.003;
+            targetRotationY *= 0.95; // Smoothly return to front
+            targetRotationX *= 0.95; // Smoothly return to front
         }
 
         // Smooth rotation
-        mainGroup.rotation.y += (targetRotationY - mainGroup.rotation.y) * 0.08;
-        mainGroup.rotation.x += (targetRotationX - mainGroup.rotation.x) * 0.08;
+        mainGroup.rotation.y += (targetRotationY - mainGroup.rotation.y) * 0.1;
+        mainGroup.rotation.x += (targetRotationX - mainGroup.rotation.x) * 0.1;
 
-        // Orbit Rings Motion
-        ring1.rotation.z = elapsedTime * 0.25;
-        ring2.rotation.z = -elapsedTime * 0.2;
+        // Subtle floating motion (gentle idle breathing, no 360 rotation)
+        mainGroup.position.y = Math.sin(elapsedTime * 1.5) * 0.08;
+
+        // Orbit Rings Subtle Motion
+        ring1.rotation.z = elapsedTime * 0.2;
+        ring2.rotation.z = -elapsedTime * 0.15;
 
         // Orbiting Particles Motion
         orbitParticles.forEach((p) => {

@@ -153,7 +153,8 @@ export function initMachineMaintenance3D(containerId) {
         const t = clock.getElapsedTime();
 
         if (!isDragging) {
-            targetRotationY += 0.003;
+            targetRotationY *= 0.95;
+            targetRotationX *= 0.95;
         }
 
         group.rotation.y += (targetRotationY - group.rotation.y) * 0.1;

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Production Tracking System (PTS) Software - Track Tech Solution')
+@section('title', 'Production Tracking System (PTS) - Track Tech Solution')
 
 @section('content')
 <div class="pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
@@ -16,25 +16,25 @@
             </div>
 
             <h1 class="text-4xl sm:text-5xl font-bold text-sky-600 font-sans tracking-tight leading-tight">
-                Real-Time Sewing Line Telemetry & Bundle Tracking
+                End-to-End Real Time Line Visibility
             </h1>
 
             <p class="text-lg text-slate-900 font-sans leading-relaxed">
-                Gain 100% transparent tracking across all production stages. Our RFID and barcode software command center streams real-time operator efficiency metrics and shopfloor WIP progress.
+                Gain 100% transparent tracking across all production stages—from cutting room and sewing lines to finishing and final dispatch.
             </p>
 
             <ul class="space-y-3 pt-2 text-base text-slate-900 font-sans">
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> RFID & Barcode bundle tracking across all sewing lines
+                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> RFID & Barcode bundle tracking across sewing lines
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Individual operator efficiency and SAM time tracking
+                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Real-time WIP updates and operator efficiency metrics
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Automated line bottleneck detection and re-balancing
+                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Automated bottleneck detection and line re-balancing
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Executive live shopfloor dashboard with exportable reports
+                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Executive shopfloor live telemetry dashboard
                 </li>
             </ul>
 
@@ -43,8 +43,9 @@
             </button>
         </div>
 
-        <div class="lg:col-span-6 h-[460px] rounded-3xl bg-slate-950 border border-sky-500/30 p-2 overflow-hidden shadow-2xl">
-            <div id="pts-software-canvas" class="w-full h-full"></div>
+        <div class="lg:col-span-6 h-[460px] rounded-3xl bg-white border border-sky-200 p-6 overflow-hidden shadow-xl flex flex-col justify-between">
+            <div class="text-xs font-sans text-sky-700 font-semibold mb-2 uppercase tracking-wider">3D REAL-TIME LINE TELEMETRY</div>
+            <div id="pts-3d-canvas" class="w-full h-full cursor-grab active:cursor-grabbing"></div>
         </div>
     </div>
 </div>

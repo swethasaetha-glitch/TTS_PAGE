@@ -118,27 +118,27 @@
 
         <!-- 5-Stage Stepper Navigation Bar -->
         <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-sans font-semibold">
-            <button @click="currentStage = 1" :class="currentStage === 1 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
+            <button @click="currentStage = 1; window.setHeroStage && window.setHeroStage(1)" :class="currentStage === 1 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
                 <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
                 <span>1. Garment Factory</span>
             </button>
             <span class="text-slate-400 hidden sm:inline">→</span>
-            <button @click="currentStage = 2" :class="currentStage === 2 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
+            <button @click="currentStage = 2; window.setHeroStage && window.setHeroStage(2)" :class="currentStage === 2 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
                 <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
                 <span>2. Real-Time Telemetry</span>
             </button>
             <span class="text-slate-400 hidden sm:inline">→</span>
-            <button @click="currentStage = 3" :class="currentStage === 3 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
+            <button @click="currentStage = 3; window.setHeroStage && window.setHeroStage(3)" :class="currentStage === 3 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
                 <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
                 <span>3. AI Vision</span>
             </button>
             <span class="text-slate-400 hidden sm:inline">→</span>
-            <button @click="currentStage = 4" :class="currentStage === 4 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
+            <button @click="currentStage = 4; window.setHeroStage && window.setHeroStage(4)" :class="currentStage === 4 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
                 <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
                 <span>4. Software Dashboard</span>
             </button>
             <span class="text-slate-400 hidden sm:inline">→</span>
-            <button @click="currentStage = 5" :class="currentStage === 5 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
+            <button @click="currentStage = 5; window.setHeroStage && window.setHeroStage(5)" :class="currentStage === 5 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
                 <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
                 <span>5. Insights</span>
             </button>

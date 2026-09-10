@@ -73,7 +73,7 @@
                 Impact & Metrics
             </a>
 
-            <a href="<?php echo e(route('home')); ?>#interactive-3d" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
+            <a href="<?php echo e(route('home')); ?>#products" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
                 3D Models
             </a>
 
@@ -82,8 +82,14 @@
             </a>
         </nav>
 
-        <!-- Desktop Sky Blue CTA Pill -->
-        <div class="hidden md:flex items-center gap-4">
+        <!-- Desktop Sky Blue CTA Pills -->
+        <div class="hidden md:flex items-center gap-3">
+            <button @click="quoteModalOpen = true"
+                    class="flex items-center gap-2 bg-white hover:bg-sky-50 text-sky-600 border border-sky-300 font-medium text-sm px-5 py-2.5 rounded-full shadow-sm hover:scale-105 transition-all">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                <span>Get Quote</span>
+            </button>
+
             <button @click="demoModalOpen = true"
                     class="flex items-center gap-2 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-medium text-sm px-6 py-2.5 rounded-full shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 hover:scale-105 transition-all">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
@@ -105,10 +111,16 @@
         <a href="<?php echo e(route('products.production-tracking')); ?>" class="text-sm font-medium text-slate-700">Production Tracking</a>
         <a href="<?php echo e(route('products.machine-maintenance')); ?>" class="text-sm font-medium text-slate-700">Machine Maintenance</a>
         <a href="<?php echo e(route('products.production-planning')); ?>" class="text-sm font-medium text-slate-700">Production Planning</a>
+        <a href="<?php echo e(route('home')); ?>#products" class="text-sm font-medium text-slate-700">3D Models</a>
         <a href="<?php echo e(route('contact')); ?>" class="text-sm font-medium text-slate-700">Contact Us</a>
-        <button @click="mobileMenu = false; demoModalOpen = true" class="w-full bg-sky-500 text-white font-medium text-sm py-3 rounded-full">
-            Book Demo
-        </button>
+        <div class="grid grid-cols-2 gap-3 pt-2">
+            <button @click="mobileMenu = false; quoteModalOpen = true" class="w-full bg-white border border-sky-300 text-sky-600 font-medium text-sm py-3 rounded-full">
+                Get Quote
+            </button>
+            <button @click="mobileMenu = false; demoModalOpen = true" class="w-full bg-sky-500 text-white font-medium text-sm py-3 rounded-full">
+                Book Demo
+            </button>
+        </div>
     </div>
 </header>
 <?php /**PATH C:\Users\sweth\OneDrive\Desktop\Trach_Tech_Solution\main_page\resources\views/partials/navbar.blade.php ENDPATH**/ ?>

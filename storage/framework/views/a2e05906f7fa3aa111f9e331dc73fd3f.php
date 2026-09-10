@@ -76,114 +76,232 @@
 </section>
 
 <!-- ================= SOFTWARE & TECHNOLOGY SOLUTIONS BRAND BANNER ================= -->
-<section class="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-sky-900 via-blue-900 to-slate-950 text-white overflow-hidden border-y border-sky-500/20 shadow-2xl">
+<section class="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-sky-50 via-white to-sky-50 text-slate-900 overflow-hidden border-y border-sky-200 shadow-sm">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
         <div class="space-y-4 max-w-3xl text-left">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-500/20 border border-sky-400/30 text-sky-300 text-xs font-semibold uppercase tracking-wider font-sans">
-                <span class="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-100 border border-sky-200 text-sky-700 text-xs font-semibold uppercase tracking-wider font-sans">
+                <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-ping"></span>
                 Software & Technology Solutions
             </div>
-            <h2 class="text-3xl sm:text-4xl font-bold font-sans tracking-tight text-white leading-snug">
-                We Provide Enterprise Software Solutions for Smart Garment Factories
+            <h2 class="text-3xl sm:text-4xl font-bold font-sans tracking-tight text-sky-600 leading-snug">
+                We Provide Enterprise Software Solutions for <span class="text-slate-900">Smart Garment Factories</span>
             </h2>
-            <p class="text-slate-200 text-base sm:text-lg font-sans leading-relaxed">
+            <p class="text-slate-700 text-base sm:text-lg font-sans leading-relaxed">
                 We deliver real-time software technology that directly powers shopfloor operations—from AI quality vision inspection to RFID line tracking, machine OEE telemetry, and smart Gantt planning.
             </p>
         </div>
         <div class="shrink-0 w-full md:w-auto">
-            <button @click="demoModalOpen = true" class="w-full md:w-auto px-8 py-4 rounded-full bg-white hover:bg-sky-50 text-sky-700 font-bold text-base shadow-2xl transition-all hover:scale-105 flex items-center justify-center gap-3">
-                <svg class="w-5 h-5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            <button @click="demoModalOpen = true" class="w-full md:w-auto px-9 py-4 rounded-full bg-gradient-to-r from-sky-500 via-blue-600 to-sky-600 hover:from-sky-600 hover:to-blue-700 text-white font-medium text-base shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 hover:scale-105 transition-all flex items-center justify-center gap-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                 <span>Schedule Software Consultation</span>
             </button>
+        </div>
+    </div>
+<!-- ================= DIGITAL GARMENT MANUFACTURING PIPELINE (CLEAN LIGHT THEME) ================= -->
+<section id="digital-pipeline" class="relative py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 text-slate-900 overflow-hidden border-b border-slate-200">
+    <div class="max-w-6xl mx-auto space-y-8 relative z-10" x-data="{ currentStage: 1 }">
+        <div class="text-center space-y-4 max-w-3xl mx-auto">
+            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block font-sans">
+                Digital Garment Technology Flow
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-bold font-sans tracking-tight text-sky-600 leading-tight">
+                How Our Software Powers <span class="text-slate-900 italic font-sans">Smart Garment Factories</span>
+            </h2>
+            <p class="text-slate-700 text-base sm:text-lg font-sans">
+                Explore the connected technology loop: from shopfloor machines to AI vision scanning and executive SaaS dashboards.
+            </p>
+        </div>
+
+        <!-- 5-Stage Stepper Navigation Bar -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-sans font-semibold">
+            <button @click="currentStage = 1" :class="currentStage === 1 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
+                <span>1. Garment Factory</span>
+            </button>
+            <span class="text-slate-400 hidden sm:inline">→</span>
+            <button @click="currentStage = 2" :class="currentStage === 2 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
+                <span>2. Real-Time Telemetry</span>
+            </button>
+            <span class="text-slate-400 hidden sm:inline">→</span>
+            <button @click="currentStage = 3" :class="currentStage === 3 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
+                <span>3. AI Vision</span>
+            </button>
+            <span class="text-slate-400 hidden sm:inline">→</span>
+            <button @click="currentStage = 4" :class="currentStage === 4 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
+                <span>4. Software Dashboard</span>
+            </button>
+            <span class="text-slate-400 hidden sm:inline">→</span>
+            <button @click="currentStage = 5" :class="currentStage === 5 ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-white text-slate-700 hover:bg-sky-50 border-slate-200'" class="px-4 py-2 rounded-full border transition-all flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
+                <span>5. Insights</span>
+            </button>
+        </div>
+
+        <!-- Clean White 3D Viewport Box -->
+        <div class="relative h-[420px] sm:h-[480px] w-full rounded-3xl overflow-hidden bg-white border border-sky-200 shadow-xl">
+            <div id="hero-digital-factory-canvas" class="w-full h-full absolute inset-0 cursor-grab active:cursor-grabbing"></div>
+
+            <!-- Dynamic Live Light HUD Card Overlay -->
+            <div class="absolute bottom-6 left-6 right-6 pointer-events-none z-10">
+                <div class="bg-white/95 backdrop-blur-md p-5 rounded-2xl border border-sky-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-left shadow-lg">
+                    <div class="space-y-1">
+                        <span class="text-xs font-mono font-bold text-sky-700 uppercase tracking-widest block" x-text="currentStage === 1 ? 'STAGE 1: GARMENT FACTORY FLOOR & WORKSTATIONS' : currentStage === 2 ? 'STAGE 2: REAL-TIME TELEMETRY & MACHINE DATA' : currentStage === 3 ? 'STAGE 3: AI COMPUTER VISION & DEFECT SCANNING' : currentStage === 4 ? 'STAGE 4: ENTERPRISE SOFTWARE DASHBOARD UI' : 'STAGE 5: CONNECTED DIGITAL FACTORY INSIGHTS'"></span>
+                        <p class="text-xs sm:text-sm text-slate-700 font-sans leading-relaxed" x-text="currentStage === 1 ? 'Digital twin visualization of sewing workstations, conveyor line vectors, and active shopfloor operators.' : currentStage === 2 ? 'Real-time telemetry signals streaming machine RPM, temp, and RFID piece counters directly to cloud servers.' : currentStage === 3 ? 'AI vision scanning fabric rolls in real-time, detecting stitch flaws with 99.4% automated inspection accuracy.' : currentStage === 4 ? 'Unified SaaS dashboard monitoring overall line efficiency, OEE metrics, and production dispatch schedules.' : 'Complete factory intelligence loop: Garment Factory → Machines → Data → AI Vision → Software Dashboard → Insights.'"></p>
+                    </div>
+                    <span class="shrink-0 text-[11px] font-mono text-emerald-700 font-bold bg-emerald-50 px-4 py-2 rounded-full border border-emerald-200 shadow-sm">SYSTEM STATUS: OPTIMAL</span>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- ================= INTERACTIVE 3D DIGITAL TWIN STUDIO HUB ================= -->
-<section id="3d-studio" class="relative py-24 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white overflow-hidden border-b border-sky-500/20">
+<section id="3d-studio" class="relative py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 text-slate-900 overflow-hidden border-b border-slate-200">
     <div class="max-w-7xl mx-auto space-y-12 relative z-10">
         <div class="text-center space-y-4 max-w-3xl mx-auto">
-            <span class="text-xs font-semibold uppercase tracking-widest text-sky-400 px-4 py-1.5 rounded-full bg-sky-950/80 border border-sky-400/30 inline-block font-sans">
+            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block font-sans">
                 Interactive 3D Digital Twin Studio
             </span>
-            <h2 class="text-3xl sm:text-5xl font-bold font-sans tracking-tight text-white leading-tight">
-                Touch & Inspect Our <span class="text-sky-400 italic">Real-Time 3D Models</span>
+            <h2 class="text-3xl sm:text-5xl font-bold font-sans tracking-tight text-sky-600 leading-tight">
+                Touch & Inspect Our <span class="text-slate-900 italic">Real-Time 3D Models</span>
             </h2>
-            <p class="text-slate-300 text-base sm:text-lg font-sans">
+            <p class="text-slate-700 text-base sm:text-lg font-sans">
                 Tap or drag any 3D viewport below to inspect real-time factory telemetry, vision inspection, and gear health.
             </p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch" x-data="{ activeTab: 'core' }">
-            <div class="lg:col-span-5 space-y-6 flex flex-col justify-between p-8 rounded-3xl bg-slate-950/90 border border-sky-500/30 backdrop-blur-xl shadow-2xl">
+            <div class="lg:col-span-5 space-y-6 flex flex-col justify-between p-8 rounded-3xl bg-white border border-sky-200 shadow-xl">
                 <div class="space-y-4">
-                    <div class="text-xs font-semibold uppercase tracking-wider text-sky-400 font-sans">Select 3D Telemetry View</div>
+                    <div class="text-xs font-semibold uppercase tracking-wider text-sky-700 font-sans">Select 3D Telemetry View</div>
                     <div class="grid grid-cols-2 gap-3">
                         <button @click="activeTab = 'core'; window.switch3DViewport('core')"
-                                :class="activeTab === 'core' ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/30 border-sky-400' : 'bg-slate-900 text-slate-300 hover:bg-slate-800 border-slate-700'"
-                                class="p-3.5 rounded-2xl border text-xs font-bold font-sans transition-all text-left flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-sky-300 animate-pulse"></span>
+                                :class="activeTab === 'core' ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-slate-50 text-slate-700 hover:bg-sky-50 border-slate-200'"
+                                class="p-3.5 rounded-2xl border text-xs font-sans transition-all text-left flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
                             <span>Core Telemetry</span>
                         </button>
                         <button @click="activeTab = 'qc'; window.switch3DViewport('qc')"
-                                :class="activeTab === 'qc' ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/30 border-sky-400' : 'bg-slate-900 text-slate-300 hover:bg-slate-800 border-slate-700'"
-                                class="p-3.5 rounded-2xl border text-xs font-bold font-sans transition-all text-left flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-sky-300 animate-pulse"></span>
+                                :class="activeTab === 'qc' ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-slate-50 text-slate-700 hover:bg-sky-50 border-slate-200'"
+                                class="p-3.5 rounded-2xl border text-xs font-sans transition-all text-left flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
                             <span>AI Vision Scan</span>
                         </button>
                         <button @click="activeTab = 'oee'; window.switch3DViewport('oee')"
-                                :class="activeTab === 'oee' ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/30 border-sky-400' : 'bg-slate-900 text-slate-300 hover:bg-slate-800 border-slate-700'"
-                                class="p-3.5 rounded-2xl border text-xs font-bold font-sans transition-all text-left flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-sky-300 animate-pulse"></span>
+                                :class="activeTab === 'oee' ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-slate-50 text-slate-700 hover:bg-sky-50 border-slate-200'"
+                                class="p-3.5 rounded-2xl border text-xs font-sans transition-all text-left flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
                             <span>Machine OEE Gears</span>
                         </button>
                         <button @click="activeTab = 'nodes'; window.switch3DViewport('nodes')"
-                                :class="activeTab === 'nodes' ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/30 border-sky-400' : 'bg-slate-900 text-slate-300 hover:bg-slate-800 border-slate-700'"
-                                class="p-3.5 rounded-2xl border text-xs font-bold font-sans transition-all text-left flex items-center gap-2">
-                            <span class="w-2 h-2 rounded-full bg-sky-300 animate-pulse"></span>
+                                :class="activeTab === 'nodes' ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-slate-50 text-slate-700 hover:bg-sky-50 border-slate-200'"
+                                class="p-3.5 rounded-2xl border text-xs font-sans transition-all text-left flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
                             <span>Plant Network</span>
                         </button>
                     </div>
                 </div>
 
-                <div class="space-y-4 pt-4 border-t border-slate-800">
-                    <p id="viewport-description" class="text-sm text-slate-300 font-sans italic">
+                <div class="space-y-4 pt-4 border-t border-slate-100">
+                    <p id="viewport-description" class="text-sm text-slate-700 font-sans italic">
                         Interactive 3D digital core representing real-time factory telemetry.
                     </p>
 
-                    <div class="p-4 rounded-2xl bg-sky-950/60 border border-sky-500/30 text-xs text-sky-200 flex items-center gap-3">
-                        <div class="p-2 rounded-xl bg-sky-500/20 text-sky-400 shrink-0">
-                            <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
+                    <div class="p-4 rounded-2xl bg-sky-50 border border-sky-200 text-xs text-slate-700 flex items-center gap-3">
+                        <div class="p-2.5 rounded-xl bg-sky-100 text-sky-600 shrink-0">
+                            <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                         </div>
                         <div>
-                            <span class="font-bold text-white block">Touch / Tap 3D Viewport</span>
-                            <span>Tap or drag 3D model to launch live telemetry HUD inspector.</span>
+                            <span class="font-bold text-sky-700 block">Touch / Tap 3D Viewport</span>
+                            <span>Tap 3D model to jump to Smart Garment Factory Solutions.</span>
                         </div>
                     </div>
 
-                    <button @click="$dispatch('open-3d-telemetry', { title: 'Live Factory Telemetry Studio', type: activeTab })"
-                            class="w-full py-3.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-bold text-sm shadow-lg shadow-sky-500/25 transition-all flex items-center justify-center gap-2">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                        <span>Inspect Live Telemetry HUD</span>
+                    <button @click="document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })"
+                            class="w-full py-4 rounded-full bg-gradient-to-r from-sky-500 via-blue-600 to-sky-600 hover:from-sky-600 hover:to-blue-700 text-white font-medium text-base shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 hover:scale-105 transition-all flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                        <span>Explore Solutions Below</span>
                     </button>
                 </div>
             </div>
 
-            <div class="lg:col-span-7 relative h-[480px] rounded-3xl bg-slate-950 border border-sky-500/30 overflow-hidden shadow-2xl p-4 flex flex-col justify-between cursor-pointer group"
-                 @click="$dispatch('open-3d-telemetry', { title: '3D Interactive Model Inspection', type: activeTab })">
+            <div class="lg:col-span-7 relative h-[480px] rounded-3xl bg-white border border-sky-200 overflow-hidden shadow-xl p-4 flex flex-col justify-between cursor-pointer group"
+                 @click="document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })">
 
                 <div class="flex items-center justify-between z-10 pointer-events-none">
-                    <span class="text-xs font-mono text-sky-400 font-bold bg-sky-950/80 px-3 py-1 rounded-full border border-sky-500/30 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-green-400 animate-ping"></span>
-                        LIVE 3D TELEMETRY STREAM
+                    <span class="text-xs font-sans text-sky-700 font-semibold bg-sky-50 px-3.5 py-1.5 rounded-full border border-sky-200 flex items-center gap-2 shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-sky-500 animate-ping"></span>
+                        <span x-text="activeTab === 'qc' ? 'SOFTWARE ENGINE: AI VISION INSPECTION' : activeTab === 'oee' ? 'SOFTWARE ENGINE: MACHINE OEE DIAGNOSTICS' : activeTab === 'nodes' ? 'SOFTWARE ENGINE: SMART GANTT SCHEDULER' : 'SOFTWARE ENGINE: REAL-TIME FACTORY TELEMETRY'"></span>
                     </span>
-                    <span class="text-xs font-mono text-slate-400">FPS: 60 | TAP TO INSPECT</span>
+                    <span class="text-xs font-mono font-semibold text-slate-600 bg-white/90 px-3 py-1 rounded-full border border-slate-200 shadow-sm">60 FPS | LIVE DATA HUD</span>
                 </div>
 
+                <!-- 3D WebGL Canvas Container -->
                 <div id="interactive-3d-viewport" class="w-full h-full absolute inset-0 cursor-grab active:cursor-grabbing"></div>
 
-                <div class="z-10 pointer-events-none text-center py-2 bg-slate-950/70 backdrop-blur-md rounded-2xl border border-sky-500/20 text-xs font-sans text-sky-300 font-medium">
-                    👈 Drag to spin in 3D • Tap to open Live Inspection HUD 👉
+                <!-- Software UI HUD Overlay Elements -->
+                <div class="absolute inset-0 pointer-events-none z-10 p-6 flex flex-col justify-between">
+                    <!-- Top Software Metric Badges -->
+                    <div class="flex items-start justify-end gap-3 mt-10">
+                        <!-- QC HUD Badge -->
+                        <div x-show="activeTab === 'qc'" class="bg-white/90 backdrop-blur-md p-3.5 rounded-2xl border border-emerald-300 shadow-lg text-left max-w-xs space-y-1 animate-fade-in">
+                            <div class="flex items-center gap-2 text-emerald-700 font-bold text-xs font-sans uppercase">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                                AI Vision Inspection UI
+                            </div>
+                            <div class="text-[11px] font-mono text-slate-700 space-y-0.5">
+                                <p><span class="text-slate-400">Scan Status:</span> <span class="text-emerald-600 font-bold">Scanning Fabric Roll #842</span></p>
+                                <p><span class="text-slate-400">Stitch Flaws:</span> <span class="text-rose-600 font-bold">1 Defect Detected (99.4%)</span></p>
+                                <p><span class="text-slate-400">Inline Pass Rate:</span> <span class="text-emerald-600 font-bold">98.6% Flawless</span></p>
+                            </div>
+                        </div>
+
+                        <!-- OEE HUD Badge -->
+                        <div x-show="activeTab === 'oee'" class="bg-white/90 backdrop-blur-md p-3.5 rounded-2xl border border-sky-300 shadow-lg text-left max-w-xs space-y-1 animate-fade-in">
+                            <div class="flex items-center gap-2 text-sky-700 font-bold text-xs font-sans uppercase">
+                                <span class="w-2 h-2 rounded-full bg-sky-500 animate-pulse"></span>
+                                Machine Maintenance OEE HUD
+                            </div>
+                            <div class="text-[11px] font-mono text-slate-700 space-y-0.5">
+                                <p><span class="text-slate-400">Motor Speed:</span> <span class="text-sky-600 font-bold">4,200 RPM</span></p>
+                                <p><span class="text-slate-400">Motor Temp:</span> <span class="text-amber-600 font-bold">38.2°C (Optimal)</span></p>
+                                <p><span class="text-slate-400">Overall OEE:</span> <span class="text-emerald-600 font-bold">98.4% Uptime</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Core HUD Badge -->
+                        <div x-show="activeTab === 'core'" class="bg-white/90 backdrop-blur-md p-3.5 rounded-2xl border border-blue-300 shadow-lg text-left max-w-xs space-y-1 animate-fade-in">
+                            <div class="flex items-center gap-2 text-blue-700 font-bold text-xs font-sans uppercase">
+                                <span class="w-2 h-2 rounded-full bg-blue-500 animate-ping"></span>
+                                Real-Time RFID Telemetry HUD
+                            </div>
+                            <div class="text-[11px] font-mono text-slate-700 space-y-0.5">
+                                <p><span class="text-slate-400">Active Lines:</span> <span class="text-blue-600 font-bold">500+ Garment Lines</span></p>
+                                <p><span class="text-slate-400">Throughput:</span> <span class="text-blue-600 font-bold">14,280 Pcs/Hr</span></p>
+                                <p><span class="text-slate-400">Telemetry Sync:</span> <span class="text-emerald-600 font-bold">Real-Time (10ms)</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Nodes HUD Badge -->
+                        <div x-show="activeTab === 'nodes'" class="bg-white/90 backdrop-blur-md p-3.5 rounded-2xl border border-indigo-300 shadow-lg text-left max-w-xs space-y-1 animate-fade-in">
+                            <div class="flex items-center gap-2 text-indigo-700 font-bold text-xs font-sans uppercase">
+                                <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+                                Smart Gantt Planner UI
+                            </div>
+                            <div class="text-[11px] font-mono text-slate-700 space-y-0.5">
+                                <p><span class="text-slate-400">Connected Hubs:</span> <span class="text-indigo-600 font-bold">25 Plants Worldwide</span></p>
+                                <p><span class="text-slate-400">Line Balance:</span> <span class="text-emerald-600 font-bold">96.8% Optimized</span></p>
+                                <p><span class="text-slate-400">Order Dispatch:</span> <span class="text-indigo-600 font-bold">On Schedule</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="z-10 pointer-events-none text-center py-2 bg-white/90 backdrop-blur-md rounded-2xl border border-sky-200 text-xs font-sans text-sky-700 font-semibold shadow-sm">
+                    👈 Drag to rotate software 3D view • Tap viewport to explore product module 👉
                 </div>
             </div>
         </div>

@@ -112,9 +112,12 @@ export function initHero3D(containerId) {
         return { x: e.clientX, y: e.clientY };
     };
 
+    let totalDragDistance = 0;
+
     const onPointerDown = (e) => {
         e.stopPropagation();
         isDragging = true;
+        totalDragDistance = 0;
         previousPointerPos = getPointerPos(e);
     };
 
@@ -124,6 +127,7 @@ export function initHero3D(containerId) {
         if (isDragging) {
             const deltaX = pos.x - previousPointerPos.x;
             const deltaY = pos.y - previousPointerPos.y;
+            totalDragDistance += Math.abs(deltaX) + Math.abs(deltaY);
             targetRotationY += deltaX * 0.01;
             targetRotationX += deltaY * 0.01;
             previousPointerPos = pos;
@@ -138,6 +142,11 @@ export function initHero3D(containerId) {
     const onClick = (e) => {
         e.preventDefault();
         e.stopPropagation();
+        if (totalDragDistance < 8) {
+            window.dispatchEvent(new CustomEvent('open-3d-telemetry', {
+                detail: { title: '3D Digital Core Telemetry Inspection', type: 'Core' }
+            }));
+        }
     };
 
     container.addEventListener('mousedown', onPointerDown);

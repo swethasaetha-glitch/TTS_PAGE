@@ -96,6 +96,8 @@
 
     @include('partials.demo-modal')
 
+    @include('partials.telemetry-modal')
+
     <!-- Floating Quick Action Glass Dock -->
     <div class="fixed bottom-6 right-6 z-40 flex items-center gap-3 font-sans">
         <a href="tel:+917868925566" class="p-3.5 rounded-full bg-white text-sky-600 border border-sky-200 shadow-xl hover:scale-110 transition-all group" title="Call Technical Support">

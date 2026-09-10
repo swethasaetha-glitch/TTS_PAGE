@@ -97,17 +97,48 @@ export function initHero3D(containerId) {
     const particleMesh = new THREE.Points(particleGeo, particleMat);
     scene.add(particleMesh);
 
-    // Mouse Interaction
-    let mouseX = 0, mouseY = 0;
-    let targetX = 0, targetY = 0;
+    container.style.touchAction = 'none';
 
-    const onMouseMove = (e) => {
-        const rect = container.getBoundingClientRect();
-        mouseX = (e.clientX - rect.left) / container.clientWidth - 0.5;
-        mouseY = (e.clientY - rect.top) / container.clientHeight - 0.5;
+    // Touch & Mouse Drag Rotation Controls
+    let isDragging = false;
+    let previousPointerPos = { x: 0, y: 0 };
+    let targetRotationY = 0;
+    let targetRotationX = 0;
+
+    const getPointerPos = (e) => {
+        if (e.touches && e.touches.length > 0) {
+            return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+        }
+        return { x: e.clientX, y: e.clientY };
     };
 
-    container.addEventListener('mousemove', onMouseMove);
+    const onPointerDown = (e) => {
+        isDragging = true;
+        previousPointerPos = getPointerPos(e);
+    };
+
+    const onPointerMove = (e) => {
+        const pos = getPointerPos(e);
+        if (isDragging) {
+            const deltaX = pos.x - previousPointerPos.x;
+            const deltaY = pos.y - previousPointerPos.y;
+            targetRotationY += deltaX * 0.01;
+            targetRotationX += deltaY * 0.01;
+            previousPointerPos = pos;
+        }
+    };
+
+    const onPointerUp = () => {
+        isDragging = false;
+    };
+
+    container.addEventListener('mousedown', onPointerDown);
+    container.addEventListener('mousemove', onPointerMove);
+    window.addEventListener('mouseup', onPointerUp);
+
+    container.addEventListener('touchstart', onPointerDown, { passive: true });
+    container.addEventListener('touchmove', onPointerMove, { passive: true });
+    window.addEventListener('touchend', onPointerUp);
 
     let animationFrameId;
     const clock = new THREE.Clock();
@@ -116,26 +147,23 @@ export function initHero3D(containerId) {
         animationFrameId = requestAnimationFrame(animate);
         const elapsedTime = clock.getElapsedTime();
 
-        targetX += (mouseX - targetX) * 0.05;
-        targetY += (mouseY - targetY) * 0.05;
+        // Idle slow spin when not dragging
+        if (!isDragging) {
+            targetRotationY += 0.003;
+        }
 
-        // Core & Cage Rotations
+        // Smooth rotation interpolation
+        group.rotation.y += (targetRotationY - group.rotation.y) * 0.1;
+        group.rotation.x += (targetRotationX - group.rotation.x) * 0.1;
+
+        // Internal element rotations
         coreMesh.rotation.y = elapsedTime * 0.35;
         coreMesh.rotation.x = elapsedTime * 0.15;
         cageMesh.rotation.y = -elapsedTime * 0.25;
 
-        // DUAL RING ROTATIONS
-        ring1Mesh.rotation.x = elapsedTime * 0.6 + targetY * 1.5;
-        ring1Mesh.rotation.y = elapsedTime * 0.4 + targetX * 1.5;
-
-        ring2Mesh.rotation.z = elapsedTime * 0.5;
-        ring2Mesh.rotation.y = -elapsedTime * 0.35 + targetX * 1.2;
-
+        ring1Mesh.rotation.z = elapsedTime * 0.4;
+        ring2Mesh.rotation.z = elapsedTime * 0.3;
         particleMesh.rotation.y = elapsedTime * 0.04;
-
-        // Group Mouse Inertia
-        group.rotation.y = targetX * 0.6;
-        group.rotation.x = -targetY * 0.6;
 
         renderer.render(scene, camera);
     };
@@ -153,7 +181,12 @@ export function initHero3D(containerId) {
 
     return () => {
         cancelAnimationFrame(animationFrameId);
-        container.removeEventListener('mousemove', onMouseMove);
+        container.removeEventListener('mousedown', onPointerDown);
+        container.removeEventListener('mousemove', onPointerMove);
+        window.removeEventListener('mouseup', onPointerUp);
+        container.removeEventListener('touchstart', onPointerDown);
+        container.removeEventListener('touchmove', onPointerMove);
+        window.removeEventListener('touchend', onPointerUp);
         window.removeEventListener('resize', onResize);
     };
 }

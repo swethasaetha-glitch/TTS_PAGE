@@ -68,6 +68,49 @@ export function initQualityControl3D(containerId) {
     boxMesh.position.set(0, -0.2, 0);
     group.add(boxMesh);
 
+    container.style.touchAction = 'none';
+
+    // Touch & Mouse Drag Controls
+    let isDragging = false;
+    let previousPointerPos = { x: 0, y: 0 };
+    let targetRotationY = 0;
+    let targetRotationX = 0;
+
+    const getPointerPos = (e) => {
+        if (e.touches && e.touches.length > 0) {
+            return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+        }
+        return { x: e.clientX, y: e.clientY };
+    };
+
+    const onPointerDown = (e) => {
+        isDragging = true;
+        previousPointerPos = getPointerPos(e);
+    };
+
+    const onPointerMove = (e) => {
+        const pos = getPointerPos(e);
+        if (isDragging) {
+            const deltaX = pos.x - previousPointerPos.x;
+            const deltaY = pos.y - previousPointerPos.y;
+            targetRotationY += deltaX * 0.01;
+            targetRotationX += deltaY * 0.01;
+            previousPointerPos = pos;
+        }
+    };
+
+    const onPointerUp = () => {
+        isDragging = false;
+    };
+
+    container.addEventListener('mousedown', onPointerDown);
+    container.addEventListener('mousemove', onPointerMove);
+    window.addEventListener('mouseup', onPointerUp);
+
+    container.addEventListener('touchstart', onPointerDown, { passive: true });
+    container.addEventListener('touchmove', onPointerMove, { passive: true });
+    window.addEventListener('touchend', onPointerUp);
+
     // Animation Loop
     let animationFrameId;
     const clock = new THREE.Clock();
@@ -76,9 +119,15 @@ export function initQualityControl3D(containerId) {
         animationFrameId = requestAnimationFrame(animate);
         const t = clock.getElapsedTime();
 
+        if (!isDragging) {
+            targetRotationY += 0.003;
+        }
+
+        group.rotation.y += (targetRotationY - group.rotation.y) * 0.1;
+        group.rotation.x += (targetRotationX - group.rotation.x) * 0.1;
+
         laserMesh.position.z = Math.sin(t * 2) * 1.4;
         boxMesh.rotation.y = t * 0.4;
-        group.rotation.y = t * 0.2;
 
         renderer.render(scene, camera);
     };
@@ -96,6 +145,12 @@ export function initQualityControl3D(containerId) {
 
     return () => {
         cancelAnimationFrame(animationFrameId);
+        container.removeEventListener('mousedown', onPointerDown);
+        container.removeEventListener('mousemove', onPointerMove);
+        window.removeEventListener('mouseup', onPointerUp);
+        container.removeEventListener('touchstart', onPointerDown);
+        container.removeEventListener('touchmove', onPointerMove);
+        window.removeEventListener('touchend', onPointerUp);
         window.removeEventListener('resize', onResize);
     };
 }

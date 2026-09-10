@@ -144,23 +144,20 @@
             </button>
         </div>
 
-        <!-- Clean White/Slate 3D Viewport Box Container with Separate Image Cards for Each Stage -->
+        <!-- Clean Slate Container with Separate Visual Image Cards for Each Stage -->
         <div class="relative min-h-[480px] sm:min-h-[540px] w-full rounded-3xl overflow-hidden bg-slate-950 border border-sky-200 shadow-xl flex flex-col justify-between p-5 sm:p-8 space-y-4">
-
-            <!-- Background 3D WebGL Canvas -->
-            <div id="hero-digital-factory-canvas" class="w-full h-full absolute inset-0 opacity-40"></div>
 
             <!-- Top Floating Stage Header Badge -->
             <div class="relative z-10 flex flex-wrap items-center justify-between gap-3 pointer-events-none">
-                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-950/80 border border-sky-400/40 text-sky-300 text-xs font-semibold uppercase tracking-wider backdrop-blur-md shadow-md">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-950 border border-sky-400/40 text-sky-300 text-xs font-semibold uppercase tracking-wider shadow-md">
                     <span class="w-2.5 h-2.5 rounded-full bg-sky-400 animate-ping"></span>
                     <span x-text="currentStage === 1 ? 'STAGE 1: GARMENT FACTORY FLOOR & WORKSTATION MAP' : currentStage === 2 ? 'STAGE 2: REAL-TIME TELEMETRY & IOT MACHINE SENSORS' : currentStage === 3 ? 'STAGE 3: AI COMPUTER VISION & DEFECT SCANNING' : currentStage === 4 ? 'STAGE 4: ENTERPRISE SAAS PRODUCTION DASHBOARD' : 'STAGE 5: SMART MANUFACTURING INSIGHTS & AI ADVISORY'"></span>
                 </div>
-                <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-950/80 px-3.5 py-1.5 rounded-full border border-emerald-400/40 backdrop-blur-md">LIVE 10ms SYNC</span>
+                <span class="text-xs font-mono font-bold text-emerald-400 bg-emerald-950 px-3.5 py-1.5 rounded-full border border-emerald-400/40">LIVE 10ms SYNC</span>
             </div>
 
             <!-- ================= STAGE 1 VISUAL IMAGE CARD: GARMENT FACTORY SHOPFLOOR MAP ================= -->
-            <div x-show="currentStage === 1" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="relative z-10 my-auto bg-slate-900/90 backdrop-blur-md rounded-2xl border border-sky-400/30 p-4 sm:p-6 shadow-2xl space-y-4">
+            <div x-show="currentStage === 1" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="relative z-10 my-auto bg-slate-900 rounded-2xl border border-sky-400/30 p-4 sm:p-6 shadow-2xl space-y-4">
                 <!-- 4 Sewing Line Map Cards -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left">
                     <div class="p-3.5 rounded-xl bg-slate-950/80 border border-sky-500/40 space-y-2">
@@ -230,10 +227,10 @@
             </div>
 
             <!-- ================= STAGE 2 VISUAL IMAGE CARD: REAL-TIME TELEMETRY & IOT SENSORS ================= -->
-            <div x-show="currentStage === 2" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="relative z-10 my-auto bg-slate-900/90 backdrop-blur-md rounded-2xl border border-emerald-400/30 p-4 sm:p-6 shadow-2xl space-y-4">
+            <div x-show="currentStage === 2" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="relative z-10 my-auto bg-slate-900 rounded-2xl border border-emerald-400/30 p-4 sm:p-6 shadow-2xl space-y-4">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                     <!-- Left Oscilloscope Waveform Card -->
-                    <div class="p-4 rounded-xl bg-slate-950/80 border border-emerald-500/40 space-y-3">
+                    <div class="p-4 rounded-xl bg-slate-950 border border-emerald-500/40 space-y-3">
                         <div class="flex items-center justify-between text-xs font-bold text-emerald-400">
                             <span>LIVE SEWING MOTOR RPM OSCILLOSCOPE</span>
                             <span class="font-mono text-[10px] text-emerald-300 animate-pulse">● SIGNAL ACTIVE</span>
@@ -243,14 +240,14 @@
                                 <path stroke-width="2" d="M 0 40 Q 30 10 60 40 T 120 40 T 180 15 T 240 65 T 300 40"></path>
                                 <path stroke-width="1.5" stroke-dasharray="4,4" class="text-sky-400 opacity-60" d="M 0 40 Q 25 65 50 40 T 100 40 T 150 20 T 200 60 T 300 40"></path>
                             </svg>
-                            <div class="absolute bottom-2 left-3 text-[10px] font-mono text-emerald-300 bg-slate-950/80 px-2 py-0.5 rounded border border-emerald-500/30">
+                            <div class="absolute bottom-2 left-3 text-[10px] font-mono text-emerald-300 bg-slate-950 px-2 py-0.5 rounded border border-emerald-500/30">
                                 VELOCITY: 4,250 RPM | THREAD TENSION: 4.2N
                             </div>
                         </div>
                     </div>
 
                     <!-- Right Juki Head IoT Spec Card -->
-                    <div class="p-4 rounded-xl bg-slate-950/80 border border-sky-500/40 space-y-3">
+                    <div class="p-4 rounded-xl bg-slate-950 border border-sky-500/40 space-y-3">
                         <div class="text-xs font-bold text-sky-400">SMART SEWING HEAD #42 TELEMETRY</div>
                         <div class="grid grid-cols-2 gap-2 text-xs font-mono">
                             <div class="p-2.5 rounded bg-slate-900 border border-slate-800">
@@ -275,7 +272,7 @@
             </div>
 
             <!-- ================= STAGE 3 VISUAL IMAGE CARD: AI VISION DEFECT SCANNING ================= -->
-            <div x-show="currentStage === 3" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="relative z-10 my-auto bg-slate-900/90 backdrop-blur-md rounded-2xl border border-sky-400/30 p-4 sm:p-6 shadow-2xl space-y-4">
+            <div x-show="currentStage === 3" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="relative z-10 my-auto bg-slate-900 rounded-2xl border border-sky-400/30 p-4 sm:p-6 shadow-2xl space-y-4">
                 <div class="grid grid-cols-1 sm:grid-cols-12 gap-4 text-left">
                     <!-- Optical Camera Scanner Grid Panel -->
                     <div class="sm:col-span-7 p-4 rounded-xl bg-slate-950 border border-sky-500/40 relative overflow-hidden space-y-2">
@@ -283,7 +280,7 @@
                             <span>OPTICAL FABRIC CAMERA SCANNER</span>
                             <span class="text-[10px] font-mono text-emerald-400">60 FPS HD</span>
                         </div>
-                        <div class="h-32 bg-slate-900/80 rounded border border-slate-800 relative flex items-center justify-center overflow-hidden">
+                        <div class="h-32 bg-slate-900 rounded border border-slate-800 relative flex items-center justify-center overflow-hidden">
                             <!-- Weave Grid SVG -->
                             <svg class="w-full h-full opacity-30 text-sky-400 stroke-current" viewBox="0 0 200 80">
                                 <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" stroke-width="0.5"></path></pattern>
@@ -324,7 +321,7 @@
             </div>
 
             <!-- ================= STAGE 4 VISUAL IMAGE CARD: ENTERPRISE SOFTWARE DASHBOARD ================= -->
-            <div x-show="currentStage === 4" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="relative z-10 my-auto bg-slate-900/90 backdrop-blur-md rounded-2xl border border-sky-400/30 p-4 sm:p-6 shadow-2xl space-y-4">
+            <div x-show="currentStage === 4" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="relative z-10 my-auto bg-slate-900 rounded-2xl border border-sky-400/30 p-4 sm:p-6 shadow-2xl space-y-4">
                 <!-- 4 Top KPI Cards -->
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-left">
                     <div class="p-3 rounded-xl bg-slate-950 border border-emerald-500/40">
@@ -366,7 +363,7 @@
             </div>
 
             <!-- ================= STAGE 5 VISUAL IMAGE CARD: SMART MANUFACTURING INSIGHTS ================= -->
-            <div x-show="currentStage === 5" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="relative z-10 my-auto bg-slate-900/90 backdrop-blur-md rounded-2xl border border-sky-400/30 p-4 sm:p-6 shadow-2xl space-y-4">
+            <div x-show="currentStage === 5" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" class="relative z-10 my-auto bg-slate-900 rounded-2xl border border-sky-400/30 p-4 sm:p-6 shadow-2xl space-y-4">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                     <!-- AI Advisory Card -->
                     <div class="p-4 rounded-xl bg-slate-950 border border-sky-500/40 space-y-2 text-xs font-sans">
@@ -405,12 +402,12 @@
 
             <!-- Dynamic Live Light HUD Card Overlay -->
             <div class="relative z-10 pointer-events-none">
-                <div class="bg-slate-900/90 backdrop-blur-md p-4 rounded-2xl border border-sky-400/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-left shadow-lg">
+                <div class="bg-slate-900 p-4 rounded-2xl border border-sky-400/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-left shadow-lg">
                     <div class="space-y-0.5">
                         <span class="text-xs font-mono font-bold text-sky-400 uppercase tracking-widest block" x-text="currentStage === 1 ? 'STAGE 1: GARMENT FACTORY FLOOR & WORKSTATIONS' : currentStage === 2 ? 'STAGE 2: REAL-TIME TELEMETRY & MACHINE DATA' : currentStage === 3 ? 'STAGE 3: AI COMPUTER VISION & DEFECT SCANNING' : currentStage === 4 ? 'STAGE 4: ENTERPRISE SOFTWARE DASHBOARD UI' : 'STAGE 5: CONNECTED DIGITAL FACTORY INSIGHTS'"></span>
                         <p class="text-xs text-slate-300 font-sans leading-relaxed" x-text="currentStage === 1 ? 'Digital twin visualization of sewing workstations, conveyor line vectors, and active shopfloor operators.' : currentStage === 2 ? 'Real-time telemetry signals streaming machine RPM, temp, and RFID piece counters directly to cloud servers.' : currentStage === 3 ? 'AI vision scanning fabric rolls in real-time, detecting stitch flaws with 99.4% automated inspection accuracy.' : currentStage === 4 ? 'Unified SaaS dashboard monitoring overall line efficiency, OEE metrics, and production dispatch schedules.' : 'Complete factory intelligence loop: Garment Factory → Machines → Data → AI Vision → Software Dashboard → Insights.'"></p>
                     </div>
-                    <span class="shrink-0 text-[11px] font-mono text-emerald-400 font-bold bg-emerald-950/90 px-3.5 py-1.5 rounded-full border border-emerald-400/30">SYSTEM STATUS: OPTIMAL</span>
+                    <span class="shrink-0 text-[11px] font-mono text-emerald-400 font-bold bg-emerald-950 px-3.5 py-1.5 rounded-full border border-emerald-400/30">SYSTEM STATUS: OPTIMAL</span>
                 </div>
             </div>
         </div>

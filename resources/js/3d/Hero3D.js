@@ -35,7 +35,7 @@ export function initHero3D(containerId) {
     const mainGroup = new THREE.Group();
     scene.add(mainGroup);
 
-    // ================= 1. DYNAMIC HIGH-RESOLUTION SaaS SOFTWARE UI CANVAS =================
+    // ================= 1. 3D HOLOGRAPHIC TELEMETRY CORE & ORBITAL DATA RINGS =================
     const uiCanvas = document.createElement('canvas');
     uiCanvas.width = 1024;
     uiCanvas.height = 640;
@@ -44,41 +44,69 @@ export function initHero3D(containerId) {
     const uiTexture = new THREE.CanvasTexture(uiCanvas);
     uiTexture.anisotropy = renderer.capabilities.getMaxAnisotropy();
 
-    // 3D Display Monitor Chassis
-    const monitorGroup = new THREE.Group();
-
-    const frameGeo = new THREE.BoxGeometry(5.4, 3.4, 0.14);
-    const frameMat = new THREE.MeshStandardMaterial({
-        color: 0x0f172a,
-        metalness: 0.95,
-        roughness: 0.15,
+    // Central Glowing Telemetry Sphere Core
+    const coreGeo = new THREE.SphereGeometry(0.9, 32, 32);
+    const coreMat = new THREE.MeshStandardMaterial({
+        color: 0x0284c7,
+        emissive: 0x0369a1,
+        roughness: 0.1,
+        metalness: 0.9,
     });
-    const frameMesh = new THREE.Mesh(frameGeo, frameMat);
-    monitorGroup.add(frameMesh);
+    const coreMesh = new THREE.Mesh(coreGeo, coreMat);
+    mainGroup.add(coreMesh);
 
-    // Illuminated Front Screen
+    // Inner Wireframe Energy Core
+    const innerGeo = new THREE.SphereGeometry(0.65, 16, 16);
+    const innerMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, wireframe: true });
+    const innerMesh = new THREE.Mesh(innerGeo, innerMat);
+    mainGroup.add(innerMesh);
+
+    // 3 Concentric Orbital Telemetry Rings
+    const ringGroup = new THREE.Group();
+
+    const ring1Geo = new THREE.TorusGeometry(1.6, 0.035, 16, 100);
+    const ring1Mat = new THREE.MeshStandardMaterial({ color: 0x38bdf8, emissive: 0x0284c7, metalness: 0.9 });
+    const ring1 = new THREE.Mesh(ring1Geo, ring1Mat);
+    ring1.rotation.x = Math.PI / 3;
+    ringGroup.add(ring1);
+
+    const ring2Geo = new THREE.TorusGeometry(2.1, 0.028, 16, 100);
+    const ring2Mat = new THREE.MeshStandardMaterial({ color: 0x10b981, emissive: 0x059669, metalness: 0.9 });
+    const ring2 = new THREE.Mesh(ring2Geo, ring2Mat);
+    ring2.rotation.y = Math.PI / 4;
+    ringGroup.add(ring2);
+
+    const ring3Geo = new THREE.TorusGeometry(2.6, 0.02, 16, 100);
+    const ring3Mat = new THREE.MeshStandardMaterial({ color: 0x818cf8, emissive: 0x4338ca, metalness: 0.9 });
+    const ring3 = new THREE.Mesh(ring3Geo, ring3Mat);
+    ring3.rotation.x = -Math.PI / 4;
+    ringGroup.add(ring3);
+
+    mainGroup.add(ringGroup);
+
+    // Orbiting Data Node Particles
+    const nodesGroup = new THREE.Group();
+    const nodeMeshes = [];
+    for (let i = 0; i < 8; i++) {
+        const nodeGeo = new THREE.IcosahedronGeometry(0.1, 1);
+        const nodeMat = new THREE.MeshStandardMaterial({ color: 0x38bdf8, emissive: 0x0284c7 });
+        const node = new THREE.Mesh(nodeGeo, nodeMat);
+        nodesGroup.add(node);
+        nodeMeshes.push(node);
+    }
+    mainGroup.add(nodesGroup);
+
+    // Holographic Telemetry Screen Canvas Plane
     const screenGeo = new THREE.PlaneGeometry(5.2, 3.2);
     const screenMat = new THREE.MeshBasicMaterial({
         map: uiTexture,
-        side: THREE.FrontSide,
+        side: THREE.DoubleSide,
+        transparent: true,
+        opacity: 0.92
     });
     const screenMesh = new THREE.Mesh(screenGeo, screenMat);
-    screenMesh.position.z = 0.08;
-    monitorGroup.add(screenMesh);
-
-    // Sleek Pedestal Stand Base
-    const standGeo = new THREE.BoxGeometry(1.2, 0.4, 0.8);
-    const standMat = new THREE.MeshStandardMaterial({ color: 0x0284c7, metalness: 0.9, roughness: 0.2 });
-    const stand = new THREE.Mesh(standGeo, standMat);
-    stand.position.set(0, -1.9, 0);
-    monitorGroup.add(stand);
-
-    const poleGeo = new THREE.CylinderGeometry(0.1, 0.1, 0.8, 16);
-    const pole = new THREE.Mesh(poleGeo, standMat);
-    pole.position.set(0, -1.5, 0);
-    monitorGroup.add(pole);
-
-    mainGroup.add(monitorGroup);
+    screenMesh.position.z = 0.05;
+    mainGroup.add(screenMesh);
 
     // ================= 2. DYNAMIC 2D SaaS DASHBOARD CANVAS RENDERER =================
     let scanLineX = 50;
@@ -715,6 +743,22 @@ export function initHero3D(containerId) {
 
         // Render dynamic 2D SaaS interface onto screen texture
         renderSaaSUI(elapsedTime);
+
+        // Animate 3D Orbital Rings & Nodes
+        if (ringGroup) {
+            ring1.rotation.z = elapsedTime * 0.4;
+            ring2.rotation.x = elapsedTime * 0.3;
+            ring3.rotation.y = elapsedTime * 0.5;
+        }
+
+        if (nodeMeshes && nodeMeshes.length > 0) {
+            nodeMeshes.forEach((nMesh, idx) => {
+                const angle = (idx / 8) * Math.PI * 2 + elapsedTime * 0.6;
+                nMesh.position.x = Math.cos(angle) * (2.0 + Math.sin(elapsedTime + idx) * 0.2);
+                nMesh.position.y = Math.sin(angle * 2) * 0.4;
+                nMesh.position.z = Math.sin(angle) * (2.0 + Math.cos(elapsedTime + idx) * 0.2);
+            });
+        }
 
         // Lock screen front-facing when not dragging
         if (!isDragging) {

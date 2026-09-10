@@ -114,9 +114,12 @@ export function initQualityControl3D(containerId) {
         e.preventDefault();
         e.stopPropagation();
         if (totalDragDistance < 8) {
-            window.dispatchEvent(new CustomEvent('open-3d-telemetry', {
-                detail: { title: 'AI Quality Control Vision Inspection', type: 'QC' }
-            }));
+            const productsEl = document.getElementById('products');
+            if (productsEl) {
+                productsEl.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                window.location.href = '/#products';
+            }
         }
     };
 

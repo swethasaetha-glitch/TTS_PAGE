@@ -126,9 +126,12 @@ export function initMachineMaintenance3D(containerId) {
         e.preventDefault();
         e.stopPropagation();
         if (totalDragDistance < 8) {
-            window.dispatchEvent(new CustomEvent('open-3d-telemetry', {
-                detail: { title: 'Machine OEE & Health Inspection', type: 'OEE' }
-            }));
+            const productsEl = document.getElementById('products');
+            if (productsEl) {
+                productsEl.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                window.location.href = '/#products';
+            }
         }
     };
 

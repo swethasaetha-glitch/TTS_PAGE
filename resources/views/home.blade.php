@@ -153,37 +153,37 @@
 
                     <div class="p-4 rounded-2xl bg-sky-950/60 border border-sky-500/30 text-xs text-sky-200 flex items-center gap-3">
                         <div class="p-2 rounded-xl bg-sky-500/20 text-sky-400 shrink-0">
-                            <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
+                            <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                         </div>
                         <div>
                             <span class="font-bold text-white block">Touch / Tap 3D Viewport</span>
-                            <span>Tap or drag 3D model to launch live telemetry HUD inspector.</span>
+                            <span>Tap 3D model to jump to Smart Garment Factory Solutions.</span>
                         </div>
                     </div>
 
-                    <button @click="$dispatch('open-3d-telemetry', { title: 'Live Factory Telemetry Studio', type: activeTab })"
+                    <button @click="document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })"
                             class="w-full py-3.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-bold text-sm shadow-lg shadow-sky-500/25 transition-all flex items-center justify-center gap-2">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
-                        <span>Inspect Live Telemetry HUD</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                        <span>Explore Solutions Below</span>
                     </button>
                 </div>
             </div>
 
             <div class="lg:col-span-7 relative h-[480px] rounded-3xl bg-slate-950 border border-sky-500/30 overflow-hidden shadow-2xl p-4 flex flex-col justify-between cursor-pointer group"
-                 @click="$dispatch('open-3d-telemetry', { title: '3D Interactive Model Inspection', type: activeTab })">
+                 @click="document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })">
 
                 <div class="flex items-center justify-between z-10 pointer-events-none">
                     <span class="text-xs font-mono text-sky-400 font-bold bg-sky-950/80 px-3 py-1 rounded-full border border-sky-500/30 flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-green-400 animate-ping"></span>
                         LIVE 3D TELEMETRY STREAM
                     </span>
-                    <span class="text-xs font-mono text-slate-400">FPS: 60 | TAP TO INSPECT</span>
+                    <span class="text-xs font-mono text-slate-400">FPS: 60 | TAP TO JUMP TO SOLUTIONS</span>
                 </div>
 
                 <div id="interactive-3d-viewport" class="w-full h-full absolute inset-0 cursor-grab active:cursor-grabbing"></div>
 
                 <div class="z-10 pointer-events-none text-center py-2 bg-slate-950/70 backdrop-blur-md rounded-2xl border border-sky-500/20 text-xs font-sans text-sky-300 font-medium">
-                    👈 Drag to spin in 3D • Tap to open Live Inspection HUD 👉
+                    👈 Drag to spin in 3D • Tap to jump to Solutions section 👉
                 </div>
             </div>
         </div>

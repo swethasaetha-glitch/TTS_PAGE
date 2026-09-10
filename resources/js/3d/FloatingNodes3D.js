@@ -108,9 +108,12 @@ export function initFloatingNodes3D(containerId) {
         e.preventDefault();
         e.stopPropagation();
         if (totalDragDistance < 8) {
-            window.dispatchEvent(new CustomEvent('open-3d-telemetry', {
-                detail: { title: 'Global Plant Constellation Network Inspection', type: 'Nodes' }
-            }));
+            const productsEl = document.getElementById('products');
+            if (productsEl) {
+                productsEl.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                window.location.href = '/#products';
+            }
         }
     };
 

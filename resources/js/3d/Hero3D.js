@@ -143,9 +143,12 @@ export function initHero3D(containerId) {
         e.preventDefault();
         e.stopPropagation();
         if (totalDragDistance < 8) {
-            window.dispatchEvent(new CustomEvent('open-3d-telemetry', {
-                detail: { title: '3D Digital Core Telemetry Inspection', type: 'Core' }
-            }));
+            const productsEl = document.getElementById('products');
+            if (productsEl) {
+                productsEl.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                window.location.href = '/#products';
+            }
         }
     };
 

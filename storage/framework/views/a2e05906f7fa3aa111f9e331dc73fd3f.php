@@ -99,6 +99,97 @@
     </div>
 </section>
 
+<!-- ================= INTERACTIVE 3D DIGITAL TWIN STUDIO HUB ================= -->
+<section id="3d-studio" class="relative py-24 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white overflow-hidden border-b border-sky-500/20">
+    <div class="max-w-7xl mx-auto space-y-12 relative z-10">
+        <div class="text-center space-y-4 max-w-3xl mx-auto">
+            <span class="text-xs font-semibold uppercase tracking-widest text-sky-400 px-4 py-1.5 rounded-full bg-sky-950/80 border border-sky-400/30 inline-block font-sans">
+                Interactive 3D Digital Twin Studio
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-bold font-sans tracking-tight text-white leading-tight">
+                Touch & Inspect Our <span class="text-sky-400 italic">Real-Time 3D Models</span>
+            </h2>
+            <p class="text-slate-300 text-base sm:text-lg font-sans">
+                Tap or drag any 3D viewport below to inspect real-time factory telemetry, vision inspection, and gear health.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch" x-data="{ activeTab: 'core' }">
+            <div class="lg:col-span-5 space-y-6 flex flex-col justify-between p-8 rounded-3xl bg-slate-950/90 border border-sky-500/30 backdrop-blur-xl shadow-2xl">
+                <div class="space-y-4">
+                    <div class="text-xs font-semibold uppercase tracking-wider text-sky-400 font-sans">Select 3D Telemetry View</div>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button @click="activeTab = 'core'; window.switch3DViewport('core')"
+                                :class="activeTab === 'core' ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/30 border-sky-400' : 'bg-slate-900 text-slate-300 hover:bg-slate-800 border-slate-700'"
+                                class="p-3.5 rounded-2xl border text-xs font-bold font-sans transition-all text-left flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-sky-300 animate-pulse"></span>
+                            <span>Core Telemetry</span>
+                        </button>
+                        <button @click="activeTab = 'qc'; window.switch3DViewport('qc')"
+                                :class="activeTab === 'qc' ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/30 border-sky-400' : 'bg-slate-900 text-slate-300 hover:bg-slate-800 border-slate-700'"
+                                class="p-3.5 rounded-2xl border text-xs font-bold font-sans transition-all text-left flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-sky-300 animate-pulse"></span>
+                            <span>AI Vision Scan</span>
+                        </button>
+                        <button @click="activeTab = 'oee'; window.switch3DViewport('oee')"
+                                :class="activeTab === 'oee' ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/30 border-sky-400' : 'bg-slate-900 text-slate-300 hover:bg-slate-800 border-slate-700'"
+                                class="p-3.5 rounded-2xl border text-xs font-bold font-sans transition-all text-left flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-sky-300 animate-pulse"></span>
+                            <span>Machine OEE Gears</span>
+                        </button>
+                        <button @click="activeTab = 'nodes'; window.switch3DViewport('nodes')"
+                                :class="activeTab === 'nodes' ? 'bg-sky-500 text-white shadow-lg shadow-sky-500/30 border-sky-400' : 'bg-slate-900 text-slate-300 hover:bg-slate-800 border-slate-700'"
+                                class="p-3.5 rounded-2xl border text-xs font-bold font-sans transition-all text-left flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-sky-300 animate-pulse"></span>
+                            <span>Plant Network</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="space-y-4 pt-4 border-t border-slate-800">
+                    <p id="viewport-description" class="text-sm text-slate-300 font-sans italic">
+                        Interactive 3D digital core representing real-time factory telemetry.
+                    </p>
+
+                    <div class="p-4 rounded-2xl bg-sky-950/60 border border-sky-500/30 text-xs text-sky-200 flex items-center gap-3">
+                        <div class="p-2 rounded-xl bg-sky-500/20 text-sky-400 shrink-0">
+                            <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path></svg>
+                        </div>
+                        <div>
+                            <span class="font-bold text-white block">Touch / Tap 3D Viewport</span>
+                            <span>Tap or drag 3D model to launch live telemetry HUD inspector.</span>
+                        </div>
+                    </div>
+
+                    <button @click="$dispatch('open-3d-telemetry', { title: 'Live Factory Telemetry Studio', type: activeTab })"
+                            class="w-full py-3.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-bold text-sm shadow-lg shadow-sky-500/25 transition-all flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                        <span>Inspect Live Telemetry HUD</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 relative h-[480px] rounded-3xl bg-slate-950 border border-sky-500/30 overflow-hidden shadow-2xl p-4 flex flex-col justify-between cursor-pointer group"
+                 @click="$dispatch('open-3d-telemetry', { title: '3D Interactive Model Inspection', type: activeTab })">
+
+                <div class="flex items-center justify-between z-10 pointer-events-none">
+                    <span class="text-xs font-mono text-sky-400 font-bold bg-sky-950/80 px-3 py-1 rounded-full border border-sky-500/30 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-green-400 animate-ping"></span>
+                        LIVE 3D TELEMETRY STREAM
+                    </span>
+                    <span class="text-xs font-mono text-slate-400">FPS: 60 | TAP TO INSPECT</span>
+                </div>
+
+                <div id="interactive-3d-viewport" class="w-full h-full absolute inset-0 cursor-grab active:cursor-grabbing"></div>
+
+                <div class="z-10 pointer-events-none text-center py-2 bg-slate-950/70 backdrop-blur-md rounded-2xl border border-sky-500/20 text-xs font-sans text-sky-300 font-medium">
+                    👈 Drag to spin in 3D • Tap to open Live Inspection HUD 👉
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- ================= IMPACT METRICS ================= -->
 <section id="impact" class="relative py-28 px-4 sm:px-6 lg:px-8 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto space-y-16">

@@ -33,13 +33,14 @@
     
     <!-- Real-World Garment Factory Video Background (Skilled Worker Operating Industrial Sewing Machine) -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <video id="hero-bg-video" autoplay loop muted playsinline preload="metadata" class="w-full h-full object-cover opacity-95 scale-100 filter brightness-105 contrast-110">
+        <video id="hero-bg-video" autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-100 scale-100 filter brightness-115 contrast-105">
             <source src="{{ asset('videos/garment-15459704.mp4') }}" type="video/mp4">
             <source src="{{ asset('videos/garment-custom.mp4') }}" type="video/mp4">
+            <source src="https://videos.pexels.com/video-files/15459704/15459704-hd_1920_1080_24fps.mp4" type="video/mp4">
             <source src="{{ asset('videos/garment-bg.mp4') }}" type="video/mp4">
         </video>
-        <!-- Crisp High-Contrast Vignette Overlay for Title Contrast -->
-        <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/75"></div>
+        <!-- Light High-Contrast Vignette Overlay for Title Contrast & Maximum Video Visibility -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/35 via-black/10 to-black/55"></div>
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-white/5 rounded-full blur-[140px]"></div>
         <div class="absolute bottom-10 right-10 w-96 h-96 bg-white/5 rounded-full blur-[120px]"></div>
     </div>
@@ -1072,20 +1073,25 @@ document.addEventListener('DOMContentLoaded', function() {
             renderer.render(scene, camera);
         }
         animate();
-    // Video Performance IntersectionObserver: pause hero video when scrolled off-screen
+    // Video Performance & Autoplay Observer
     const heroVideo = document.getElementById('hero-bg-video');
     const heroSection = document.getElementById('hero');
-    if (heroVideo && heroSection && 'IntersectionObserver' in window) {
-        const videoObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    heroVideo.play().catch(() => {});
-                } else {
-                    heroVideo.pause();
-                }
-            });
-        }, { threshold: 0.1 });
-        videoObserver.observe(heroSection);
+    if (heroVideo) {
+        // Trigger immediate playback on load
+        heroVideo.play().catch(() => {});
+        
+        if (heroSection && 'IntersectionObserver' in window) {
+            const videoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        heroVideo.play().catch(() => {});
+                    } else {
+                        heroVideo.pause();
+                    }
+                });
+            }, { threshold: 0.1 });
+            videoObserver.observe(heroSection);
+        }
     }
 });
 </script>

@@ -64,20 +64,12 @@
             Real-time digital intelligence for apparel manufacturing. Connect shopfloor sewing lines, AI vision inspection, and machine IoT sensors directly to executive SaaS dashboards.
         </p>
 
-        <!-- Prominent Dual CTAs -->
-        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto">
-            <!-- Primary Prominent CTA: Book a Demo -->
-            <button @click="demoModalOpen = true"
-                    class="w-full sm:w-auto flex items-center justify-center gap-3 bg-gradient-to-r from-sky-400 via-blue-600 to-sky-500 hover:from-sky-300 hover:to-blue-500 text-white font-bold text-lg px-11 py-4.5 rounded-full shadow-2xl shadow-sky-500/50 hover:shadow-sky-400/70 hover:scale-105 transition-all group ring-4 ring-sky-400/25 font-sans">
-                <svg class="w-6 h-6 group-hover:rotate-12 transition-transform text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                <span>Book a Demo</span>
-            </button>
-
-            <!-- Secondary CTA: See How It Works -->
+        <!-- Single Prominent Hero CTA: See How It Works -->
+        <div class="pt-2 flex justify-center w-full">
             <a href="#problem"
-               class="w-full sm:w-auto flex items-center justify-center gap-2 bg-black/80 hover:bg-sky-600 text-white font-sans font-bold text-base px-9 py-4.5 rounded-full border-2 border-sky-400 hover:border-sky-300 backdrop-blur-md shadow-2xl shadow-sky-500/20 hover:scale-105 transition-all group">
+               class="flex items-center justify-center gap-3 bg-gradient-to-r from-sky-400 via-blue-600 to-sky-500 hover:from-sky-300 hover:to-blue-500 text-white font-bold text-lg px-11 py-4.5 rounded-full shadow-2xl shadow-sky-500/50 hover:shadow-sky-400/70 hover:scale-105 transition-all group ring-4 ring-sky-400/25 font-sans">
                 <span>See How It Works</span>
-                <svg class="w-5 h-5 group-hover:translate-y-1 transition-transform text-sky-300 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                <svg class="w-6 h-6 group-hover:translate-y-1 transition-transform text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
             </a>
         </div>
 

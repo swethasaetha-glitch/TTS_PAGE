@@ -9,12 +9,21 @@
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+@keyframes logoMarqueeReverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
 .animate-logo-marquee {
     display: flex;
     width: max-content;
     animation: logoMarquee 26s linear infinite;
 }
-.animate-logo-marquee:hover {
+.animate-logo-marquee-reverse {
+    display: flex;
+    width: max-content;
+    animation: logoMarqueeReverse 26s linear infinite;
+}
+.animate-logo-marquee:hover, .animate-logo-marquee-reverse:hover {
     animation-play-state: paused;
 }
 </style>
@@ -84,6 +93,77 @@
             </div>
             <div class="px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-indigo-400"></span> 🎯 99.4% AI Vision Inspection Accuracy
+            </div>
+        </div>
+
+        <!-- Trusted Client Logos Moving Marquee Strip in Hero -->
+        <div class="w-full pt-8 relative overflow-hidden">
+            <div class="text-[11px] font-mono uppercase tracking-widest text-sky-300/80 mb-3">
+                TRUSTED BY LEADING GLOBAL APPAREL &amp; TEXTILE MANUFACTURERS
+            </div>
+            <div class="relative overflow-hidden w-full py-2">
+                <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent z-10 pointer-events-none"></div>
+                <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-slate-950 via-slate-950/80 to-transparent z-10 pointer-events-none"></div>
+
+                <div class="animate-logo-marquee flex items-center gap-5">
+                    <!-- SET 1 -->
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/shahi.png') }}" alt="Shahi Exports" class="h-7 w-auto object-contain">
+                    </div>
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/arvind.png') }}" alt="Arvind" class="h-7 w-auto object-contain">
+                    </div>
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/pds.png') }}" alt="PDS" class="h-8 w-auto object-contain">
+                    </div>
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/modelama.png') }}" alt="Modelama" class="h-8 w-auto object-contain">
+                    </div>
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/armstrong.png') }}" alt="Armstrong" class="h-8 w-auto object-contain">
+                    </div>
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/penguin.png') }}" alt="Penguin Apparels" class="h-6 w-auto object-contain">
+                    </div>
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/sahana.png') }}" alt="Sahana" class="h-7 w-auto object-contain">
+                    </div>
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/trendy_fits.png') }}" alt="Trendy Fits" class="h-7 w-auto object-contain">
+                    </div>
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/mehala.png') }}" alt="Mehala Machines" class="h-7 w-auto object-contain">
+                    </div>
+
+                    <!-- DUPLICATE FOR INFINITE LOOP -->
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/shahi.png') }}" alt="Shahi Exports" class="h-7 w-auto object-contain">
+                    </div>
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/arvind.png') }}" alt="Arvind" class="h-7 w-auto object-contain">
+                    </div>
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/pds.png') }}" alt="PDS" class="h-8 w-auto object-contain">
+                    </div>
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/modelama.png') }}" alt="Modelama" class="h-8 w-auto object-contain">
+                    </div>
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/armstrong.png') }}" alt="Armstrong" class="h-8 w-auto object-contain">
+                    </div>
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/penguin.png') }}" alt="Penguin Apparels" class="h-6 w-auto object-contain">
+                    </div>
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/sahana.png') }}" alt="Sahana" class="h-7 w-auto object-contain">
+                    </div>
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/trendy_fits.png') }}" alt="Trendy Fits" class="h-7 w-auto object-contain">
+                    </div>
+                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/mehala.png') }}" alt="Mehala Machines" class="h-7 w-auto object-contain">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -225,11 +305,12 @@
             <span class="text-xs font-mono font-semibold uppercase tracking-widest text-sky-400">
                 TRUSTED BY LEADING GLOBAL APPAREL &amp; TEXTILE MANUFACTURERS
             </span>
-            <div class="relative overflow-hidden w-full py-3">
+            <div class="relative overflow-hidden w-full space-y-4 py-2">
                 <!-- Fade overlays on left and right edges for smooth visual transition -->
                 <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent z-10 pointer-events-none"></div>
                 <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-slate-900 via-slate-900/80 to-transparent z-10 pointer-events-none"></div>
 
+                <!-- ROW 1: LEFTWARD MOVING MARQUEE -->
                 <div class="animate-logo-marquee flex items-center gap-6">
                     <!-- FIRST SET OF 9 CLIENT LOGOS -->
                     <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
@@ -287,6 +368,66 @@
                     </div>
                     <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
                         <img src="{{ asset('images/logos/mehala.png') }}" alt="Mehala Machines Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+                </div>
+
+                <!-- ROW 2: RIGHTWARD MOVING MARQUEE -->
+                <div class="animate-logo-marquee-reverse flex items-center gap-6">
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/mehala.png') }}" alt="Mehala Machines Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/trendy_fits.png') }}" alt="Trendy Fits Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/sahana.png') }}" alt="Sahana Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/penguin.png') }}" alt="Penguin Apparels Logo" class="h-7 w-auto object-contain max-h-7">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/armstrong.png') }}" alt="Armstrong Logo" class="h-9 w-auto object-contain max-h-9">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/modelama.png') }}" alt="Modelama Exports Logo" class="h-9 w-auto object-contain max-h-9">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/pds.png') }}" alt="PDS Logo" class="h-9 w-auto object-contain max-h-9">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/arvind.png') }}" alt="Arvind Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/shahi.png') }}" alt="Shahi Exports Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+
+                    <!-- DUPLICATE ROW 2 SET FOR SEAMLESS LOOP -->
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/mehala.png') }}" alt="Mehala Machines Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/trendy_fits.png') }}" alt="Trendy Fits Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/sahana.png') }}" alt="Sahana Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/penguin.png') }}" alt="Penguin Apparels Logo" class="h-7 w-auto object-contain max-h-7">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/armstrong.png') }}" alt="Armstrong Logo" class="h-9 w-auto object-contain max-h-9">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/modelama.png') }}" alt="Modelama Exports Logo" class="h-9 w-auto object-contain max-h-9">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/pds.png') }}" alt="PDS Logo" class="h-9 w-auto object-contain max-h-9">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/arvind.png') }}" alt="Arvind Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/shahi.png') }}" alt="Shahi Exports Logo" class="h-8 w-auto object-contain max-h-8">
                     </div>
                 </div>
             </div>

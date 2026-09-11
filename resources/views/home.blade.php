@@ -218,75 +218,99 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Product 1: AI Quality Control -->
-            <div class="p-8 sm:p-10 rounded-3xl bg-white border border-sky-200 shadow-xl flex flex-col justify-between space-y-6 hover:shadow-2xl transition-all">
+            <div class="p-8 sm:p-10 rounded-3xl bg-white border border-emerald-200 shadow-xl flex flex-col justify-between space-y-6 hover:shadow-2xl hover:border-emerald-400 transition-all group">
                 <div class="space-y-4">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 text-xs font-bold font-mono uppercase">
-                        BUSINESS BENEFIT: CUT DEFECTS FROM 5.8% TO &lt;0.6%
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs font-bold font-mono uppercase">
+                        💰 BUSINESS BENEFIT: 85% DEFECT REDUCTION ($140K/YR SCRAP SAVINGS)
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 font-sans">AI Quality Control Studio</h3>
+                    <h3 class="text-2xl font-bold text-slate-900 font-sans group-hover:text-emerald-600 transition-colors">AI Quality Control Studio</h3>
                     <p class="text-slate-700 text-base font-sans leading-relaxed">
-                        Automated optical camera fabric scanning inspects rolls and cut panels in real-time, calling out stitch skips and flaws instantly before assembly.
+                        Replaces manual inline inspection with 99.4% accurate AI cameras—catching fabric flaws and stitch skips in real time before final assembly to eliminate buyer returns.
                     </p>
-                    <ul class="space-y-2 text-sm text-slate-700 font-sans">
-                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 99.4% Automated defect inspection accuracy</li>
-                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Eliminates fabric scrap &amp; customer quality claims</li>
-                    </ul>
+                    <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-100 space-y-2 text-xs font-sans text-emerald-900">
+                        <div class="flex items-center justify-between font-semibold">
+                            <span>Key Financial Impact:</span>
+                            <span class="text-emerald-700 font-mono font-bold">$140,000 Saved / 50 Lines</span>
+                        </div>
+                        <div class="flex items-center justify-between font-semibold">
+                            <span>Defect Target:</span>
+                            <span class="text-emerald-700 font-mono font-bold">&lt;0.6% First Pass Defect Rate</span>
+                        </div>
+                    </div>
                 </div>
-                <a href="/products/quality-control" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-sky-600 text-white font-medium text-center transition-colors block font-sans">Learn More About AI Quality</a>
+                <a href="/products/quality-control" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-emerald-600 text-white font-medium text-center transition-colors block font-sans shadow-md">Learn More About AI Quality</a>
             </div>
 
             <!-- Product 2: Production Tracking RFID -->
-            <div class="p-8 sm:p-10 rounded-3xl bg-white border border-sky-200 shadow-xl flex flex-col justify-between space-y-6 hover:shadow-2xl transition-all">
+            <div class="p-8 sm:p-10 rounded-3xl bg-white border border-sky-200 shadow-xl flex flex-col justify-between space-y-6 hover:shadow-2xl hover:border-sky-400 transition-all group">
                 <div class="space-y-4">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-800 text-xs font-bold font-mono uppercase">
-                        BUSINESS BENEFIT: +22% DAILY GARMENT THROUGHPUT
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 border border-sky-300 text-sky-800 text-xs font-bold font-mono uppercase">
+                        ⚡ BUSINESS BENEFIT: +22% DAILY GARMENT THROUGHPUT
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 font-sans">Production Tracking &amp; RFID Line Balancing</h3>
+                    <h3 class="text-2xl font-bold text-slate-900 font-sans group-hover:text-sky-600 transition-colors">Real-Time RFID Production Tracking</h3>
                     <p class="text-slate-700 text-base font-sans leading-relaxed">
-                        RFID smart tag bundle tracking monitors garment piece movement across sewing stations, eliminating worker idle time and line bottlenecks.
+                        Tracks every garment bundle automatically from cutting room to final packing—eliminating worker idle time and balancing sewing workstation workloads in real time.
                     </p>
-                    <ul class="space-y-2 text-sm text-slate-700 font-sans">
-                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-sky-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 100% Real-time WIP visibility across 500+ lines</li>
-                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-sky-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Automated piece rate counting &amp; worker incentive logs</li>
-                    </ul>
+                    <div class="p-4 rounded-2xl bg-sky-50/60 border border-sky-100 space-y-2 text-xs font-sans text-sky-900">
+                        <div class="flex items-center justify-between font-semibold">
+                            <span>Output Boost:</span>
+                            <span class="text-sky-700 font-mono font-bold">+3,200 Extra Pcs / Day</span>
+                        </div>
+                        <div class="flex items-center justify-between font-semibold">
+                            <span>WIP Transparency:</span>
+                            <span class="text-sky-700 font-mono font-bold">100% Real-Time Bundle Location</span>
+                        </div>
+                    </div>
                 </div>
-                <a href="/products/production-tracking" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-sky-600 text-white font-medium text-center transition-colors block font-sans">Learn More About Line Tracking</a>
+                <a href="/products/production-tracking" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-sky-600 text-white font-medium text-center transition-colors block font-sans shadow-md">Learn More About Line Tracking</a>
             </div>
 
             <!-- Product 3: Machine Maintenance OEE -->
-            <div class="p-8 sm:p-10 rounded-3xl bg-white border border-sky-200 shadow-xl flex flex-col justify-between space-y-6 hover:shadow-2xl transition-all">
+            <div class="p-8 sm:p-10 rounded-3xl bg-white border border-amber-200 shadow-xl flex flex-col justify-between space-y-6 hover:shadow-2xl hover:border-amber-400 transition-all group">
                 <div class="space-y-4">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-200 text-amber-800 text-xs font-bold font-mono uppercase">
-                        BUSINESS BENEFIT: 98.4% MACHINE UPTIME (ZERO BREAKDOWNS)
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold font-mono uppercase">
+                        ⏱️ BUSINESS BENEFIT: 98.4% MACHINE UPTIME (82% DOWNTIME CUT)
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 font-sans">Machine Maintenance OEE Telemetry</h3>
+                    <h3 class="text-2xl font-bold text-slate-900 font-sans group-hover:text-amber-600 transition-colors">Machine Maintenance &amp; OEE Telemetry</h3>
                     <p class="text-slate-700 text-base font-sans leading-relaxed">
-                        IoT sewing motor sensors stream speed, temperature, and needle vibration telemetry to issue 48-hour early warnings before machine failure.
+                        IoT sewing motor sensors monitor machine vibration and thermal health—issuing 48-hour early warnings before motor breakdowns happen during peak production shifts.
                     </p>
-                    <ul class="space-y-2 text-sm text-slate-700 font-sans">
-                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 82% Reduction in unexpected sewing downtime</li>
-                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-amber-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Preventive maintenance scheduling &amp; motor health alerts</li>
-                    </ul>
+                    <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-100 space-y-2 text-xs font-sans text-amber-900">
+                        <div class="flex items-center justify-between font-semibold">
+                            <span>Downtime Reduction:</span>
+                            <span class="text-amber-700 font-mono font-bold">82% Breakdown Cut</span>
+                        </div>
+                        <div class="flex items-center justify-between font-semibold">
+                            <span>Early Warning:</span>
+                            <span class="text-amber-700 font-mono font-bold">48-Hour Preventive Alert</span>
+                        </div>
+                    </div>
                 </div>
-                <a href="/products/machine-maintenance" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-sky-600 text-white font-medium text-center transition-colors block font-sans">Learn More About OEE Maintenance</a>
+                <a href="/products/machine-maintenance" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-amber-600 text-white font-medium text-center transition-colors block font-sans shadow-md">Learn More About OEE Maintenance</a>
             </div>
 
             <!-- Product 4: Smart Line Planner -->
-            <div class="p-8 sm:p-10 rounded-3xl bg-white border border-sky-200 shadow-xl flex flex-col justify-between space-y-6 hover:shadow-2xl transition-all">
+            <div class="p-8 sm:p-10 rounded-3xl bg-white border border-indigo-200 shadow-xl flex flex-col justify-between space-y-6 hover:shadow-2xl hover:border-indigo-400 transition-all group">
                 <div class="space-y-4">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100 border border-indigo-200 text-indigo-800 text-xs font-bold font-mono uppercase">
-                        BUSINESS BENEFIT: 100% ON-TIME BUYER DISPATCH
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100 border border-indigo-300 text-indigo-900 text-xs font-bold font-mono uppercase">
+                        🎯 BUSINESS BENEFIT: 100% ON-TIME BUYER DISPATCH
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 font-sans">Smart Gantt Line Planner</h3>
+                    <h3 class="text-2xl font-bold text-slate-900 font-sans group-hover:text-indigo-600 transition-colors">Smart Gantt Line Planner</h3>
                     <p class="text-slate-700 text-base font-sans leading-relaxed">
-                        Dynamic drag-and-drop Gantt scheduling balances operator allocation across styles and guarantees buyer order dispatch deadlines.
+                        AI drag-and-drop Gantt scheduling matches buyer orders with real operator skill matrices—ensuring zero missed delivery deadlines and zero air-freight rush penalties.
                     </p>
-                    <ul class="space-y-2 text-sm text-slate-700 font-sans">
-                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Multi-plant order dispatch tracking</li>
-                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-indigo-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> AI-assisted operator reallocation recommendations</li>
-                    </ul>
+                    <div class="p-4 rounded-2xl bg-indigo-50/60 border border-indigo-100 space-y-2 text-xs font-sans text-indigo-900">
+                        <div class="flex items-center justify-between font-semibold">
+                            <span>Dispatch Guarantee:</span>
+                            <span class="text-indigo-700 font-mono font-bold">100% On-Time Buyer Delivery</span>
+                        </div>
+                        <div class="flex items-center justify-between font-semibold">
+                            <span>Capacity Optimization:</span>
+                            <span class="text-indigo-700 font-mono font-bold">Multi-Plant Style Balancing</span>
+                        </div>
+                    </div>
                 </div>
-                <a href="/#roi-calculator" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-sky-600 text-white font-medium text-center transition-colors block font-sans">Calculate Factory Savings</a>
+                <a href="/#roi-calculator" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-indigo-600 text-white font-medium text-center transition-colors block font-sans shadow-md">Calculate Factory Savings</a>
             </div>
         </div>
     </div>

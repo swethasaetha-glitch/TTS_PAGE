@@ -4,6 +4,21 @@
 
 @section('content')
 
+<style>
+@keyframes logoMarquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.animate-logo-marquee {
+    display: flex;
+    width: max-content;
+    animation: logoMarquee 26s linear infinite;
+}
+.animate-logo-marquee:hover {
+    animation-play-state: paused;
+}
+</style>
+
 <!-- ================= 1. HERO SECTION (REAL-WORLD FACTORY VIDEO & OUTCOME HEADLINE) ================= -->
 <section id="hero" class="relative min-h-screen flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-slate-950 text-white">
     
@@ -205,31 +220,74 @@
 <section id="certifications-trust" class="relative py-16 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white overflow-hidden">
     <div class="max-w-7xl mx-auto space-y-12 relative z-10">
         
-        <!-- Trusted Enterprise Apparel Brands Logos Banner -->
+        <!-- Trusted Enterprise Apparel Brands Infinite Marquee Logo Slider ("Moving La Podu") -->
         <div class="space-y-6 text-center">
             <span class="text-xs font-mono font-semibold uppercase tracking-widest text-sky-400">
-                TRUSTED BY LEADING GLOBAL APPAREL MANUFACTURERS
+                TRUSTED BY LEADING GLOBAL APPAREL &amp; TEXTILE MANUFACTURERS
             </span>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 items-center justify-center opacity-90">
-                <div class="p-4 rounded-xl bg-slate-800/80 border border-slate-700 text-center font-sans font-bold text-slate-200 text-sm tracking-wider hover:border-sky-400 transition-all">
-                    PACIFIC APPAREL
-                    <div class="text-[10px] text-sky-400 font-mono font-normal">Woven Formalwear (50 Lines)</div>
-                </div>
-                <div class="p-4 rounded-xl bg-slate-800/80 border border-slate-700 text-center font-sans font-bold text-slate-200 text-sm tracking-wider hover:border-sky-400 transition-all">
-                    ATLAS DENIM MILLS
-                    <div class="text-[10px] text-emerald-400 font-mono font-normal">Denim Heavywear (35 Lines)</div>
-                </div>
-                <div class="p-4 rounded-xl bg-slate-800/80 border border-slate-700 text-center font-sans font-bold text-slate-200 text-sm tracking-wider hover:border-sky-400 transition-all">
-                    ZENITH KNITWEAR
-                    <div class="text-[10px] text-indigo-400 font-mono font-normal">High-Speed Activewear (45 Lines)</div>
-                </div>
-                <div class="p-4 rounded-xl bg-slate-800/80 border border-slate-700 text-center font-sans font-bold text-slate-200 text-sm tracking-wider hover:border-sky-400 transition-all">
-                    APEX SOURCING
-                    <div class="text-[10px] text-amber-400 font-mono font-normal">Apparel Export (40 Lines)</div>
-                </div>
-                <div class="p-4 rounded-xl bg-slate-800/80 border border-slate-700 text-center font-sans font-bold text-slate-200 text-sm tracking-wider hover:border-sky-400 transition-all col-span-2 md:col-span-1">
-                    VANGUARD GARMENT
-                    <div class="text-[10px] text-rose-400 font-mono font-normal">Smart Apparel Tech (60 Lines)</div>
+            <div class="relative overflow-hidden w-full py-3">
+                <!-- Fade overlays on left and right edges for smooth visual transition -->
+                <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent z-10 pointer-events-none"></div>
+                <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-slate-900 via-slate-900/80 to-transparent z-10 pointer-events-none"></div>
+
+                <div class="animate-logo-marquee flex items-center gap-6">
+                    <!-- FIRST SET OF 9 CLIENT LOGOS -->
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/shahi.png') }}" alt="Shahi Exports Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/arvind.png') }}" alt="Arvind Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/pds.png') }}" alt="PDS Logo" class="h-9 w-auto object-contain max-h-9">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/modelama.png') }}" alt="Modelama Exports Logo" class="h-9 w-auto object-contain max-h-9">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/armstrong.png') }}" alt="Armstrong Logo" class="h-9 w-auto object-contain max-h-9">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/penguin.png') }}" alt="Penguin Apparels Logo" class="h-7 w-auto object-contain max-h-7">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/sahana.png') }}" alt="Sahana Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/trendy_fits.png') }}" alt="Trendy Fits Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/mehala.png') }}" alt="Mehala Machines Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+
+                    <!-- DUPLICATE SET FOR SEAMLESS CONTINUOUS INFINITE LOOP -->
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/shahi.png') }}" alt="Shahi Exports Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/arvind.png') }}" alt="Arvind Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/pds.png') }}" alt="PDS Logo" class="h-9 w-auto object-contain max-h-9">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/modelama.png') }}" alt="Modelama Exports Logo" class="h-9 w-auto object-contain max-h-9">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/armstrong.png') }}" alt="Armstrong Logo" class="h-9 w-auto object-contain max-h-9">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/penguin.png') }}" alt="Penguin Apparels Logo" class="h-7 w-auto object-contain max-h-7">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/sahana.png') }}" alt="Sahana Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/trendy_fits.png') }}" alt="Trendy Fits Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
+                    <div class="h-16 px-6 py-3 rounded-2xl bg-white border border-slate-200 flex items-center justify-center shrink-0 shadow-md hover:scale-105 transition-all">
+                        <img src="{{ asset('images/logos/mehala.png') }}" alt="Mehala Machines Logo" class="h-8 w-auto object-contain max-h-8">
+                    </div>
                 </div>
             </div>
         </div>

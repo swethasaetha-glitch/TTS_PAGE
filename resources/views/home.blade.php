@@ -30,8 +30,8 @@
 
         <!-- Outcome-Focused Main Title -->
         <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-white font-sans max-w-5xl [text-shadow:_0_4px_24px_rgba(0,0,0,0.95)]">
-            Cut Garment Defect Rates by <span class="text-sky-400 italic font-sans [text-shadow:_0_4px_20px_rgba(14,165,233,0.8)]">85%</span>, <br class="hidden sm:inline" />
-            Boost OEE to <span class="text-emerald-400 italic font-sans [text-shadow:_0_4px_20px_rgba(16,185,129,0.8)]">98.4%</span> & Accelerate Output
+            Slash Garment Defects by <span class="text-sky-400 italic font-sans [text-shadow:_0_4px_20px_rgba(14,165,233,0.8)]">85%</span>, <br class="hidden sm:inline" />
+            Maximize Machine OEE to <span class="text-emerald-400 italic font-sans [text-shadow:_0_4px_20px_rgba(16,185,129,0.8)]">98.4%</span> & Boost Efficiency by <span class="text-amber-300 italic font-sans [text-shadow:_0_4px_20px_rgba(252,211,77,0.8)]">+22%</span>
         </h1>
 
         <!-- Centered Business Outcome Subtitle -->

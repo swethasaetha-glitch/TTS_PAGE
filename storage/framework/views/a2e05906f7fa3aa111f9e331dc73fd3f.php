@@ -5,30 +5,35 @@
 <!-- ================= 1. HERO SECTION (REAL-WORLD FACTORY VIDEO & OUTCOME HEADLINE) ================= -->
 <section id="hero" class="relative min-h-screen flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-slate-950 text-white">
     
-    <!-- Clean High-Tech Dark Ambient Background -->
+    <!-- Real-World Garment Factory Video Background (Skilled Worker Operating Industrial Sewing Machine) -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"></div>
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/15 rounded-full blur-[120px]"></div>
-        <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]"></div>
+        <video autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-95 scale-100 filter brightness-105 contrast-110">
+            <source src="<?php echo e(asset('videos/garment-custom.mp4')); ?>" type="video/mp4">
+            <source src="<?php echo e(asset('videos/garment-bg.mp4')); ?>" type="video/mp4">
+        </video>
+        <!-- Crisp High-Contrast Vignette Overlay for Title Contrast -->
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/30 to-slate-950/80"></div>
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-sky-500/10 rounded-full blur-[140px]"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px]"></div>
     </div>
 
     <!-- Hero Content Container -->
     <div class="max-w-5xl mx-auto w-full flex flex-col items-center text-center space-y-8 relative z-10">
 
         <!-- Top Industry 4.0 Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 text-sky-300 text-xs font-semibold uppercase tracking-widest font-sans backdrop-blur-md shadow-xl">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-950/80 border border-sky-400/50 text-sky-300 text-xs font-semibold uppercase tracking-widest font-sans backdrop-blur-md shadow-2xl">
             <span class="w-2.5 h-2.5 rounded-full bg-sky-400 animate-ping"></span>
             Industry 4.0 Digital Garment Intelligence
         </div>
 
         <!-- Outcome-Focused Main Title -->
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-white font-sans max-w-5xl drop-shadow-xl">
-            Cut Garment Defect Rates by <span class="text-sky-400 italic font-sans drop-shadow-lg">85%</span>, <br class="hidden sm:inline" />
-            Boost OEE to <span class="text-emerald-400 italic font-sans drop-shadow-lg">98.4%</span> & Accelerate Output
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-white font-sans max-w-5xl [text-shadow:_0_4px_24px_rgba(0,0,0,0.95)]">
+            Cut Garment Defect Rates by <span class="text-sky-400 italic font-sans [text-shadow:_0_4px_20px_rgba(14,165,233,0.8)]">85%</span>, <br class="hidden sm:inline" />
+            Boost OEE to <span class="text-emerald-400 italic font-sans [text-shadow:_0_4px_20px_rgba(16,185,129,0.8)]">98.4%</span> & Accelerate Output
         </h1>
 
         <!-- Centered Business Outcome Subtitle -->
-        <p class="text-base sm:text-xl text-slate-200 font-sans leading-relaxed max-w-3xl drop-shadow-md">
+        <p class="text-base sm:text-xl text-slate-100 font-sans leading-relaxed max-w-3xl [text-shadow:_0_2px_12px_rgba(0,0,0,0.9)] bg-slate-950/40 p-4 rounded-2xl backdrop-blur-sm border border-white/10">
             Real-time digital intelligence for apparel manufacturing. Connect shopfloor sewing lines, AI vision inspection, and machine IoT sensors directly to executive SaaS dashboards.
         </p>
 
@@ -49,17 +54,17 @@
 
         <!-- Key Outcomes Summary Pills -->
         <div class="pt-8 border-t border-white/20 flex flex-wrap items-center justify-center gap-4 text-xs font-sans font-medium text-white w-full">
-            <div class="px-4 py-2 rounded-full bg-slate-900/80 border border-sky-400/30 backdrop-blur-md shadow-md flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-sky-400"></span> AI Quality Vision
+            <div class="px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 💰 $140,000 Annual Scrap Savings / 50 Lines
             </div>
-            <div class="px-4 py-2 rounded-full bg-slate-900/80 border border-sky-400/30 backdrop-blur-md shadow-md flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live RFID Sewing Line Tracking
+            <div class="px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span> ⚡ +22% Daily Pcs Output Throughput
             </div>
-            <div class="px-4 py-2 rounded-full bg-slate-900/80 border border-sky-400/30 backdrop-blur-md shadow-md flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-amber-400"></span> Machine OEE Telemetry
+            <div class="px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span> ⏱️ 2.4 Months Full Payback Period
             </div>
-            <div class="px-4 py-2 rounded-full bg-slate-900/80 border border-sky-400/30 backdrop-blur-md shadow-md flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-indigo-400"></span> Smart Gantt Line Planner
+            <div class="px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span> 🎯 99.4% AI Vision Inspection Accuracy
             </div>
         </div>
     </div>
@@ -649,6 +654,107 @@
         </div>
     </div>
 </section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    (function initHeroFabricCanvas() {
+        const container = document.getElementById('hero-3d-bg-canvas');
+        if (!container || typeof THREE === 'undefined') return;
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 1, 2000);
+        camera.position.set(0, 180, 420);
+        camera.lookAt(0, 0, 0);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(container.clientWidth, container.clientHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        container.appendChild(renderer.domElement);
+
+        // Interactive 3D Digital Fabric Mesh Particles
+        const amountX = 65;
+        const amountY = 45;
+        const numParticles = amountX * amountY;
+        const positions = new Float32Array(numParticles * 3);
+        const colors = new Float32Array(numParticles * 3);
+
+        const colorSky = new THREE.Color(0x38bdf8);
+        const colorEmerald = new THREE.Color(0x10b981);
+
+        let i = 0;
+        for (let ix = 0; ix < amountX; ix++) {
+            for (let iy = 0; iy < amountY; iy++) {
+                positions[i] = (ix * 24) - ((amountX * 24) / 2);
+                positions[i + 1] = 0;
+                positions[i + 2] = (iy * 24) - ((amountY * 24) / 2);
+
+                const mixRatio = ix / amountX;
+                const c = colorSky.clone().lerp(colorEmerald, mixRatio);
+                colors[i] = c.r;
+                colors[i + 1] = c.g;
+                colors[i + 2] = c.b;
+
+                i += 3;
+            }
+        }
+
+        const geometry = new THREE.BufferGeometry();
+        geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+        geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+        const material = new THREE.PointsMaterial({
+            size: 3.2,
+            vertexColors: true,
+            transparent: true,
+            opacity: 0.8,
+            blending: THREE.AdditiveBlending
+        });
+
+        const particles = new THREE.Points(geometry, material);
+        scene.add(particles);
+
+        let count = 0;
+        let mouseX = 0;
+        let mouseY = 0;
+
+        window.addEventListener('mousemove', function(e) {
+            mouseX = (e.clientX - window.innerWidth / 2) * 0.08;
+            mouseY = (e.clientY - window.innerHeight / 2) * 0.08;
+        });
+
+        window.addEventListener('resize', function() {
+            if (!container) return;
+            camera.aspect = container.clientWidth / container.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.clientWidth, container.clientHeight);
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            camera.position.x += (mouseX - camera.position.x) * 0.04;
+            camera.position.y += (-mouseY + 180 - camera.position.y) * 0.04;
+            camera.lookAt(scene.position);
+
+            const positionAttr = geometry.attributes.position;
+            const posArray = positionAttr.array;
+
+            let pIdx = 0;
+            for (let ix = 0; ix < amountX; ix++) {
+                for (let iy = 0; iy < amountY; iy++) {
+                    posArray[pIdx + 1] = (Math.sin((ix + count) * 0.25) * 30) + (Math.sin((iy + count) * 0.4) * 25);
+                    pIdx += 3;
+                }
+            }
+
+            positionAttr.needsUpdate = true;
+            count += 0.03;
+            renderer.render(scene, camera);
+        }
+        animate();
+    })();
+});
+</script>
 
 <?php $__env->stopSection(); ?>
 

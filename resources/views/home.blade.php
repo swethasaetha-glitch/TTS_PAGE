@@ -9,12 +9,14 @@
     
     <!-- Premium Real-World Garment Factory Background Video -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-35 scale-105 filter brightness-90 contrast-110">
+        <video autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-75 scale-105 filter brightness-105 contrast-110">
             <source src="{{ asset('videos/garment-bg.mp4') }}" type="video/mp4">
+            <source src="{{ asset('videos/garment-custom.mp4') }}" type="video/mp4">
         </video>
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/90 via-slate-950/80 to-slate-950"></div>
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/15 rounded-full blur-[120px]"></div>
-        <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]"></div>
+        <!-- Balanced Dark Vignette & Ambient Glow for Crisp Text Legibility -->
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/40 to-slate-950/90"></div>
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-600/15 rounded-full blur-[100px]"></div>
     </div>
 
     <!-- Hero Content Container -->

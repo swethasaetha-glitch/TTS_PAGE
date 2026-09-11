@@ -7,15 +7,11 @@
 <!-- ================= 1. HERO SECTION (REAL-WORLD FACTORY VIDEO & OUTCOME HEADLINE) ================= -->
 <section id="hero" class="relative min-h-screen flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-slate-950 text-white">
     
-    <!-- Premium Real-World Garment Factory Video Background -->
+    <!-- Clean High-Tech Dark Ambient Background -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <video autoplay loop muted playsinline preload="metadata" class="w-full h-full object-cover opacity-65 scale-105 filter contrast-105 saturate-110">
-            <source src="{{ asset('videos/garment-custom.mp4') }}" type="video/mp4">
-        </video>
-
-        <!-- Deep Gradient Vignette Overlay for Crisp Readability -->
-        <div class="absolute inset-0" style="background:radial-gradient(circle at center, transparent 0%, transparent 30%, rgba(3, 7, 18, 0.45) 60%, rgba(3, 7, 18, 0.85) 85%, rgba(3, 7, 18, 0.98) 100%)"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-950/40 to-slate-950/95"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"></div>
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/15 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]"></div>
     </div>
 
     <!-- Hero Content Container -->

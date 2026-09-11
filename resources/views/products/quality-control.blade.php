@@ -11,30 +11,30 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div class="lg:col-span-6 space-y-6">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-700 text-xs font-sans font-semibold uppercase">
-                Quality Control AI
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 text-xs font-sans font-bold uppercase">
+                BUSINESS OUTCOME: 85% DEFECT REDUCTION ($140K/YR SAVINGS)
             </div>
 
             <h1 class="text-4xl sm:text-5xl font-bold text-sky-600 font-sans tracking-tight leading-tight">
-                Quality Control AI & Defect Prevention
+                AI Quality Control & Defect Prevention
             </h1>
 
             <p class="text-lg text-slate-900 font-sans leading-relaxed">
-                Eliminate re-works and customer rejections with automated vision AI inspection. Our 3D quality scan technology detects stitching flaws, fabric defects, and measurement deviations in real time.
+                Eliminate expensive fabric scrap, re-works, and buyer claims with automated vision AI inspection. Detect stitching flaws, skipped stitches, and fabric defects with 99.4% accuracy before final assembly.
             </p>
 
             <ul class="space-y-3 pt-2 text-base text-slate-900 font-sans">
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Automated fabric roll inspection logging
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> <strong>85% Defect Rate Reduction</strong> across 500+ active apparel lines
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> AI vision inspection at inline & end-line checkpoints
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> <strong>99.4% Automated AI optical camera</strong> inspection accuracy
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Instant defect alerts sent to floor supervisors
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Instant defect alerts & automated cutting bed flaw markers
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> 35% reduction in overall factory garment re-works
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Saves an average of <strong>$140,000 / year</strong> in fabric scrap per 50 lines
                 </li>
             </ul>
 

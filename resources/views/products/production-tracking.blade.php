@@ -11,30 +11,30 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div class="lg:col-span-6 space-y-6">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-700 text-xs font-sans font-semibold uppercase">
-                Production Tracking System (PTS)
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-800 text-xs font-sans font-bold uppercase">
+                BUSINESS OUTCOME: +22% DAILY GARMENT THROUGHPUT
             </div>
 
             <h1 class="text-4xl sm:text-5xl font-bold text-sky-600 font-sans tracking-tight leading-tight">
-                End-to-End Real Time Line Visibility
+                Production Tracking & RFID Line Balancing
             </h1>
 
             <p class="text-lg text-slate-900 font-sans leading-relaxed">
-                Gain 100% transparent tracking across all production stages—from cutting room and sewing lines to finishing and final dispatch.
+                Transform physical sewing line bundles into real-time digital signals. RFID bundle tracking eliminates operator idle time, resolves workstation bottlenecks, and boosts plant daily output.
             </p>
 
             <ul class="space-y-3 pt-2 text-base text-slate-900 font-sans">
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> RFID & Barcode bundle tracking across sewing lines
+                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> <strong>+22% Increase in daily garment throughput</strong> across sewing lines
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Real-time WIP updates and operator efficiency metrics
+                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> <strong>100% Real-time WIP visibility</strong> from cutting room to final packing
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Automated bottleneck detection and line re-balancing
+                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Automated piece-rate tracking & worker incentive calculation
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Executive shopfloor live telemetry dashboard
+                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Eliminates paper bundle tracking disputes & shift delays
                 </li>
             </ul>
 

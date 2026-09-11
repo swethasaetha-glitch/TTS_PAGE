@@ -51,17 +51,17 @@
 
         <!-- Key Outcomes Summary Pills -->
         <div class="pt-8 border-t border-white/20 flex flex-wrap items-center justify-center gap-4 text-xs font-sans font-medium text-white w-full">
-            <div class="px-4 py-2 rounded-full bg-slate-900/80 border border-sky-400/30 backdrop-blur-md shadow-md flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-sky-400"></span> AI Quality Vision
+            <div class="px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 💰 $140,000 Annual Scrap Savings / 50 Lines
             </div>
-            <div class="px-4 py-2 rounded-full bg-slate-900/80 border border-sky-400/30 backdrop-blur-md shadow-md flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live RFID Sewing Line Tracking
+            <div class="px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span> ⚡ +22% Daily Pcs Output Throughput
             </div>
-            <div class="px-4 py-2 rounded-full bg-slate-900/80 border border-sky-400/30 backdrop-blur-md shadow-md flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-amber-400"></span> Machine OEE Telemetry
+            <div class="px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span> ⏱️ 2.4 Months Full Payback Period
             </div>
-            <div class="px-4 py-2 rounded-full bg-slate-900/80 border border-sky-400/30 backdrop-blur-md shadow-md flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-indigo-400"></span> Smart Gantt Line Planner
+            <div class="px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span> 🎯 99.4% AI Vision Inspection Accuracy
             </div>
         </div>
     </div>

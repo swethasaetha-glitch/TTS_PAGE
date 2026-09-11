@@ -11,30 +11,30 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div class="lg:col-span-6 space-y-6">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-700 text-xs font-sans font-semibold uppercase">
-                Production Planning
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-100 border border-indigo-200 text-indigo-800 text-xs font-sans font-bold uppercase">
+                BUSINESS OUTCOME: 100% ON-TIME BUYER DISPATCH
             </div>
 
             <h1 class="text-4xl sm:text-5xl font-bold text-sky-600 font-sans tracking-tight leading-tight">
-                Intelligent Gantt Scheduling & Capacity Optimization
+                Smart Gantt Production Line Planner
             </h1>
 
             <p class="text-lg text-slate-900 font-sans leading-relaxed">
-                Schedule customer POs against exact line capacities, operator skill matrices, and delivery deadlines with an intuitive digital Gantt planner.
+                Guaranteed buyer order delivery dates. Drag-and-drop dynamic Gantt scheduling balances line loading against real operator skill matrices to avoid bottleneck delays and costly air-freight penalties.
             </p>
 
             <ul class="space-y-3 pt-2 text-base text-slate-900 font-sans">
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> AI-assisted Gantt line loading and style scheduling
+                    <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span> <strong>100% On-Time Dispatch Rate</strong> for global apparel buyer orders
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Automatic skill matrix matching to prevent section bottlenecks
+                    <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span> <strong>Zero Late Delivery Penalties & Air-Freight Rush Costs</strong>
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Real-time shipping deadline progress tracking
+                    <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span> AI-assisted operator skill matrix matching across style changeovers
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Multi-factory capacity balancing and order allocation
+                    <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span> Multi-factory order capacity allocation & dispatch milestone tracking
                 </li>
             </ul>
 

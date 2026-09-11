@@ -11,30 +11,30 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div class="lg:col-span-6 space-y-6">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 text-sky-700 text-xs font-sans font-semibold uppercase">
-                Machine Maintenance (OEE)
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100 border border-amber-200 text-amber-800 text-xs font-sans font-bold uppercase">
+                BUSINESS OUTCOME: 98.4% MACHINE UPTIME (82% DOWNTIME CUT)
             </div>
 
             <h1 class="text-4xl sm:text-5xl font-bold text-sky-600 font-sans tracking-tight leading-tight">
-                Equipment Health & Downtime Prevention
+                Machine Maintenance & OEE Telemetry
             </h1>
 
             <p class="text-lg text-slate-900 font-sans leading-relaxed">
-                Maximize overall equipment effectiveness (OEE). Monitor machine run hours, predict motor failures, and schedule servicing automatically.
+                Prevent sudden sewing machine breakdowns before they paralyze production lines. IoT vibration and thermal sensors stream motor health metrics to predict failures up to 48 hours in advance.
             </p>
 
             <ul class="space-y-3 pt-2 text-base text-slate-900 font-sans">
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> IoT vibration & temperature telemetry sensors for sewing machinery
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> <strong>98.4% Machine Uptime Score</strong> maintained across active plants
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Real-time line OEE availability and performance indicators
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> <strong>82% Reduction in unexpected sewing line downtime</strong>
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Predictive lubrication and needle bushing replacement alerts
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> 48-Hour predictive early warning alerts for motor & needle bushing wear
                 </li>
                 <li class="flex items-center gap-3">
-                    <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span> Automated maintenance ticket generation for technician teams
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span> Automated preventive maintenance tickets sent to technician mobile apps
                 </li>
             </ul>
 

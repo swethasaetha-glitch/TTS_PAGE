@@ -9,7 +9,7 @@
     
     <!-- Real-World Garment Factory Video Background (Skilled Worker Operating Industrial Sewing Machine) -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <video autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-95 scale-100 filter brightness-105 contrast-110">
+        <video id="hero-bg-video" autoplay loop muted playsinline preload="metadata" class="w-full h-full object-cover opacity-95 scale-100 filter brightness-105 contrast-110">
             <source src="{{ asset('videos/garment-custom.mp4') }}" type="video/mp4">
             <source src="{{ asset('videos/garment-bg.mp4') }}" type="video/mp4">
         </video>
@@ -1072,7 +1072,21 @@ document.addEventListener('DOMContentLoaded', function() {
             renderer.render(scene, camera);
         }
         animate();
-    })();
+    // Video Performance IntersectionObserver: pause hero video when scrolled off-screen
+    const heroVideo = document.getElementById('hero-bg-video');
+    const heroSection = document.getElementById('hero');
+    if (heroVideo && heroSection && 'IntersectionObserver' in window) {
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    heroVideo.play().catch(() => {});
+                } else {
+                    heroVideo.pause();
+                }
+            });
+        }, { threshold: 0.1 });
+        videoObserver.observe(heroSection);
+    }
 });
 </script>
 

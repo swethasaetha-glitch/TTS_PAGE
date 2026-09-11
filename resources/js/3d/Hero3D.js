@@ -10,14 +10,17 @@ export function initHero3D(containerId) {
 
     container.innerHTML = '';
 
+    const isMobile = window.innerWidth < 768;
+
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(42, container.clientWidth / container.clientHeight, 0.1, 1000);
-    camera.position.set(0, 0.2, 6.2);
+    const initialZ = isMobile ? 7.8 : 6.2;
+    camera.position.set(0, 0.2, initialZ);
     camera.lookAt(0, 0, 0);
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    const renderer = new THREE.WebGLRenderer({ antialias: !isMobile, alpha: true });
     renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.25 : 2));
     container.appendChild(renderer.domElement);
 
     // Studio Lighting
@@ -705,12 +708,25 @@ export function initHero3D(containerId) {
     container.addEventListener('touchend', onPointerUp);
     window.addEventListener('touchend', onPointerUp);
 
+    // IntersectionObserver to pause WebGL rendering when off-screen
+    let isCanvasVisible = true;
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            isCanvasVisible = entry.isIntersecting;
+        });
+    }, { threshold: 0.05 });
+    observer.observe(container);
+
     // ANIMATION LOOP
     let animationFrameId;
     const clock = new THREE.Clock();
 
     const animate = () => {
         animationFrameId = requestAnimationFrame(animate);
+
+        // Pause GPU & CPU rendering if canvas is scrolled off-screen
+        if (!isCanvasVisible) return;
+
         const elapsedTime = clock.getElapsedTime();
 
         // Render dynamic 2D SaaS interface onto screen texture
@@ -736,6 +752,8 @@ export function initHero3D(containerId) {
 
     const onResize = () => {
         if (!container) return;
+        const mobileNow = window.innerWidth < 768;
+        camera.position.z = mobileNow ? 7.8 : 6.2;
         camera.aspect = container.clientWidth / container.clientHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(container.clientWidth, container.clientHeight);
@@ -745,6 +763,7 @@ export function initHero3D(containerId) {
 
     return () => {
         cancelAnimationFrame(animationFrameId);
+        observer.disconnect();
         container.removeEventListener('mousedown', onPointerDown);
         container.removeEventListener('mousemove', onPointerMove);
         window.removeEventListener('mouseup', onPointerUp);

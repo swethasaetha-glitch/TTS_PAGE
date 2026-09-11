@@ -34,6 +34,7 @@
     <!-- Real-World Garment Factory Video Background (Skilled Worker Operating Industrial Sewing Machine) -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <video id="hero-bg-video" autoplay loop muted playsinline preload="metadata" class="w-full h-full object-cover opacity-95 scale-100 filter brightness-105 contrast-110">
+            <source src="{{ asset('videos/garment-15459704.mp4') }}" type="video/mp4">
             <source src="{{ asset('videos/garment-custom.mp4') }}" type="video/mp4">
             <source src="{{ asset('videos/garment-bg.mp4') }}" type="video/mp4">
         </video>

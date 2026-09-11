@@ -29,7 +29,7 @@
 </style>
 
 <!-- ================= 1. HERO SECTION (REAL-WORLD FACTORY VIDEO & OUTCOME HEADLINE) ================= -->
-<section id="hero" class="relative min-h-screen flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-slate-950 text-white">
+<section id="hero" class="relative flex flex-col justify-center items-center pt-24 pb-12 sm:pt-28 sm:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-black text-white">
     
     <!-- Real-World Garment Factory Video Background (Skilled Worker Operating Industrial Sewing Machine) -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -39,16 +39,16 @@
             <source src="{{ asset('videos/garment-bg.mp4') }}" type="video/mp4">
         </video>
         <!-- Crisp High-Contrast Vignette Overlay for Title Contrast -->
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/30 to-slate-950/80"></div>
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-sky-500/10 rounded-full blur-[140px]"></div>
-        <div class="absolute bottom-10 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px]"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/75"></div>
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-white/5 rounded-full blur-[140px]"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-white/5 rounded-full blur-[120px]"></div>
     </div>
 
     <!-- Hero Content Container -->
-    <div class="max-w-5xl mx-auto w-full flex flex-col items-center text-center space-y-8 relative z-10">
+    <div class="max-w-5xl mx-auto w-full flex flex-col items-center text-center space-y-6 relative z-10">
 
         <!-- Top Industry 4.0 Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-950/80 border border-sky-400/50 text-sky-300 text-xs font-semibold uppercase tracking-widest font-sans backdrop-blur-md shadow-2xl">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/70 border border-sky-400/50 text-sky-300 text-xs font-semibold uppercase tracking-widest font-sans backdrop-blur-md shadow-2xl">
             <span class="w-2.5 h-2.5 rounded-full bg-sky-400"></span>
             Industry 4.0 Digital Garment Intelligence
         </div>
@@ -60,12 +60,12 @@
         </h1>
 
         <!-- Centered Business Outcome Subtitle -->
-        <p class="text-base sm:text-xl text-slate-100 font-sans leading-relaxed max-w-3xl [text-shadow:_0_2px_12px_rgba(0,0,0,0.9)] bg-slate-950/40 p-4 rounded-2xl backdrop-blur-sm border border-white/10">
+        <p class="text-base sm:text-xl text-slate-100 font-sans leading-relaxed max-w-3xl [text-shadow:_0_2px_12px_rgba(0,0,0,0.9)] bg-black/40 p-4 rounded-2xl backdrop-blur-sm border border-white/10">
             Real-time digital intelligence for apparel manufacturing. Connect shopfloor sewing lines, AI vision inspection, and machine IoT sensors directly to executive SaaS dashboards.
         </p>
 
         <!-- Prominent Dual CTAs -->
-        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto">
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto">
             <!-- Primary Prominent CTA: Book a Demo -->
             <button @click="demoModalOpen = true"
                     class="w-full sm:w-auto flex items-center justify-center gap-3 bg-gradient-to-r from-sky-400 via-blue-600 to-sky-500 hover:from-sky-300 hover:to-blue-500 text-white font-bold text-lg px-11 py-4.5 rounded-full shadow-2xl shadow-sky-500/50 hover:shadow-sky-400/70 hover:scale-105 transition-all group ring-4 ring-sky-400/25 font-sans">
@@ -75,96 +75,25 @@
 
             <!-- Secondary CTA: See How It Works -->
             <a href="#problem"
-               class="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-900/95 hover:bg-sky-600 text-white font-sans font-bold text-base px-9 py-4.5 rounded-full border-2 border-sky-400 hover:border-sky-300 backdrop-blur-md shadow-2xl shadow-sky-500/20 hover:scale-105 transition-all group">
+               class="w-full sm:w-auto flex items-center justify-center gap-2 bg-black/80 hover:bg-sky-600 text-white font-sans font-bold text-base px-9 py-4.5 rounded-full border-2 border-sky-400 hover:border-sky-300 backdrop-blur-md shadow-2xl shadow-sky-500/20 hover:scale-105 transition-all group">
                 <span>See How It Works</span>
                 <svg class="w-5 h-5 group-hover:translate-y-1 transition-transform text-sky-300 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
             </a>
         </div>
 
         <!-- Key Outcomes Summary Pills -->
-        <div class="pt-8 border-t border-white/20 flex flex-wrap items-center justify-center gap-4 text-xs font-sans font-medium text-white w-full">
-            <div class="px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
+        <div class="pt-5 border-t border-white/20 flex flex-wrap items-center justify-center gap-4 text-xs font-sans font-medium text-white w-full">
+            <div class="px-4 py-2 rounded-full bg-black/70 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-emerald-400"></span> 💰 $140,000 Annual Scrap Savings / 50 Lines
             </div>
-            <div class="px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
+            <div class="px-4 py-2 rounded-full bg-black/70 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-sky-400"></span> ⚡ +22% Daily Pcs Output Throughput
             </div>
-            <div class="px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
+            <div class="px-4 py-2 rounded-full bg-black/70 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-amber-400"></span> ⏱️ 2.4 Months Full Payback Period
             </div>
-            <div class="px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
+            <div class="px-4 py-2 rounded-full bg-black/70 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-indigo-400"></span> 🎯 99.4% AI Vision Inspection Accuracy
-            </div>
-        </div>
-
-        <!-- Trusted Client Logos Moving Marquee Strip in Hero -->
-        <div class="w-full pt-8 relative overflow-hidden">
-            <div class="text-[11px] font-mono uppercase tracking-widest text-sky-300/80 mb-3">
-                TRUSTED BY LEADING GLOBAL APPAREL &amp; TEXTILE MANUFACTURERS
-            </div>
-            <div class="relative overflow-hidden w-full py-2">
-                <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent z-10 pointer-events-none"></div>
-                <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-slate-950 via-slate-950/80 to-transparent z-10 pointer-events-none"></div>
-
-                <div class="animate-logo-marquee flex items-center gap-5">
-                    <!-- SET 1 -->
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/shahi.png') }}" alt="Shahi Exports" class="h-7 w-auto object-contain">
-                    </div>
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/arvind.png') }}" alt="Arvind" class="h-7 w-auto object-contain">
-                    </div>
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/pds.png') }}" alt="PDS" class="h-8 w-auto object-contain">
-                    </div>
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/modelama.png') }}" alt="Modelama" class="h-8 w-auto object-contain">
-                    </div>
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/armstrong.png') }}" alt="Armstrong" class="h-8 w-auto object-contain">
-                    </div>
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/penguin.png') }}" alt="Penguin Apparels" class="h-6 w-auto object-contain">
-                    </div>
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/sahana.png') }}" alt="Sahana" class="h-7 w-auto object-contain">
-                    </div>
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/trendy_fits.png') }}" alt="Trendy Fits" class="h-7 w-auto object-contain">
-                    </div>
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/mehala.png') }}" alt="Mehala Machines" class="h-7 w-auto object-contain">
-                    </div>
-
-                    <!-- DUPLICATE FOR INFINITE LOOP -->
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/shahi.png') }}" alt="Shahi Exports" class="h-7 w-auto object-contain">
-                    </div>
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/arvind.png') }}" alt="Arvind" class="h-7 w-auto object-contain">
-                    </div>
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/pds.png') }}" alt="PDS" class="h-8 w-auto object-contain">
-                    </div>
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/modelama.png') }}" alt="Modelama" class="h-8 w-auto object-contain">
-                    </div>
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/armstrong.png') }}" alt="Armstrong" class="h-8 w-auto object-contain">
-                    </div>
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/penguin.png') }}" alt="Penguin Apparels" class="h-6 w-auto object-contain">
-                    </div>
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/sahana.png') }}" alt="Sahana" class="h-7 w-auto object-contain">
-                    </div>
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/trendy_fits.png') }}" alt="Trendy Fits" class="h-7 w-auto object-contain">
-                    </div>
-                    <div class="h-14 px-5 py-2.5 rounded-xl bg-white/95 border border-white/20 flex items-center justify-center shrink-0 shadow-lg backdrop-blur-md hover:scale-105 transition-all">
-                        <img src="{{ asset('images/logos/mehala.png') }}" alt="Mehala Machines" class="h-7 w-auto object-contain">
-                    </div>
-                </div>
             </div>
         </div>
     </div>

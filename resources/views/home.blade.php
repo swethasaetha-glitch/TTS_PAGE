@@ -7,14 +7,14 @@
 <!-- ================= 1. HERO SECTION (REAL-WORLD FACTORY VIDEO & OUTCOME HEADLINE) ================= -->
 <section id="hero" class="relative min-h-screen flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-slate-950 text-white">
     
-    <!-- Premium Real-World Garment Factory Shot-by-Shot Video Background (15s Custom Cut List) -->
+    <!-- Real-World Garment Factory Video Background (Skilled Worker Operating Industrial Sewing Machine) -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <video autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-85 scale-100 filter brightness-100 contrast-105">
+        <video autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-95 scale-100 filter brightness-105 contrast-110">
             <source src="{{ asset('videos/garment-custom.mp4') }}" type="video/mp4">
             <source src="{{ asset('videos/garment-bg.mp4') }}" type="video/mp4">
         </video>
-        <!-- High-Contrast Vignette Gradient for Perfect Text Legibility -->
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/50 to-slate-950/90"></div>
+        <!-- Crisp High-Contrast Vignette Overlay for Title Contrast -->
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/30 to-slate-950/80"></div>
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-sky-500/10 rounded-full blur-[140px]"></div>
         <div class="absolute bottom-10 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px]"></div>
     </div>

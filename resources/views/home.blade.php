@@ -7,35 +7,35 @@
 <!-- ================= 1. HERO SECTION (REAL-WORLD FACTORY VIDEO & OUTCOME HEADLINE) ================= -->
 <section id="hero" class="relative min-h-screen flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-slate-950 text-white">
     
-    <!-- Premium Real-World Garment Factory Background Video -->
+    <!-- Premium Real-World Garment Factory Background Video (100% Crystal Clear & Transparent) -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <video autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-75 scale-105 filter brightness-105 contrast-110">
+        <video autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-100 scale-105 filter brightness-100 contrast-100">
             <source src="{{ asset('videos/garment-bg.mp4') }}" type="video/mp4">
             <source src="{{ asset('videos/garment-custom.mp4') }}" type="video/mp4">
         </video>
-        <!-- Balanced Dark Vignette & Ambient Glow for Crisp Text Legibility -->
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/40 to-slate-950/90"></div>
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/20 rounded-full blur-[120px]"></div>
-        <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-600/15 rounded-full blur-[100px]"></div>
+        <!-- Ultra-Light Transparent Overlay for Maximum Video Clarity -->
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/30 via-transparent to-slate-950/60"></div>
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/15 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]"></div>
     </div>
 
     <!-- Hero Content Container -->
     <div class="max-w-5xl mx-auto w-full flex flex-col items-center text-center space-y-8 relative z-10">
 
         <!-- Top Industry 4.0 Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 text-sky-300 text-xs font-semibold uppercase tracking-widest font-sans backdrop-blur-md shadow-xl">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-950/80 border border-sky-400/50 text-sky-300 text-xs font-semibold uppercase tracking-widest font-sans backdrop-blur-md shadow-2xl">
             <span class="w-2.5 h-2.5 rounded-full bg-sky-400 animate-ping"></span>
             Industry 4.0 Digital Garment Intelligence
         </div>
 
         <!-- Outcome-Focused Main Title -->
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-white font-sans max-w-5xl drop-shadow-xl">
-            Cut Garment Defect Rates by <span class="text-sky-400 italic font-sans drop-shadow-lg">85%</span>, <br class="hidden sm:inline" />
-            Boost OEE to <span class="text-emerald-400 italic font-sans drop-shadow-lg">98.4%</span> & Accelerate Output
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-white font-sans max-w-5xl [text-shadow:_0_4px_24px_rgba(0,0,0,0.95)]">
+            Cut Garment Defect Rates by <span class="text-sky-400 italic font-sans [text-shadow:_0_4px_20px_rgba(14,165,233,0.8)]">85%</span>, <br class="hidden sm:inline" />
+            Boost OEE to <span class="text-emerald-400 italic font-sans [text-shadow:_0_4px_20px_rgba(16,185,129,0.8)]">98.4%</span> & Accelerate Output
         </h1>
 
         <!-- Centered Business Outcome Subtitle -->
-        <p class="text-base sm:text-xl text-slate-200 font-sans leading-relaxed max-w-3xl drop-shadow-md">
+        <p class="text-base sm:text-xl text-slate-100 font-sans leading-relaxed max-w-3xl [text-shadow:_0_2px_12px_rgba(0,0,0,0.9)] bg-slate-950/40 p-4 rounded-2xl backdrop-blur-sm border border-white/10">
             Real-time digital intelligence for apparel manufacturing. Connect shopfloor sewing lines, AI vision inspection, and machine IoT sensors directly to executive SaaS dashboards.
         </p>
 

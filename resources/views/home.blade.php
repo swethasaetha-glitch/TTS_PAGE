@@ -411,29 +411,77 @@
 
 <!-- ================= 6. REDESIGNED ROI CALCULATOR SECTION (TRANSPARENT FORMULAS) ================= -->
 <section id="roi-calculator" class="relative py-28 px-4 sm:px-6 lg:px-8 bg-slate-50 border-t border-slate-200">
-    <div class="max-w-7xl mx-auto space-y-16" x-data="{
+    <div class="max-w-7xl mx-auto space-y-12" x-data="{
         lines: 15,
         pcsPerLine: 1200,
         reworkRate: 5.5,
         reworkCost: 4.00,
-        
+        showFormulas: false,
+
+        // Realistic Enterprise Apparel Manufacturing Constants
+        DAYS_PER_YEAR: 300,
+        DEFECT_REDUCTION_EFFICIENCY: 0.85, // 85% reduction with TTS AI Vision & RFID
+        SYSTEM_COST_PER_LINE_YEAR: 2400,    // $200/line/month hardware + SaaS license
+        PROFIT_PER_EXTRA_PC: 0.75,          // $0.75 avg profit contribution per extra garment
+
+        // Dynamic Mathematical Formulas
+        get annualVolume() {
+            return Number(this.lines) * Number(this.pcsPerLine) * this.DAYS_PER_YEAR;
+        },
         get annualReworksSaved() {
-            return Math.round(this.lines * this.pcsPerLine * 300 * (this.reworkRate * 0.01 * 0.85));
+            return Math.round(this.annualVolume * (Number(this.reworkRate) * 0.01) * this.DEFECT_REDUCTION_EFFICIENCY);
         },
-        get annualSavingsUSD() {
-            return Math.round(this.annualReworksSaved * this.reworkCost);
+        get directDefectSavingsUSD() {
+            return Math.round(this.annualReworksSaved * Number(this.reworkCost));
         },
-        get annualSavingsFormatted() {
-            return '$' + this.annualSavingsUSD.toLocaleString('en-US');
+        get productivityGainVal() {
+            return Math.min(25, Math.round((12 + (Number(this.reworkRate) * 0.8)) * 10) / 10);
+        },
+        get productivityValueUSD() {
+            return Math.round(this.annualVolume * (this.productivityGainVal * 0.01) * this.PROFIT_PER_EXTRA_PC);
+        },
+        get grossAnnualSavingsUSD() {
+            return this.directDefectSavingsUSD + this.productivityValueUSD;
+        },
+        get totalAnnualCostUSD() {
+            return Number(this.lines) * this.SYSTEM_COST_PER_LINE_YEAR;
+        },
+        get netAnnualSavingsUSD() {
+            return Math.max(0, this.grossAnnualSavingsUSD - this.totalAnnualCostUSD);
+        },
+        get paybackMonthsVal() {
+            if (this.grossAnnualSavingsUSD <= 0) return 0;
+            return Math.max(0.5, Math.round((this.totalAnnualCostUSD / this.grossAnnualSavingsUSD) * 12 * 10) / 10);
+        },
+        get netRoiPctVal() {
+            if (this.totalAnnualCostUSD <= 0) return 0;
+            return Math.round((this.netAnnualSavingsUSD / this.totalAnnualCostUSD) * 100);
+        },
+
+        // Formatted Output Helpers
+        get netAnnualSavingsFormatted() {
+            return '$' + this.netAnnualSavingsUSD.toLocaleString('en-US');
+        },
+        get directDefectSavingsFormatted() {
+            return '$' + this.directDefectSavingsUSD.toLocaleString('en-US');
+        },
+        get productivityValueFormatted() {
+            return '$' + this.productivityValueUSD.toLocaleString('en-US');
+        },
+        get grossAnnualSavingsFormatted() {
+            return '$' + this.grossAnnualSavingsUSD.toLocaleString('en-US');
+        },
+        get totalAnnualCostFormatted() {
+            return '$' + this.totalAnnualCostUSD.toLocaleString('en-US');
         },
         get productivityGainPct() {
-            return '18.4%';
+            return this.productivityGainVal + '%';
         },
         get paybackMonths() {
-            return '2.4 Months';
+            return this.paybackMonthsVal + ' Months';
         },
         get netRoiPct() {
-            return '420%';
+            return this.netRoiPctVal.toLocaleString('en-US') + '%';
         }
     }">
         <div class="text-center space-y-4 max-w-3xl mx-auto">
@@ -488,11 +536,11 @@
                             <span class="font-semibold">Current Defect / Rework Rate</span>
                             <span class="text-sky-600 font-bold text-lg font-sans" x-text="reworkRate + '%'"></span>
                         </div>
-                        <input type="range" min="2" max="12" step="0.5" x-model="reworkRate" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-500">
+                        <input type="range" min="1" max="15" step="0.5" x-model="reworkRate" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-500">
                         <div class="flex justify-between text-xs text-slate-500 font-sans">
-                            <span>2% (Low)</span>
+                            <span>1% (Low)</span>
                             <span>6% (Average)</span>
-                            <span>12% (High)</span>
+                            <span>15% (High)</span>
                         </div>
                     </div>
 
@@ -523,24 +571,29 @@
 
                 <div class="space-y-6 relative z-10">
                     <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/20 border border-white/30 text-white text-xs font-semibold uppercase tracking-wider font-sans">
-                        Estimated Financial ROI
+                        Transparent Garment Unit Economics
                     </div>
 
                     <div>
-                        <div class="text-xs font-semibold uppercase tracking-wider text-sky-200 font-sans mb-1">Projected Annual Financial Savings</div>
-                        <div class="text-4xl sm:text-5xl font-bold font-sans tracking-tight text-white" x-text="annualSavingsFormatted"></div>
-                        <p class="text-xs text-sky-100 mt-1 font-sans">Saved from eliminated fabric scrap, inline re-works, and downtime</p>
+                        <div class="text-xs font-semibold uppercase tracking-wider text-sky-200 font-sans mb-1">Projected Net Annual Savings</div>
+                        <div class="text-4xl sm:text-5xl font-bold font-sans tracking-tight text-white" x-text="netAnnualSavingsFormatted"></div>
+                        <p class="text-xs text-sky-100 mt-1 font-sans">
+                            Gross Savings: <span class="font-bold text-emerald-300" x-text="grossAnnualSavingsFormatted"></span> 
+                            &bull; Est. System Cost: <span class="font-medium text-slate-200" x-text="totalAnnualCostFormatted"></span>/year
+                        </p>
                     </div>
 
                     <div class="grid grid-cols-2 gap-4 pt-4 border-t border-white/20">
                         <div>
-                            <div class="text-3xl font-bold font-sans text-white" x-text="annualReworksSaved.toLocaleString()"></div>
-                            <div class="text-xs text-sky-100 font-sans mt-0.5">Garments Saved / Year</div>
+                            <div class="text-2xl sm:text-3xl font-bold font-sans text-white" x-text="directDefectSavingsFormatted"></div>
+                            <div class="text-xs text-sky-100 font-sans mt-0.5">Direct Defect Savings</div>
+                            <div class="text-[11px] text-sky-200 mt-0.5 font-sans" x-text="annualReworksSaved.toLocaleString() + ' pcs saved/yr'"></div>
                         </div>
 
                         <div>
-                            <div class="text-3xl font-bold font-sans text-emerald-300" x-text="productivityGainPct"></div>
+                            <div class="text-2xl sm:text-3xl font-bold font-sans text-emerald-300" x-text="productivityGainPct"></div>
                             <div class="text-xs text-sky-100 font-sans mt-0.5">Productivity Gain</div>
+                            <div class="text-[11px] text-sky-200 mt-0.5 font-sans" x-text="productivityValueFormatted + ' added capacity'"></div>
                         </div>
                     </div>
 
@@ -552,7 +605,7 @@
 
                         <div>
                             <div class="text-2xl font-bold font-sans text-emerald-300" x-text="netRoiPct"></div>
-                            <div class="text-xs text-sky-100 font-sans mt-0.5">Estimated 1-Year ROI</div>
+                            <div class="text-xs text-sky-100 font-sans mt-0.5">Estimated 1-Year Net ROI</div>
                         </div>
                     </div>
                 </div>
@@ -560,6 +613,66 @@
                 <button @click="demoModalOpen = true" class="w-full py-4 rounded-full bg-white text-sky-700 hover:bg-sky-50 font-bold text-base shadow-lg transition-all text-center relative z-10 font-sans">
                     Book Live Factory Consultation
                 </button>
+            </div>
+        </div>
+
+        <!-- Transparent Formula Breakdown Drawer / Accordion -->
+        <div class="pt-4">
+            <button @click="showFormulas = !showFormulas" class="w-full flex items-center justify-between p-5 bg-white border border-slate-200 hover:border-sky-300 rounded-2xl transition-all shadow-sm group font-sans">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-sky-100 text-sky-600 flex items-center justify-center font-bold text-sm">
+                        &fnof;
+                    </div>
+                    <div class="text-left">
+                        <div class="text-sm font-bold text-slate-900 group-hover:text-sky-600 transition-colors">Calculation Methodology & Transparent Formulas</div>
+                        <div class="text-xs text-slate-500">Click to inspect exact mathematical equations, ROI assumptions, and apparel factory parameters</div>
+                    </div>
+                </div>
+                <div class="text-slate-400 group-hover:text-sky-600 transition-colors">
+                    <svg class="w-5 h-5 transform transition-transform duration-200" :class="showFormulas ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+            </button>
+
+            <div x-show="showFormulas" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" class="mt-4 p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-md space-y-6 text-slate-700 font-sans text-sm">
+                <h4 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
+                    <span>📐</span> Transparent Mathematical Model Breakdown
+                </h4>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="font-semibold text-sky-700">1. Direct Defect Cost Savings</div>
+                        <div class="font-mono text-xs text-slate-800 bg-white p-2 rounded border border-slate-200">
+                            Direct Savings = Lines &times; Daily Pcs &times; 300 Days &times; (Defect Rate &times; 85%) &times; Rework Cost
+                        </div>
+                        <p class="text-xs text-slate-600">Calculates direct financial savings from preventing fabric waste and inline sewing rework using 85% AI defect reduction precision.</p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="font-semibold text-sky-700">2. Productivity &amp; Line Throughput Gain</div>
+                        <div class="font-mono text-xs text-slate-800 bg-white p-2 rounded border border-slate-200">
+                            Gain % = 12% Line Balancing Base + (Defect Rate &times; 0.8)<br>
+                            Added Value = Annual Volume &times; Gain % &times; $0.75/pc Profit Margin
+                        </div>
+                        <p class="text-xs text-slate-600">Reflects throughput increase achieved by eliminating line bottlenecks and reducing operator rework delays.</p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="font-semibold text-sky-700">3. Enterprise System Cost</div>
+                        <div class="font-mono text-xs text-slate-800 bg-white p-2 rounded border border-slate-200">
+                            Total System Cost = Active Sewing Lines &times; $2,400 / Line / Year
+                        </div>
+                        <p class="text-xs text-slate-600">Includes all IoT motor sensors, RFID floor readers, optical cameras, and full enterprise SaaS cloud licensing ($200/line/month).</p>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="font-semibold text-sky-700">4. Payback Period &amp; Net ROI</div>
+                        <div class="font-mono text-xs text-slate-800 bg-white p-2 rounded border border-slate-200">
+                            Payback (Months) = (System Cost &divide; Gross Savings) &times; 12<br>
+                            Net ROI % = ((Gross Savings &minus; System Cost) &divide; System Cost) &times; 100
+                        </div>
+                        <p class="text-xs text-slate-600">Demonstrates exact timeline until total investment payback and net annualized return on investment.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

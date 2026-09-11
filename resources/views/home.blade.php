@@ -29,18 +29,18 @@
 </style>
 
 <!-- ================= 1. HERO SECTION (REAL-WORLD FACTORY VIDEO & OUTCOME HEADLINE) ================= -->
-<section id="hero" class="relative flex flex-col justify-center items-center pt-24 pb-12 sm:pt-28 sm:pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-black text-white">
+<section id="hero" class="relative flex flex-col justify-center items-center pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-black text-white">
     
     <!-- Real-World Garment Factory Video Background (Skilled Worker Operating Industrial Sewing Machine) -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <video id="hero-bg-video" autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-100 scale-100 filter brightness-115 contrast-105">
+        <video id="hero-bg-video" autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-95 scale-100 filter brightness-110 contrast-105">
+            <source src="https://videos.pexels.com/video-files/15459704/15459704-hd_1920_1080_24fps.mp4" type="video/mp4">
             <source src="{{ asset('videos/garment-15459704.mp4') }}" type="video/mp4">
             <source src="{{ asset('videos/garment-custom.mp4') }}" type="video/mp4">
-            <source src="https://videos.pexels.com/video-files/15459704/15459704-hd_1920_1080_24fps.mp4" type="video/mp4">
             <source src="{{ asset('videos/garment-bg.mp4') }}" type="video/mp4">
         </video>
-        <!-- Light High-Contrast Vignette Overlay for Title Contrast & Maximum Video Visibility -->
-        <div class="absolute inset-0 bg-gradient-to-b from-black/35 via-black/10 to-black/55"></div>
+        <!-- Light Vignette Overlay for Crisp Visibility & Maximum Contrast -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-black/60"></div>
         <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-white/5 rounded-full blur-[140px]"></div>
         <div class="absolute bottom-10 right-10 w-96 h-96 bg-white/5 rounded-full blur-[120px]"></div>
     </div>
@@ -65,6 +65,15 @@
             Real-time digital intelligence for apparel manufacturing. Connect shopfloor sewing lines, AI vision inspection, and machine IoT sensors directly to executive SaaS dashboards.
         </p>
 
+        <!-- Primary Hero CTA: See How It Works -->
+        <div class="pt-2 flex justify-center w-full">
+            <a href="#problem"
+               class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-sky-400 via-blue-600 to-sky-500 hover:from-sky-300 hover:to-blue-500 text-white font-bold text-base px-8 py-3.5 rounded-full shadow-xl shadow-sky-500/40 hover:scale-105 transition-all group font-sans">
+                <span>See How It Works</span>
+                <svg class="w-5 h-5 group-hover:translate-y-1 transition-transform text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </a>
+        </div>
+
         <!-- Key Outcomes Summary Pills -->
         <div class="pt-4 border-t border-white/20 flex flex-wrap items-center justify-center gap-4 text-xs font-sans font-medium text-white w-full">
             <div class="px-4 py-2 rounded-full bg-black/70 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
@@ -79,15 +88,6 @@
             <div class="px-4 py-2 rounded-full bg-black/70 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-indigo-400"></span> 🎯 99.4% AI Vision Inspection Accuracy
             </div>
-        </div>
-
-        <!-- Sleek Scroll CTA: See How It Works -->
-        <div class="pt-2 flex justify-center">
-            <a href="#problem"
-               class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-sky-500/20 hover:bg-sky-500/40 border border-sky-400/60 text-sky-300 hover:text-white font-sans font-semibold text-sm backdrop-blur-md shadow-lg transition-all group hover:scale-105">
-                <span>See How It Works</span>
-                <svg class="w-4 h-4 group-hover:translate-y-1 transition-transform text-sky-300 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-            </a>
         </div>
     </div>
 </section>

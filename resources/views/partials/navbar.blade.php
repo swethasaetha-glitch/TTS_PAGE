@@ -1,7 +1,5 @@
-<header x-data="{ scrolled: false, productDropdown: false, mobileMenu: false }"
-        @scroll.window="scrolled = (window.pageYOffset > 20)"
-        :class="scrolled ? 'bg-white/90 backdrop-blur-md border-b border-sky-100 py-3 shadow-md' : 'bg-transparent py-5'"
-        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+<header x-data="{ productDropdown: false, mobileMenu: false }"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-sky-100 py-3 shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         
         <!-- Navbar Logo Icon & Title -->

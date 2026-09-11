@@ -938,39 +938,51 @@
     </div>
 </section>
 
-<!-- ================= 8. FINAL CONVERSION CTA SECTION ================= -->
-<section id="conversion-cta" class="relative py-28 px-4 sm:px-6 lg:px-8 bg-slate-950 text-white overflow-hidden">
+<!-- ================= 8. FINAL CONVERSION CTA SECTION (FOCUSED SINGLE ACTION) ================= -->
+<section id="conversion-cta" class="relative py-28 px-4 sm:px-6 lg:px-8 bg-slate-950 text-white overflow-hidden border-t border-slate-800">
     <!-- Ambient Background Glow -->
     <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-sky-500/15 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/10 rounded-full blur-[140px]"></div>
     </div>
 
-    <div class="max-w-5xl mx-auto text-center space-y-8 relative z-10">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 border border-sky-400/40 text-sky-300 text-xs font-semibold uppercase tracking-widest font-sans">
+    <div class="max-w-4xl mx-auto text-center space-y-8 relative z-10">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 border border-sky-400/40 text-sky-300 text-xs font-semibold uppercase tracking-widest font-sans backdrop-blur-md shadow-2xl">
             <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-            Accelerate Your Apparel Manufacturing
+            Enterprise Factory ROI Calculator
         </div>
 
-        <h2 class="text-4xl sm:text-6xl font-bold font-sans tracking-tight text-white leading-tight max-w-4xl mx-auto">
-            See How Much Your Factory <span class="text-sky-400 italic">Can Save Today</span>
+        <h2 class="text-4xl sm:text-6xl font-bold font-sans tracking-tight text-white leading-tight max-w-3xl mx-auto">
+            Ready to Cut Defect Scrap &amp; Boost Output? <br class="hidden sm:inline" />
+            <span class="text-sky-400 italic">See How Much Your Factory Can Save</span>
         </h2>
 
-        <p class="text-lg sm:text-xl text-slate-300 font-sans max-w-2xl mx-auto leading-relaxed">
-            Join 500+ active apparel sewing lines driving Industry 4.0 smart factory transformation with Track Tech Solution.
+        <p class="text-base sm:text-xl text-slate-300 font-sans max-w-2xl mx-auto leading-relaxed">
+            Input your active sewing lines and daily garment volume to generate an instant, field-audited financial cost reduction report for your plant.
         </p>
 
-        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-5">
-            <button @click="demoModalOpen = true"
-                    class="w-full sm:w-auto flex items-center justify-center gap-3 bg-gradient-to-r from-sky-500 via-blue-600 to-sky-500 hover:from-sky-400 hover:to-blue-600 text-white font-semibold text-lg px-12 py-4 rounded-full shadow-2xl shadow-sky-500/50 hover:scale-105 transition-all group font-sans">
-                <svg class="w-5 h-5 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                <span>Book a Live Factory Demo</span>
-            </button>
-
+        <!-- SINGLE FOCUSED PRIMARY ACTION BUTTON -->
+        <div class="pt-4 flex justify-center">
             <a href="#roi-calculator"
-               class="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-sans font-medium text-lg px-10 py-4 rounded-full border border-white/30 hover:border-sky-400 backdrop-blur-md shadow-lg transition-all group">
-                <span>Calculate Factory ROI</span>
-                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-sky-400 via-blue-600 to-sky-500 hover:from-sky-300 hover:to-blue-500 text-white font-bold text-xl px-12 py-5 rounded-full shadow-2xl shadow-sky-500/50 hover:shadow-sky-400/70 hover:scale-105 transition-all group ring-4 ring-sky-400/30 font-sans">
+                <span>See How Much Your Factory Can Save</span>
+                <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </a>
+        </div>
+
+        <!-- Single Action High-Trust Guarantees Band -->
+        <div class="pt-8 border-t border-slate-800 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-sans">
+            <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span>Instant Audited Calculation</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span>Zero Commitment Required</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <span>1.8-Month Average Full Payback</span>
+            </div>
         </div>
     </div>
 </section>

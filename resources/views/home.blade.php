@@ -7,14 +7,17 @@
 <!-- ================= 1. HERO SECTION (REAL-WORLD FACTORY VIDEO & OUTCOME HEADLINE) ================= -->
 <section id="hero" class="relative min-h-screen flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-slate-950 text-white">
     
-    <!-- Premium Real-World Garment Factory Background Video (100% Crystal Clear, Zero Blue Tint) -->
+    <!-- Premium Industry 4.0 High-Tech Blueprint Background (Mentor Approved) -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <video autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-100 scale-100 filter brightness-100 contrast-100">
-            <source src="{{ asset('videos/garment-bg.mp4') }}" type="video/mp4">
-            <source src="{{ asset('videos/garment-custom.mp4') }}" type="video/mp4">
-        </video>
-        <!-- Neutral Pure Transparent Overlay for 100% Pure Video Visibility -->
-        <div class="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/60"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"></div>
+        
+        <!-- High-Tech Vector Grid Matrix -->
+        <div class="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#38bdf8_1px,transparent_1px),linear-gradient(to_bottom,#38bdf8_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_30%,#000_70%,transparent_100%)]"></div>
+        
+        <!-- Ambient Glowing Light Orbs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-sky-500/15 rounded-full blur-[140px] animate-pulse"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px]"></div>
+        <div class="absolute top-10 left-10 w-80 h-80 bg-blue-600/10 rounded-full blur-[100px]"></div>
     </div>
 
     <!-- Hero Content Container -->

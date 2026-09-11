@@ -24,14 +24,14 @@
 
         <!-- Top Industry 4.0 Badge -->
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-950/80 border border-sky-400/50 text-sky-300 text-xs font-semibold uppercase tracking-widest font-sans backdrop-blur-md shadow-2xl">
-            <span class="w-2.5 h-2.5 rounded-full bg-sky-400 animate-ping"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-sky-400"></span>
             Industry 4.0 Digital Garment Intelligence
         </div>
 
         <!-- Outcome-Focused Main Title -->
         <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-white font-sans max-w-5xl [text-shadow:_0_4px_24px_rgba(0,0,0,0.95)]">
             Slash Garment Defects by <span class="text-sky-400 italic font-sans [text-shadow:_0_4px_20px_rgba(14,165,233,0.8)]">85%</span>, <br class="hidden sm:inline" />
-            Maximize Machine OEE to <span class="text-emerald-400 italic font-sans [text-shadow:_0_4px_20px_rgba(16,185,129,0.8)]">98.4%</span> & Boost Efficiency by <span class="text-amber-300 italic font-sans [text-shadow:_0_4px_20px_rgba(252,211,77,0.8)]">+22%</span>
+            Maximize Machine OEE to <span class="text-emerald-400 italic font-sans [text-shadow:_0_4px_20px_rgba(16,185,129,0.8)]">98.4%</span> &amp; Boost Efficiency by <span class="text-amber-300 italic font-sans [text-shadow:_0_4px_20px_rgba(252,211,77,0.8)]">+22%</span>
         </h1>
 
         <!-- Centered Business Outcome Subtitle -->
@@ -59,16 +59,16 @@
         <!-- Key Outcomes Summary Pills -->
         <div class="pt-8 border-t border-white/20 flex flex-wrap items-center justify-center gap-4 text-xs font-sans font-medium text-white w-full">
             <div class="px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> 💰 $140,000 Annual Scrap Savings / 50 Lines
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> 💰 $140,000 Annual Scrap Savings / 50 Lines
             </div>
             <div class="px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span> ⚡ +22% Daily Pcs Output Throughput
+                <span class="w-2 h-2 rounded-full bg-sky-400"></span> ⚡ +22% Daily Pcs Output Throughput
             </div>
             <div class="px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span> ⏱️ 2.4 Months Full Payback Period
+                <span class="w-2 h-2 rounded-full bg-amber-400"></span> ⏱️ 2.4 Months Full Payback Period
             </div>
             <div class="px-4 py-2 rounded-full bg-slate-900/90 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span> 🎯 99.4% AI Vision Inspection Accuracy
+                <span class="w-2 h-2 rounded-full bg-indigo-400"></span> 🎯 99.4% AI Vision Inspection Accuracy
             </div>
         </div>
     </div>
@@ -942,12 +942,12 @@
 <section id="conversion-cta" class="relative py-28 px-4 sm:px-6 lg:px-8 bg-slate-950 text-white overflow-hidden">
     <!-- Ambient Background Glow -->
     <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-sky-500/15 rounded-full blur-3xl"></div>
     </div>
 
     <div class="max-w-5xl mx-auto text-center space-y-8 relative z-10">
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 border border-sky-400/40 text-sky-300 text-xs font-semibold uppercase tracking-widest font-sans">
-            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
             Accelerate Your Apparel Manufacturing
         </div>
 

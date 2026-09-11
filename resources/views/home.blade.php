@@ -7,12 +7,15 @@
 <!-- ================= 1. HERO SECTION (REAL-WORLD FACTORY VIDEO & OUTCOME HEADLINE) ================= -->
 <section id="hero" class="relative min-h-screen flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-slate-950 text-white">
     
-    <!-- Premium Industry 4.0 Interactive 3D Cyber Fabric Background (WebGL Powered) -->
+    <!-- Premium Real-World Garment Factory Shot-by-Shot Video Background (15s Custom Cut List) -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"></div>
-        <div id="hero-3d-bg-canvas" class="absolute inset-0 w-full h-full opacity-70"></div>
-        <div class="absolute inset-0 opacity-15 bg-[linear-gradient(to_right,#38bdf8_1px,transparent_1px),linear-gradient(to_bottom,#38bdf8_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_30%,#000_70%,transparent_100%)]"></div>
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-sky-500/15 rounded-full blur-[140px] animate-pulse"></div>
+        <video autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-85 scale-100 filter brightness-100 contrast-105">
+            <source src="{{ asset('videos/garment-custom.mp4') }}" type="video/mp4">
+            <source src="{{ asset('videos/garment-bg.mp4') }}" type="video/mp4">
+        </video>
+        <!-- High-Contrast Vignette Gradient for Perfect Text Legibility -->
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/50 to-slate-950/90"></div>
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-sky-500/10 rounded-full blur-[140px]"></div>
         <div class="absolute bottom-10 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px]"></div>
     </div>
 

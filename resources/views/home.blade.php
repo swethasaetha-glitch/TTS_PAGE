@@ -7,16 +7,14 @@
 <!-- ================= 1. HERO SECTION (REAL-WORLD FACTORY VIDEO & OUTCOME HEADLINE) ================= -->
 <section id="hero" class="relative min-h-screen flex flex-col justify-center items-center pt-32 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden bg-slate-950 text-white">
     
-    <!-- Premium Real-World Garment Factory Background Video (100% Crystal Clear & Transparent) -->
+    <!-- Premium Real-World Garment Factory Background Video (100% Crystal Clear, Zero Blue Tint) -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <video autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-100 scale-105 filter brightness-100 contrast-100">
+        <video autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-100 scale-100 filter brightness-100 contrast-100">
             <source src="{{ asset('videos/garment-bg.mp4') }}" type="video/mp4">
             <source src="{{ asset('videos/garment-custom.mp4') }}" type="video/mp4">
         </video>
-        <!-- Ultra-Light Transparent Overlay for Maximum Video Clarity -->
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/30 via-transparent to-slate-950/60"></div>
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/15 rounded-full blur-[120px]"></div>
-        <div class="absolute bottom-10 right-10 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]"></div>
+        <!-- Neutral Pure Transparent Overlay for 100% Pure Video Visibility -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/60"></div>
     </div>
 
     <!-- Hero Content Container -->

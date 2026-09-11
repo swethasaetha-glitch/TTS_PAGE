@@ -133,8 +133,8 @@ export function initHero3D(containerId) {
         ctx.fill();
 
         ctx.fillStyle = '#e2e8f0';
-        ctx.font = 'bold 12px monospace';
-        ctx.fillText('LIVE (10ms)', 898, 34);
+        ctx.font = 'bold 12px sans-serif';
+        ctx.fillText('SYSTEM ONLINE', 898, 34);
 
         // RENDER STAGE-SPECIFIC UI VIEWS
         if (currentHeroStage === 1) {

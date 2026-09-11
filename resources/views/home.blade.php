@@ -362,7 +362,7 @@
                         <span class="w-2 h-2 rounded-full bg-sky-500 animate-ping"></span>
                         <span x-text="activeTab === 'qc' ? 'SOFTWARE ENGINE: AI VISION INSPECTION' : activeTab === 'oee' ? 'SOFTWARE ENGINE: MACHINE OEE DIAGNOSTICS' : activeTab === 'nodes' ? 'SOFTWARE ENGINE: SMART GANTT SCHEDULER' : 'SOFTWARE ENGINE: REAL-TIME FACTORY TELEMETRY'"></span>
                     </span>
-                    <span class="text-xs font-mono font-semibold text-slate-600 bg-white/90 px-3 py-1 rounded-full border border-slate-200 shadow-sm">60 FPS | LIVE DATA HUD</span>
+                    <span class="text-xs font-sans font-semibold text-slate-700 bg-white/95 px-3.5 py-1.5 rounded-full border border-slate-200 shadow-sm">REAL-TIME DASHBOARD</span>
                 </div>
 
                 <!-- 3D WebGL Canvas Container -->

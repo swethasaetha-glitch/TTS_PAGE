@@ -69,16 +69,28 @@
                 </div>
             </div>
 
-            <a href="{{ route('home') }}#impact" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
-                Impact & Metrics
+            <a href="{{ route('home') }}#problem" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
+                Problem
+            </a>
+
+            <a href="{{ route('home') }}#solution" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
+                Solution
             </a>
 
             <a href="{{ route('home') }}#products" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
-                3D Models
+                Products
             </a>
 
-            <a href="{{ route('contact') }}" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
-                Contact Us
+            <a href="{{ route('home') }}#technology" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
+                Technology
+            </a>
+
+            <a href="{{ route('home') }}#roi-calculator" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
+                ROI Calculator
+            </a>
+
+            <a href="{{ route('home') }}#case-studies" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
+                Case Studies
             </a>
         </nav>
 

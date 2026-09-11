@@ -974,44 +974,44 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-10">
             <!-- Case Study 1: Pacific Apparel Group -->
-            <div class="p-8 rounded-3xl bg-slate-50 border border-sky-200 shadow-xl space-y-6 flex flex-col justify-between hover:shadow-2xl transition-all">
-                <div class="space-y-5">
-                    <div class="flex items-center justify-between">
+            <div class="p-8 sm:p-9 rounded-3xl bg-slate-50 border border-sky-200 shadow-xl space-y-6 flex flex-col justify-between hover:shadow-2xl transition-all">
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between pb-3 border-b border-slate-200">
                         <div class="text-xs font-mono font-bold text-sky-700 uppercase tracking-widest">PACIFIC APPAREL GROUP</div>
-                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-100 text-sky-800 border border-sky-200">50 Sewing Lines</span>
+                        <span class="text-[11px] font-mono font-semibold px-3 py-1 rounded-full bg-sky-100 text-sky-800 border border-sky-200">50 Sewing Lines</span>
                     </div>
 
                     <h3 class="text-xl font-bold text-slate-900 font-sans leading-snug">88.7% Reduction in Fabric Defects &amp; Zero Buyer Rejections</h3>
 
                     <p class="text-xs text-slate-600 font-sans leading-relaxed">
-                        <strong>Operational Challenge:</strong> High manual inspection error on formal trousers and blazer lapels caused 6.2% defect rates and $168,000 annual fabric scrap loss.
+                        <strong>Operational Challenge:</strong> Manual inspection on formal trousers and blazer lapels caused 6.2% defect rates and $168,000 annual fabric scrap loss.
                     </p>
 
-                    <!-- Before vs After Audited Table -->
-                    <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2.5 text-xs font-sans">
-                        <div class="text-[11px] font-bold text-slate-400 uppercase font-mono tracking-wider pb-1 border-b border-slate-100 flex justify-between">
-                            <span>Metric</span>
-                            <span>Before TTS &rarr; After TTS</span>
+                    <!-- Spacious Side-by-Side Before vs After Audited Metric Box -->
+                    <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4 font-sans">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-700">Inline Fabric Defect Rate</span>
+                            <span class="text-[11px] font-bold font-mono text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full border border-emerald-200">88.7% Reduction</span>
                         </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-slate-600">Inline Defect Rate:</span>
-                            <span class="font-mono text-right"><span class="text-rose-600 line-through mr-1">6.2%</span> &rarr; <span class="text-emerald-600 font-bold">0.7% (-88.7%)</span></span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-slate-600">Annual Scrap Cost:</span>
-                            <span class="font-mono text-right"><span class="text-rose-600 line-through mr-1">$168K</span> &rarr; <span class="text-emerald-600 font-bold">$23.5K ($144.5K Saved)</span></span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-slate-600">Buyer Quality Claims:</span>
-                            <span class="font-mono text-right"><span class="text-rose-600 line-through mr-1">4.2/mo</span> &rarr; <span class="text-emerald-600 font-bold">0 Claims (100% Pass)</span></span>
+                        <div class="grid grid-cols-2 gap-3 pt-2 border-t border-slate-100 text-xs">
+                            <div class="p-3 rounded-xl bg-rose-50/70 border border-rose-100">
+                                <div class="text-[10px] text-rose-700 font-mono font-bold uppercase">Before TTS</div>
+                                <div class="text-rose-600 font-bold font-mono text-base mt-0.5">6.2% Defect</div>
+                                <div class="text-[11px] text-rose-500 mt-1">$168K/yr Scrap</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-emerald-50/70 border border-emerald-100">
+                                <div class="text-[10px] text-emerald-700 font-mono font-bold uppercase">After TTS</div>
+                                <div class="text-emerald-600 font-bold font-mono text-base mt-0.5">0.7% Defect</div>
+                                <div class="text-[11px] text-emerald-700 mt-1">$144.5K Saved</div>
+                            </div>
                         </div>
                     </div>
 
-                    <p class="text-xs text-slate-500 font-sans italic">
+                    <div class="p-4 rounded-xl bg-sky-50/50 border border-sky-100 text-xs text-slate-600 font-sans italic leading-relaxed">
                         &ldquo;Deploying AI Quality Control Studio across our 18 inspection nodes eliminated quality penalty disputes with European apparel buyers.&rdquo;
-                    </p>
+                    </div>
                 </div>
 
                 <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono font-bold text-sky-700">
@@ -1021,11 +1021,11 @@
             </div>
 
             <!-- Case Study 2: Atlas Denim Mills -->
-            <div class="p-8 rounded-3xl bg-slate-50 border border-emerald-200 shadow-xl space-y-6 flex flex-col justify-between hover:shadow-2xl transition-all">
-                <div class="space-y-5">
-                    <div class="flex items-center justify-between">
+            <div class="p-8 sm:p-9 rounded-3xl bg-slate-50 border border-emerald-200 shadow-xl space-y-6 flex flex-col justify-between hover:shadow-2xl transition-all">
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between pb-3 border-b border-slate-200">
                         <div class="text-xs font-mono font-bold text-emerald-700 uppercase tracking-widest">ATLAS DENIM MILLS</div>
-                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-200">35 Sewing Lines</span>
+                        <span class="text-[11px] font-mono font-semibold px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">35 Sewing Lines</span>
                     </div>
 
                     <h3 class="text-xl font-bold text-slate-900 font-sans leading-snug">+2,200 Extra Garments / Day Output Gain</h3>
@@ -1034,29 +1034,29 @@
                         <strong>Operational Challenge:</strong> Severe line imbalance on heavy flatlock stitching created 4.5-hour daily WIP bottlenecks and delayed shipment dispatches.
                     </p>
 
-                    <!-- Before vs After Audited Table -->
-                    <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2.5 text-xs font-sans">
-                        <div class="text-[11px] font-bold text-slate-400 uppercase font-mono tracking-wider pb-1 border-b border-slate-100 flex justify-between">
-                            <span>Metric</span>
-                            <span>Before TTS &rarr; After TTS</span>
+                    <!-- Spacious Side-by-Side Before vs After Audited Metric Box -->
+                    <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4 font-sans">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-700">Daily Garment Output</span>
+                            <span class="text-[11px] font-bold font-mono text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full border border-emerald-200">+2,200 Pcs/Day</span>
                         </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-slate-600">Line Balance Score:</span>
-                            <span class="font-mono text-right"><span class="text-rose-600 line-through mr-1">68.4%</span> &rarr; <span class="text-emerald-600 font-bold">93.8% (+25.4%)</span></span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-slate-600">Daily Output Volume:</span>
-                            <span class="font-mono text-right"><span class="text-rose-600 line-through mr-1">8,200</span> &rarr; <span class="text-emerald-600 font-bold">10,400 pcs (+26.8%)</span></span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-slate-600">WIP Cycle Lead Time:</span>
-                            <span class="font-mono text-right"><span class="text-rose-600 line-through mr-1">8.5 Days</span> &rarr; <span class="text-emerald-600 font-bold">5.2 Days (38.8% Faster)</span></span>
+                        <div class="grid grid-cols-2 gap-3 pt-2 border-t border-slate-100 text-xs">
+                            <div class="p-3 rounded-xl bg-rose-50/70 border border-rose-100">
+                                <div class="text-[10px] text-rose-700 font-mono font-bold uppercase">Before TTS</div>
+                                <div class="text-rose-600 font-bold font-mono text-base mt-0.5">8,200 Pcs/Day</div>
+                                <div class="text-[11px] text-rose-500 mt-1">68.4% Balance</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-emerald-50/70 border border-emerald-100">
+                                <div class="text-[10px] text-emerald-700 font-mono font-bold uppercase">After TTS</div>
+                                <div class="text-emerald-600 font-bold font-mono text-base mt-0.5">10,400 Pcs/Day</div>
+                                <div class="text-[11px] text-emerald-700 mt-1">93.8% Balance</div>
+                            </div>
                         </div>
                     </div>
 
-                    <p class="text-xs text-slate-500 font-sans italic">
+                    <div class="p-4 rounded-xl bg-emerald-50/50 border border-emerald-100 text-xs text-slate-600 font-sans italic leading-relaxed">
                         &ldquo;Real-time RFID bundle tracking allowed shopfloor supervisors to identify and balance workstation bottlenecks instantly.&rdquo;
-                    </p>
+                    </div>
                 </div>
 
                 <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono font-bold text-emerald-700">
@@ -1066,11 +1066,11 @@
             </div>
 
             <!-- Case Study 3: Zenith Knitwear Global -->
-            <div class="p-8 rounded-3xl bg-slate-50 border border-indigo-200 shadow-xl space-y-6 flex flex-col justify-between hover:shadow-2xl transition-all">
-                <div class="space-y-5">
-                    <div class="flex items-center justify-between">
+            <div class="p-8 sm:p-9 rounded-3xl bg-slate-50 border border-indigo-200 shadow-xl space-y-6 flex flex-col justify-between hover:shadow-2xl transition-all">
+                <div class="space-y-6">
+                    <div class="flex items-center justify-between pb-3 border-b border-slate-200">
                         <div class="text-xs font-mono font-bold text-indigo-700 uppercase tracking-widest">ZENITH KNITWEAR GLOBAL</div>
-                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-100 text-indigo-800 border border-indigo-200">45 Sewing Lines</span>
+                        <span class="text-[11px] font-mono font-semibold px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200">45 Sewing Lines</span>
                     </div>
 
                     <h3 class="text-xl font-bold text-slate-900 font-sans leading-snug">98.6% Machine Uptime Score (85.6% Downtime Cut)</h3>
@@ -1079,29 +1079,29 @@
                         <strong>Operational Challenge:</strong> Overlock sewing motor overheating caused 19.5% monthly unscheduled machine downtime during peak export deadlines.
                     </p>
 
-                    <!-- Before vs After Audited Table -->
-                    <div class="p-4 rounded-2xl bg-white border border-slate-200 space-y-2.5 text-xs font-sans">
-                        <div class="text-[11px] font-bold text-slate-400 uppercase font-mono tracking-wider pb-1 border-b border-slate-100 flex justify-between">
-                            <span>Metric</span>
-                            <span>Before TTS &rarr; After TTS</span>
+                    <!-- Spacious Side-by-Side Before vs After Audited Metric Box -->
+                    <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4 font-sans">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-slate-700">Sewing Machine OEE Uptime</span>
+                            <span class="text-[11px] font-bold font-mono text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full border border-emerald-200">85.6% Cut</span>
                         </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-slate-600">Plant OEE Score:</span>
-                            <span class="font-mono text-right"><span class="text-rose-600 line-through mr-1">71.2%</span> &rarr; <span class="text-emerald-600 font-bold">98.6% Uptime</span></span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-slate-600">Unscheduled Outages:</span>
-                            <span class="font-mono text-right"><span class="text-rose-600 line-through mr-1">19.5%</span> &rarr; <span class="text-emerald-600 font-bold">2.8% (-85.6%)</span></span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-slate-600">Maintenance Costs:</span>
-                            <span class="font-mono text-right"><span class="text-rose-600 line-through mr-1">$54K/yr</span> &rarr; <span class="text-emerald-600 font-bold">$11.2K/yr (79% Cut)</span></span>
+                        <div class="grid grid-cols-2 gap-3 pt-2 border-t border-slate-100 text-xs">
+                            <div class="p-3 rounded-xl bg-rose-50/70 border border-rose-100">
+                                <div class="text-[10px] text-rose-700 font-mono font-bold uppercase">Before TTS</div>
+                                <div class="text-rose-600 font-bold font-mono text-base mt-0.5">71.2% Uptime</div>
+                                <div class="text-[11px] text-rose-500 mt-1">19.5% Outage</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-emerald-50/70 border border-emerald-100">
+                                <div class="text-[10px] text-emerald-700 font-mono font-bold uppercase">After TTS</div>
+                                <div class="text-emerald-600 font-bold font-mono text-base mt-0.5">98.6% Uptime</div>
+                                <div class="text-[11px] text-emerald-700 mt-1">2.8% Outage</div>
+                            </div>
                         </div>
                     </div>
 
-                    <p class="text-xs text-slate-500 font-sans italic">
+                    <div class="p-4 rounded-xl bg-indigo-50/50 border border-indigo-100 text-xs text-slate-600 font-sans italic leading-relaxed">
                         &ldquo;Predictive IoT sewing motor telemetry issues 48-hour advance warnings before motor breakdowns happen during peak shifts.&rdquo;
-                    </p>
+                    </div>
                 </div>
 
                 <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono font-bold text-indigo-700">

@@ -331,52 +331,61 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch" x-data="{ activeTab: 'core' }">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch" x-data="{ activeStep: 1 }">
+            <!-- Left Panel: 4-Step Factory Workflow Stepper -->
             <div class="lg:col-span-5 space-y-6 flex flex-col justify-between p-8 rounded-3xl bg-white border border-sky-200 shadow-xl">
                 <div class="space-y-4">
-                    <div class="text-xs font-semibold uppercase tracking-wider text-sky-700 font-sans">Select 3D Telemetry View</div>
-                    <div class="grid grid-cols-2 gap-3">
-                        <button @click="activeTab = 'core'; window.switch3DViewport('core')"
-                                :class="activeTab === 'core' ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-slate-50 text-slate-700 hover:bg-sky-50 border-slate-200'"
-                                class="p-3.5 rounded-2xl border text-xs font-sans transition-all text-left flex items-center gap-2">
-                            <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
-                            <span>Core Telemetry</span>
+                    <div class="text-xs font-bold uppercase tracking-wider text-sky-700 font-sans">4-Step Factory Workflow Sequence</div>
+                    <div class="space-y-3">
+                        <!-- Step 1 -->
+                        <button @click="activeStep = 1; if(window.setHeroStage) window.setHeroStage(1)"
+                                :class="activeStep === 1 ? 'bg-sky-50 border-sky-400 text-sky-900 shadow-md ring-2 ring-sky-300 font-bold' : 'bg-slate-50 text-slate-700 hover:bg-sky-50 border-slate-200'"
+                                class="w-full p-4 rounded-2xl border text-left transition-all flex items-start gap-3">
+                            <div class="w-7 h-7 rounded-xl bg-sky-500 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">1</div>
+                            <div>
+                                <div class="font-bold text-sm font-sans">Cutting &amp; RFID Bundle Tagging</div>
+                                <div class="text-xs text-slate-600 font-sans mt-0.5">Assigns RFID smart tags at cutting room entry for 100% WIP visibility.</div>
+                            </div>
                         </button>
-                        <button @click="activeTab = 'qc'; window.switch3DViewport('qc')"
-                                :class="activeTab === 'qc' ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-slate-50 text-slate-700 hover:bg-sky-50 border-slate-200'"
-                                class="p-3.5 rounded-2xl border text-xs font-sans transition-all text-left flex items-center gap-2">
-                            <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
-                            <span>AI Vision Scan</span>
+
+                        <!-- Step 2 -->
+                        <button @click="activeStep = 2; if(window.setHeroStage) window.setHeroStage(2)"
+                                :class="activeStep === 2 ? 'bg-sky-50 border-sky-400 text-sky-900 shadow-md ring-2 ring-sky-300 font-bold' : 'bg-slate-50 text-slate-700 hover:bg-sky-50 border-slate-200'"
+                                class="w-full p-4 rounded-2xl border text-left transition-all flex items-start gap-3">
+                            <div class="w-7 h-7 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">2</div>
+                            <div>
+                                <div class="font-bold text-sm font-sans">Sewing Line Telemetry &amp; Balancing</div>
+                                <div class="text-xs text-slate-600 font-sans mt-0.5">Monitors workstation piece-rates in real time to eliminate line bottlenecks (+22% output).</div>
+                            </div>
                         </button>
-                        <button @click="activeTab = 'oee'; window.switch3DViewport('oee')"
-                                :class="activeTab === 'oee' ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-slate-50 text-slate-700 hover:bg-sky-50 border-slate-200'"
-                                class="p-3.5 rounded-2xl border text-xs font-sans transition-all text-left flex items-center gap-2">
-                            <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
-                            <span>Machine OEE Gears</span>
+
+                        <!-- Step 3 -->
+                        <button @click="activeStep = 3; if(window.setHeroStage) window.setHeroStage(3)"
+                                :class="activeStep === 3 ? 'bg-sky-50 border-sky-400 text-sky-900 shadow-md ring-2 ring-sky-300 font-bold' : 'bg-slate-50 text-slate-700 hover:bg-sky-50 border-slate-200'"
+                                class="w-full p-4 rounded-2xl border text-left transition-all flex items-start gap-3">
+                            <div class="w-7 h-7 rounded-xl bg-amber-500 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">3</div>
+                            <div>
+                                <div class="font-bold text-sm font-sans">AI Vision Defect Inspection</div>
+                                <div class="text-xs text-slate-600 font-sans mt-0.5">HD camera scanners flag stitch skips and fabric flaws before assembly (85% defect cut).</div>
+                            </div>
                         </button>
-                        <button @click="activeTab = 'nodes'; window.switch3DViewport('nodes')"
-                                :class="activeTab === 'nodes' ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md shadow-sky-500/20 border-sky-400 font-bold' : 'bg-slate-50 text-slate-700 hover:bg-sky-50 border-slate-200'"
-                                class="p-3.5 rounded-2xl border text-xs font-sans transition-all text-left flex items-center gap-2">
-                            <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
-                            <span>Plant Network</span>
+
+                        <!-- Step 4 -->
+                        <button @click="activeStep = 4; if(window.setHeroStage) window.setHeroStage(4)"
+                                :class="activeStep === 4 ? 'bg-sky-50 border-sky-400 text-sky-900 shadow-md ring-2 ring-sky-300 font-bold' : 'bg-slate-50 text-slate-700 hover:bg-sky-50 border-slate-200'"
+                                class="w-full p-4 rounded-2xl border text-left transition-all flex items-start gap-3">
+                            <div class="w-7 h-7 rounded-xl bg-indigo-500 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">4</div>
+                            <div>
+                                <div class="font-bold text-sm font-sans">Executive SaaS &amp; Order Dispatch</div>
+                                <div class="text-xs text-slate-600 font-sans mt-0.5">Streams machine OEE (98.4% uptime) and guarantees 100% on-time buyer dispatch.</div>
+                            </div>
                         </button>
                     </div>
                 </div>
 
-                <div class="space-y-4 pt-4 border-t border-slate-100">
-                    <p id="viewport-description" class="text-sm text-slate-700 font-sans italic">
-                        Interactive 3D digital core representing real-time factory telemetry.
-                    </p>
-
-                    <div class="p-4 rounded-2xl bg-sky-50 border border-sky-200 text-xs text-slate-700 flex items-center gap-3">
-                        <div class="p-2.5 rounded-xl bg-sky-100 text-sky-600 shrink-0">
-                            <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
-                        </div>
-                        <div>
-                            <span class="font-bold text-sky-700 block">Touch / Drag 3D Viewport</span>
-                            <span>Drag 3D model to inspect real-time factory sensors.</span>
-                        </div>
-                    </div>
+                <div class="pt-4 border-t border-slate-100 flex items-center gap-3 text-xs text-slate-500 font-sans">
+                    <svg class="w-4 h-4 text-sky-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span>Click any step above to inspect the step-by-step digital twin factory workflow in 3D.</span>
                 </div>
             </div>
 

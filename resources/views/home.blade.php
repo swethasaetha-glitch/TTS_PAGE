@@ -50,9 +50,9 @@
 
             <!-- Secondary CTA: See How It Works -->
             <a href="#problem"
-               class="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-900/90 hover:bg-slate-800 text-slate-100 hover:text-white font-sans font-semibold text-base px-9 py-4.5 rounded-full border border-white/30 hover:border-sky-400 backdrop-blur-md shadow-xl transition-all group">
+               class="w-full sm:w-auto flex items-center justify-center gap-2 bg-slate-900/95 hover:bg-sky-600 text-white font-sans font-bold text-base px-9 py-4.5 rounded-full border-2 border-sky-400 hover:border-sky-300 backdrop-blur-md shadow-2xl shadow-sky-500/20 hover:scale-105 transition-all group">
                 <span>See How It Works</span>
-                <svg class="w-5 h-5 group-hover:translate-y-1 transition-transform text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                <svg class="w-5 h-5 group-hover:translate-y-1 transition-transform text-sky-300 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
             </a>
         </div>
 

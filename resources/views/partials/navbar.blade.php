@@ -10,7 +10,7 @@
             </span>
         </a>
 
-        <!-- Desktop Flexbox Navigation -->
+        <!-- Desktop Flexbox Navigation (Neat & Clean 4 Items) -->
         <nav class="hidden md:flex items-center gap-8 font-sans">
             <!-- Products Dropdown -->
             <div class="relative" @mouseenter="productDropdown = true" @mouseleave="productDropdown = false">
@@ -67,16 +67,8 @@
                 </div>
             </div>
 
-            <a href="{{ route('home') }}#problem" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
-                Problem
-            </a>
-
             <a href="{{ route('home') }}#solution" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
-                Solution
-            </a>
-
-            <a href="{{ route('home') }}#products" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
-                Products
+                Solutions
             </a>
 
             <a href="{{ route('home') }}#technology" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
@@ -85,10 +77,6 @@
 
             <a href="{{ route('home') }}#roi-calculator" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
                 ROI Calculator
-            </a>
-
-            <a href="{{ route('home') }}#case-studies" class="text-sm font-medium text-slate-700 hover:text-sky-600 transition-colors">
-                Case Studies
             </a>
         </nav>
 

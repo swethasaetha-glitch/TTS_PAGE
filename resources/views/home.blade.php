@@ -34,10 +34,11 @@
     <!-- Real-World Garment Factory Video Background (Skilled Worker Operating Industrial Sewing Machine) -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <video id="hero-bg-video" autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-95 scale-100 filter brightness-110 contrast-105">
-            <source src="https://videos.pexels.com/video-files/15459704/15459704-hd_1920_1080_24fps.mp4" type="video/mp4">
-            <source src="{{ asset('videos/garment-15459704.mp4') }}" type="video/mp4">
+            <source src="{{ asset('videos/garment-user.mp4') }}" type="video/mp4">
             <source src="{{ asset('videos/garment-custom.mp4') }}" type="video/mp4">
             <source src="{{ asset('videos/garment-bg.mp4') }}" type="video/mp4">
+            <source src="{{ asset('videos/garment-15459704.mp4') }}" type="video/mp4">
+            <source src="https://videos.pexels.com/video-files/15459704/15459704-hd_1920_1080_24fps.mp4" type="video/mp4">
         </video>
         <!-- Light Vignette Overlay for Crisp Visibility & Maximum Contrast -->
         <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-black/60"></div>
@@ -46,48 +47,32 @@
     </div>
 
     <!-- Hero Content Container -->
-    <div class="max-w-5xl mx-auto w-full flex flex-col items-center text-center space-y-6 relative z-10">
+    <div class="max-w-4xl mx-auto w-full flex flex-col items-center text-center space-y-6 relative z-10">
 
         <!-- Top Industry 4.0 Badge -->
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/70 border border-sky-400/50 text-sky-300 text-xs font-semibold uppercase tracking-widest font-sans backdrop-blur-md shadow-2xl">
-            <span class="w-2.5 h-2.5 rounded-full bg-sky-400"></span>
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/50 border border-sky-400/30 text-sky-300 text-xs font-semibold uppercase tracking-widest font-sans backdrop-blur-sm">
+            <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
             Industry 4.0 Digital Garment Intelligence
         </div>
 
         <!-- Outcome-Focused Main Title -->
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-white font-sans max-w-5xl [text-shadow:_0_4px_24px_rgba(0,0,0,0.95)]">
-            Slash Garment Defects by <span class="text-sky-400 italic font-sans [text-shadow:_0_4px_20px_rgba(14,165,233,0.8)]">85%</span>, <br class="hidden sm:inline" />
-            Maximize Machine OEE to <span class="text-emerald-400 italic font-sans [text-shadow:_0_4px_20px_rgba(16,185,129,0.8)]">98.4%</span> &amp; Boost Efficiency by <span class="text-amber-300 italic font-sans [text-shadow:_0_4px_20px_rgba(252,211,77,0.8)]">+22%</span>
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.12] text-white max-w-5xl [text-shadow:_0_4px_24px_rgba(0,0,0,0.95)]">
+            Slash Garment Defects by <span class="text-sky-400 [text-shadow:_0_4px_20px_rgba(14,165,233,0.8)]">85%</span>, <br class="hidden sm:inline" />
+            Maximize Machine OEE to <span class="text-sky-400 [text-shadow:_0_4px_20px_rgba(14,165,233,0.8)]">98.4%</span> &amp; Boost Efficiency by <span class="text-sky-400 [text-shadow:_0_4px_20px_rgba(14,165,233,0.8)]">+22%</span>
         </h1>
 
-        <!-- Centered Business Outcome Subtitle -->
-        <p class="text-base sm:text-xl text-slate-100 font-sans leading-relaxed max-w-3xl [text-shadow:_0_2px_12px_rgba(0,0,0,0.9)] bg-black/40 p-4 rounded-2xl backdrop-blur-sm border border-white/10">
+        <!-- Clean Subtitle without heavy box -->
+        <p class="text-base sm:text-xl text-slate-100 leading-relaxed max-w-3xl [text-shadow:_0_2px_12px_rgba(0,0,0,0.95)] font-normal">
             Real-time digital intelligence for apparel manufacturing. Connect shopfloor sewing lines, AI vision inspection, and machine IoT sensors directly to executive SaaS dashboards.
         </p>
 
         <!-- Primary Hero CTA: See How It Works -->
-        <div class="pt-2 flex justify-center w-full">
+        <div class="pt-4 flex justify-center w-full">
             <a href="#problem"
                class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-sky-400 via-blue-600 to-sky-500 hover:from-sky-300 hover:to-blue-500 text-white font-bold text-base px-8 py-3.5 rounded-full shadow-xl shadow-sky-500/40 hover:scale-105 transition-all group font-sans">
                 <span>See How It Works</span>
                 <svg class="w-5 h-5 group-hover:translate-y-1 transition-transform text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
             </a>
-        </div>
-
-        <!-- Key Outcomes Summary Pills -->
-        <div class="pt-4 border-t border-white/20 flex flex-wrap items-center justify-center gap-4 text-xs font-sans font-medium text-white w-full">
-            <div class="px-4 py-2 rounded-full bg-black/70 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> 💰 $140,000 Annual Scrap Savings / 50 Lines
-            </div>
-            <div class="px-4 py-2 rounded-full bg-black/70 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-sky-400"></span> ⚡ +22% Daily Pcs Output Throughput
-            </div>
-            <div class="px-4 py-2 rounded-full bg-black/70 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-amber-400"></span> ⏱️ 2.4 Months Full Payback Period
-            </div>
-            <div class="px-4 py-2 rounded-full bg-black/70 border border-sky-400/40 backdrop-blur-md shadow-lg flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-indigo-400"></span> 🎯 99.4% AI Vision Inspection Accuracy
-            </div>
         </div>
     </div>
 </section>
@@ -96,72 +81,72 @@
 <section id="problem" class="relative py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 text-slate-900 border-b border-slate-200">
     <div class="max-w-7xl mx-auto space-y-16">
         <div class="text-center space-y-4 max-w-3xl mx-auto">
-            <span class="text-xs font-semibold uppercase tracking-widest text-rose-700 px-4 py-1.5 rounded-full bg-rose-100 border border-rose-200 inline-block font-sans">
+            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block font-sans">
                 Industry Challenges
             </span>
-            <h2 class="text-3xl sm:text-5xl font-bold font-sans tracking-tight text-slate-900 leading-tight">
-                The Hidden Friction Costing Your <span class="text-rose-600 italic">Garment Factory Profits</span>
+            <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 leading-tight">
+                The Hidden Friction Costing Your <span class="text-sky-600">Garment Factory Profits</span>
             </h2>
-            <p class="text-slate-700 text-base sm:text-lg font-sans">
+            <p class="text-slate-700 text-base sm:text-lg">
                 Traditional apparel factories lose up to 18% of operating margin to unmonitored shopfloor bottlenecks, manual inline inspection delays, and unexpected downtime.
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Pain Point 1 -->
-            <div class="p-8 rounded-3xl bg-white border border-rose-200 shadow-xl space-y-4 flex flex-col justify-between hover:shadow-2xl transition-all">
+            <div class="p-8 rounded-3xl bg-white border border-sky-100 shadow-xl space-y-4 flex flex-col justify-between hover:shadow-2xl hover:border-sky-300 transition-all">
                 <div class="space-y-3">
-                    <div class="p-3.5 rounded-2xl bg-rose-50 text-rose-600 inline-flex border border-rose-200">
+                    <div class="p-3.5 rounded-2xl bg-sky-50 text-sky-600 inline-flex border border-sky-200">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 font-sans">Invisible Fabric Stitch Defects</h3>
-                    <p class="text-sm text-slate-600 font-sans leading-relaxed">
+                    <h3 class="text-xl font-bold text-slate-900">Invisible Fabric Stitch Defects</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
                         Manual inline QC misses stitch skips and fabric flaws until final finishing, causing expensive re-works and fabric scrap (average 5.8% defect rate).
                     </p>
                 </div>
-                <div class="text-xs font-mono font-bold text-rose-600 bg-rose-50 px-3 py-1.5 rounded-full border border-rose-200 w-fit">AVG LOSS: $140K / YEAR</div>
+                <div class="text-xs font-mono font-bold text-sky-700 bg-sky-50 px-3 py-1.5 rounded-full border border-sky-200 w-fit">AVG LOSS: $140K / YEAR</div>
             </div>
 
             <!-- Pain Point 2 -->
-            <div class="p-8 rounded-3xl bg-white border border-rose-200 shadow-xl space-y-4 flex flex-col justify-between hover:shadow-2xl transition-all">
+            <div class="p-8 rounded-3xl bg-white border border-sky-100 shadow-xl space-y-4 flex flex-col justify-between hover:shadow-2xl hover:border-sky-300 transition-all">
                 <div class="space-y-3">
-                    <div class="p-3.5 rounded-2xl bg-rose-50 text-rose-600 inline-flex border border-rose-200">
+                    <div class="p-3.5 rounded-2xl bg-sky-50 text-sky-600 inline-flex border border-sky-200">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 font-sans">Unmonitored Sewing Downtime</h3>
-                    <p class="text-sm text-slate-600 font-sans leading-relaxed">
+                    <h3 class="text-xl font-bold text-slate-900">Unmonitored Sewing Downtime</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
                         Sewing machine motor failures and needle overheating go undetected until lines grind to a halt, dropping plant overall OEE below 70%.
                     </p>
                 </div>
-                <div class="text-xs font-mono font-bold text-rose-600 bg-rose-50 px-3 py-1.5 rounded-full border border-rose-200 w-fit">OEE DROP: -24% UPTIME</div>
+                <div class="text-xs font-mono font-bold text-sky-700 bg-sky-50 px-3 py-1.5 rounded-full border border-sky-200 w-fit">OEE DROP: -24% UPTIME</div>
             </div>
 
             <!-- Pain Point 3 -->
-            <div class="p-8 rounded-3xl bg-white border border-rose-200 shadow-xl space-y-4 flex flex-col justify-between hover:shadow-2xl transition-all">
+            <div class="p-8 rounded-3xl bg-white border border-sky-100 shadow-xl space-y-4 flex flex-col justify-between hover:shadow-2xl hover:border-sky-300 transition-all">
                 <div class="space-y-3">
-                    <div class="p-3.5 rounded-2xl bg-rose-50 text-rose-600 inline-flex border border-rose-200">
+                    <div class="p-3.5 rounded-2xl bg-sky-50 text-sky-600 inline-flex border border-sky-200">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 font-sans">Manual Paper Bundle Logs</h3>
-                    <p class="text-sm text-slate-600 font-sans leading-relaxed">
+                    <h3 class="text-xl font-bold text-slate-900">Manual Paper Bundle Logs</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
                         Paper WIP tracking creates operator bottleneck disputes, line imbalance, and delayed order shipments to global apparel buyers.
                     </p>
                 </div>
-                <div class="text-xs font-mono font-bold text-rose-600 bg-rose-50 px-3 py-1.5 rounded-full border border-rose-200 w-fit">BOTTLENECK: 4h DELAY/SHIFT</div>
+                <div class="text-xs font-mono font-bold text-sky-700 bg-sky-50 px-3 py-1.5 rounded-full border border-sky-200 w-fit">BOTTLENECK: 4h DELAY/SHIFT</div>
             </div>
 
             <!-- Pain Point 4 -->
-            <div class="p-8 rounded-3xl bg-white border border-rose-200 shadow-xl space-y-4 flex flex-col justify-between hover:shadow-2xl transition-all">
+            <div class="p-8 rounded-3xl bg-white border border-sky-100 shadow-xl space-y-4 flex flex-col justify-between hover:shadow-2xl hover:border-sky-300 transition-all">
                 <div class="space-y-3">
-                    <div class="p-3.5 rounded-2xl bg-rose-50 text-rose-600 inline-flex border border-rose-200">
+                    <div class="p-3.5 rounded-2xl bg-sky-50 text-sky-600 inline-flex border border-sky-200">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 font-sans">Blind Executive Management</h3>
-                    <p class="text-sm text-slate-600 font-sans leading-relaxed">
+                    <h3 class="text-xl font-bold text-slate-900">Blind Executive Management</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
                         Plant directors lack real-time shopfloor data to make proactive line balancing decisions before shipment deadlines are missed.
                     </p>
                 </div>
-                <div class="text-xs font-mono font-bold text-rose-600 bg-rose-50 px-3 py-1.5 rounded-full border border-rose-200 w-fit">RISK: MISSED DISPATCHES</div>
+                <div class="text-xs font-mono font-bold text-sky-700 bg-sky-50 px-3 py-1.5 rounded-full border border-sky-200 w-fit">RISK: MISSED DISPATCHES</div>
             </div>
         </div>
     </div>
@@ -186,32 +171,32 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="p-8 sm:p-10 rounded-3xl bg-slate-50 border border-sky-200 shadow-xl space-y-4 hover:border-sky-400 transition-all">
                 <div class="w-12 h-12 rounded-2xl bg-sky-500 text-white flex items-center justify-center font-bold text-xl shadow-lg shadow-sky-500/30">1</div>
-                <h3 class="text-2xl font-bold text-slate-900 font-sans">Shopfloor IoT Sensor Telemetry</h3>
-                <p class="text-slate-700 text-base leading-relaxed font-sans">
+                <h3 class="text-2xl font-bold text-slate-900">Shopfloor IoT Sensor Telemetry</h3>
+                <p class="text-slate-700 text-base leading-relaxed">
                     Connect every sewing head, motor shaft, and cutting table directly to cloud servers with ultra-low 8ms latency IoT sensors.
                 </p>
             </div>
 
             <div class="p-8 sm:p-10 rounded-3xl bg-slate-50 border border-sky-200 shadow-xl space-y-4 hover:border-sky-400 transition-all">
-                <div class="w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center font-bold text-xl shadow-lg shadow-emerald-500/30">2</div>
-                <h3 class="text-2xl font-bold text-slate-900 font-sans">AI Optical Vision Inspection</h3>
-                <p class="text-slate-700 text-base leading-relaxed font-sans">
+                <div class="w-12 h-12 rounded-2xl bg-sky-500 text-white flex items-center justify-center font-bold text-xl shadow-lg shadow-sky-500/30">2</div>
+                <h3 class="text-2xl font-bold text-slate-900">AI Optical Vision Inspection</h3>
+                <p class="text-slate-700 text-base leading-relaxed">
                     Deploy automated camera scanners across fabric rolls and cut pieces to identify stitch flaws with 99.4% inspection accuracy.
                 </p>
             </div>
 
             <div class="p-8 sm:p-10 rounded-3xl bg-slate-50 border border-sky-200 shadow-xl space-y-4 hover:border-sky-400 transition-all">
-                <div class="w-12 h-12 rounded-2xl bg-indigo-500 text-white flex items-center justify-center font-bold text-xl shadow-lg shadow-indigo-500/30">3</div>
-                <h3 class="text-2xl font-bold text-slate-900 font-sans">Real-Time RFID Bundle Tracking</h3>
-                <p class="text-slate-700 text-base leading-relaxed font-sans">
+                <div class="w-12 h-12 rounded-2xl bg-sky-500 text-white flex items-center justify-center font-bold text-xl shadow-lg shadow-sky-500/30">3</div>
+                <h3 class="text-2xl font-bold text-slate-900">Real-Time RFID Bundle Tracking</h3>
+                <p class="text-slate-700 text-base leading-relaxed">
                     Track every garment bundle seamlessly from cutting to packing, identifying bottlenecked workstations in real time.
                 </p>
             </div>
 
             <div class="p-8 sm:p-10 rounded-3xl bg-slate-50 border border-sky-200 shadow-xl space-y-4 hover:border-sky-400 transition-all">
-                <div class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center font-bold text-xl shadow-lg shadow-amber-500/30">4</div>
-                <h3 class="text-2xl font-bold text-slate-900 font-sans">Executive SaaS Analytics & ROI</h3>
-                <p class="text-slate-700 text-base leading-relaxed font-sans">
+                <div class="w-12 h-12 rounded-2xl bg-sky-500 text-white flex items-center justify-center font-bold text-xl shadow-lg shadow-sky-500/30">4</div>
+                <h3 class="text-2xl font-bold text-slate-900">Executive SaaS Analytics & ROI</h3>
+                <p class="text-slate-700 text-base leading-relaxed">
                     Access unified line balancing metrics, OEE health scores, and order dispatch progress trackers on any browser or mobile device.
                 </p>
             </div>
@@ -220,55 +205,55 @@
 </section>
 
 <!-- ================= 3B. VERIFIED ENTERPRISE CERTIFICATIONS ================= -->
-<section id="certifications-trust" class="relative py-16 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white overflow-hidden">
+<section id="certifications-trust" class="relative py-16 px-4 sm:px-6 lg:px-8 bg-slate-950 text-white overflow-hidden">
     <div class="max-w-7xl mx-auto space-y-12 relative z-10">
 
         <!-- Verified Industry Certifications Grid -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-6 border-t border-slate-800">
-            <div class="p-5 rounded-2xl bg-slate-800/60 border border-slate-700/80 flex items-start gap-4">
+            <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
                 <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0 font-bold text-lg">
                     🛡️
                 </div>
                 <div class="space-y-1">
-                    <div class="text-sm font-bold text-white font-sans">ISO 9001:2015 Certified</div>
-                    <div class="text-xs text-slate-400 font-sans">Quality Management Systems Certified for Smart Apparel Manufacturing</div>
+                    <div class="text-sm font-bold text-white">ISO 9001:2015 Certified</div>
+                    <div class="text-xs text-slate-400">Quality Management Systems Certified for Smart Apparel Manufacturing</div>
                 </div>
             </div>
 
-            <div class="p-5 rounded-2xl bg-slate-800/60 border border-slate-700/80 flex items-start gap-4">
-                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 font-bold text-lg">
+            <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0 font-bold text-lg">
                     🔒
                 </div>
                 <div class="space-y-1">
-                    <div class="text-sm font-bold text-white font-sans">ISO 27001:2022 Certified</div>
-                    <div class="text-xs text-slate-400 font-sans">Enterprise Information Security &amp; Shopfloor Data Protection Compliance</div>
+                    <div class="text-sm font-bold text-white">ISO 27001:2022 Certified</div>
+                    <div class="text-xs text-slate-400">Enterprise Information Security &amp; Shopfloor Data Protection Compliance</div>
                 </div>
             </div>
 
-            <div class="p-5 rounded-2xl bg-slate-800/60 border border-slate-700/80 flex items-start gap-4">
-                <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 font-bold text-lg">
+            <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0 font-bold text-lg">
                     ⚡
                 </div>
                 <div class="space-y-1">
-                    <div class="text-sm font-bold text-white font-sans">CE &amp; FCC Industrial Hardware</div>
-                    <div class="text-xs text-slate-400 font-sans">Industrial Grade AI Vision Cameras &amp; Shopfloor RFID Readers</div>
+                    <div class="text-sm font-bold text-white">CE &amp; FCC Industrial Hardware</div>
+                    <div class="text-xs text-slate-400">Industrial Grade AI Vision Cameras &amp; Shopfloor RFID Readers</div>
                 </div>
             </div>
 
-            <div class="p-5 rounded-2xl bg-slate-800/60 border border-slate-700/80 flex items-start gap-4">
-                <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center shrink-0 font-bold text-lg">
+            <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0 font-bold text-lg">
                     🌿
                 </div>
                 <div class="space-y-1">
-                    <div class="text-sm font-bold text-white font-sans">Higg Index &amp; OEKO-TEX</div>
-                    <div class="text-xs text-slate-400 font-sans">Sustainable Operations &amp; Energy Consumption Telemetry Integration</div>
+                    <div class="text-sm font-bold text-white">Higg Index &amp; OEKO-TEX</div>
+                    <div class="text-xs text-slate-400">Sustainable Operations &amp; Energy Consumption Telemetry Integration</div>
                 </div>
             </div>
         </div>
 
         <!-- Claim Verification Audit Notice Badge -->
-        <div class="p-4 rounded-xl bg-sky-950/80 border border-sky-500/30 flex items-center justify-center gap-3 text-center text-xs text-sky-200 font-sans">
-            <svg class="w-5 h-5 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <div class="p-4 rounded-xl bg-black/80 border border-sky-500/30 flex items-center justify-center gap-3 text-center text-xs text-sky-200">
+            <svg class="w-5 h-5 text-sky-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             <span><strong>Verified Claim Audit Standard:</strong> Every statistic, throughput gain, and ROI output metric presented on this platform is verified via direct shopfloor IoT telemetry logs across 500+ active sewing lines.</span>
         </div>
     </div>
@@ -276,40 +261,40 @@
 <section id="products" class="relative py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 text-slate-900 border-b border-slate-200">
     <div class="max-w-7xl mx-auto space-y-16">
         <div class="text-center space-y-4 max-w-3xl mx-auto">
-            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block font-sans">
+            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block">
                 Product Suite
             </span>
-            <h2 class="text-3xl sm:text-5xl font-bold font-sans tracking-tight text-sky-600 leading-tight">
-                4 Core Software Modules Built for <span class="text-slate-900 italic">Garment ROI</span>
+            <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-sky-600 leading-tight">
+                4 Core Software Modules Built for <span class="text-slate-900">Garment ROI</span>
             </h2>
-            <p class="text-slate-700 text-base sm:text-lg font-sans">
+            <p class="text-slate-700 text-base sm:text-lg">
                 Simplified software tools engineered to solve specific manufacturing challenges and deliver measurable financial outcomes.
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Product 1: AI Quality Control -->
-            <div class="p-8 sm:p-10 rounded-3xl bg-white border border-emerald-200 shadow-xl flex flex-col justify-between space-y-6 hover:shadow-2xl hover:border-emerald-400 transition-all group">
+            <div class="p-8 sm:p-10 rounded-3xl bg-white border border-sky-200 shadow-xl flex flex-col justify-between space-y-6 hover:shadow-2xl hover:border-sky-400 transition-all group">
                 <div class="space-y-4">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs font-bold font-mono uppercase">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 border border-sky-300 text-sky-800 text-xs font-bold font-mono uppercase">
                         💰 BUSINESS BENEFIT: 85% DEFECT REDUCTION ($140K/YR SCRAP SAVINGS)
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 font-sans group-hover:text-emerald-600 transition-colors">AI Quality Control Studio</h3>
-                    <p class="text-slate-700 text-base font-sans leading-relaxed">
+                    <h3 class="text-2xl font-bold text-slate-900 group-hover:text-sky-600 transition-colors">AI Quality Control Studio</h3>
+                    <p class="text-slate-700 text-base leading-relaxed">
                         Replaces manual inline inspection with 99.4% accurate AI cameras—catching fabric flaws and stitch skips in real time before final assembly to eliminate buyer returns.
                     </p>
-                    <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-100 space-y-2 text-xs font-sans text-emerald-900">
+                    <div class="p-4 rounded-2xl bg-sky-50/60 border border-sky-100 space-y-2 text-xs text-sky-900">
                         <div class="flex items-center justify-between font-semibold">
                             <span>Key Financial Impact:</span>
-                            <span class="text-emerald-700 font-mono font-bold">$140,000 Saved / 50 Lines</span>
+                            <span class="text-sky-700 font-mono font-bold">$140,000 Saved / 50 Lines</span>
                         </div>
                         <div class="flex items-center justify-between font-semibold">
                             <span>Defect Target:</span>
-                            <span class="text-emerald-700 font-mono font-bold">&lt;0.6% First Pass Defect Rate</span>
+                            <span class="text-sky-700 font-mono font-bold">&lt;0.6% First Pass Defect Rate</span>
                         </div>
                     </div>
                 </div>
-                <a href="/products/quality-control" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-emerald-600 text-white font-medium text-center transition-colors block font-sans shadow-md">Learn More About AI Quality</a>
+                <a href="/products/quality-control" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-sky-600 text-white font-medium text-center transition-colors block shadow-md">Learn More About AI Quality</a>
             </div>
 
             <!-- Product 2: Production Tracking RFID -->
@@ -318,11 +303,11 @@
                     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 border border-sky-300 text-sky-800 text-xs font-bold font-mono uppercase">
                         ⚡ BUSINESS BENEFIT: +22% DAILY GARMENT THROUGHPUT
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 font-sans group-hover:text-sky-600 transition-colors">Real-Time RFID Production Tracking</h3>
-                    <p class="text-slate-700 text-base font-sans leading-relaxed">
+                    <h3 class="text-2xl font-bold text-slate-900 group-hover:text-sky-600 transition-colors">Real-Time RFID Production Tracking</h3>
+                    <p class="text-slate-700 text-base leading-relaxed">
                         Tracks every garment bundle automatically from cutting room to final packing—eliminating worker idle time and balancing sewing workstation workloads in real time.
                     </p>
-                    <div class="p-4 rounded-2xl bg-sky-50/60 border border-sky-100 space-y-2 text-xs font-sans text-sky-900">
+                    <div class="p-4 rounded-2xl bg-sky-50/60 border border-sky-100 space-y-2 text-xs text-sky-900">
                         <div class="flex items-center justify-between font-semibold">
                             <span>Output Boost:</span>
                             <span class="text-sky-700 font-mono font-bold">+3,200 Extra Pcs / Day</span>
@@ -333,55 +318,55 @@
                         </div>
                     </div>
                 </div>
-                <a href="/products/production-tracking" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-sky-600 text-white font-medium text-center transition-colors block font-sans shadow-md">Learn More About Line Tracking</a>
+                <a href="/products/production-tracking" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-sky-600 text-white font-medium text-center transition-colors block shadow-md">Learn More About Line Tracking</a>
             </div>
 
             <!-- Product 3: Machine Maintenance OEE -->
-            <div class="p-8 sm:p-10 rounded-3xl bg-white border border-amber-200 shadow-xl flex flex-col justify-between space-y-6 hover:shadow-2xl hover:border-amber-400 transition-all group">
+            <div class="p-8 sm:p-10 rounded-3xl bg-white border border-sky-200 shadow-xl flex flex-col justify-between space-y-6 hover:shadow-2xl hover:border-sky-400 transition-all group">
                 <div class="space-y-4">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold font-mono uppercase">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 border border-sky-300 text-sky-800 text-xs font-bold font-mono uppercase">
                         ⏱️ BUSINESS BENEFIT: 98.4% MACHINE UPTIME (82% DOWNTIME CUT)
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 font-sans group-hover:text-amber-600 transition-colors">Machine Maintenance &amp; OEE Telemetry</h3>
-                    <p class="text-slate-700 text-base font-sans leading-relaxed">
+                    <h3 class="text-2xl font-bold text-slate-900 group-hover:text-sky-600 transition-colors">Machine Maintenance &amp; OEE Telemetry</h3>
+                    <p class="text-slate-700 text-base leading-relaxed">
                         IoT sewing motor sensors monitor machine vibration and thermal health—issuing 48-hour early warnings before motor breakdowns happen during peak production shifts.
                     </p>
-                    <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-100 space-y-2 text-xs font-sans text-amber-900">
+                    <div class="p-4 rounded-2xl bg-sky-50/60 border border-sky-100 space-y-2 text-xs text-sky-900">
                         <div class="flex items-center justify-between font-semibold">
                             <span>Downtime Reduction:</span>
-                            <span class="text-amber-700 font-mono font-bold">82% Breakdown Cut</span>
+                            <span class="text-sky-700 font-mono font-bold">82% Breakdown Cut</span>
                         </div>
                         <div class="flex items-center justify-between font-semibold">
                             <span>Early Warning:</span>
-                            <span class="text-amber-700 font-mono font-bold">48-Hour Preventive Alert</span>
+                            <span class="text-sky-700 font-mono font-bold">48-Hour Preventive Alert</span>
                         </div>
                     </div>
                 </div>
-                <a href="/products/machine-maintenance" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-amber-600 text-white font-medium text-center transition-colors block font-sans shadow-md">Learn More About OEE Maintenance</a>
+                <a href="/products/machine-maintenance" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-sky-600 text-white font-medium text-center transition-colors block shadow-md">Learn More About OEE Maintenance</a>
             </div>
 
             <!-- Product 4: Smart Line Planner -->
-            <div class="p-8 sm:p-10 rounded-3xl bg-white border border-indigo-200 shadow-xl flex flex-col justify-between space-y-6 hover:shadow-2xl hover:border-indigo-400 transition-all group">
+            <div class="p-8 sm:p-10 rounded-3xl bg-white border border-sky-200 shadow-xl flex flex-col justify-between space-y-6 hover:shadow-2xl hover:border-sky-400 transition-all group">
                 <div class="space-y-4">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-100 border border-indigo-300 text-indigo-900 text-xs font-bold font-mono uppercase">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-100 border border-sky-300 text-sky-800 text-xs font-bold font-mono uppercase">
                         🎯 BUSINESS BENEFIT: 100% ON-TIME BUYER DISPATCH
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 font-sans group-hover:text-indigo-600 transition-colors">Smart Gantt Line Planner</h3>
-                    <p class="text-slate-700 text-base font-sans leading-relaxed">
+                    <h3 class="text-2xl font-bold text-slate-900 group-hover:text-sky-600 transition-colors">Smart Gantt Line Planner</h3>
+                    <p class="text-slate-700 text-base leading-relaxed">
                         AI drag-and-drop Gantt scheduling matches buyer orders with real operator skill matrices—ensuring zero missed delivery deadlines and zero air-freight rush penalties.
                     </p>
-                    <div class="p-4 rounded-2xl bg-indigo-50/60 border border-indigo-100 space-y-2 text-xs font-sans text-indigo-900">
+                    <div class="p-4 rounded-2xl bg-sky-50/60 border border-sky-100 space-y-2 text-xs text-sky-900">
                         <div class="flex items-center justify-between font-semibold">
                             <span>Dispatch Guarantee:</span>
-                            <span class="text-indigo-700 font-mono font-bold">100% On-Time Buyer Delivery</span>
+                            <span class="text-sky-700 font-mono font-bold">100% On-Time Buyer Delivery</span>
                         </div>
                         <div class="flex items-center justify-between font-semibold">
                             <span>Capacity Optimization:</span>
-                            <span class="text-indigo-700 font-mono font-bold">Multi-Plant Style Balancing</span>
+                            <span class="text-sky-700 font-mono font-bold">Multi-Plant Style Balancing</span>
                         </div>
                     </div>
                 </div>
-                <a href="/#roi-calculator" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-indigo-600 text-white font-medium text-center transition-colors block font-sans shadow-md">Calculate Factory Savings</a>
+                <a href="/#roi-calculator" class="w-full py-3.5 rounded-full bg-slate-900 hover:bg-sky-600 text-white font-medium text-center transition-colors block shadow-md">Calculate Factory Savings</a>
             </div>
         </div>
     </div>
@@ -406,57 +391,72 @@
             <!-- Left Panel: 4-Step Factory Workflow Stepper -->
             <div class="lg:col-span-5 space-y-6 flex flex-col justify-between p-8 rounded-3xl bg-white border border-sky-200 shadow-xl">
                 <div class="space-y-4">
-                    <div class="text-xs font-bold uppercase tracking-wider text-sky-700 font-sans">4-Step Factory Workflow Sequence</div>
+                    <div class="flex items-center justify-between text-xs font-bold uppercase tracking-wider text-sky-700 font-sans">
+                        <span>4-Step Factory Workflow Sequence</span>
+                        <span class="text-[11px] font-semibold text-sky-600 bg-sky-50 px-2.5 py-1 rounded-full border border-sky-200">Interactive 3D Views</span>
+                    </div>
                     <div class="space-y-3">
-                        <!-- Step 1 -->
+                        <!-- Step 1: Cutting & RFID -->
                         <button @click="activeStep = 1; if(window.setHeroStage) window.setHeroStage(1)"
-                                :class="activeStep === 1 ? 'bg-sky-50 border-sky-400 text-sky-900 shadow-md ring-2 ring-sky-300 font-bold' : 'bg-slate-50 text-slate-700 hover:bg-sky-50 border-slate-200'"
-                                class="w-full p-4 rounded-2xl border text-left transition-all flex items-start gap-3">
-                            <div class="w-7 h-7 rounded-xl bg-sky-500 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">1</div>
-                            <div>
-                                <div class="font-bold text-sm font-sans">Cutting &amp; RFID Bundle Tagging</div>
-                                <div class="text-xs text-slate-600 font-sans mt-0.5">Assigns RFID smart tags at cutting room entry for 100% WIP visibility.</div>
+                                :class="activeStep === 1 ? 'bg-sky-50/90 border-sky-500 text-slate-900 shadow-lg ring-2 ring-sky-300/80 scale-[1.02]' : 'bg-slate-50 text-slate-700 hover:bg-sky-50/60 border-slate-200 hover:scale-[1.01]'"
+                                class="w-full p-4 rounded-2xl border text-left transition-all duration-300 flex items-start gap-3.5 group">
+                            <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-sky-400 to-sky-600 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 shadow-md group-hover:scale-110 transition-transform">1</div>
+                            <div class="flex-1">
+                                <div class="font-bold text-sm font-sans flex items-center justify-between">
+                                    <span>Cutting &amp; RFID Bundle Tagging</span>
+                                    <span x-show="activeStep === 1" class="text-[10px] font-mono text-sky-700 bg-sky-100/80 px-2 py-0.5 rounded-full border border-sky-200">ACTIVE VIEW</span>
+                                </div>
+                                <div class="text-xs text-slate-600 font-sans mt-1 leading-relaxed">Assigns RFID smart tags at cutting room entry for 100% WIP visibility.</div>
                             </div>
                         </button>
 
-                        <!-- Step 2 -->
+                        <!-- Step 2: Sewing Line Telemetry -->
                         <button @click="activeStep = 2; if(window.setHeroStage) window.setHeroStage(2)"
-                                :class="activeStep === 2 ? 'bg-sky-50 border-sky-400 text-sky-900 shadow-md ring-2 ring-sky-300 font-bold' : 'bg-slate-50 text-slate-700 hover:bg-sky-50 border-slate-200'"
-                                class="w-full p-4 rounded-2xl border text-left transition-all flex items-start gap-3">
-                            <div class="w-7 h-7 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">2</div>
-                            <div>
-                                <div class="font-bold text-sm font-sans">Sewing Line Telemetry &amp; Balancing</div>
-                                <div class="text-xs text-slate-600 font-sans mt-0.5">Monitors workstation piece-rates in real time to eliminate line bottlenecks (+22% output).</div>
+                                :class="activeStep === 2 ? 'bg-emerald-50/90 border-emerald-500 text-slate-900 shadow-lg ring-2 ring-emerald-300/80 scale-[1.02]' : 'bg-slate-50 text-slate-700 hover:bg-emerald-50/60 border-slate-200 hover:scale-[1.01]'"
+                                class="w-full p-4 rounded-2xl border text-left transition-all duration-300 flex items-start gap-3.5 group">
+                            <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 shadow-md group-hover:scale-110 transition-transform">2</div>
+                            <div class="flex-1">
+                                <div class="font-bold text-sm font-sans flex items-center justify-between">
+                                    <span>Sewing Line Telemetry &amp; Balancing</span>
+                                    <span x-show="activeStep === 2" class="text-[10px] font-mono text-emerald-700 bg-emerald-100/80 px-2 py-0.5 rounded-full border border-emerald-200">ACTIVE VIEW</span>
+                                </div>
+                                <div class="text-xs text-slate-600 font-sans mt-1 leading-relaxed">Monitors workstation piece-rates in real time to eliminate line bottlenecks (+22% output).</div>
                             </div>
                         </button>
 
-                        <!-- Step 3 -->
+                        <!-- Step 3: AI Vision Defect Inspection -->
                         <button @click="activeStep = 3; if(window.setHeroStage) window.setHeroStage(3)"
-                                :class="activeStep === 3 ? 'bg-sky-50 border-sky-400 text-sky-900 shadow-md ring-2 ring-sky-300 font-bold' : 'bg-slate-50 text-slate-700 hover:bg-sky-50 border-slate-200'"
-                                class="w-full p-4 rounded-2xl border text-left transition-all flex items-start gap-3">
-                            <div class="w-7 h-7 rounded-xl bg-amber-500 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">3</div>
-                            <div>
-                                <div class="font-bold text-sm font-sans">AI Vision Defect Inspection</div>
-                                <div class="text-xs text-slate-600 font-sans mt-0.5">HD camera scanners flag stitch skips and fabric flaws before assembly (85% defect cut).</div>
+                                :class="activeStep === 3 ? 'bg-rose-50/90 border-rose-500 text-slate-900 shadow-lg ring-2 ring-rose-300/80 scale-[1.02]' : 'bg-slate-50 text-slate-700 hover:bg-rose-50/60 border-slate-200 hover:scale-[1.01]'"
+                                class="w-full p-4 rounded-2xl border text-left transition-all duration-300 flex items-start gap-3.5 group">
+                            <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-rose-400 to-red-600 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 shadow-md group-hover:scale-110 transition-transform">3</div>
+                            <div class="flex-1">
+                                <div class="font-bold text-sm font-sans flex items-center justify-between">
+                                    <span>AI Vision Defect Inspection</span>
+                                    <span x-show="activeStep === 3" class="text-[10px] font-mono text-rose-700 bg-rose-100/80 px-2 py-0.5 rounded-full border border-rose-200">ACTIVE VIEW</span>
+                                </div>
+                                <div class="text-xs text-slate-600 font-sans mt-1 leading-relaxed">HD camera scanners flag stitch skips and fabric flaws before assembly (85% defect cut).</div>
                             </div>
                         </button>
 
-                        <!-- Step 4 -->
+                        <!-- Step 4: Executive SaaS & Order Dispatch -->
                         <button @click="activeStep = 4; if(window.setHeroStage) window.setHeroStage(4)"
-                                :class="activeStep === 4 ? 'bg-sky-50 border-sky-400 text-sky-900 shadow-md ring-2 ring-sky-300 font-bold' : 'bg-slate-50 text-slate-700 hover:bg-sky-50 border-slate-200'"
-                                class="w-full p-4 rounded-2xl border text-left transition-all flex items-start gap-3">
-                            <div class="w-7 h-7 rounded-xl bg-indigo-500 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">4</div>
-                            <div>
-                                <div class="font-bold text-sm font-sans">Executive SaaS &amp; Order Dispatch</div>
-                                <div class="text-xs text-slate-600 font-sans mt-0.5">Streams machine OEE (98.4% uptime) and guarantees 100% on-time buyer dispatch.</div>
+                                :class="activeStep === 4 ? 'bg-indigo-50/90 border-indigo-500 text-slate-900 shadow-lg ring-2 ring-indigo-300/80 scale-[1.02]' : 'bg-slate-50 text-slate-700 hover:bg-indigo-50/60 border-slate-200 hover:scale-[1.01]'"
+                                class="w-full p-4 rounded-2xl border text-left transition-all duration-300 flex items-start gap-3.5 group">
+                            <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-indigo-400 to-indigo-600 text-white flex items-center justify-center font-bold text-xs shrink-0 mt-0.5 shadow-md group-hover:scale-110 transition-transform">4</div>
+                            <div class="flex-1">
+                                <div class="font-bold text-sm font-sans flex items-center justify-between">
+                                    <span>Executive SaaS &amp; Order Dispatch</span>
+                                    <span x-show="activeStep === 4" class="text-[10px] font-mono text-indigo-700 bg-indigo-100/80 px-2 py-0.5 rounded-full border border-indigo-200">ACTIVE VIEW</span>
+                                </div>
+                                <div class="text-xs text-slate-600 font-sans mt-1 leading-relaxed">Streams machine OEE (98.4% uptime) and guarantees 100% on-time buyer dispatch.</div>
                             </div>
                         </button>
                     </div>
                 </div>
 
                 <div class="pt-4 border-t border-slate-100 flex items-center gap-3 text-xs text-slate-500 font-sans">
-                    <svg class="w-4 h-4 text-sky-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    <span>Click any step above to inspect the step-by-step digital twin factory workflow in 3D.</span>
+                    <svg class="w-4 h-4 text-sky-500 shrink-0 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span>Click any topic above to rotate and inspect the live 3D factory view.</span>
                 </div>
             </div>
 
@@ -743,21 +743,15 @@
                         </div>
                         <p class="text-xs text-slate-600">Demonstrates exact timeline until total investment payback and net annualized return on investment.</p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ================= 7. CASE STUDIES & TRUST SECTION ================= -->
+                </di<!-- ================= 7. CASE STUDIES & TRUST SECTION ================= -->
 <section id="case-studies" class="relative py-24 px-4 sm:px-6 lg:px-8 bg-white text-slate-900 border-b border-slate-200">
     <div class="max-w-7xl mx-auto space-y-16">
         <div class="text-center space-y-4 max-w-3xl mx-auto">
-            <span class="text-xs font-semibold uppercase tracking-widest text-emerald-700 px-4 py-1.5 rounded-full bg-emerald-100 border border-emerald-200 inline-block font-sans">
+            <span class="text-xs font-semibold uppercase tracking-widest text-sky-700 px-4 py-1.5 rounded-full bg-sky-100 border border-sky-200 inline-block font-sans">
                 Field-Verified Audit Results
             </span>
             <h2 class="text-3xl sm:text-5xl font-bold font-sans tracking-tight text-slate-900 leading-tight">
-                Real Case Studies with <span class="text-sky-600 italic">Measurable Results</span>
+                Real Case Studies with <span class="text-sky-600">Measurable Results</span>
             </h2>
             <p class="text-slate-700 text-base sm:text-lg font-sans">
                 Explore audited before-and-after operational transformations across 500+ active apparel sewing lines.
@@ -783,39 +777,39 @@
                     <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4 font-sans">
                         <div class="flex items-center justify-between">
                             <span class="text-xs font-bold text-slate-700">Inline Fabric Defect Rate</span>
-                            <span class="text-[11px] font-bold font-mono text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full border border-emerald-200">88.7% Reduction</span>
+                            <span class="text-[11px] font-bold font-mono text-sky-700 bg-sky-100 px-3 py-1 rounded-full border border-sky-200">88.7% Reduction</span>
                         </div>
                         <div class="grid grid-cols-2 gap-3 pt-2 border-t border-slate-100 text-xs">
-                            <div class="p-3 rounded-xl bg-rose-50/70 border border-rose-100">
-                                <div class="text-[10px] text-rose-700 font-mono font-bold uppercase">Before TTS</div>
-                                <div class="text-rose-600 font-bold font-mono text-base mt-0.5">6.2% Defect</div>
-                                <div class="text-[11px] text-rose-500 mt-1">$168K/yr Scrap</div>
+                            <div class="p-3 rounded-xl bg-slate-100 border border-slate-200">
+                                <div class="text-[10px] text-slate-700 font-mono font-bold uppercase">Before TTS</div>
+                                <div class="text-slate-900 font-bold font-mono text-base mt-0.5">6.2% Defect</div>
+                                <div class="text-[11px] text-slate-600 mt-1">$168K/yr Scrap</div>
                             </div>
-                            <div class="p-3 rounded-xl bg-emerald-50/70 border border-emerald-100">
-                                <div class="text-[10px] text-emerald-700 font-mono font-bold uppercase">After TTS</div>
-                                <div class="text-emerald-600 font-bold font-mono text-base mt-0.5">0.7% Defect</div>
-                                <div class="text-[11px] text-emerald-700 mt-1">$144.5K Saved</div>
+                            <div class="p-3 rounded-xl bg-sky-50 border border-sky-200">
+                                <div class="text-[10px] text-sky-700 font-mono font-bold uppercase">After TTS</div>
+                                <div class="text-sky-600 font-bold font-mono text-base mt-0.5">0.7% Defect</div>
+                                <div class="text-[11px] text-sky-700 mt-1">$144.5K Saved</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="p-4 rounded-xl bg-sky-50/50 border border-sky-100 text-xs text-slate-600 font-sans italic leading-relaxed">
+                    <div class="p-4 rounded-xl bg-sky-50/50 border border-sky-100 text-xs text-slate-600 font-sans leading-relaxed">
                         &ldquo;Deploying AI Quality Control Studio across our 18 inspection nodes eliminated quality penalty disputes with European apparel buyers.&rdquo;
                     </div>
                 </div>
 
                 <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono font-bold text-sky-700">
                     <span>PAYBACK: 1.9 MONTHS</span>
-                    <span class="text-emerald-600">AUDITED &check;</span>
+                    <span class="text-sky-600">AUDITED &check;</span>
                 </div>
             </div>
 
             <!-- Case Study 2: Atlas Denim Mills -->
-            <div class="p-8 sm:p-9 rounded-3xl bg-slate-50 border border-emerald-200 shadow-xl space-y-6 flex flex-col justify-between hover:shadow-2xl transition-all">
+            <div class="p-8 sm:p-9 rounded-3xl bg-slate-50 border border-sky-200 shadow-xl space-y-6 flex flex-col justify-between hover:shadow-2xl transition-all">
                 <div class="space-y-6">
                     <div class="flex items-center justify-between pb-3 border-b border-slate-200">
-                        <div class="text-xs font-mono font-bold text-emerald-700 uppercase tracking-widest">ATLAS DENIM MILLS</div>
-                        <span class="text-[11px] font-mono font-semibold px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">35 Sewing Lines</span>
+                        <div class="text-xs font-mono font-bold text-sky-700 uppercase tracking-widest">ATLAS DENIM MILLS</div>
+                        <span class="text-[11px] font-mono font-semibold px-3 py-1 rounded-full bg-sky-100 text-sky-800 border border-sky-200">35 Sewing Lines</span>
                     </div>
 
                     <h3 class="text-xl font-bold text-slate-900 font-sans leading-snug">+2,200 Extra Garments / Day Output Gain</h3>
@@ -828,39 +822,39 @@
                     <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4 font-sans">
                         <div class="flex items-center justify-between">
                             <span class="text-xs font-bold text-slate-700">Daily Garment Output</span>
-                            <span class="text-[11px] font-bold font-mono text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full border border-emerald-200">+2,200 Pcs/Day</span>
+                            <span class="text-[11px] font-bold font-mono text-sky-700 bg-sky-100 px-3 py-1 rounded-full border border-sky-200">+2,200 Pcs/Day</span>
                         </div>
                         <div class="grid grid-cols-2 gap-3 pt-2 border-t border-slate-100 text-xs">
-                            <div class="p-3 rounded-xl bg-rose-50/70 border border-rose-100">
-                                <div class="text-[10px] text-rose-700 font-mono font-bold uppercase">Before TTS</div>
-                                <div class="text-rose-600 font-bold font-mono text-base mt-0.5">8,200 Pcs/Day</div>
-                                <div class="text-[11px] text-rose-500 mt-1">68.4% Balance</div>
+                            <div class="p-3 rounded-xl bg-slate-100 border border-slate-200">
+                                <div class="text-[10px] text-slate-700 font-mono font-bold uppercase">Before TTS</div>
+                                <div class="text-slate-900 font-bold font-mono text-base mt-0.5">8,200 Pcs/Day</div>
+                                <div class="text-[11px] text-slate-600 mt-1">68.4% Balance</div>
                             </div>
-                            <div class="p-3 rounded-xl bg-emerald-50/70 border border-emerald-100">
-                                <div class="text-[10px] text-emerald-700 font-mono font-bold uppercase">After TTS</div>
-                                <div class="text-emerald-600 font-bold font-mono text-base mt-0.5">10,400 Pcs/Day</div>
-                                <div class="text-[11px] text-emerald-700 mt-1">93.8% Balance</div>
+                            <div class="p-3 rounded-xl bg-sky-50 border border-sky-200">
+                                <div class="text-[10px] text-sky-700 font-mono font-bold uppercase">After TTS</div>
+                                <div class="text-sky-600 font-bold font-mono text-base mt-0.5">10,400 Pcs/Day</div>
+                                <div class="text-[11px] text-sky-700 mt-1">93.8% Balance</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="p-4 rounded-xl bg-emerald-50/50 border border-emerald-100 text-xs text-slate-600 font-sans italic leading-relaxed">
+                    <div class="p-4 rounded-xl bg-sky-50/50 border border-sky-100 text-xs text-slate-600 font-sans leading-relaxed">
                         &ldquo;Real-time RFID bundle tracking allowed shopfloor supervisors to identify and balance workstation bottlenecks instantly.&rdquo;
                     </div>
                 </div>
 
-                <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono font-bold text-emerald-700">
+                <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono font-bold text-sky-700">
                     <span>PAYBACK: 1.7 MONTHS</span>
-                    <span class="text-emerald-600">AUDITED &check;</span>
+                    <span class="text-sky-600">AUDITED &check;</span>
                 </div>
             </div>
 
             <!-- Case Study 3: Zenith Knitwear Global -->
-            <div class="p-8 sm:p-9 rounded-3xl bg-slate-50 border border-indigo-200 shadow-xl space-y-6 flex flex-col justify-between hover:shadow-2xl transition-all">
+            <div class="p-8 sm:p-9 rounded-3xl bg-slate-50 border border-sky-200 shadow-xl space-y-6 flex flex-col justify-between hover:shadow-2xl transition-all">
                 <div class="space-y-6">
                     <div class="flex items-center justify-between pb-3 border-b border-slate-200">
-                        <div class="text-xs font-mono font-bold text-indigo-700 uppercase tracking-widest">ZENITH KNITWEAR GLOBAL</div>
-                        <span class="text-[11px] font-mono font-semibold px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200">45 Sewing Lines</span>
+                        <div class="text-xs font-mono font-bold text-sky-700 uppercase tracking-widest">ZENITH KNITWEAR GLOBAL</div>
+                        <span class="text-[11px] font-mono font-semibold px-3 py-1 rounded-full bg-sky-100 text-sky-800 border border-sky-200">45 Sewing Lines</span>
                     </div>
 
                     <h3 class="text-xl font-bold text-slate-900 font-sans leading-snug">98.6% Machine Uptime Score (85.6% Downtime Cut)</h3>
@@ -873,30 +867,30 @@
                     <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-4 font-sans">
                         <div class="flex items-center justify-between">
                             <span class="text-xs font-bold text-slate-700">Sewing Machine OEE Uptime</span>
-                            <span class="text-[11px] font-bold font-mono text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full border border-emerald-200">85.6% Cut</span>
+                            <span class="text-[11px] font-bold font-mono text-sky-700 bg-sky-100 px-3 py-1 rounded-full border border-sky-200">85.6% Cut</span>
                         </div>
                         <div class="grid grid-cols-2 gap-3 pt-2 border-t border-slate-100 text-xs">
-                            <div class="p-3 rounded-xl bg-rose-50/70 border border-rose-100">
-                                <div class="text-[10px] text-rose-700 font-mono font-bold uppercase">Before TTS</div>
-                                <div class="text-rose-600 font-bold font-mono text-base mt-0.5">71.2% Uptime</div>
-                                <div class="text-[11px] text-rose-500 mt-1">19.5% Outage</div>
+                            <div class="p-3 rounded-xl bg-slate-100 border border-slate-200">
+                                <div class="text-[10px] text-slate-700 font-mono font-bold uppercase">Before TTS</div>
+                                <div class="text-slate-900 font-bold font-mono text-base mt-0.5">71.2% Uptime</div>
+                                <div class="text-[11px] text-slate-600 mt-1">19.5% Outage</div>
                             </div>
-                            <div class="p-3 rounded-xl bg-emerald-50/70 border border-emerald-100">
-                                <div class="text-[10px] text-emerald-700 font-mono font-bold uppercase">After TTS</div>
-                                <div class="text-emerald-600 font-bold font-mono text-base mt-0.5">98.6% Uptime</div>
-                                <div class="text-[11px] text-emerald-700 mt-1">2.8% Outage</div>
+                            <div class="p-3 rounded-xl bg-sky-50 border border-sky-200">
+                                <div class="text-[10px] text-sky-700 font-mono font-bold uppercase">After TTS</div>
+                                <div class="text-sky-600 font-bold font-mono text-base mt-0.5">98.6% Uptime</div>
+                                <div class="text-[11px] text-sky-700 mt-1">2.8% Outage</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="p-4 rounded-xl bg-indigo-50/50 border border-indigo-100 text-xs text-slate-600 font-sans italic leading-relaxed">
+                    <div class="p-4 rounded-xl bg-sky-50/50 border border-sky-100 text-xs text-slate-600 font-sans leading-relaxed">
                         &ldquo;Predictive IoT sewing motor telemetry issues 48-hour advance warnings before motor breakdowns happen during peak shifts.&rdquo;
                     </div>
                 </div>
 
-                <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono font-bold text-indigo-700">
+                <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono font-bold text-sky-700">
                     <span>PAYBACK: 2.2 MONTHS</span>
-                    <span class="text-emerald-600">AUDITED &check;</span>
+                    <span class="text-sky-600">AUDITED &check;</span>
                 </div>
             </div>
         </div>
@@ -936,13 +930,13 @@
 
     <div class="max-w-4xl mx-auto text-center space-y-8 relative z-10">
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 border border-sky-400/40 text-sky-300 text-xs font-semibold uppercase tracking-widest font-sans backdrop-blur-md shadow-2xl">
-            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-sky-400"></span>
             Enterprise Factory ROI Calculator
         </div>
 
         <h2 class="text-4xl sm:text-6xl font-bold font-sans tracking-tight text-white leading-tight max-w-3xl mx-auto">
             Ready to Cut Defect Scrap &amp; Boost Output? <br class="hidden sm:inline" />
-            <span class="text-sky-400 italic">See How Much Your Factory Can Save</span>
+            <span class="text-sky-400">See How Much Your Factory Can Save</span>
         </h2>
 
         <p class="text-base sm:text-xl text-slate-300 font-sans max-w-2xl mx-auto leading-relaxed">
@@ -954,23 +948,27 @@
             <a href="#roi-calculator"
                class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gradient-to-r from-sky-400 via-blue-600 to-sky-500 hover:from-sky-300 hover:to-blue-500 text-white font-bold text-xl px-12 py-5 rounded-full shadow-2xl shadow-sky-500/50 hover:shadow-sky-400/70 hover:scale-105 transition-all group ring-4 ring-sky-400/30 font-sans">
                 <span>See How Much Your Factory Can Save</span>
-                <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7-7m7-7H3"></path></svg>
             </a>
         </div>
 
         <!-- Single Action High-Trust Guarantees Band -->
         <div class="pt-8 border-t border-slate-800 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-sans">
             <div class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                 <span>Instant Audited Calculation</span>
             </div>
             <div class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                 <span>Zero Commitment Required</span>
             </div>
             <div class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                 <span>1.8-Month Average Full Payback</span>
+            </div>
+        </div>
+    </div>
+</section>pan>
             </div>
         </div>
     </div>

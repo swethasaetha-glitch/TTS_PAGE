@@ -83,15 +83,83 @@ export function initHero3D(containerId) {
 
     mainGroup.add(monitorGroup);
 
-    // ================= 2. DYNAMIC 2D SaaS DASHBOARD CANVAS RENDERER =================
+    // ================= 2. DYNAMIC 3D STAGE EFFECT RING & HALO =================
+    const haloGeo = new THREE.TorusGeometry(3.0, 0.04, 16, 100);
+    const haloMat = new THREE.MeshBasicMaterial({
+        color: 0x38bdf8,
+        wireframe: true,
+        transparent: true,
+        opacity: 0.65
+    });
+    const stageHaloMesh = new THREE.Mesh(haloGeo, haloMat);
+    stageHaloMesh.position.set(0, 0.1, 0.02);
+    monitorGroup.add(stageHaloMesh);
+
+    // Dynamic 3D Corner HUD Scanner Markers for AI Vision & Telemetry Stage
+    const hudGroup = new THREE.Group();
+    const hudMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.8 });
+    const cornerOffsets = [
+        [-2.5, 1.5, 0.1], [2.5, 1.5, 0.1],
+        [-2.5, -1.5, 0.1], [2.5, -1.5, 0.1]
+    ];
+    cornerOffsets.forEach(([cx, cy, cz]) => {
+        const cGeo = new THREE.BoxGeometry(0.3, 0.06, 0.04);
+        const cMesh = new THREE.Mesh(cGeo, hudMat);
+        cMesh.position.set(cx, cy, cz);
+        hudGroup.add(cMesh);
+        const cGeoV = new THREE.BoxGeometry(0.06, 0.3, 0.04);
+        const cMeshV = new THREE.Mesh(cGeoV, hudMat);
+        cMeshV.position.set(cx, cy, cz);
+        hudGroup.add(cMeshV);
+    });
+    monitorGroup.add(hudGroup);
+
+    // ================= 3. DYNAMIC 2D SaaS DASHBOARD CANVAS RENDERER =================
     let scanLineX = 50;
     let scanDir = 1;
     let currentHeroStage = 1;
+
+    let targetStageRotY = -0.22;
+    let targetStageRotX = 0.06;
+    let targetStageCamZ = initialZ - 0.2;
 
     // Expose global controller for Alpine.js stepper clicks
     window.setHeroStage = function(stageNum) {
         if (stageNum >= 1 && stageNum <= 5) {
             currentHeroStage = stageNum;
+
+            // Distinct 3D camera angles, zooms & 3D halo colors per topic
+            if (stageNum === 1) { // Step 1: Cutting & RFID Tagging
+                targetStageRotY = -0.32;
+                targetStageRotX = 0.08;
+                targetStageCamZ = isMobile ? 7.5 : 5.8;
+                haloMat.color.setHex(0x38bdf8); // Sky blue
+                hudMat.color.setHex(0x38bdf8);
+            } else if (stageNum === 2) { // Step 2: Sewing Line Telemetry
+                targetStageRotY = 0.35;
+                targetStageRotX = -0.05;
+                targetStageCamZ = isMobile ? 7.7 : 6.0;
+                haloMat.color.setHex(0x10b981); // Emerald green
+                hudMat.color.setHex(0x10b981);
+            } else if (stageNum === 3) { // Step 3: AI Vision Inspection
+                targetStageRotY = 0.0;
+                targetStageRotX = 0.22; // Top-down optical scanner angle
+                targetStageCamZ = isMobile ? 7.2 : 5.5; // Zoom into vision feed
+                haloMat.color.setHex(0xef4444); // Inspection Red
+                hudMat.color.setHex(0xef4444);
+            } else if (stageNum === 4) { // Step 4: Executive SaaS Dashboard
+                targetStageRotY = 0.0;
+                targetStageRotX = -0.02;
+                targetStageCamZ = isMobile ? 7.9 : 6.3; // Wide executive view
+                haloMat.color.setHex(0x818cf8); // Indigo
+                hudMat.color.setHex(0x818cf8);
+            } else if (stageNum === 5) {
+                targetStageRotY = -0.15;
+                targetStageRotX = -0.08;
+                targetStageCamZ = isMobile ? 7.6 : 5.9;
+                haloMat.color.setHex(0xf59e0b); // Amber gold
+                hudMat.color.setHex(0xf59e0b);
+            }
         }
     };
 
@@ -732,11 +800,18 @@ export function initHero3D(containerId) {
         // Render dynamic 2D SaaS interface onto screen texture
         renderSaaSUI(elapsedTime);
 
-        // Lock screen front-facing when not dragging
+        // Lock screen front-facing or interpolate to target stage angle when not dragging
         if (!isDragging) {
-            targetRotationY *= 0.92;
-            targetRotationX *= 0.92;
+            targetRotationY += (targetStageRotY - targetRotationY) * 0.08;
+            targetRotationX += (targetStageRotX - targetRotationX) * 0.08;
         }
+
+        // Smooth 3D Stage Camera Transition & Zoom
+        camera.position.z += (targetStageCamZ - camera.position.z) * 0.08;
+
+        // Dynamic 3D Stage Halo & HUD scanner rotation per topic
+        stageHaloMesh.rotation.z = elapsedTime * 0.4;
+        stageHaloMesh.rotation.x = Math.sin(elapsedTime * 0.8) * 0.15;
 
         // Smooth rotation
         mainGroup.rotation.y += (targetRotationY - mainGroup.rotation.y) * 0.1;

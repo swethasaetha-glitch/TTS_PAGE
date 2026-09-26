@@ -36,9 +36,7 @@
         <video id="hero-bg-video" autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-95 scale-100 filter brightness-110 contrast-105">
             <source src="{{ asset('videos/garment-user.mp4') }}" type="video/mp4">
             <source src="{{ asset('videos/garment-custom.mp4') }}" type="video/mp4">
-            <source src="{{ asset('videos/garment-bg.mp4') }}" type="video/mp4">
             <source src="{{ asset('videos/garment-15459704.mp4') }}" type="video/mp4">
-            <source src="https://videos.pexels.com/video-files/15459704/15459704-hd_1920_1080_24fps.mp4" type="video/mp4">
         </video>
         <!-- Light Vignette Overlay for Crisp Visibility & Maximum Contrast -->
         <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-black/60"></div>

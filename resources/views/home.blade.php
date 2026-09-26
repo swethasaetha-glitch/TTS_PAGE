@@ -33,7 +33,7 @@
     
     <!-- Real-World Garment Factory Video Background (Skilled Worker Operating Industrial Sewing Machine) -->
     <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <video id="hero-bg-video" autoplay loop muted playsinline preload="auto" class="w-full h-full object-cover opacity-95 scale-100 filter brightness-110 contrast-105">
+        <video id="hero-bg-video" autoplay loop muted playsinline webkit-playsinline disablePictureInPicture preload="auto" class="w-full h-full object-cover opacity-95 scale-100 filter brightness-110 contrast-105">
             <source src="{{ asset('videos/garment-user.mp4') }}" type="video/mp4">
             <source src="{{ asset('videos/garment-custom.mp4') }}" type="video/mp4">
             <source src="{{ asset('videos/garment-15459704.mp4') }}" type="video/mp4">
@@ -1069,18 +1069,35 @@ document.addEventListener('DOMContentLoaded', function() {
             renderer.render(scene, camera);
         }
         animate();
-    // Video Performance & Autoplay Observer
+    // Video Performance & Autoplay Observer with Touch/Click Fallback
     const heroVideo = document.getElementById('hero-bg-video');
     const heroSection = document.getElementById('hero');
     if (heroVideo) {
-        // Trigger immediate playback on load
-        heroVideo.play().catch(() => {});
+        heroVideo.muted = true;
+        heroVideo.defaultMuted = true;
+        heroVideo.playsInline = true;
+
+        const attemptPlay = () => {
+            const p = heroVideo.play();
+            if (p !== undefined) {
+                p.catch(() => {
+                    const forcePlay = () => {
+                        heroVideo.play().catch(() => {});
+                    };
+                    document.addEventListener('touchstart', forcePlay, { once: true });
+                    document.addEventListener('click', forcePlay, { once: true });
+                    document.addEventListener('scroll', forcePlay, { once: true });
+                });
+            }
+        };
+
+        attemptPlay();
         
         if (heroSection && 'IntersectionObserver' in window) {
             const videoObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        heroVideo.play().catch(() => {});
+                        attemptPlay();
                     } else {
                         heroVideo.pause();
                     }

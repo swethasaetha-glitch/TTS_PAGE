@@ -43,9 +43,49 @@
             </button>
         </div>
 
-        <div class="lg:col-span-6 h-[460px] rounded-3xl bg-white border border-sky-200 p-6 overflow-hidden shadow-xl flex flex-col justify-between">
-            <div class="text-xs font-sans text-sky-700 font-semibold mb-2 uppercase tracking-wider">3D LASER QUALITY SCANNER</div>
-            <div id="qc-3d-canvas" class="w-full h-full cursor-grab active:cursor-grabbing"></div>
+        <div class="lg:col-span-6 h-[460px] rounded-3xl bg-slate-950 border border-rose-500/40 overflow-hidden shadow-2xl relative group p-6 flex flex-col justify-between">
+            <!-- Top HUD Label Bar -->
+            <div class="flex items-center justify-between z-10">
+                <span class="text-xs font-sans text-rose-300 font-semibold bg-slate-900/90 px-3.5 py-1.5 rounded-full border border-rose-500/40 backdrop-blur-md flex items-center gap-2 shadow-lg">
+                    <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                    <span>AI OPTICAL CAMERA DEFECT SCANNER</span>
+                </span>
+                <span class="text-xs font-sans font-semibold text-emerald-300 bg-slate-900/90 px-3.5 py-1.5 rounded-full border border-emerald-500/40 backdrop-blur-md shadow-lg font-mono">99.4% ACCURACY</span>
+            </div>
+
+            <!-- Photorealistic Dedicated QC AI Scanner Image & Scan Overlay -->
+            <div class="absolute inset-0 z-0 overflow-hidden">
+                <img src="{{ asset('images/products/qc-ai-scanner.jpg') }}" alt="AI Optical Camera Defect Scanner" class="w-full h-full object-cover">
+                
+                <!-- Laser Scan Beam -->
+                <div class="laser-beam-red"></div>
+
+                <!-- Animated AI Defect Detection Reticle Locking Box -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-52 h-40 border-2 border-rose-500/80 rounded-xl ai-target-box pointer-events-none flex flex-col justify-between p-2.5 shadow-[0_0_25px_rgba(244,63,94,0.5)]">
+                    <div class="flex justify-between items-center">
+                        <span class="w-3.5 h-3.5 border-t-2 border-l-2 border-rose-400"></span>
+                        <span class="text-[9px] font-mono text-rose-300 bg-rose-950/85 px-2 py-0.5 rounded border border-rose-500/50">TARGET: FABRIC SCAN UNIT #17</span>
+                        <span class="w-3.5 h-3.5 border-t-2 border-r-2 border-rose-400"></span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="w-3.5 h-3.5 border-b-2 border-l-2 border-rose-400"></span>
+                        <span class="text-[9px] font-mono text-emerald-400 font-bold bg-slate-950/85 px-2 py-0.5 rounded border border-emerald-500/40">STATUS: 0 STAINS / 0 SKIPS</span>
+                        <span class="w-3.5 h-3.5 border-b-2 border-r-2 border-rose-400"></span>
+                    </div>
+                </div>
+
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/15 to-slate-950/40 pointer-events-none"></div>
+            </div>
+
+            <!-- Bottom Live Telemetry HUD Card -->
+            <div class="relative z-10 p-4 rounded-2xl bg-slate-900/90 backdrop-blur-md border border-rose-400/40 text-white font-sans text-xs shadow-xl space-y-1.5 w-fit">
+                <div class="flex items-center gap-2 text-rose-400 font-bold font-mono text-xs">
+                    <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+                    OPTICAL VISION AI: STITCH &amp; FABRIC FLAW DETECTOR
+                </div>
+                <div class="text-xs text-slate-300">Throughput: <strong class="text-white font-mono">60 FPS Camera</strong> &bull; Scrap Savings: <strong class="text-emerald-400 font-mono">$140,000 / Year</strong></div>
+                <div class="text-[11px] font-mono text-rose-300">Flaw Marker #QC-8821 Active Scanning</div>
+            </div>
         </div>
     </div>
 </div>

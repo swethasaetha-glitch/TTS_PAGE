@@ -26,6 +26,61 @@
 .animate-logo-marquee:hover, .animate-logo-marquee-reverse:hover {
     animation-play-state: paused;
 }
+
+@keyframes laserScanVertical {
+    0% { top: 4%; opacity: 0.85; }
+    50% { top: 88%; opacity: 0.85; }
+    100% { top: 4%; opacity: 0.85; }
+}
+@keyframes laserScanHorizontal {
+    0% { left: 4%; opacity: 0.85; }
+    50% { left: 88%; opacity: 0.85; }
+    100% { left: 4%; opacity: 0.85; }
+}
+.laser-beam-v {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.95), #ffffff, rgba(56, 189, 248, 0.95), transparent);
+    box-shadow: 0 0 16px #38bdf8, 0 0 32px #38bdf8;
+    animation: laserScanVertical 3.2s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 10;
+}
+.laser-beam-red {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(239, 68, 68, 0.95), #ffffff, rgba(239, 68, 68, 0.95), transparent);
+    box-shadow: 0 0 16px #ef4444, 0 0 32px #ef4444;
+    animation: laserScanVertical 2.6s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 10;
+}
+.laser-beam-h {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, transparent, rgba(16, 185, 129, 0.95), #ffffff, rgba(16, 185, 129, 0.95), transparent);
+    box-shadow: 0 0 16px #10b981, 0 0 32px #10b981;
+    animation: laserScanHorizontal 4s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 10;
+}
+.laser-beam-cyan {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, transparent, rgba(129, 140, 248, 0.95), #ffffff, rgba(129, 140, 248, 0.95), transparent);
+    box-shadow: 0 0 16px #818cf8, 0 0 32px #818cf8;
+    animation: laserScanHorizontal 4.5s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 10;
+}
 </style>
 
 <!-- ================= 1. HERO SECTION (REAL-WORLD FACTORY VIDEO & OUTCOME HEADLINE) ================= -->
@@ -453,25 +508,110 @@
                 </div>
 
                 <div class="pt-4 border-t border-slate-100 flex items-center gap-3 text-xs text-slate-500 font-sans">
-                    <svg class="w-4 h-4 text-sky-500 shrink-0 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <svg class="w-4 h-4 text-sky-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     <span>Click any topic above to rotate and inspect the live 3D factory view.</span>
                 </div>
             </div>
 
-            <div class="lg:col-span-7 relative h-[480px] rounded-3xl bg-white border border-sky-200 overflow-hidden shadow-xl p-4 flex flex-col justify-between group">
-                <div class="flex items-center justify-between z-10 pointer-events-none">
-                    <span class="text-xs font-sans text-sky-700 font-semibold bg-sky-50 px-3.5 py-1.5 rounded-full border border-sky-200 flex items-center gap-2 shadow-sm">
-                        <span class="w-2 h-2 rounded-full bg-sky-500 animate-ping"></span>
-                        <span x-text="activeTab === 'qc' ? 'SOFTWARE ENGINE: AI VISION INSPECTION' : activeTab === 'oee' ? 'SOFTWARE ENGINE: MACHINE OEE DIAGNOSTICS' : activeTab === 'nodes' ? 'SOFTWARE ENGINE: SMART GANTT SCHEDULER' : 'SOFTWARE ENGINE: REAL-TIME FACTORY TELEMETRY'"></span>
+            <div class="lg:col-span-7 relative h-[480px] rounded-3xl bg-slate-950 border border-sky-200 overflow-hidden shadow-2xl p-6 flex flex-col justify-between group">
+                <!-- Top Badge Overlay (No Blinking) -->
+                <div class="flex items-center justify-between z-10">
+                    <span class="text-xs font-sans text-sky-300 font-semibold bg-slate-900/80 px-3.5 py-1.5 rounded-full border border-sky-400/40 backdrop-blur-md flex items-center gap-2 shadow-lg">
+                        <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+                        <span x-text="activeStep === 1 ? 'STAGE 1: CUTTING & RFID BUNDLE TAGGING' : activeStep === 2 ? 'STAGE 2: SEWING LINE TELEMETRY & BALANCING' : activeStep === 3 ? 'STAGE 3: AI VISION DEFECT INSPECTION' : 'STAGE 4: EXECUTIVE SAAS & ORDER DISPATCH'"></span>
                     </span>
-                    <span class="text-xs font-sans font-semibold text-slate-700 bg-white/95 px-3.5 py-1.5 rounded-full border border-slate-200 shadow-sm">REAL-TIME DASHBOARD</span>
+                    <span class="text-xs font-sans font-semibold text-slate-200 bg-slate-900/80 px-3.5 py-1.5 rounded-full border border-white/10 backdrop-blur-md shadow-lg">LIVE FACTORY MODULE</span>
                 </div>
 
-                <!-- 3D WebGL Canvas Container -->
-                <div id="interactive-3d-viewport" class="w-full h-full absolute inset-0 cursor-grab active:cursor-grabbing"></div>
+                <!-- Dynamic High-Res Topic Image Layers & Live Processing Scanline Overlays -->
+                <div class="absolute inset-0 z-0 overflow-hidden">
+                    <!-- Step 1 Image: Cutting & RFID -->
+                    <div x-show="activeStep === 1"
+                         x-transition:enter="transition ease-out duration-500"
+                         x-transition:enter-start="opacity-0 scale-95"
+                         x-transition:enter-end="opacity-100 scale-100"
+                         class="w-full h-full relative">
+                        <img src="{{ asset('images/steps/cutting-rfid.jpg') }}" alt="Cutting & RFID Bundle Tagging" class="w-full h-full object-cover">
+                        <div class="laser-beam-v"></div>
+                        <div class="absolute top-16 right-6 z-10 p-3 rounded-2xl bg-slate-900/85 backdrop-blur-md border border-sky-400/40 text-white font-sans text-xs shadow-xl space-y-1">
+                            <div class="flex items-center gap-2 text-sky-400 font-bold font-mono text-[11px]">
+                                <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+                                PROCESSING: AUTOMATED CUTTING &amp; RFID SCAN
+                            </div>
+                            <div class="text-[11px] text-slate-300">Speed: <strong class="text-white font-mono">110 m/min</strong> &bull; Yield: <strong class="text-emerald-400 font-mono">97.4%</strong></div>
+                            <div class="text-[10px] font-mono text-sky-300">RFID Bundle Tag #8847 Verified</div>
+                        </div>
+                    </div>
 
-                <div class="z-10 pointer-events-none text-center py-2 bg-white/90 backdrop-blur-md rounded-2xl border border-sky-200 text-xs font-sans text-sky-700 font-semibold shadow-sm">
-                    👈 Drag to rotate software 3D view • Tap viewport to explore product module 👉
+                    <!-- Step 2 Image: Sewing Line Telemetry -->
+                    <div x-show="activeStep === 2"
+                         x-transition:enter="transition ease-out duration-500"
+                         x-transition:enter-start="opacity-0 scale-95"
+                         x-transition:enter-end="opacity-100 scale-100"
+                         class="w-full h-full relative">
+                        <img src="{{ asset('images/steps/sewing-telemetry.jpg') }}" alt="Sewing Line Telemetry & Balancing" class="w-full h-full object-cover">
+                        <div class="laser-beam-h"></div>
+                        <div class="absolute top-16 right-6 z-10 p-3 rounded-2xl bg-slate-900/85 backdrop-blur-md border border-emerald-400/40 text-white font-sans text-xs shadow-xl space-y-1">
+                            <div class="flex items-center gap-2 text-emerald-400 font-bold font-mono text-[11px]">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                                PROCESSING: SEWING WORKSTATION TELEMETRY
+                            </div>
+                            <div class="text-[11px] text-slate-300">Throughput: <strong class="text-white font-mono">148 pcs/hr</strong> &bull; OEE: <strong class="text-emerald-400 font-mono">94.2%</strong></div>
+                            <div class="text-[10px] font-mono text-emerald-300">340 Sewing Machine Heads Connected</div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 Image: AI Vision Defect Inspection -->
+                    <div x-show="activeStep === 3"
+                         x-transition:enter="transition ease-out duration-500"
+                         x-transition:enter-start="opacity-0 scale-95"
+                         x-transition:enter-end="opacity-100 scale-100"
+                         class="w-full h-full relative">
+                        <img src="{{ asset('images/steps/ai-vision.jpg') }}" alt="AI Vision Defect Inspection" class="w-full h-full object-cover">
+                        <div class="laser-beam-red"></div>
+                        <div class="absolute top-16 right-6 z-10 p-3 rounded-2xl bg-slate-900/85 backdrop-blur-md border border-rose-400/40 text-white font-sans text-xs shadow-xl space-y-1">
+                            <div class="flex items-center gap-2 text-rose-400 font-bold font-mono text-[11px]">
+                                <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+                                PROCESSING: OPTICAL FABRIC SCANNER
+                            </div>
+                            <div class="text-[11px] text-slate-300">Scanner: <strong class="text-white font-mono">60 FPS AI Optical</strong> &bull; Accuracy: <strong class="text-rose-400 font-mono">99.4%</strong></div>
+                            <div class="text-[10px] font-mono text-rose-300">Stitch Skip Detected &amp; Tagged</div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 Image: Executive SaaS Dashboard -->
+                    <div x-show="activeStep === 4"
+                         x-transition:enter="transition ease-out duration-500"
+                         x-transition:enter-start="opacity-0 scale-95"
+                         x-transition:enter-end="opacity-100 scale-100"
+                         class="w-full h-full relative">
+                        <img src="{{ asset('images/steps/executive-saas.jpg') }}" alt="Executive SaaS & Order Dispatch" class="w-full h-full object-cover">
+                        <div class="laser-beam-cyan"></div>
+                        <div class="absolute top-16 right-6 z-10 p-3 rounded-2xl bg-slate-900/85 backdrop-blur-md border border-indigo-400/40 text-white font-sans text-xs shadow-xl space-y-1">
+                            <div class="flex items-center gap-2 text-indigo-400 font-bold font-mono text-[11px]">
+                                <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+                                PROCESSING: EXECUTIVE SAAS METRICS
+                            </div>
+                            <div class="text-[11px] text-slate-300">Plant Uptime: <strong class="text-white font-mono">98.4%</strong> &bull; Dispatch: <strong class="text-indigo-400 font-mono">100% On-Time</strong></div>
+                            <div class="text-[10px] font-mono text-indigo-300">25 Global Apparel Plants Synced</div>
+                        </div>
+                    </div>
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-slate-950/40 pointer-events-none"></div>
+                </div>
+
+                <!-- Bottom Information Glass Banner -->
+                <div class="z-10 relative mt-auto p-4 rounded-2xl bg-slate-900/85 backdrop-blur-md border border-white/10 text-white flex items-center justify-between shadow-2xl">
+                    <div class="space-y-0.5">
+                        <div class="text-xs font-mono font-bold text-sky-400 uppercase tracking-widest"
+                             x-text="activeStep === 1 ? 'RFID TAGGING SYSTEM ACTIVE' : activeStep === 2 ? 'TELEMETRY MESH ONLINE' : activeStep === 3 ? 'AI OPTICAL CAMERA ACTIVE' : 'EXECUTIVE DASHBOARD ONLINE'"></div>
+                        <div class="text-sm font-bold font-sans text-slate-100"
+                             x-text="activeStep === 1 ? 'Cutting Room Entry & RFID Bundle WIP Visibility' : activeStep === 2 ? 'Real-Time Sewing Workstation Piece-Rate Balancing' : activeStep === 3 ? 'Sub-Millimeter AI Fabric Stitch Defect Inspection' : 'Enterprise SaaS Machine OEE & Order Dispatch'"></div>
+                    </div>
+                    <a href="#roi-calculator" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-gradient-to-r from-sky-400 to-blue-600 hover:from-sky-300 hover:to-blue-500 text-white font-bold text-xs font-sans shadow-lg hover:scale-105 transition-all">
+                        <span>Calculate Savings</span>
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7-7m7-7H3"></path></svg>
+                    </a>
                 </div>
             </div>
         </div>

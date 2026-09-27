@@ -43,9 +43,62 @@
             </button>
         </div>
 
-        <div class="lg:col-span-6 h-[460px] rounded-3xl bg-white border border-sky-200 p-6 overflow-hidden shadow-xl flex flex-col justify-between">
-            <div class="text-xs font-sans text-sky-700 font-semibold mb-2 uppercase tracking-wider">3D REAL-TIME LINE TELEMETRY</div>
-            <div id="pts-3d-canvas" class="w-full h-full cursor-grab active:cursor-grabbing"></div>
+        <div class="lg:col-span-6 h-[460px] rounded-3xl bg-slate-950 border border-sky-400/40 overflow-hidden shadow-2xl relative group p-6 flex flex-col justify-between">
+            <!-- Top HUD Label Bar -->
+            <div class="flex items-center justify-between z-10">
+                <span class="text-xs font-sans text-sky-300 font-semibold bg-slate-900/90 px-3.5 py-1.5 rounded-full border border-sky-500/40 backdrop-blur-md flex items-center gap-2 shadow-lg">
+                    <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+                    <span>RFID LIVE WORKSTATION TELEMETRY</span>
+                </span>
+                <span class="text-xs font-sans font-semibold text-emerald-300 bg-slate-900/90 px-3.5 py-1.5 rounded-full border border-emerald-500/40 backdrop-blur-md shadow-lg font-mono">+22% THROUGHPUT</span>
+            </div>
+
+            <!-- Photorealistic Dedicated PTS Sewing Line Image & Overlay -->
+            <div class="absolute inset-0 z-0 overflow-hidden">
+                <img src="{{ asset('images/products/pts-sewing-line.jpg') }}" alt="RFID Sewing Workstation Telemetry" class="w-full h-full object-cover">
+                
+                <!-- Laser Scan Beam -->
+                <div class="laser-beam-h"></div>
+
+                <!-- Animated RFID Active Node Trackers Overlay -->
+                <div class="absolute inset-x-8 top-1/2 -translate-y-1/2 flex items-center justify-between pointer-events-none z-10">
+                    <div class="p-2.5 rounded-xl bg-slate-900/90 border border-sky-400/60 text-white font-mono text-[10px] space-y-1 shadow-lg backdrop-blur-md">
+                        <div class="text-sky-400 font-bold flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span>
+                            LINE 2 - WORKSTATION #14
+                        </div>
+                        <div class="text-slate-300">Bundle #8842 &bull; <strong class="text-emerald-400">148 pcs/hr</strong></div>
+                    </div>
+
+                    <div class="p-2.5 rounded-xl bg-slate-900/90 border border-emerald-400/60 text-white font-mono text-[10px] space-y-1 shadow-lg backdrop-blur-md">
+                        <div class="text-emerald-400 font-bold flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                            LINE 2 - WORKSTATION #15
+                        </div>
+                        <div class="text-slate-300">Bundle #8843 &bull; <strong class="text-emerald-400">BALANCED</strong></div>
+                    </div>
+
+                    <div class="p-2.5 rounded-xl bg-slate-900/90 border border-indigo-400/60 text-white font-mono text-[10px] space-y-1 shadow-lg backdrop-blur-md">
+                        <div class="text-indigo-400 font-bold flex items-center gap-1.5">
+                            <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>
+                            PACKING NODE
+                        </div>
+                        <div class="text-slate-300">Dispatch Batch &bull; <strong class="text-sky-300">READY</strong></div>
+                    </div>
+                </div>
+
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/15 to-slate-950/40 pointer-events-none"></div>
+            </div>
+
+            <!-- Bottom Live Telemetry HUD Card -->
+            <div class="relative z-10 p-4 rounded-2xl bg-slate-900/90 backdrop-blur-md border border-emerald-400/40 text-white font-sans text-xs shadow-xl space-y-1.5 w-fit">
+                <div class="flex items-center gap-2 text-emerald-400 font-bold font-mono text-xs">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                    LIVE SEWING LINE TELEMETRY: 340 HEADS CONNECTED
+                </div>
+                <div class="text-xs text-slate-300">Daily Output: <strong class="text-white font-mono">+22% Daily Throughput</strong> &bull; WIP Visibility: <strong class="text-emerald-400 font-mono">100% Real-Time</strong></div>
+                <div class="text-[11px] font-mono text-emerald-300">Paperless RFID Bundle Tagging Active</div>
+            </div>
         </div>
     </div>
 </div>

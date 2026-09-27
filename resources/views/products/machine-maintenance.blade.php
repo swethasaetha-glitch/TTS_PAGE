@@ -43,9 +43,56 @@
             </button>
         </div>
 
-        <div class="lg:col-span-6 h-[460px] rounded-3xl bg-white border border-sky-200 p-6 overflow-hidden shadow-xl flex flex-col justify-between">
-            <div class="text-xs font-sans text-sky-700 font-semibold mb-2 uppercase tracking-wider">3D GEAR MAINTENANCE TELEMETRY</div>
-            <div id="oee-3d-canvas" class="w-full h-full cursor-grab active:cursor-grabbing"></div>
+        <div class="lg:col-span-6 h-[460px] rounded-3xl bg-slate-950 border border-amber-500/40 overflow-hidden shadow-2xl relative group p-6 flex flex-col justify-between">
+            <!-- Top HUD Label Bar -->
+            <div class="flex items-center justify-between z-10">
+                <span class="text-xs font-sans text-amber-300 font-semibold bg-slate-900/90 px-3.5 py-1.5 rounded-full border border-amber-500/40 backdrop-blur-md flex items-center gap-2 shadow-lg">
+                    <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                    <span>PREDICTIVE OEE MOTOR TELEMETRY</span>
+                </span>
+                <span class="text-xs font-sans font-semibold text-emerald-300 bg-slate-900/90 px-3.5 py-1.5 rounded-full border border-emerald-500/40 backdrop-blur-md shadow-lg font-mono">98.4% UPTIME</span>
+            </div>
+
+            <!-- Photorealistic Dedicated OEE Motor Telemetry Image & Overlay -->
+            <div class="absolute inset-0 z-0 overflow-hidden">
+                <img src="{{ asset('images/products/oee-motor-telemetry.jpg') }}" alt="Predictive Gear Shaft Motor Telemetry" class="w-full h-full object-cover">
+                
+                <!-- Laser Scan Beam -->
+                <div class="laser-beam-v"></div>
+
+                <!-- Live Motor Vibration Spectrum Analysis Animated Overlay -->
+                <div class="absolute bottom-20 right-6 z-10 p-3 rounded-2xl bg-slate-900/90 backdrop-blur-md border border-amber-400/50 text-white font-mono text-xs shadow-xl space-y-2 w-72">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[10px] font-bold text-amber-400">GEAR DRIVE TELEMETRY UNIT</span>
+                        <span class="text-[9px] text-emerald-400 bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40">BEARING: HEALTHY</span>
+                    </div>
+
+                    <!-- CSS Equalizer Spectrum Bars -->
+                    <div class="flex items-end gap-1.5 h-8 pt-1">
+                        <div class="w-2 bg-amber-400 rounded-t eq-bar-1"></div>
+                        <div class="w-2 bg-amber-300 rounded-t eq-bar-2"></div>
+                        <div class="w-2 bg-emerald-400 rounded-t eq-bar-3"></div>
+                        <div class="w-2 bg-amber-400 rounded-t eq-bar-4"></div>
+                        <div class="w-2 bg-emerald-300 rounded-t eq-bar-5"></div>
+                        <div class="w-2 bg-amber-400 rounded-t eq-bar-2"></div>
+                        <div class="w-2 bg-sky-400 rounded-t eq-bar-1"></div>
+                        <div class="w-2 bg-emerald-400 rounded-t eq-bar-3"></div>
+                        <div class="w-2 bg-amber-400 rounded-t eq-bar-4"></div>
+                    </div>
+                </div>
+
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/15 to-slate-950/40 pointer-events-none"></div>
+            </div>
+
+            <!-- Bottom Live Telemetry HUD Card -->
+            <div class="relative z-10 p-4 rounded-2xl bg-slate-900/90 backdrop-blur-md border border-amber-400/40 text-white font-sans text-xs shadow-xl space-y-1.5 w-fit">
+                <div class="flex items-center gap-2 text-amber-400 font-bold font-mono text-xs">
+                    <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                    OEE PREDICTIVE SENSOR: GEARBOX &amp; BUSHING DIAGNOSTICS
+                </div>
+                <div class="text-xs text-slate-300">Downtime Cut: <strong class="text-white font-mono">82% Breakdown Reduction</strong> &bull; Early Warning: <strong class="text-amber-400 font-mono">48 Hours Ahead</strong></div>
+                <div class="text-[11px] font-mono text-amber-300">Predictive Maintenance Alerts Synced to Mobile App</div>
+            </div>
         </div>
     </div>
 </div>

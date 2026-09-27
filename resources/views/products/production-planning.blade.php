@@ -43,9 +43,61 @@
             </button>
         </div>
 
-        <div class="lg:col-span-6 h-[460px] rounded-3xl bg-white border border-sky-200 p-6 overflow-hidden shadow-xl flex flex-col justify-between">
-            <div class="text-xs font-sans text-sky-700 font-semibold mb-2 uppercase tracking-wider">3D MULTI-FACILITY NODES TELEMETRY</div>
-            <div id="nodes-3d-canvas" class="w-full h-full cursor-grab active:cursor-grabbing"></div>
+        <div class="lg:col-span-6 h-[460px] rounded-3xl bg-slate-950 border border-indigo-500/40 overflow-hidden shadow-2xl relative group p-6 flex flex-col justify-between">
+            <!-- Top HUD Label Bar -->
+            <div class="flex items-center justify-between z-10">
+                <span class="text-xs font-sans text-indigo-300 font-semibold bg-slate-900/90 px-3.5 py-1.5 rounded-full border border-indigo-500/40 backdrop-blur-md flex items-center gap-2 shadow-lg">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+                    <span>SAAS MULTI-FACILITY GANTT DISPATCH PLANNER</span>
+                </span>
+                <span class="text-xs font-sans font-semibold text-emerald-300 bg-slate-900/90 px-3.5 py-1.5 rounded-full border border-emerald-500/40 backdrop-blur-md shadow-lg font-mono">100% ON-TIME</span>
+            </div>
+
+            <!-- Photorealistic Dedicated Planning Command Center Image & Overlay -->
+            <div class="absolute inset-0 z-0 overflow-hidden">
+                <img src="{{ asset('images/products/planning-command-center.jpg') }}" alt="Multi-Facility Production Planning Command Center" class="w-full h-full object-cover">
+                
+                <!-- Laser Scan Beam -->
+                <div class="laser-beam-cyan"></div>
+
+                <!-- Animated Multi-Factory Dispatch Grid Overlay -->
+                <div class="absolute top-1/3 right-6 z-10 p-3.5 rounded-2xl bg-slate-900/90 backdrop-blur-md border border-indigo-400/50 text-white font-mono text-xs shadow-xl space-y-2 w-72">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[10px] font-bold text-indigo-400">GANTT CAPACITY ALLOCATION</span>
+                        <span class="text-[9px] text-emerald-400 font-bold bg-emerald-950/80 px-1.5 py-0.5 rounded border border-emerald-500/40">0 DELAYS</span>
+                    </div>
+
+                    <div class="space-y-1.5 text-[10px]">
+                        <div class="flex items-center justify-between text-slate-300">
+                            <span>PLANT A (HANOI):</span>
+                            <span class="text-indigo-300 font-bold">100% LOADED</span>
+                        </div>
+                        <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-indigo-500 h-full w-full"></div>
+                        </div>
+
+                        <div class="flex items-center justify-between text-slate-300 pt-1">
+                            <span>PLANT B (COLOMBO):</span>
+                            <span class="text-emerald-400 font-bold">DISPATCH READY</span>
+                        </div>
+                        <div class="w-full bg-slate-800 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-emerald-400 h-full w-[94%]"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/15 to-slate-950/40 pointer-events-none"></div>
+            </div>
+
+            <!-- Bottom Live Telemetry HUD Card -->
+            <div class="relative z-10 p-4 rounded-2xl bg-slate-900/90 backdrop-blur-md border border-indigo-400/40 text-white font-sans text-xs shadow-xl space-y-1.5 w-fit">
+                <div class="flex items-center gap-2 text-indigo-400 font-bold font-mono text-xs">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400"></span>
+                    EXECUTIVE COMMAND CENTER: 25 GLOBAL HUBS SYNCED
+                </div>
+                <div class="text-xs text-slate-300">Buyer Delivery: <strong class="text-white font-mono">0 Late Deliveries</strong> &bull; Penalties: <strong class="text-emerald-400 font-mono">$0 Air Freight Rush</strong></div>
+                <div class="text-[11px] font-mono text-indigo-300">Order Dispatch Batch #EXP-2026 Scheduled</div>
+            </div>
         </div>
     </div>
 </div>

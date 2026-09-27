@@ -82,6 +82,77 @@
         .animate-marquee:hover {
             animation-play-state: paused;
         }
+        @keyframes laserScanVertical {
+            0% { top: 4%; opacity: 0.85; }
+            50% { top: 88%; opacity: 0.85; }
+            100% { top: 4%; opacity: 0.85; }
+        }
+        @keyframes laserScanHorizontal {
+            0% { left: 4%; opacity: 0.85; }
+            50% { left: 88%; opacity: 0.85; }
+            100% { left: 4%; opacity: 0.85; }
+        }
+        .laser-beam-v {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.95), #ffffff, rgba(56, 189, 248, 0.95), transparent);
+            box-shadow: 0 0 16px #38bdf8, 0 0 32px #38bdf8;
+            animation: laserScanVertical 3.2s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .laser-beam-red {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, rgba(239, 68, 68, 0.95), #ffffff, rgba(239, 68, 68, 0.95), transparent);
+            box-shadow: 0 0 16px #ef4444, 0 0 32px #ef4444;
+            animation: laserScanVertical 2.6s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .laser-beam-h {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, transparent, rgba(16, 185, 129, 0.95), #ffffff, rgba(16, 185, 129, 0.95), transparent);
+            box-shadow: 0 0 16px #10b981, 0 0 32px #10b981;
+            animation: laserScanHorizontal 4s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .laser-beam-cyan {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, transparent, rgba(129, 140, 248, 0.95), #ffffff, rgba(129, 140, 248, 0.95), transparent);
+            box-shadow: 0 0 16px #818cf8, 0 0 32px #818cf8;
+            animation: laserScanHorizontal 4.5s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 10;
+        }
+        @keyframes targetLockPulse {
+            0% { transform: scale(0.98); opacity: 0.85; }
+            50% { transform: scale(1.02); opacity: 1; }
+            100% { transform: scale(0.98); opacity: 0.85; }
+        }
+        .ai-target-box {
+            animation: targetLockPulse 2.5s ease-in-out infinite;
+        }
+        @keyframes eqWave {
+            0%, 100% { height: 6px; }
+            50% { height: 26px; }
+        }
+        .eq-bar-1 { animation: eqWave 0.8s ease-in-out infinite alternate; }
+        .eq-bar-2 { animation: eqWave 1.1s ease-in-out 0.2s infinite alternate; }
+        .eq-bar-3 { animation: eqWave 0.9s ease-in-out 0.4s infinite alternate; }
+        .eq-bar-4 { animation: eqWave 1.3s ease-in-out 0.1s infinite alternate; }
+        .eq-bar-5 { animation: eqWave 0.7s ease-in-out 0.3s infinite alternate; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col antialiased" x-data="{ demoModalOpen: false, quoteModalOpen: false }">

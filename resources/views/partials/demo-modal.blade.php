@@ -60,54 +60,86 @@
 
         <template x-if="!submitted">
             <div>
-                <div class="flex items-center gap-2 text-sky-600 font-semibold text-xs uppercase tracking-wider mb-2 font-sans">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
-                    <span>Schedule Personal Walkthrough</span>
+                <div class="flex items-center gap-2 text-sky-600 font-bold text-xs uppercase tracking-wider mb-1 font-sans">
+                    <svg class="w-4 h-4 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    <span>APPAREL INDUSTRY 4.0 AUDIT</span>
                 </div>
-                <h3 class="text-2xl font-bold text-sky-600 mb-2 font-sans">Book a Live 3D Demo</h3>
-                <p class="text-sm text-slate-900 mb-6 font-sans">
-                    Discover how Track Tech Solution can optimize your garment manufacturing facility in real time.
+                <h3 class="text-2xl font-bold text-slate-900 mb-1 font-sans">Schedule Factory Floor Audit</h3>
+                <p class="text-xs text-slate-600 mb-5 font-sans">
+                    Request an on-site or digital shopfloor audit by our senior Industrial Engineering &amp; IoT technical specialists.
                 </p>
 
-                <form @submit.prevent="submitForm()" class="space-y-4 font-sans">
-                    <div>
-                        <label class="block text-xs font-medium text-slate-700 mb-1">Full Name</label>
-                        <input type="text" x-model="form.name" required placeholder="e.g. Rahul Sharma"
-                               class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-sky-500 text-sm">
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <form @submit.prevent="submitForm()" class="space-y-3 font-sans text-left">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div>
-                            <label class="block text-xs font-medium text-slate-700 mb-1">Phone Number</label>
-                            <input type="tel" x-model="form.phone" required placeholder="+91 98765 43210"
-                                   class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-sky-500 text-sm">
+                            <label class="block text-[11px] font-semibold text-slate-700 mb-1">Full Name *</label>
+                            <input type="text" x-model="form.name" required placeholder="e.g. Rajesh Kumar"
+                                   class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-sky-500 text-xs">
                         </div>
                         <div>
-                            <label class="block text-xs font-medium text-slate-700 mb-1">Work Email</label>
+                            <label class="block text-[11px] font-semibold text-slate-700 mb-1">Corporate Email *</label>
                             <input type="email" x-model="form.email" required placeholder="name@company.com"
-                                   class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-sky-500 text-sm">
+                                   class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-sky-500 text-xs">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-[11px] font-semibold text-slate-700 mb-1">Phone / WhatsApp Number *</label>
+                            <input type="tel" x-model="form.phone" required placeholder="+91 98765 43210"
+                                   class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-sky-500 text-xs">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-semibold text-slate-700 mb-1">Company / Factory Name *</label>
+                            <input type="text" x-model="form.company" required placeholder="e.g. Apex Exports Ltd"
+                                   class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-sky-500 text-xs">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-[11px] font-semibold text-slate-700 mb-1">Plant Location / City *</label>
+                            <input type="text" x-model="form.location" required placeholder="e.g. Tirupur, Bangalore, Dhaka"
+                                   class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-sky-500 text-xs">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-semibold text-slate-700 mb-1">Preferred Audit Date</label>
+                            <input type="date" x-model="form.audit_date"
+                                   class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-sky-500 text-xs">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-[11px] font-semibold text-slate-700 mb-1">Active Sewing Machines</label>
+                            <select x-model="form.machines" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-sky-500 text-xs">
+                                <option value="100-300">100 - 300 Machines</option>
+                                <option value="300-800">300 - 800 Machines</option>
+                                <option value="800-1500">800 - 1,500 Machines</option>
+                                <option value="1500+">1,500+ Machines (Enterprise)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-semibold text-slate-700 mb-1">Primary Product Category</label>
+                            <select x-model="form.category" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-sky-500 text-xs">
+                                <option value="Woven Shirts & Tops">Woven Shirts &amp; Tops</option>
+                                <option value="Denim & Bottoms">Denim &amp; Bottoms</option>
+                                <option value="Knitwear & T-Shirts">Knitwear &amp; T-Shirts</option>
+                                <option value="Outerwear & Jackets">Outerwear &amp; Jackets</option>
+                                <option value="Intimates & Activewear">Intimates &amp; Activewear</option>
+                            </select>
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-medium text-slate-700 mb-1">Company / Factory Name</label>
-                        <input type="text" x-model="form.company" placeholder="e.g. Apex Apparels Ltd"
-                               class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-sky-500 text-sm">
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-medium text-slate-700 mb-1">Primary Interest</label>
-                        <select x-model="form.solution" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:outline-none focus:border-sky-500 text-sm">
-                            <option value="Quality Control">Quality Control AI</option>
-                            <option value="Production Tracking">Real-Time Production Tracking</option>
-                            <option value="Machine Maintenance">Machine Maintenance (OEE)</option>
-                            <option value="Production Planning">Production Planning & Scheduling</option>
-                        </select>
+                        <label class="block text-[11px] font-semibold text-slate-700 mb-1">Specific Plant Pain Points (Optional)</label>
+                        <textarea x-model="form.pain_points" rows="2" placeholder="e.g. High fabric end-bit scrap, WIP bottleneck disputes, sewing machine downtime..."
+                                  class="w-full px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-sky-500 text-xs"></textarea>
                     </div>
 
                     <button type="submit" :disabled="loading"
-                            class="w-full mt-2 flex items-center justify-center gap-2 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-medium py-3.5 rounded-xl shadow-lg shadow-sky-500/20 transition-all text-sm">
-                        <span x-show="!loading">Submit Demo Request</span>
+                            class="w-full mt-2 flex items-center justify-center gap-2 bg-gradient-to-r from-sky-500 via-blue-600 to-sky-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-sky-500/20 transition-all text-xs uppercase tracking-wider">
+                        <span x-show="!loading">Confirm Factory Audit Request</span>
                         <span x-show="loading" class="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full"></span>
                     </button>
                 </form>
